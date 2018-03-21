@@ -1,0 +1,490 @@
+<?php
+/**
+ * 玩家管理类
+ */
+namespace application\admin\controller;
+
+use application\admin\model\Gameuser;
+
+use think\Loader;
+use application\admin\model\Gamebetrecord;
+use application\admin\model\Gameroom;
+use think\Model;
+use think\Request;
+use think\Db;
+class UserController extends CommonController{
+	public function index(){
+	    $inputId=input('get.mid');
+	    $inputRole=input('get.role');
+	    $inputname=input('post.szUserName');
+	    $role=session('user_role');
+	    $data=$this->getSearchWhere($role);
+        if($inputId){
+            $datainfo=$this->getGivenRole($inputId,$inputRole);
+            $users=$datainfo['users'];
+            $count=$datainfo['count'];
+            $remainfangka=$datainfo['remainfangka'];
+            $usefangka=$datainfo['usefangka'];
+        }else{
+            $users=Db::name('gameuser')->where($this->come_where)->paginate(20);
+            $count=Db::name('gameuser')->where($this->come_where)->count();
+            $remainfangka=Db::name('gameuser')->where($this->come_where)->sum('n64RoomCardNum');//剩余房卡总数
+            $userids=Db::name('gameuser')->where($this->come_where)->column('un32UserID');
+            if(!count($userids)){
+                $userids=[-1];
+            }
+            $totalfangka=Db::name('consumelog')->where('szGoodsID','200000')->where('un32UserID','in',$userids)->sum('un32Num');//总购买房卡数
+            $usefangka=$totalfangka-$remainfangka;
+        }
+        if($inputname){
+            $users=Db::name('gameuser')->where('szUserName','like',"%$inputname%")->where($this->come_where)->paginate(20);
+            $count=Db::name('gameuser')->where('szUserName','like',"%$inputname%")->where($this->come_where)->count();
+            $remainfangka=Db::name('gameuser')->where('szUserName','like',"%$inputname%")->where($this->come_where)->sum('n64RoomCardNum');//剩余房卡总数
+            $userids=Db::name('gameuser')->where('szUserName','like',"%$inputname%")->where($this->come_where)->column('un32UserID');
+            if(!count($userids)){
+                $userids=[-1];
+            }
+            $totalfangka=Db::name('consumelog')->where('szGoodsID','200000')->where('un32UserID','in',$userids)->sum('un32Num');//总购买房卡数
+            $usefangka=$totalfangka-$remainfangka;
+        }
+        if(isset($data['xl'])){
+            $this->assign('data1',$data['xl']);
+        }
+        if(isset($data['sh'])){
+            $this->assign('data2',$data['sh']);
+        }
+        if(isset($data['dl'])){
+            $this->assign('data3',$data['dl']);
+        }
+        $newarr=[];
+        foreach ($users as $key=>$user){
+            $parentid=$user['parentId'];
+            $merinfo=Db::name('merchant')->where('mid',$parentid)->find();
+            $newarr[$key][$parentid]=$merinfo['nickname'];
+        }
+        $this->assign('newarr',$newarr);
+        $this->assign('usefangka',$usefangka);
+        $this->assign('remainfangka',$remainfangka);
+        $this->assign('count',$count);
+		$this->assign('role',$role);
+		$this->assign('users',$users);
+		return $this->fetch();
+	}
+	//添加金币或者房卡
+	public function addcoins()
+	{
+		$this->error('暂无改功能！！');
+		$userid = input('get.userid');
+		$form_data = input('post.form_data');
+		// parse_str($form_data, $data);
+		preg_match('/gems=(\d+)/', $form_data, $data);
+		preg_match('/coins=(\d+(\.\d+)?)/', $form_data, $data1);
+		//var_dump($data);
+		//var_dump($data1);
+		if(!$data && !$data1){
+			return  $code=0;
+		}
+		$gems=empty($data)?0:$data[1];
+		$coins=empty($data1)?0:$data1[1];
+		$user = Gameuser::get($userid);
+		$user->dGold += $coins;
+		$user->n64RoomCardNum += $gems;
+		if ($user->save()) {
+			//记录购买日志
+			$time = time();
+			$log = array(
+				'admin_id' => session('user_id'),
+				'user_id' => $userid,
+				'user_name' => $user->szNickName,
+				'gem_number' => $gems,
+				'coins_number' => $coins,
+				'create_time' => $time,
+				'user_account'=>$user->szUserName,
+				'merchantId'=>$this->merch_id
+			);
+			$res=Db::name('buylog')->insert($log);
+			if($res){
+				echo $code = 1;
+			}else{
+				echo $code=0;
+			}
+		}else{
+			echo $code=0;
+		}
+	}
+
+	/**
+	 * 修改
+	 */
+	public function info(){
+		//暂时不做
+		/* $data = input();
+		if (isset($data['dosubmit'])) {
+			if (!$data['password']) {
+				unset($data['password']);
+			} else {
+				$data['password'] = md5($data['password']);
+			}		
+			$user=Loader::model('gameuser');
+			$res = $user->allowField(true)->save($data,['id' => $data['un32UserID']]);	
+			if ($res) {
+				$this->success('修改成功',url('index'),'',1);
+			} else {
+				$this->error('修改失败');
+			}
+		} else {
+			if($data['id']){
+				$info=Db::name('gameuser')->where('un32UserID',$data['id'])->find();
+				$this->assign('info', $info);
+				return $this->fetch();
+			}else{
+				$this->error('页面丢失！');
+			}
+		}
+		 */
+	}
+	
+	/**
+	 * 冻结
+	 */
+	public function disabled(){
+		$id=input('get.id');
+		if($id){
+			$res=Db::name('gameuser')->where('un32UserID',$id)->update(['status' => 0]);
+			if($res){
+				$this->success('修改成功',url('index'),'',1);
+			}else{
+				$this->error('修改失败');
+			}
+		}
+	}
+	/**
+	 * 解冻
+	 */
+	public function enabled(){
+		$id=input('get.id');
+		if($id){
+			$res=Db::name('gameuser')->where('un32UserID',$id)->update(['status' =>1]);
+			if($res){
+				$this->success('修改成功',url('index'),'',1);
+			}else{
+				$this->error('修改失败');
+			}
+		}
+	}
+	/**
+	 * 删除
+	 */
+	public function del(){
+		
+	}
+	/**
+	 * 发送邮件
+	 */
+	public function mail(){
+		if(Request::instance()->isPost()){
+			$data=input();
+			$result = $this->validate($data,'Gamemail');
+			if (true !== $result) {
+				$this->error($result,url('showmail'),'',1);
+			}else{
+				$result=Db::name('gamemail')->insert([ 'title' => $data['title'], 'content' => $data['content'],'from'=>'系统管理员','fromto'=>$data['un32UserID'],'time'=>time(),'merchantId'=>$this->merch_id]);
+				if($result){
+					//连接服务器
+					$host=config('host');
+					$port=config('port');
+					$protectId=config('mailtocs');
+					$jintinginfo=$this->gameListen($host,$port,$protectId);
+					$this->success('操作成功'.$jintinginfo, url('system/showmail'),'',1);
+				}else{
+					$this->error('操作失败',url('index'),'',1);
+				}
+			}
+		}else{
+			$id=input('get.id');
+			$this->assign('id',$id);
+			return $this->fetch('mail');
+		}
+	}
+	/**
+	 * 模糊查询id
+	 */
+	public function likeid(){
+		$id=input('post.un32UserID');
+		$users=Db::name('gameuser')->where('un32UserID','like',"%$id%")->where('merchantId','in',$this->come_where)->paginate(20);
+		$this->assign('users',$users);
+		return $this->fetch('index');
+	}
+	/**
+	 * 模糊查询昵称
+	 */
+	public function likenickname(){
+		$name=input('post.szNickName');
+		$users=Db::name('gameuser')->where('szNickName','like',"%$name%")->where('merchantId','in',$this->come_where)->paginate(20);
+		$this->assign('users',$users);
+		return $this->fetch('index');
+	}
+	/**
+	 * 模糊查询用户名
+	 */
+	public function likeusername(){
+		$name=input('post.szUserName');
+		$users=Db::name('gameuser')->where('szUserName','like',"%$name%")->where('merchantId','in',$this->come_where)->paginate(20);
+		$this->assign('users',$users);
+		return $this->fetch('index');
+	}
+	/**
+	 * 用户游戏详情
+	 */
+	public function details(){
+		$uid=session('user_id');
+		if($uid!=1){
+		    $merId=Db::name('merchant')->field('id')->where('mid',$uid)->find();
+			$group_id=Db::name('admingroupaccess')->where('uid',$merId['id'])->field('group_id')->select();
+		}else{//超管
+			$group_id='admin';
+		}
+		$id=input('get.id');//接受玩家的ID值
+		$this->assign('id',$id);
+		$this->assign('groupId',$group_id);
+		return $this->fetch();
+	}
+	/**
+	 * 玩家推锅所有房间
+	 */
+	public function roomshow(){
+        $uid=input('get.uid');
+		$userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+		$un64GameRoomID=Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gamebetrecord')->where('un32PlayerID',$uid)->column('un64GameRoomID');
+		$arrid=array_unique($un64GameRoomID);//房间ID去重；
+		if(!count($arrid)){
+            $this->error($userinfo['szUserName'].'没有玩过推锅游戏');
+        }
+        $rooms= Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroom')->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un64ID','in',$arrid)->paginate(20);
+        $lists = Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroomrecord')->where('un64GameRoomID','in',$arrid)->where('un32GameUserID',$uid)->select();
+        //var_dump($lists);exit;
+        $this->assign('userinfo',$userinfo);
+        $this->assign('lists',$lists);
+        $this->assign('rooms',$rooms);
+        $this->assign('uid',$uid);
+        $this->assign('arrid',serialize($arrid));
+        return $this->fetch();
+//		var_dump($arrid);exit;
+//		$Gamebetrecord=new Gamebetrecord();
+//		$roomsid = $Gamebetrecord->field('un64GameRoomID')->group('un64GameRoomID')->where('un32PlayerID',$uid)->order('un32ID','desc')->select();
+//		if(empty($roomsid[0])){
+//			$this->error('该玩家还没有玩过推锅游戏');
+//		}else{
+//			$arrid=array();
+//			foreach($roomsid as $id){
+//				$arrid[]=$id->un64GameRoomID;//房间ID
+//			}
+//			//var_dump($arrid);exit;
+//			$gameroom=new Gameroom();
+//			$rooms=$gameroom->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un64ID','in',$arrid)->paginate(20);
+//
+//			//var_dump($rooms);exit;
+//			$lists = Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroomrecord')->where('un64GameRoomID','in',$arrid)->where('un64GameRoomID',$uid)->select();
+//			//var_dump($lists);exit;
+//			$this->assign('userinfo',$userinfo);
+//			$this->assign('lists',$lists);
+//			$this->assign('rooms',$rooms);
+//			$this->assign('uid',$uid);
+//			$this->assign('arrid',serialize($arrid));
+//			return $this->fetch();
+//		}
+	}
+	/**
+	 * 玩家推筒子房间
+	 */
+	public function tuitong(){
+		$uid=input('get.uid');
+		$userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+        $roomid = Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gamebetrecord')->where('un32PlayerID',$uid)->column('un64GameRoomID');
+		$arrid=array_unique($roomid);
+        if(!count($arrid)){
+			$this->error('该玩家还没有玩过推筒子游戏');
+		}else{
+			$rooms=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroom')->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un64ID','in',$arrid)->paginate(20);
+			$lists = Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroomrecord')->where('un64GameRoomID','in',$arrid)->where('un32GameUserID',$uid)->select();
+			//var_dump($lists);exit;
+			$this->assign('userinfo',$userinfo);
+			$this->assign('lists',$lists);
+			$this->assign('rooms',$rooms);
+			$this->assign('uid',$uid);
+			$this->assign('arrid',serialize($arrid));
+			return $this->fetch();
+		}
+	}
+	/**
+	 * 牌九
+	 */
+	public function paijiu(){
+		$this->error('还没有开通！');exit;
+		$uid=input('get.uid');
+		$Gamebetrecord=new Gamebetrecord();
+		$roomsid = $Gamebetrecord->field('un32GameRoomID')->group('un32GameRoomID')->where('un32PlayerID',$uid)->order('un32ID','desc')->select();
+		if(empty($roomsid[0])){
+			$this->error('该玩家还没有玩游戏');
+		}else{
+			$arrid=array();
+			foreach($roomsid as $id){
+				$arrid[]=$id['un32GameRoomID'];
+			}
+			//var_dump($arrid);exit;
+			$gameroom=new Gameroom();
+			$rooms=$gameroom->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un32ID','in',$arrid)->paginate(20);
+			$this->assign('rooms',$rooms);
+			$this->assign('uid',$uid);
+			$this->assign('arrid',serialize($arrid));
+			return $this->fetch();
+		}
+	}
+	/**
+	 * 推锅游戏房间详情 房间号查询
+	 */
+	public function likepwd(){
+		$pwd=input('post.n32GameRoomPwd');
+		$arrid=unserialize(input('post.arrid'));
+		$uid=input('post.uid');
+        $userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+		$gameroom=new Gameroom();
+		$rooms=$gameroom->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un64ID','in',$arrid)->where('g.n32GameRoomPwd',$pwd)->paginate(20);
+		if(!$rooms){
+			$this->error('该房间号不存在！');
+		}
+		$lists = Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroomrecord')->where('un64GameRoomID','in',$arrid)->where('un32GameUserID',$uid)->paginate(20);
+//		$this->assign('rooms',$rooms);
+//		$this->assign('uid',$uid);
+//		$this->assign('list',$list);
+        $this->assign('userinfo',$userinfo);
+        $this->assign('lists',$lists);
+        $this->assign('rooms',$rooms);
+        $this->assign('uid',$uid);
+        $this->assign('arrid',serialize($arrid));
+		return $this->fetch('roomshow');
+	}
+	/**
+	 * 房间里玩家每回合详情
+	 */
+	public function roomdetail(){
+		$uid=input('get.uid');
+		$roomid=input('get.roomid');
+		$userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+        //$gameroom= Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroom')->where('un64ID',$roomid)->find();
+		$gameroom=new Gameroom();
+		$gameroom=$gameroom->where('un64ID',$roomid)->find();
+		$Gamebetrecord=new Gamebetrecord();
+		$infos = $Gamebetrecord->where('un64GameRoomID',$roomid)->where('un32PlayerID',$uid)->select();
+		foreach($infos as $k=>$v){
+			$juid=$v->un32GameJuID;
+			$huiid=$v->un32GameRoundID;
+			$juinfo=Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'pumpwaterrecord')->where('un64GameRoomID',$roomid)->where('un32GameJuID',$juid)->find();
+			$infos[$k]['ePlayWay']=$juinfo['ePlayWay'];
+			$roundinfo=Db::table(config('tuiguo_db.db1').'.'.config('database.prefix').'gameroundrecord')->where('un64GameRoomID',$roomid)->where('un32GameJuID',$juid)->where('un32GameRoundID',$huiid)->find();
+			$infos[$k]['un8BankerCardID1']=$roundinfo['un8BankerCardID1'];
+			$infos[$k]['un8BankerCardID2']=$roundinfo['un8BankerCardID2'];
+			$infos[$k]['un8ShunCardID1']=$roundinfo['un8ShunCardID1'];
+			$infos[$k]['un8ShunCardID2']=$roundinfo['un8ShunCardID2'];
+			$infos[$k]['un8TianCardID1']=$roundinfo['un8TianCardID1'];
+			$infos[$k]['un8TianCardID2']=$roundinfo['un8TianCardID2'];
+			$infos[$k]['un8DiCardID1']=$roundinfo['un8DiCardID1'];
+			$infos[$k]['un8DiCardID2']=$roundinfo['un8DiCardID2'];
+			if($huiid==1){
+					$infos[$k]['kaiguodi']=$gameroom->un32TotalAnte;
+			}else{
+				$infos[$k]['kaiguodi']=$infos[$k-1]['n32GuoDiScore'];
+			}
+		}
+		$this->assign('gameroom',$gameroom);
+		$this->assign('userinfo',$userinfo);
+		$this->assign('infos',$infos);
+		$this->assign('uid',$uid);
+		return $this->fetch();
+		
+	}
+	/**
+	 * 推筒子游戏房间详情 房间号查询
+	 */
+	public function likepwdtong(){
+		$pwd=input('post.n32GameRoomPwd');
+		$arrid=unserialize(input('post.arrid'));
+		$uid=input('post.uid');
+        $userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+		$rooms=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroom')->alias('g')->join(config('database.database').'.'.config('database.prefix').'gameuser u','g.un32OwnerUserID=u.un32UserID')->where('g.un64ID','in',$arrid)->where('g.n32GameRoomPwd',$pwd)->paginate(20);
+		if(!$rooms){
+			$this->error('该房间号不存在！');
+		}
+		$lists = Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroomrecord')->where('un64GameRoomID','in',$arrid)->where('un32GameUserID',$uid)->paginate(20);
+//		$this->assign('rooms',$rooms);
+//		$this->assign('uid',$uid);
+//		$this->assign('list',$list);
+        $this->assign('userinfo',$userinfo);
+        $this->assign('lists',$lists);
+        $this->assign('rooms',$rooms);
+        $this->assign('uid',$uid);
+        $this->assign('arrid',serialize($arrid));
+        return $this->fetch('tuitong');
+	}
+	/**
+	 * 推筒子房间里玩家每回合详情
+	 */
+	public function roomdetailtong(){
+		$uid=input('get.uid');
+		$roomid=input('get.roomid');
+		$userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+		$gameroom=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroom')->where('un64ID',$roomid)->find();
+		//var_dump($gameroom['un32TotalAnte']);exit;
+		$infos = Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gamebetrecord')->where('un64GameRoomID',$roomid)->where('un32PlayerID',$uid)->select();
+		foreach($infos as $k=>$v){
+			$juid=$v['un32GameJuID'];
+			$huiid=$v['un32GameRoundID'];
+			$juinfo=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'pumpwaterrecord')->where('un64GameRoomID',$roomid)->where('un32GameJuID',$juid)->find();
+			$infos[$k]['ePlayWay']=$juinfo['ePlayWay'];
+			$roundinfo=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroundrecord')->where('un64GameRoomID',$roomid)->where('un32GameJuID',$juid)->where('un32GameRoundID',$huiid)->find();
+			$infos[$k]['un8BankerCardID1']=$roundinfo['un8BankerCardID1'];
+			$infos[$k]['un8BankerCardID2']=$roundinfo['un8BankerCardID2'];
+			$infos[$k]['un8ShunCardID1']=$roundinfo['un8ShunCardID1'];
+			$infos[$k]['un8ShunCardID2']=$roundinfo['un8ShunCardID2'];
+			$infos[$k]['un8TianCardID1']=$roundinfo['un8TianCardID1'];
+			$infos[$k]['un8TianCardID2']=$roundinfo['un8TianCardID2'];
+			$infos[$k]['un8DiCardID1']=$roundinfo['un8DiCardID1'];
+			$infos[$k]['un8DiCardID2']=$roundinfo['un8DiCardID2'];
+			if($huiid==1){
+				$infos[$k]['kaiguodi']=$gameroom['un32TotalAnte'];
+			}else{
+				$infos[$k]['kaiguodi']=$infos[$k-1]['n32GuoDiScore'];
+			}
+		}
+		$this->assign('gameroom',$gameroom);
+		$this->assign('infos',$infos);
+		$this->assign('userinfo',$userinfo);
+		$this->assign('uid',$uid);
+		return $this->fetch();
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

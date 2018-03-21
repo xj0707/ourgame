@@ -1,0 +1,96 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+         <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.history.go(-1);">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+        <h1>
+            房间号：{$roompwd}
+            <small>
+                =》  第{$juid}局 =>第{$huiid}回
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>昵称</th>
+                                <th>角色</th>
+                                <th>下注区域</th>
+                                <th>输赢记录</th>
+                                <th class="hidden-480">抽水比例</th>
+                                <th class="hidden-480">房主应得</th>
+                                <th>实际收益</th>
+                                <th class="hidden-480">结算时间</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="infos" id="vo"}
+
+                            <tr>
+                                <td class="hidden-480">{$vo.szNickName}/ID:{$vo.un32PlayerID}</td>
+                                <td>{$vo.eIdentity|isrule}</td>
+                                <td>
+                                    {if condition="$vo.eIdentity==1"}
+                                        -
+                                    {else/}
+                                        {if condition="$vo.n32TianBetNum >0"}
+                                        顺
+                                        {/if}
+                                        {if condition="$vo.n32DiBetNum >0"}
+                                        天
+                                        {/if}
+                                        {if condition="$vo.n32RenBetNum >0"}
+                                        地
+                                        {/if}
+                                    {/if}
+
+                                </td>
+                                <td class="hidden-480">{$vo.n32TianWinloseNum+$vo.n32DiWinloseNum+$vo.n32RenWinloseNum}</td>
+                                <td>
+                                    {if condition="$vo.eIdentity==1 && $count==$vo.un32GameRoundID"}
+                                        {$info1}%
+                                    {else/}
+                                    -
+                                    {/if}
+                                </td>
+                                <td class="hidden-480">
+                                    {if condition="$vo.eIdentity==1 && $count==$vo.un32GameRoundID"}
+                                        {$info2}
+                                    {else/}
+                                    -
+                                    {/if}
+                                </td>
+                                <td class="hidden-480">
+                                    {if condition="$vo.eIdentity==1 && $count==$vo.un32GameRoundID"}
+                                    {$vo.n32TianWinloseNum+$vo.n32DiWinloseNum+$vo.n32RenWinloseNum-$info2}
+                                    {else/}
+                                    {$vo.n32TianWinloseNum+$vo.n32DiWinloseNum+$vo.n32RenWinloseNum}
+                                    {/if}
+                                </td>
+                                <td>{$vo.un32LogTime|date="Y-m-d H:i:s",###}</td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+
+</script>
+

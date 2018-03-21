@@ -1,0 +1,486 @@
+
+<div class="page-content">
+     <!-- <div class="col-sm-6 pull-right">
+        <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'adduser'">
+            添加玩家
+            <i class="icon-reply icon-only"></i>
+        </span>
+    </div> -->
+    <div class="page-header">
+        <h1>
+            玩家总数： {$count} 人
+
+        	 <!--<small>-->
+                <!--<i class="ace-icon fa fa-angle-double-right"></i>-->
+                    <!--消耗房卡总数：<span style="color: red;">{$usefangka}</span>  ;&nbsp;&nbsp; 剩余房卡总数：<span style="color: green;">{$remainfangka}</span>-->
+             <!--</small>-->
+        </h1>
+    </div>
+
+        <div class="row">
+
+            {switch name="$role"}
+            {case value="1|10"}
+            <div class="col-lg-3">
+                <div>
+                    <span>线路商查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data1" id="vo"}
+                        <option id="{$vo[mid]}5" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div>
+                    <span>商户查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList1(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data2" id="vo"}
+                        <option id="{$vo[mid]}4" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            {/case}
+            {case value="1000"}
+            <div class="col-lg-3">
+                <div>
+                    <span>代理查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList2(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data3" id="vo"}
+                        <option id="{$vo[mid]}3" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            {/case}
+            {case value="10000"}
+            <div class="col-lg-3">
+                <div>
+                    <span>线路商查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data1" id="vo"}
+                        <option id="{$vo[mid]}" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div>
+                    <span>商户查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList1(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data2" id="vo"}
+                        <option id="{$vo[mid]}1" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+
+            </div>
+            <div class="col-lg-3">
+                <div>
+                    <span>代理查询:</span>
+                    <select class="form-control" style="display: inline-block;width: 60%;" onchange="getList2(this)">
+                        <option value='' >请选择</option>
+                        {volist name="data3" id="vo"}
+                        <option id="{$vo[mid]}2" value='{$vo[mid]}' >{$vo.nickname}</option>
+                        {/volist}
+                    </select>
+                </div>
+            </div>
+            {/case}
+            {/switch}
+
+        	<!--<form action="{:url('likeid')}" method="post" name='myfrom'>-->
+	            <!--<div class="col-lg-2">-->
+	                <!--<div class="input-group " style="margin-bottom: 10px;">-->
+	                    <!--<input style="height: 42px;" type="text" class="form-control" name='un32UserID' onkeyup="this.value=this.value.replace(/[^\d]/g,'')"  placeholder="输入uid查询玩家">-->
+	                    <!--<span class="input-group-btn">-->
+	                        <!--<button class="btn btn-default" type="button" id='but'>搜一搜</button>-->
+	                    <!--</span>-->
+	                <!--</div>-->
+	            <!--</div>-->
+            <!--</form>-->
+            <!--<form action="{:url('likenickname')}" method="post" name='myfrom1'>-->
+	            <!--<div class="col-lg-2">-->
+	                <!--<div class="input-group " style="margin-bottom: 10px;">-->
+	                    <!--<input  style="height: 42px;" type="text" class="form-control" name='szNickName'  placeholder="输入昵称查询玩家">-->
+	                    <!--<span class="input-group-btn">-->
+	                        <!--<button class="btn btn-default" type="button" id='but1'>搜一搜</button>-->
+	                    <!--</span>-->
+	                <!--</div>-->
+	            <!--</div>-->
+            <!--</form>-->
+            <form action="" method="post" name="myfrom2">
+	            <div class="col-lg-2">
+	                <div class="input-group " style="margin-bottom: 10px;">
+	                    <input style="height: 42px;" type="text" class="form-control" name='szUserName'  placeholder="输入用户名查询玩家">
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default" type="button" id='but2'>搜一搜</button>
+	                    </span>
+	                </div>
+	            </div>
+            </form>
+        </div>
+
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+
+                                <th class="hidden-480">线路号</th>
+                                <th class="hidden-480">商户/代理昵称</th>
+                                <th class="hidden-480">用户名</th>
+                                <th>昵称</th>
+                                <th class="hidden-480">性别</th>
+                                <th>金币</th>
+                                <th>房卡</th>
+                                <th>N币</th>
+                                <th class="hidden-480">注册时间</th>
+                                <th class="hidden-480">
+                                    <i class="ace-icon fa fa-clock-o bigger-110 hidden-480"></i>
+                                    最后登录时间
+                                </th>
+                                <!--<th>操作</th>-->
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="users" id="vo"}
+                            <tr>
+                                <td>{$i}</td>
+                                <td class="hidden-480">{$vo.merchantId|format3}</td>
+                                <td class="hidden-480">{$newarr[$key][$vo.parentId]}</td>
+                                <td class="hidden-480"><a href='{:url("details","id=$vo[un32UserID]")}'>{$vo.szUserName}</a></td> 
+                                <td>{$vo.szNickName}</td>
+                                <td class="hidden-480">{$vo.bSex|isSex}</td>
+                                <td>{$vo.dGold}</td>
+                                <td>{$vo.n64RoomCardNum}</td>
+                                <td>{$vo.n32Diamond}</td>
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$vo.tRegisteUTCMilsec/1000)}</td>
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$vo.tLastLoginUTCMilsec)}</td>
+                                <!--<td>                                  -->
+                                    <!--<div class="hidden-sm hidden-xs btn-group">-->
+
+                                       <!--&lt;!&ndash;  <a href='{:url("info","id=$vo[un32UserID]")}'> -->
+                                           <!--<span class="btn btn-xs btn-info">-->
+                                                <!--<i class="ace-icon fa fa-pencil bigger-120">编辑</i>-->
+                                            <!--</span>-->
+                                        <!--</a> &ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href='#addUserModal' data-toggle="modal" onclick="getuserid({$vo['un32UserID']})">&ndash;&gt;-->
+                                          <!--&lt;!&ndash;<span class="btn btn-xs btn-info">&ndash;&gt;-->
+                                               <!--&lt;!&ndash;<i class="glyphicon glyphicon-shopping-cart">购买</i>&ndash;&gt;-->
+                                           <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                       <!--&lt;!&ndash;</a>&ndash;&gt;-->
+
+                                      <!--&lt;!&ndash;{if condition='$vo.status==1'}  &ndash;&gt;-->
+                                         <!--&lt;!&ndash;<a href='javascript:void(0)' onclick="return alert_disabled('{:url(\"disabled\",\"id=$vo[un32UserID]\")}', '确认要冻结『 昵称={$vo.szNickName} 』该玩家吗？');" >&ndash;&gt;-->
+                                           <!--&lt;!&ndash;<span class="btn btn-xs btn-warning">&ndash;&gt;-->
+                                                <!--&lt;!&ndash;<i class="glyphicon glyphicon-ban-circle">冻结</i>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                       <!--&lt;!&ndash;{else/} &ndash;&gt;-->
+	                                       <!--&lt;!&ndash;<a href='javascript:void(0)' onclick="return alert_enabled('{:url(\"enabled\",\"id=$vo[un32UserID]\")}', '确认要启用『 昵称={$vo.szNickName} 』该玩家吗？');" >&ndash;&gt;-->
+	                                           <!--&lt;!&ndash;<span class="btn btn-xs btn-success">&ndash;&gt;-->
+	                                                <!--&lt;!&ndash;<i class="glyphicon  glyphicon-ok">解冻</i>&ndash;&gt;-->
+	                                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+	                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+	                                    <!--&lt;!&ndash;{/if}&ndash;&gt;-->
+                                        <!--&lt;!&ndash; <a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[un32UserID]\")}', '确认要删除『 昵称={$vo.szNickName} 』该玩家吗？');" >-->
+                                           <!--<span class="btn btn-xs btn-danger">-->
+                                                <!--<i class="ace-icon fa fa-trash-o bigger-120">删除</i>-->
+                                            <!--</span>-->
+                                        <!--</a> &ndash;&gt;-->
+                                        <!--&lt;!&ndash;<a href='{:url("mail","id=$vo[un32UserID]")}'>&ndash;&gt;-->
+                                           <!--&lt;!&ndash;<span class="btn btn-xs btn-info">&ndash;&gt;-->
+                                                <!--&lt;!&ndash;<i class=" glyphicon glyphicon-envelope">发送邮件</i>&ndash;&gt;-->
+                                            <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                        <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                    <!--</div>-->
+
+                                    <!--<div class="hidden-md hidden-lg">-->
+                                        <!--<div class="inline pos-rel">-->
+                                            <!--<span class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">-->
+                                                <!--<i class="ace-icon fa fa-cog icon-only bigger-110"></i>-->
+                                            <!--</span>-->
+
+                                            <!--<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">-->
+                                               <!--&lt;!&ndash;  <li>-->
+                                                    <!--<a href='{:url("info","id=$vo[un32UserID]")}' class="tooltip-success" data-rel="tooltip" title="编辑">-->
+                                                        <!--<span class="green">-->
+                                                            <!--<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li> &ndash;&gt;-->
+                                                  <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                      <!--&lt;!&ndash;<a href='#addUserModal' data-toggle="modal" onclick="getuserid({$vo['un32UserID']})">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<span class="btn btn-xs btn-info">&ndash;&gt;-->
+                                                             <!--&lt;!&ndash;<i class="glyphicon glyphicon-shopping-cart"></i>&ndash;&gt;-->
+                                                         <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                                      <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;{if condition='$vo.status==1'} &ndash;&gt;-->
+                                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<a href='javascript:void(0)' onclick="return alert_disabled('{:url(\"disabled\",\"id=$vo[un32UserID]\")}', '确认要冻结『 昵称={$vo.szNickName} 』该玩家吗？');" class="tooltip-error" data-rel="tooltip" title="冻结">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<span class="yellow">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<i class="glyphicon glyphicon-ban-circle"></i>&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;{else/}&ndash;&gt;-->
+                                                <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<a href='javascript:void(0)' onclick="return alert_enabled('{:url(\"enabled\",\"id=$vo[un32UserID]\")}', '确认要启用『 昵称={$vo.szNickName} 』该玩家吗？');" class="tooltip-error" data-rel="tooltip" title="解冻">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<span class="yellow">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<i class="glyphicon glyphicon-ok"></i>&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;{/if}&ndash;&gt;-->
+                                               <!--&lt;!&ndash;  <li>-->
+                                                    <!--<a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[un32UserID]\")}', '确认要删除『 昵称={$vo.szNickName} 』该玩家吗？');" class="tooltip-error" data-rel="tooltip" title="删除">-->
+                                                        <!--<span class="red">-->
+                                                            <!--<i class="ace-icon fa fa-trash-o bigger-120"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li> &ndash;&gt;-->
+                                                  <!--&lt;!&ndash;<li>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;<a href='{:url("mail","id=$vo[un32UserID]")}' class="tooltip-success" data-rel="tooltip" title="邮件">&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;<span class="green">&ndash;&gt;-->
+                                                            <!--&lt;!&ndash;<i class="glyphicon glyphicon-envelope"></i>&ndash;&gt;-->
+                                                        <!--&lt;!&ndash;</span>&ndash;&gt;-->
+                                                    <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                                                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                                            <!--</ul>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                   <!---->
+                                <!--</td>-->
+                                
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                   {$users->render()}
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+             
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+<!-- 模态框示例（Modal） -->
+<form method="post" action="" class="form-horizontal" role="form" id="form_data" onsubmit="return check_form()" style="margin: 20px;">
+    <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        购买金币或房卡
+                    </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="jinbi" class="col-sm-3 control-label">金币</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="jinbi" name="coins" value="" onkeyup="value=value.replace(/[^\d.]/g,'')" placeholder="请输入数量">
+                            </div>
+                        </div>
+                        <input type="hidden" name="userid" id="user_id"/>
+                        <div class="form-group">
+                            <label for="zuansi" class="col-sm-3 control-label">房卡</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" name="gems" value="" id="zuansi" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="请输入数量">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        提交
+                    </button><span id="tip"> </span>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+</form>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='un32UserID']").val()==''){
+		alert('uid不能为空');
+		$("input[name='un32UserID']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+$("#but1").click(function(){
+	if($("input[name='szNickName']").val()==''){
+		alert('昵称不能为空');
+		$("input[name='szNickName']").focus();
+	}else{
+		document.myfrom1.submit();
+	}
+});
+$("#but2").click(function(){
+	if($("input[name='szUserName']").val()==''){
+		alert('用户名不能为空');
+		$("input[name='szUserName']").focus();
+	}else{
+		document.myfrom2.submit();
+	}
+});
+$(document).ready(function () {
+    var storage=window.localStorage;
+    if(storage){
+        if(storage.optionId){
+            var mid=storage.optionId;
+            $("#"+mid).attr('selected',true);
+            $("#"+mid+"5").attr('selected',true);
+        }else if(storage.optionId1){
+            var mid=storage.optionId1;
+            $("#"+mid+"1").attr('selected',true);
+            $("#"+mid+"4").attr('selected',true);
+        }else if(storage.optionId2){
+            var mid=storage.optionId2;
+            $("#"+mid+"2").attr('selected',true);
+            $("#"+mid+"3").attr('selected',true);
+        }
+
+    }
+});
+function getList(obj) {
+    var mid=obj.value;
+    var storage=window.localStorage;
+    storage['optionId1'] = ""
+    storage['optionId2'] = ""
+    storage["optionId"]=mid;
+    window.location.href='index?mid='+mid+'&role=xl';
+    //console.log(obj.value)
+}
+function getList1(obj) {
+    var mid=obj.value;
+    var storage=window.localStorage;
+    storage['optionId'] = ""
+    storage['optionId2'] = ""
+    storage["optionId1"]=mid;
+    window.location.href='index?mid='+mid+'&role=sh';
+    //console.log(obj.value)
+}
+function getList2(obj) {
+    var mid=obj.value;
+    var storage=window.localStorage;
+    storage["optionId2"]=mid;
+    storage['optionId1'] = ""
+    storage['optionId'] = ""
+    window.location.href='index?mid='+mid+'&role=dl';
+    //console.log(obj.value)
+}
+function getuserid($id){
+    $("#user_id").val($id);
+    //alert($id);
+}
+// 提交表单
+function check_form()
+{
+    var jinbi = $.trim($('#jinbi').val());
+    var zuansi     = $.trim($('#zuansi').val());
+    var userid=$("#user_id").val();
+    if(!userid)
+    {
+        alert('操作异常！请重新操作');
+        return false;
+    }
+    if(!jinbi && !zuansi){
+        alert('你还没有选择金币或房卡');
+        return false;
+    }
+    if(zuansi){
+        if(isNaN(zuansi)){
+            alert("房卡数据不合法");
+            return false;
+        }
+        if(zuansi<=0){
+            alert('房卡数量不能小于0');
+            return false;
+        }
+    }
+    if(zuansi>=10000000000){
+        alert('房卡数量过多');
+        return false;
+    }
+    if(jinbi){
+        if(isNaN(jinbi)){
+            alert("金币的数据不合法");
+            return false;
+        }
+        if(jinbi<=0){
+            alert('金币数量不能小于0');
+            return false;
+        }
+    }
+
+    if(jinbi>=10000000000){
+        alert('金币数量太大');
+        return false;
+    }
+    var form_data = $('#form_data').serialize();
+    // 异步提交数据到action/add_action.php页面
+    $.ajax(
+            {
+                url: "{:url('addcoins')}?userid="+userid,
+                data:{"form_data":form_data},
+                type: "post",
+//                beforeSend:function()
+//                {
+//                    $("#tip").html("<span style='color:blue'>正在处理...</span>");
+//                    return true;
+//                },
+                success:function(data)
+                {
+                    if(data > 0)
+                    {
+                        //$("#tip").html("<span style='color:blueviolet'>恭喜操作成功！</span>");
+                        // document.location.href='system_notice.php'
+                        alert("购买成功");
+                        window.location.href='index';
+                    }
+                    else
+                    {
+                        // $("#tip").html("<span style='color:red'>失败，请重试</span>");
+                        alert('购买失败');
+                        location.reload();
+                    }
+                },
+                error:function()
+                {
+                    alert('请求出错');
+                    location.reload();
+                },
+                complete:function()
+                {
+                    $('#acting_tips').hide();
+                }
+            });
+
+    return false;
+}
+</script>
+

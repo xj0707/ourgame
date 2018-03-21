@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="__ROOT__/js/picker/jquery.datetimepicker.css">
+<script src="__ROOT__/js/jquery.js"></script>
+<script src="__ROOT__/js/picker/jquery.datetimepicker.js"></script>
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+        <h1>
+            日志记录
+        </h1>
+    </div>
+    <div class="row">
+        <form action="{:url('searchid')}" method="post" name='myfrom1'>
+            <div class="col-lg-2">
+                <div class="input-group " style="margin-bottom: 10px;">
+                    <input style="height: 42px;" type="text" class="form-control" name='un32UserID' onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="玩家ID查询">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id='but1'>搜一搜</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+        <form action="{:url('searchname')}" method="post" name='myfrom3'>
+            <div class="col-lg-2">
+                <div class="input-group " style="margin-bottom: 10px;">
+                    <input style="height: 42px;" type="text" class="form-control" name='szUserName'  placeholder="玩家用户名查询">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button" id='but3'>搜一搜</button>
+                    </span>
+                </div>
+            </div>
+        </form>
+        <form class="form-inline" role="form" action="{:url('liketime')}" method="post" name="myfrom2">
+            <div class="form-group" style="margin-bottom: 10px;">
+                <label class="sr-only" for="name">起始时间</label>
+                <input style="height: 42px;" type="text" class="form-control" id="name" name="create_time" placeholder="起始时间">
+            </div>
+            <div class="form-group" style="margin-bottom: 10px;">
+                <label class="sr-only" for="name1">结束时间</label>
+                <input style="height: 42px;" type="text" class="form-control" id="name1" name="e_time" placeholder="结束时间，可不填">
+            </div>
+                 <button style="margin-bottom: 10px;" class="btn btn-default" type="button" id='but2'>搜一搜</button>
+        </form>
+    </div>
+    <div class="top-20"></div>
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>玩家ID</th>
+                            <th>玩家用户名</th>
+                            <th>玩家昵称</th>
+                            <th>道具名称</th>
+                            <th>购买数量</th>
+                            <th>消耗金币数量</th>
+                            <th>玩家剩余金币</th>
+                            <!--<th>玩家剩余N币</th>-->
+                            <th class="hidden-480">购买时间</th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        {volist name="usergold" id="vo"}
+                        <tr>
+                            <td>{$vo.un32UserID}</td>
+                            <td>{$vo.szUserName}</td>
+                            <td>{$vo.szNickName}</td>
+                            <td>{$vo.szGoodsName}</td>
+                            <td>{$vo.un32Num}</td>
+                            <td>{$vo.cost}</td>
+                            <td>{$vo.dRestGold}</td>
+                            <!--<td>{$vo.un32RestDiamond}</td>-->
+                            <td class="hidden-480">{:date('Y-m-d H:i:s',$vo.tLogTime)}</td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                    {$usergold->render()}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    $("#but1").click(function(){
+        if($("input[name='un32UserID']").val()==''){
+            alert('玩家ID不能为空');
+            $("input[name='un32UserID']").focus();
+        }else{
+            document.myfrom1.submit();
+        }
+    });
+    $("#but2").click(function(){
+        if($("input[name='create_time']").val()==''){
+            alert('起始时间不能为空');
+            $("input[name='create_time']").focus();
+        }else{
+            document.myfrom2.submit();
+        }
+    });
+    $("#but3").click(function(){
+        if($("input[name='szUserName']").val()==''){
+            alert('玩家用户名不能为空');
+            $("input[name='szUserName']").focus();
+        }else{
+            document.myfrom3.submit();
+        }
+    });
+    $('#name').datetimepicker({
+        dayOfWeekStart : 1,
+        lang:'ch',
+        startDate:	'2016/11/21 '
+    });
+    $('#name1').datetimepicker({
+        dayOfWeekStart : 1,
+        lang:'ch',
+        startDate:	'2016/11/21 '
+    });
+</script>
+

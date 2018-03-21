@@ -1,0 +1,1702 @@
+[ 2017-09-06T16:39:07+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.225012s][吞吐率：4.44req/s] [内存消耗：1,669.11kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-09-06T16:39:16+08:00 ] 127.0.0.1 127.0.0.1 POST /
+[ log ] a.cn/ [运行时间：0.225013s][吞吐率：4.44req/s] [内存消耗：2,664.68kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '45',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'supadminxj',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `na_admin` WHERE  `username` = 'supadminxj'  AND `password` = 'b65f703bcb8dc7cae8d22abfb8895d21' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1504687156,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.028001s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T16:39:17+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.177010s][吞吐率：5.65req/s] [内存消耗：2,673.95kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.036002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T16:39:18+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.052003s][吞吐率：19.23req/s] [内存消耗：1,608.66kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-06T17:28:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.229013s][吞吐率：4.37req/s] [内存消耗：2,872.79kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.032002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:28:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/favicon.ico
+[ log ] a.cn/admin/user_buy_fang_ka/favicon.ico [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：1,635.23kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:02+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/index.html
+[ log ] a.cn/admin/menu/index.html [运行时间：0.296017s][吞吐率：3.38req/s] [内存消耗：3,410.25kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/favicon.ico
+[ log ] a.cn/admin/menu/favicon.ico [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,627.88kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:11+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/info.html?id=97
+[ log ] a.cn/admin/menu/info.html?id=97 [运行时间：0.141008s][吞吐率：7.09req/s] [内存消耗：2,852.17kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '97',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->info[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\menu\info.html [ array (
+  0 => 'info',
+  1 => 'selectMenu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` = 97 LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'info' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 42 LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/index
+[ log ] a.cn/admin/menu/index [运行时间：0.263015s][吞吐率：3.80req/s] [内存消耗：3,410.24kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/info.html?id=97',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.027001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/info.html?id=153
+[ log ] a.cn/admin/menu/info.html?id=153 [运行时间：0.139008s][吞吐率：7.19req/s] [内存消耗：2,852.22kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'info',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '153',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->info[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\menu\info.html [ array (
+  0 => 'info',
+  1 => 'selectMenu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.021001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` = 153 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'info' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 42 LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:35+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/menu/edit
+[ log ] a.cn/admin/menu/edit [运行时间：0.124007s][吞吐率：8.06req/s] [内存消耗：2,674.65kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'edit',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '138',
+  'referer' => 'http://a.cn/admin/menu/info.html?id=153',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '153',
+  'parentid' => '',
+  'icon' => 'fa-shopping-cart',
+  'name' => '玩家消费日志',
+  'c' => 'UserBuyFangKa',
+  'a' => 'index',
+  'data' => '',
+  'display' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->edit[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] UPDATE `na_menu`  SET `parentid`=0,`icon`='fa-shopping-cart',`name`='玩家消费日志',`c`='UserBuyFangKa',`a`='index',`data`='',`display`=1,`updatetime`=1504690175  WHERE  `id` = 153            [ RunTime:0.063004s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/menu/index.html
+[ log ] a.cn/admin/menu/index.html [运行时间：0.346020s][吞吐率：2.89req/s] [内存消耗：3,410.17kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/edit',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\MenuController->index[ D:\wamp\www\OurGame\application\admin\controller\MenuController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\menu\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.025001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036002s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Menu'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:29:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.137007s][吞吐率：7.30req/s] [内存消耗：2,872.92kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:42:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.169010s][吞吐率：5.92req/s] [内存消耗：3,082.23kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:43:26+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.145008s][吞吐率：6.90req/s] [内存消耗：3,082.23kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T17:44:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.153008s][吞吐率：6.54req/s] [内存消耗：3,082.43kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/menu/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:05:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：2,876.88kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:07:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.128007s][吞吐率：7.81req/s] [内存消耗：3,082.36kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:07:41+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.124007s][吞吐率：8.06req/s] [内存消耗：2,876.97kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:31:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.139008s][吞吐率：7.19req/s] [内存消耗：2,876.88kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_usergoldconsumerecord` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_usergoldconsumerecord` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.un32ID desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:40:20+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.113006s][吞吐率：8.85req/s] [内存消耗：3,201.45kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: un32LogTime[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:222]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:41:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.109006s][吞吐率：9.17req/s] [内存消耗：3,199.68kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+[ error ] [8]未定义数组索引: goldcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]未定义数组索引: diamondcost[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:219]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:43:19+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.124008s][吞吐率：8.06req/s] [内存消耗：3,199.37kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:43:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：3,199.55kb] [文件加载：54]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001001s ]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:44:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.112007s][吞吐率：8.93req/s] [内存消耗：2,989.01kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:44:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.100006s][吞吐率：10.00req/s] [内存消耗：2,989.02kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant vo - assumed 'vo'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+[ error ] [8]Use of undefined constant eType - assumed 'eType'[D:\wamp\www\OurGame\runtime\temp\78058773a85d720b3dce6d0f8ec91fc4.php:218]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:45:14+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.151008s][吞吐率：6.62req/s] [内存消耗：3,138.13kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:46:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.151009s][吞吐率：6.62req/s] [内存消耗：3,137.87kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-06T18:46:31+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user_buy_fang_ka/index.html
+[ log ] a.cn/admin/user_buy_fang_ka/index.html [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：3,137.85kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user_buy_fang_ka',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:55.0) Gecko/20100101 Firefox/55.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user_buy_fang_ka/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=mecuuhfqj6rjo0mg4c3faoosv1; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserBuyFangKaController->index[ D:\wamp\www\OurGame\application\admin\controller\UserBuyFangKaController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user_buy_fang_ka\index.html [ array (
+  0 => 'usergold',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_consumelog` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_consumelog` `u` INNER JOIN `na_gameuser` `g` ON `u`.`un32UserID`=`g`.`un32UserID` WHERE  `u`.`un32UserID` IN (206689,976460,523651,443583,217031,210879,219044,443268,321824,666530,799558,587667,520670,171368,153602,373017,928568,462380,534414,354080,125885,900671,321337,543731,642686,883392,982156,757840,292744,893170,517308,380278,242228,581942,188208,452390,344358,457196,169756,891141,537787,738247,903512,267811,809180,995915,848792,413696,319383,471115,482657,307049,380559,988050,696084,448789,217889,671276,756292,768270,123579,529405,630537,655764,682130,838889,882197,52622,15123,16465,485465,123564,20011,20012,20013,20014,20015,20016,20017,20018,20019,20020,10000,10001,10002,10003,10004,10005,10006,10007,10008,10009,10010,5435435,471683,78222,24354325,528917,3434334,6756565,92314,20000,20001,20002,20003,20004,20005,20006,20007,20008,20009,20010,859276) ORDER BY u.id desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------

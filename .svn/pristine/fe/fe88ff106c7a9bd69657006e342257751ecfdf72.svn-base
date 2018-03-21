@@ -1,0 +1,3802 @@
+[ 2017-08-29T11:03:09+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,442.16kb] [文件加载：27]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'e318011a-a621-0ef5-4193-e2b021ab9c18',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:03:55+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.018001s][吞吐率：55.55req/s] [内存消耗：1,442.00kb] [文件加载：27]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '7816e693-5642-1f66-8eec-d458c12ae958',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:04:02+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：1,442.00kb] [文件加载：27]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '9834a2d0-534f-a427-23cd-cd2ad8768ba5',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:04:06+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.097006s][吞吐率：10.31req/s] [内存消耗：2,300.01kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'bcb8b86e-256a-ef40-b68a-112fe4b70132',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = 'c0e76a50-f15c-43b5-9370-154b81ad9a88' LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:40:51+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,664.48kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:00+08:00 ] 127.0.0.1 127.0.0.1 POST /
+[ log ] a.cn/ [运行时间：0.095006s][吞吐率：10.53req/s] [内存消耗：2,660.13kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '45',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'supadminxj',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `na_admin` WHERE  `username` = 'supadminxj'  AND `password` = 'b65f703bcb8dc7cae8d22abfb8895d21' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1503978060,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.026001s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.093005s][吞吐率：10.75req/s] [内存消耗：2,668.63kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,608.52kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:07+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/index.html
+[ log ] a.cn/admin/user/index.html [运行时间：0.170010s][吞吐率：5.88req/s] [内存消耗：3,118.55kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->index[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\index.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'count',
+  4 => 'role',
+  5 => 'users',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` LIMIT 0,20   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'User'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:205]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:205]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:217]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:217]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:217]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:229]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\dbdd586cc1fa87f58585fbdbfa6f1220.php:229]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:07+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/favicon.ico
+[ log ] a.cn/admin/user/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,769.37kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.087005s][吞吐率：11.49req/s] [内存消耗：3,036.73kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.099006s][吞吐率：10.10req/s] [内存消耗：3,036.91kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T11:41:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/scmj.html?uid=220453
+[ log ] a.cn/admin/game_ma_jiang/scmj.html?uid=220453 [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,608.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'scmj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:42:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/scmj.html?uid=220453
+[ log ] a.cn/admin/game_ma_jiang/scmj.html?uid=220453 [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,580.34kb] [文件加载：35]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'scmj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->scmj[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T11:52:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.107006s][吞吐率：9.35req/s] [内存消耗：2,834.02kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T12:06:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/roomshow.html?uid=220453
+[ log ] a.cn/admin/user/roomshow.html?uid=220453 [运行时间：0.133008s][吞吐率：7.52req/s] [内存消耗：2,698.99kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'roomshow',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->roomshow[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `un32UserID` = 220453 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gamebetrecord` [ RunTime:0.042002s ]
+[ sql ] [ SQL ] SELECT `un32GameRoomID` FROM `na_gamebetrecord` WHERE  `un32PlayerID` = 220453 GROUP BY un32GameRoomID ORDER BY `un32ID`  desc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T12:06:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.089005s][吞吐率：11.24req/s] [内存消耗：2,834.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T12:22:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/scmj.html?uid=220453
+[ log ] a.cn/admin/game_ma_jiang/scmj.html?uid=220453 [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,580.16kb] [文件加载：35]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'scmj',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->scmj[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T12:22:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.083005s][吞吐率：12.05req/s] [内存消耗：2,834.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:16:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/index.html
+[ log ] a.cn/admin/game_ma_jiang/index.html [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,588.63kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->index[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:16:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/details.html?id=220453
+[ log ] a.cn/admin/user/details.html?id=220453 [运行时间：0.080004s][吞吐率：12.50req/s] [内存消耗：2,834.05kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'details',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '220453',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\UserController->details[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\details.html [ array (
+  0 => 'id',
+  1 => 'groupId',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:43:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/logout.html
+[ log ] a.cn/admin/login/logout.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,682.42kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'logout',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/details.html?id=220453',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->logout[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:43:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,665.21kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/logout.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:43:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/favicon.ico
+[ log ] a.cn/admin/login/favicon.ico [运行时间：0.028002s][吞吐率：35.71req/s] [内存消耗：1,606.09kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:48:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] a.cn/admin [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,664.62kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:48:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,652.41kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:48:23+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.040002s][吞吐率：25.00req/s] [内存消耗：1,665.17kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:48:31+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：2,660.48kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '45',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'supadminxj',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `na_admin` WHERE  `username` = 'supadminxj'  AND `password` = 'b65f703bcb8dc7cae8d22abfb8895d21' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1503992911,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.026002s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:48:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.092006s][吞吐率：10.87req/s] [内存消耗：2,668.80kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.033002s][吞吐率：30.30req/s] [内存消耗：1,555.83kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/font-awesome/4.5.0/css/font-awesome.min.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/font-awesome/4.5.0/css/font-awesome.min.css [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,609.75kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'font-awesome',
+  0 => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/css/bootstrap.min.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/css/bootstrap.min.css [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,609.43kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/css/ace.min.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/css/ace.min.css [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,609.36kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/css/fonts.googleapis.com.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/css/fonts.googleapis.com.css [运行时间：0.059003s][吞吐率：16.95req/s] [内存消耗：1,609.49kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/css/ace-skins.min.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/css/ace-skins.min.css [运行时间：0.060004s][吞吐率：16.67req/s] [内存消耗：1,609.45kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/js/ace-extra.min.js
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/js/ace-extra.min.js [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：1,609.30kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'js',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:53:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/css/ace-rtl.min.css
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/css/ace-rtl.min.css [运行时间：0.079005s][吞吐率：12.66req/s] [内存消耗：1,609.45kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/css,*/*;q=0.1',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'css',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T15:54:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/__ROOT__/static/ace1.4/assets/images/avatars/avatar2.png
+[ log ] a.cn/admin/index/__ROOT__/static/ace1.4/assets/images/avatars/avatar2.png [运行时间：0.069003s][吞吐率：14.49req/s] [内存消耗：1,609.73kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => '__ROOT__',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+  'static' => 'ace1.4',
+  'assets' => 'images',
+  'avatars' => 'avatar2.png',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T16:40:40+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.081005s][吞吐率：12.34req/s] [内存消耗：2,668.49kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:37:08+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.401023s][吞吐率：2.49req/s] [内存消耗：2,363.26kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '87459069-c670-91f8-4b43-9f5ce51647ea',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 1)    [ RunTime:0.020002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 2)    [ RunTime:0.037002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 3)    [ RunTime:0.045002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 4)    [ RunTime:0.050003s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 5)    [ RunTime:0.025002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 6)    [ RunTime:0.025001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 8)    [ RunTime:0.025002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 9)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 10)    [ RunTime:0.025001s ]
+[ error ] [0]数据表字段不存在:[0][D:\wamp\www\OurGame\thinkphp\library\think\db\Builder.php:95]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:37:31+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.020001s][吞吐率：50.00req/s] [内存消耗：1,442.05kb] [文件加载：27]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'd8b9d798-4f73-f818-ddcc-86244b34d61b',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T17:37:39+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.046003s][吞吐率：21.74req/s] [内存消耗：2,180.52kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'c25bb184-7e2f-22a8-1f5b-ac1e03ff6c67',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:37:48+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.100005s][吞吐率：10.00req/s] [内存消耗：2,375.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '80d0d17e-9e33-3545-393f-6249137bae16',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.014000s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '3-1' pour la clef 'uid_group_id'[D:\wamp\www\OurGame\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:37:57+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.042003s][吞吐率：23.81req/s] [内存消耗：2,180.52kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'a5d3ca95-5243-c3d4-ad7c-12d42715748d',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:38:15+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.069004s][吞吐率：14.49req/s] [内存消耗：2,179.81kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'ab17997d-bf4c-97f7-7eeb-1d1d50003e66',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:38:52+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：2,375.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'afb51a47-4cd0-83d8-07b4-7e72f7ccb277',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.015001s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '3-1' pour la clef 'uid_group_id'[D:\wamp\www\OurGame\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:39:23+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.065004s][吞吐率：15.38req/s] [内存消耗：2,179.70kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '447a58f9-c0d4-e6ed-1235-4863280f27ed',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:40:02+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.397022s][吞吐率：2.52req/s] [内存消耗：2,363.39kb] [文件加载：42]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '29e227a5-1f48-f039-b31b-a11f07e7d97a',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.014000s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 1)    [ RunTime:0.027001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 2)    [ RunTime:0.025002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 3)    [ RunTime:0.048002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 4)    [ RunTime:0.057004s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 5)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 6)    [ RunTime:0.024002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 8)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 9)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 10)    [ RunTime:0.024001s ]
+[ error ] [0]数据表字段不存在:[0][D:\wamp\www\OurGame\thinkphp\library\think\db\Builder.php:95]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:40:41+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.099005s][吞吐率：10.10req/s] [内存消耗：2,375.82kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'f410d2f2-2df9-4b65-3425-ddc7d1ec8233',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.014001s ]
+[ error ] [10501]SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicata du champ '3-1' pour la clef 'uid_group_id'[D:\wamp\www\OurGame\thinkphp\library\think\db\Connection.php:405]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:41:01+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.315018s][吞吐率：3.17req/s] [内存消耗：2,182.86kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'd86eaaf5-4e2c-e0a9-a27c-c2dbd7732d6d',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `id` FROM `na_admingroup`  [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 1)    [ RunTime:0.031002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 2)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 3)    [ RunTime:0.023001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 4)    [ RunTime:0.023001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 5)    [ RunTime:0.025001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 6)    [ RunTime:0.023002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 8)    [ RunTime:0.023001s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 9)    [ RunTime:0.023002s ]
+[ sql ] [ SQL ] INSERT INTO `na_admingroupaccess` (`uid` , `group_id`) VALUES (3 , 10)    [ RunTime:0.024001s ]
+[ sql ] [ SQL ] UPDATE `na_merchant`  SET `isAccess`=1  WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325'     [ RunTime:0.020001s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:41:12+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,600.31kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '7067eab0-46b1-fa55-1709-ae76cf1a4a89',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T17:41:20+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.070004s][吞吐率：14.28req/s] [内存消耗：2,300.86kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => 'c36b11fc-4d3a-bd2a-6962-0cd7e5320deb',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T17:50:10+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.080005s][吞吐率：12.50req/s] [内存消耗：2,669.33kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,652.98kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:49+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.043003s][吞吐率：23.25req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:50+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.041002s][吞吐率：24.39req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:09:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.031001s][吞吐率：32.26req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:52+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,711.43kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.038003s][吞吐率：26.31req/s] [内存消耗：1,652.93kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:57+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:28:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.033001s][吞吐率：30.30req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:29:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:29:06+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,711.43kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:29:07+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.042003s][吞吐率：23.81req/s] [内存消耗：1,652.93kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:29:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.039002s][吞吐率：25.64req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:29:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.038003s][吞吐率：26.31req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:30:31+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,711.43kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:30:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.038002s][吞吐率：26.31req/s] [内存消耗：1,652.93kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:30:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.041003s][吞吐率：24.39req/s] [内存消耗：1,711.83kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:30:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,653.02kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=uvhsa1ojd7op2ikq0v41jobrc4; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:19+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.031002s][吞吐率：32.26req/s] [内存消耗：1,668.41kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:28+08:00 ] 127.0.0.1 127.0.0.1 POST /
+[ log ] a.cn/ [运行时间：0.127007s][吞吐率：7.87req/s] [内存消耗：2,664.02kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '45',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'supadminxj',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `na_admin` WHERE  `username` = 'supadminxj'  AND `password` = 'b65f703bcb8dc7cae8d22abfb8895d21' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1504002688,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.063004s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:29+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.091005s][吞吐率：10.99req/s] [内存消耗：2,668.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'msg',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.276015s][吞吐率：3.62req/s] [内存消耗：3,074.25kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.001001s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.105006s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\44a9f9a9115cb5674b8bf43fccacd844.php:212]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/favicon.ico
+[ log ] a.cn/admin/game_tui_guo/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,733.09kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/gameusertel.html
+[ log ] a.cn/admin/system/gameusertel.html [运行时间：0.154009s][吞吐率：6.49req/s] [内存消耗：3,069.88kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'gameusertel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\SystemController->gameUserTel[ D:\wamp\www\OurGame\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\system\gameusertel.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuiguo` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`un32UserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY p.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`un32UserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY p.un32ID desc LIMIT 0,20   [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/favicon.ico
+[ log ] a.cn/admin/system/favicon.ico [运行时间：0.029002s][吞吐率：34.48req/s] [内存消耗：1,816.08kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:35+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.166010s][吞吐率：6.02req/s] [内存消耗：3,074.33kb] [文件加载：53]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/gameusertel.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\44a9f9a9115cb5674b8bf43fccacd844.php:212]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/show.html
+[ log ] a.cn/admin/game_tui_tong/show.html [运行时间：0.270015s][吞吐率：3.70req/s] [内存消耗：3,117.59kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\show.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'rooms',
+  5 => 'empty',
+  6 => 'time',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_7_tuitongzi`.`na_gameroom` [ RunTime:0.110006s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,20   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\6e100f5ffa913945529ef8b3c2b98f47.php:212]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:31:38+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/favicon.ico
+[ log ] a.cn/admin/game_tui_tong/favicon.ico [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,812.99kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-29T18:36:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/show.html
+[ log ] a.cn/admin/game_tui_tong/show.html [运行时间：0.117007s][吞吐率：8.55req/s] [内存消耗：3,117.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/show.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\show.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'rooms',
+  5 => 'empty',
+  6 => 'time',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_7_tuitongzi`.`na_gameroom` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,20   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\6e100f5ffa913945529ef8b3c2b98f47.php:212]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:36:01+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/gameusertel.html
+[ log ] a.cn/admin/game_tui_tong/gameusertel.html [运行时间：0.120007s][吞吐率：8.33req/s] [内存消耗：3,047.13kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'gameusertel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/show.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->gameUserTel[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\gameusertel.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuitongzi` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuitongzi` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`un32UserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY p.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuitongzi` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`un32UserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY p.un32ID desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-29T18:36:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/show.html
+[ log ] a.cn/admin/game_tui_tong/show.html [运行时间：0.150009s][吞吐率：6.67req/s] [内存消耗：3,117.66kb] [文件加载：52]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/gameusertel.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=l5f2dfq8amd0fn09pclh5jtdc3; thinkphp_show_page_trace=0|0',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\show.html [ array (
+  0 => 'data1',
+  1 => 'data2',
+  2 => 'data3',
+  3 => 'role',
+  4 => 'rooms',
+  5 => 'empty',
+  6 => 'time',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 10   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 100   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `mid`,`username` FROM `na_merchant` WHERE  `role` = 1000  AND `levelIndex` <> '0'    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser`  [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_7_tuitongzi`.`na_gameroom` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (453454,373018,220453,290292,559690,889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,20   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ error ] [8]未定义数组索引: suffix[D:\wamp\www\OurGame\runtime\temp\6e100f5ffa913945529ef8b3c2b98f47.php:212]
+
+---------------------------------------------------------------

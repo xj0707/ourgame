@@ -1,0 +1,34 @@
+<?php
+
+/**
+ *  
+ * @file   Index.php  
+ * @date   2016-8-23 16:03:10 
+ * @author Zhenxun Du<5552123@qq.com>  
+ * @version    SVN:$Id:$ 
+ */  
+
+namespace application\admin\controller;
+
+use think\Db;
+class IndexController extends CommonController{
+    /**
+     * 后台首页
+     */
+    public function index(){
+//     	$id=session('user_id');
+//     	$info=Db::name('admin')->find($id);
+    	$time=date("Y-m-d H:i:s",time());
+    	if(getenv("HTTP_X_FORWARDED_FOR")){
+    		$ip=getenv("HTTP_X_FORWARDED_FOR");
+    	}else{
+    		$ip=getenv("REMOTE_ADDR");
+    	}
+    	$this->assign('time',$time);
+    	$this->assign('ip',$ip);
+//     	$this->assign('info',$info);
+        return $this->fetch();
+    }
+    
+    
+}

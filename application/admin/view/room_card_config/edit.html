@@ -1,0 +1,99 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+
+    </div>
+    <div class="page-header">
+        <h1>
+            {$info.eGameKind|servername}
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               配置
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          
+            <form class="form-horizontal" role="form" action="" method="post" name="myfromroomcard" >
+                <input type="hidden" name="id" value="{$info.id}"/>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">一小时房卡数:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-2" value="{$info.roomcard_time|default=''}" name="roomcard_time" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" maxlength="8" />
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">一局房卡数:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-2" value="{$info.roomcard_round|default=''}" name="roomcard_round" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" maxlength="8"/>
+
+                    </div>
+                </div>
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">折扣率:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-2" value="{$info.rebate|default=''}" name="rebate" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" placeholder="请输入0-100" maxlength="3"/>
+
+                    </div>
+                </div>
+                <div class="space-4"></div>
+
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button" onclick="sendform()">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
+
+<script>
+    function sendform() {
+        if(checkpost()){
+            document.myfromroomcard.submit();
+        }
+    }
+    function checkpost() {
+        if($("input[name='roomcard_time']").val()>10000000){
+            alert('房卡数量过大！');
+            $("input[name='roomcard_time']").focus();
+            return false;
+        }
+        if($("input[name='roomcard_round']").val()>10000000){
+            alert('房卡数量过大！');
+            $("input[name='roomcard_round']").focus();
+            return false;
+        }
+        if($("input[name='rebate']").val()>100 ){
+            alert('请输入0-100之间的整数！');
+            $("input[name='rebate']").focus();
+            return false;
+        }
+        return true;
+    }
+    
+</script>
+
+
+
+
+
+
+
+
+
+

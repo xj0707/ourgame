@@ -1,0 +1,243 @@
+<!-- <script>tinymce.init({ 
+	selector:'textarea',
+	plugins:"wordcount",
+	
+	
+	});</script> -->
+    <link rel="stylesheet" href="__ROOT__/js/picker/jquery.datetimepicker.css">
+    <script src="__ROOT__/js/jquery.js"></script> 
+     <script src="__ROOT__/js/picker/jquery.datetimepicker.js"></script>
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+     
+    </div>
+    <div class="page-header">
+        <h1>
+            {:model('menu')->getParentNname()}
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               {:input('id')?'编辑':'新增'}
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          
+            <form class="form-horizontal" role="form" action="" method="post" name="myfrom" >
+            	<input type="hidden" name="id" value="{$info.id}"/>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">公告内容</label>
+                    <div class="col-sm-9">
+                         <textarea class="col-xs-10 col-sm-5"  rows="8" id="content" name='content'>{$info.content|default=''}</textarea>
+                    </div>
+                </div>   
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">单条公告显示时间:</label>
+                    <div class="col-sm-9">
+                        <!--<input type="text" id="info" style="width:100px;border:none;" value="0s" disabled="disabled" />-->
+                        <div id="info" style="height: 34px;line-height: 34px;">0s</div>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                 <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">选择群体:</label>
+                    <div class="col-sm-9">
+                        <select class="col-xs-10 col-sm-2" name='un32GameKindID'>
+                           <!--原来的逻辑--> <!--{volist name="res" id="vo"}-->
+                                <!--<option value="{$vo.un32GameHallID}" >{$vo.szGameHallName}</option>-->
+                            <!--{/volist}-->
+                            <!--{if condition='$type==1'}-->
+                            <!--<option value="{$info.un32GameHallID}" >{$info.szGameHallName}</option>-->
+                            <!--{/if}-->
+                            <!--修改版-->
+                            {volist name='res' id="vo"}
+                                {switch name="$vo" }
+                                {case value=":config('gh_0')"}<option value="{$vo}" >广场</option>{/case}
+                                {case value=":config('gh_10000')"}<option value="{$vo}" >推锅</option>{/case}
+                                {case value=":config('gh_10001')"}<option value="{$vo}" >推筒子</option>{/case}
+                                {case value=":config('gh_10002')"}<option value="{$vo}" >牌九</option>{/case}
+                                {/switch}
+                            {/volist}
+                            {if condition='$type==1'}
+                                {switch name="$info.un32GameKindID" }
+                                {case value=":config('gh_0')"}<option value="{$info.un32GameKindID}" >广场</option>{/case}
+                                {case value=":config('gh_10000')"}<option value="{$info.un32GameKindID}" >推锅</option>{/case}
+                                {case value=":config('gh_10001')"}<option value="{$info.un32GameKindID}" >推筒子</option>{/case}
+                                {case value=":config('gh_10002')"}<option value="{$info.un32GameKindID}" >牌九</option>{/case}
+                                {/switch}
+                            {/if}
+                        </select>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">开始时间:</label>
+                    <div class="col-sm-9">
+                           <input type="text" value="{$info.start_time|date='Y-m-d H:i:s',###|default=''}" id="start_time" name="s_time" placeholder="开始时间"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">结束时间:</label>
+                    <div class="col-sm-9">
+                           <input type="text" value="{$info.end_time|date='Y-m-d H:i:s',###|default=''}" id="end_time" name="e_time" placeholder="结束时间"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">播放时间间隔:</label>
+                    <div class="col-sm-9">
+                         <input type="text" id="hour" name="hour" style="width:40px;" value="{$hour|default=0}" onkeyup="this.value=this.value.replace(/\D/g,'')"/>时
+                          <input type="text" id="minute" name="minute" style="width:40px;" value="{$minute|default=0}" onkeyup="this.value=this.value.replace(/\D/g,'')"/>分
+                           <input type="text" id="second" name="second" style="width:40px;" value="{$second|default=0}" onkeyup="this.value=this.value.replace(/\D/g,'')"/>秒
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">预计播放最多次数:</label>
+                    <div class="col-sm-9">
+                            <!--<input type="text" id="info1" style="width:100px;border:none;" value="0次" disabled="disabled" />-->
+                        <div id="info1" style="height: 34px;line-height: 34px;">0次</div>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button" onclick="myfrom.submit()">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
+<script>
+$('#start_time').datetimepicker({
+	dayOfWeekStart : 1,
+	lang:'ch',
+	startDate:	'2016/11/21	'
+	});
+$('#end_time').datetimepicker({
+	dayOfWeekStart : 1,
+	lang:'ch',
+	startDate:	'2016/11/21	'
+	});
+$("#content").blur(function(){
+	 var str = $("#content").val();
+	 var len = str.length;
+	 var c_time=2+len*0.25;	
+	 $("#info").text(c_time+'s');
+	});
+$('#end_time').blur(function(){
+	var diff_time1=(Date.parse($("#end_time").val())-Date.parse($("#start_time").val()))/1000;
+	 //console.log(diff_time1);
+	var str1 = $("#content").val();
+	 var len1 = str1.length;
+	 var time1=2+len1*0.25;
+	// console.log(time);
+	 var hour1=$("#hour").val();
+	 var minute1=$("#minute").val();
+	 var second1=$("#second").val();
+	 var num_time1=hour1*3600+minute1*60+second1*1;
+	 var totaltime1=time1*1+num_time1*1;
+	// console.log(totaltime);
+	var c_time1=Math.floor(diff_time1/totaltime1);
+	
+	$("#info1").text(c_time1+'次');
+});
+
+$('#hour').blur(function(){
+	var diff_time2=(Date.parse($("#end_time").val())-Date.parse($("#start_time").val()))/1000;
+	// console.log(diff_time);
+	var str2 = $("#content").val();
+	 var len2= str2.length;
+	 var time2=2+len2*0.25;
+	// console.log(time);
+	 var hour2=$("#hour").val();
+	 //console.log(hour2);
+	 var minute2=$("#minute").val();
+	// console.log(minute2);
+	 var second2=$("#second").val();
+	 //console.log(second2);
+	 var num_time2=hour2*3600+minute2*60+second2*1;
+	 //console.log(num_time2);
+	 var totaltime2=time2*1+num_time2*1;
+	// console.log(totaltime2);
+	var c_time2=Math.floor(diff_time2/totaltime2);
+	
+	$("#info1").text(c_time2+'次');
+});
+$('#minute').blur(function(){
+	var diff_time2=(Date.parse($("#end_time").val())-Date.parse($("#start_time").val()))/1000;
+	// console.log(diff_time);
+	var str2 = $("#content").val();
+	 var len2= str2.length;
+	 var time2=2+len2*0.25;
+	// console.log(time);
+	 var hour2=$("#hour").val();
+	 //console.log(hour2);
+	 var minute2=$("#minute").val();
+	 //console.log(minute2);
+	 var second2=$("#second").val();
+	 //console.log(second2);
+	 var num_time2=hour2*3600+minute2*60+second2*1;
+	 //console.log(num_time2);
+	 var totaltime2=time2*1+num_time2*1;
+	// console.log(totaltime2);
+	var c_time2=Math.floor(diff_time2/totaltime2);
+	
+	$("#info1").text(c_time2+'次');
+});
+$('#second').blur(function(){
+	var diff_time2=(Date.parse($("#end_time").val())-Date.parse($("#start_time").val()))/1000;
+	// console.log(diff_time);
+	var str2 = $("#content").val();
+	 var len2= str2.length;
+	 var time2=2+len2*0.25;
+	// console.log(time);
+	 var hour2=$("#hour").val();
+	 //console.log(hour2);
+	 var minute2=$("#minute").val();
+	// console.log(minute2);
+	 var second2=$("#second").val();
+	//console.log(second2);
+	 var num_time2=hour2*3600+minute2*60+second2*1;
+	 //console.log(num_time2);
+	 var totaltime2=time2*1+num_time2*1;
+	 //console.log(totaltime2);
+	var c_time2=Math.floor(diff_time2/totaltime2);
+	
+	$("#info1").text(c_time2+'次');
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

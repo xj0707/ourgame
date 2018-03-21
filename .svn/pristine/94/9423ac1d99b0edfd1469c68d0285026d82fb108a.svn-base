@@ -1,0 +1,106 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+      
+    </div> 
+    <div class="page-header">
+         <h1>
+           		推锅游戏
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               玩家：'{$userinfo.szNickName}'
+            </small>
+        </h1>
+    </div>
+    
+   
+        <div class="row">
+        	<form action="{:url('likepwd')}" method="post" name='myfrom'>
+	            <div class="col-lg-2">
+	                <div class="input-group " style="margin-bottom: 10px;">
+	                	<input type="hidden" name='arrid' value="{$arrid}"/>
+	                	<input type="hidden" name='uid' value="{$uid}"/>
+	                    <input type="text" style="height: 42px;" class="form-control" name='n32GameRoomPwd' onkeyup="this.value=this.value.replace(/[^\d]/g,'')"  placeholder="输入房间号查询房间">
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default" type="button" id='but'>搜一搜</button>
+	                    </span>
+	                </div>
+	            </div>
+            </form>
+            
+        </div>
+   
+
+    
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <!--<th class="hidden-480">房间ID</th>-->
+                                <th>房间号</th>
+                               	<th class="hidden-480">开房人</th>
+                                <th class="hidden-480">玩家</th>
+                                <th>锅底</th>
+                                <th>抽水比例(赢/输)</th>
+                                <th>输赢记录</th>
+                                <th>实际收益</th>
+                                <th class="hidden-480">开始时间</th>
+                                <th class="hidden-480">结束时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="rooms" id="vo"}
+                            <tr>
+                                <!--<td class="hidden-480">{$vo.un32ID}</td> -->
+                                <td>{$vo.n32GameRoomPwd}</td>
+                                <td class="hidden-480">{$vo.szNickName}</td>
+                                <td class="hidden-480">{$userinfo.szNickName}</td>
+
+                                <td>{$vo.un32TotalAnte}</td>
+                                <td>{$vo.un32WinTaxRate}%/{$vo.un32LoseTaxRate}%</td>
+                                    {volist name="lists" id="vv"}
+                                        {if condition="$vv.un32GameRoomID==$vo.un32ID"}
+                                            <td> {$vv.n32GotScore + $vv.n32PumpWater}</td>
+                                            <td>{$vv.n32GotScore}</td>
+                                        {/if}
+                                    {/volist}
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$vo.tCreateTime)}</td>
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$vo.tCreateTime+$vo.un32RoomLiveSecond+$vo.tPauseTime)}</td>
+                                <td><a href='{:url("roomdetail","uid=$uid&roomid=$vo[un32ID]")}'>查看详情</a></td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                   {$rooms->render()}
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+             
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='n32GameRoomPwd']").val()==''){
+		alert('房间号不能为空');
+		$("input[name='n32GameRoomPwd']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+
+</script>
+

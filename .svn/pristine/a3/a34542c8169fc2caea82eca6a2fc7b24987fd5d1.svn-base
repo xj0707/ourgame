@@ -1,0 +1,1617 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : NA_GamePlaza
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-05-16 15:26:38
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `NA_Admin`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_Admin`;
+CREATE TABLE `NA_Admin` (
+  `id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(32) NOT NULL DEFAULT '',
+  `encrypt` varchar(6) NOT NULL DEFAULT '',
+  `lastloginip` int(10) NOT NULL DEFAULT '0',
+  `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0',
+  `email` varchar(40) NOT NULL DEFAULT '',
+  `mobile` varchar(11) NOT NULL DEFAULT '',
+  `realname` varchar(50) NOT NULL DEFAULT '',
+  `openid` varchar(255) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否有效(2:无效,1:有效)',
+  `updatetime` int(10) NOT NULL DEFAULT '0',
+  `merchantId` int(3) DEFAULT '0',
+  `parentId` int(10) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`) USING BTREE,
+  KEY `status` (`status`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of NA_Admin
+-- ----------------------------
+INSERT INTO `NA_Admin` VALUES ('1', 'supadminxj', 'b65f703bcb8dc7cae8d22abfb8895d21', '', '-1411542815', '1493751599', '5552123@qq.com', '18888873646', '阿杜', '', '1', '1477623198', '0', '0');
+INSERT INTO `NA_Admin` VALUES ('7', 'aaa', '30b7f636a45df065be09fb4359ee3e68', '', '-1411542815', '1493432126', '', '', '', '', '1', '0', '111', '0');
+INSERT INTO `NA_Admin` VALUES ('8', 'aaa_%_a1', '2bb95d33075d3effeaaf4c00ba4f47f7', '', '0', '0', '', '', '', '', '1', '0', '111', '7');
+INSERT INTO `NA_Admin` VALUES ('9', 'bbb', '30b7f636a45df065be09fb4359ee3e68', '', '-1411541552', '1494312662', '', '', '', '', '1', '1493722561', '123', '0');
+INSERT INTO `NA_Admin` VALUES ('10', 'admin111', '66e0564ad9c925fd46909ecf4d705465', '', '1816000051', '1493546243', '', '', '', '', '1', '0', '555', '0');
+INSERT INTO `NA_Admin` VALUES ('11', 'admin112', '66e0564ad9c925fd46909ecf4d705465', '', '1816000051', '1493546315', '', '', '', '', '1', '0', '545', '0');
+INSERT INTO `NA_Admin` VALUES ('12', 'bbb_%_b1', '2b804a51dd0fed678343d0641cdd594b', '', '0', '0', '', '', '', '', '1', '0', '123', '9');
+INSERT INTO `NA_Admin` VALUES ('13', 'admin001', '66e0564ad9c925fd46909ecf4d705465', '', '-631735293', '1494102765', '', '', '', '', '1', '0', '1', '0');
+
+-- ----------------------------
+-- Table structure for `NA_AdminGroup`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_AdminGroup`;
+CREATE TABLE `NA_AdminGroup` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `name` varchar(50) NOT NULL COMMENT '角色名称',
+  `description` text COMMENT '权限的描述',
+  `rules` varchar(500) NOT NULL DEFAULT '' COMMENT '角色拥有的权限id，多个权限 , 隔开',
+  `listorder` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='角色表';
+
+-- ----------------------------
+-- Records of NA_AdminGroup
+-- ----------------------------
+INSERT INTO `NA_AdminGroup` VALUES ('1', '推锅游戏', '可以操作推锅游戏的所有功能', '87,88,122,123,125,142,143,92,93,94,95,126,127,96,150,98', '0', '1493354501');
+INSERT INTO `NA_AdminGroup` VALUES ('2', '推筒子', '可以操作所有推筒子的权限', '100,104,137,138,139,140,141,105,144,145,146,147,148,106,149,107', '0', '1493354490');
+INSERT INTO `NA_AdminGroup` VALUES ('3', '牌九', '可以操作所有的牌九的功能', '101,108,109,110,111', '0', '1493090781');
+INSERT INTO `NA_AdminGroup` VALUES ('4', '后台公告', '管理公告，邮件，玩家反馈', '66,71,79,67,74,91,75,81,68,80,90,69,82,83', '0', '1493090821');
+INSERT INTO `NA_AdminGroup` VALUES ('5', '玩家管理', '管理玩家功能', '32,70,86,113,114,115,116,117,118,119,120,121,151,152', '0', '1493621113');
+INSERT INTO `NA_AdminGroup` VALUES ('6', '系统设置', '房卡商店配置', '102,103,128', '0', '1493090965');
+INSERT INTO `NA_AdminGroup` VALUES ('7', '购买日志', '日志查看', '97,129,130', '0', '1493091014');
+INSERT INTO `NA_AdminGroup` VALUES ('8', '子管理员配置', '添加管理员等功能', '131,132,133,134,135,136', '0', '1493091056');
+
+-- ----------------------------
+-- Table structure for `na_admingroupaccess`
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admingroupaccess`;
+CREATE TABLE `na_admingroupaccess` (
+  `uid` int(10) unsigned NOT NULL COMMENT '用户id',
+  `group_id` mediumint(8) unsigned NOT NULL COMMENT '用户组id',
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admingroupaccess
+-- ----------------------------
+INSERT INTO `na_admingroupaccess` VALUES ('7', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('8', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('12', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('7', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('9', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('10', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('11', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('13', '8');
+
+-- ----------------------------
+-- Table structure for `na_adminlog`
+-- ----------------------------
+DROP TABLE IF EXISTS `na_adminlog`;
+CREATE TABLE `na_adminlog` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `m` varchar(15) NOT NULL,
+  `c` varchar(20) NOT NULL,
+  `a` varchar(20) NOT NULL,
+  `querystring` varchar(255) NOT NULL,
+  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(20) NOT NULL,
+  `ip` int(10) NOT NULL,
+  `time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_adminlog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `NA_Broadcast`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_Broadcast`;
+CREATE TABLE `NA_Broadcast` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `content` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '公告内容',
+  `time` int(11) DEFAULT NULL,
+  `un32HallID` int(11) DEFAULT '0' COMMENT '游戏类别 0 为广场 其他为游戏的ID',
+  `start_time` int(11) DEFAULT NULL,
+  `end_time` int(11) DEFAULT NULL,
+  `interval` int(10) unsigned zerofill DEFAULT '0000000000' COMMENT '时间间隔秒数',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=54 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='公告';
+
+-- ----------------------------
+-- Records of NA_Broadcast
+-- ----------------------------
+INSERT INTO `NA_Broadcast` VALUES ('51', '亲爱的玩家，目前NA游戏属于测试期间，有任何问题可以反馈给我们，我们将及时处理，谢谢您的支持，祝您玩的愉快！', '1493800275', '0', '1493794800', '1496221200', '0000000060', '1');
+INSERT INTO `NA_Broadcast` VALUES ('52', '测试公告123', '1494311271', '0', '1494309600', '1494327600', '0000000090', '123');
+INSERT INTO `NA_Broadcast` VALUES ('53', '测试公告12334', '1494311353', '0', '1494309600', '1494342000', '0000000030', '123');
+
+-- ----------------------------
+-- Table structure for `na_buylog`
+-- ----------------------------
+DROP TABLE IF EXISTS `na_buylog`;
+CREATE TABLE `na_buylog` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `admin_id` int(11) NOT NULL COMMENT '管理员的ID',
+  `user_id` int(11) NOT NULL COMMENT '玩家ID',
+  `user_name` varchar(128) DEFAULT NULL,
+  `gem_number` int(11) NOT NULL COMMENT '购买房卡数量',
+  `coins_number` double(10,2) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `merchantId` int(3) DEFAULT '0',
+  `user_account` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COMMENT='购买日志';
+
+-- ----------------------------
+-- Records of na_buylog
+-- ----------------------------
+INSERT INTO `na_buylog` VALUES ('1', '1', '53', 'aaaavv', '2', '1.00', '1491639640', '0', null);
+INSERT INTO `na_buylog` VALUES ('2', '1', '1', '唐岗翔', '1', '11.00', '1492363969', '0', null);
+INSERT INTO `na_buylog` VALUES ('3', '1', '1', '唐岗翔', '0', '12321312.00', '1492363989', '0', null);
+INSERT INTO `na_buylog` VALUES ('4', '1', '1', '唐岗翔', '5', '0.00', '1492568508', '0', null);
+INSERT INTO `na_buylog` VALUES ('5', '1', '1', '唐岗翔', '10', '10.00', '1492947104', '0', 'tgx01');
+INSERT INTO `na_buylog` VALUES ('6', '1', '55', '111111', '5', '5.00', '1492954750', '0', 'test3');
+INSERT INTO `na_buylog` VALUES ('7', '1', '60', '555', '6', '6.00', '1492954787', '0', 'test8');
+INSERT INTO `na_buylog` VALUES ('8', '1', '53', 'test1', '2', '2.00', '1492954829', '0', 'test1');
+INSERT INTO `na_buylog` VALUES ('9', '1', '81', 'natest18', '1', '1.00', '1492954977', '0', 'natest18');
+INSERT INTO `na_buylog` VALUES ('10', '1', '57', 'kj9', '22', '12.00', '1493456609', '0', 'test5');
+INSERT INTO `na_buylog` VALUES ('11', '9', '64', 'kevin', '1', '10.00', '1493619839', '123', 'natest1');
+INSERT INTO `na_buylog` VALUES ('12', '9', '64', 'kevin', '0', '100.00', '1493632555', '123', 'natest1');
+
+-- ----------------------------
+-- Table structure for `NA_GameHall`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameHall`;
+CREATE TABLE `NA_GameHall` (
+  `un32GameHallID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '大厅ID',
+  `un32GameKindID` int(11) NOT NULL DEFAULT '0' COMMENT '类型ID',
+  `szGameHallName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅名称',
+  `szGameHallPwd` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅密码',
+  PRIMARY KEY (`un32GameHallID`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_GameHall
+-- ----------------------------
+INSERT INTO `NA_GameHall` VALUES ('0', '0', '广场', '');
+INSERT INTO `NA_GameHall` VALUES ('6', '10000', '推锅大厅一', 'abc123');
+INSERT INTO `NA_GameHall` VALUES ('7', '10001', '推筒子大厅一', 'abc123');
+
+-- ----------------------------
+-- Table structure for `NA_GameMail`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameMail`;
+CREATE TABLE `NA_GameMail` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL COMMENT '标题',
+  `content` text COMMENT '内容',
+  `time` int(11) DEFAULT '0',
+  `from` varchar(255) DEFAULT NULL COMMENT '来源于谁发送的',
+  `fromto` int(11) DEFAULT NULL COMMENT '发送给那个玩家ID',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=124 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of NA_GameMail
+-- ----------------------------
+INSERT INTO `NA_GameMail` VALUES ('114', '集合咯', '觉得房价水电费绝对是发', '1493721737', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('115', 'jfdgjdf', 'jgfdjgfdkgjkfd ', '1493721783', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('116', '123', 'fdgfdg', '1493721944', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('117', '321', '321', '1493721996', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('118', 'hihj ', 'hjjhkhlhl', '1493722047', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('119', 'hhh', '呵呵哈哈哈', '1493722579', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('120', '好了', '收到没有？', '1493730452', '系统管理员', '86', '123');
+INSERT INTO `NA_GameMail` VALUES ('121', '欢迎光临', '亲爱的玩家，NA 游戏已经进入测试阶段，希望您在游戏中找到欢乐，有任何问题都可以提交反馈给我们，祝您玩的愉快！', '1493800416', '系统管理员', '0', '1');
+INSERT INTO `NA_GameMail` VALUES ('122', '测试邮件', '123', '1494311399', '系统管理员', '0', '123');
+INSERT INTO `NA_GameMail` VALUES ('123', '测试', '111', '1494381571', '系统管理员', '0', '123');
+
+-- ----------------------------
+-- Table structure for `NA_GameUser`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameUser`;
+CREATE TABLE `NA_GameUser` (
+  `un32UserID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `eUserCate` int(11) unsigned zerofill NOT NULL COMMENT '0:无;1:普通玩家',
+  `szUserName` char(30) COLLATE utf8_unicode_ci NOT NULL COMMENT '用户名',
+  `password` char(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '登录密码',
+  `szNickName` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '昵称',
+  `n64Score` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分',
+  `dGold` double(20,6) NOT NULL DEFAULT '0.000000' COMMENT '金币',
+  `n64RoomCardNum` bigint(20) NOT NULL DEFAULT '0' COMMENT '房卡数量',
+  `tRegisteUTCMilsec` bigint(20) NOT NULL DEFAULT '0' COMMENT '注册时间',
+  `tLastLoginUTCMilsec` bigint(20) NOT NULL DEFAULT '0' COMMENT '最后一次登录时间',
+  `bSex` tinyint(1) NOT NULL DEFAULT '0' COMMENT '性别',
+  `status` tinyint(1) DEFAULT '1' COMMENT '1为正常0为禁用',
+  `islogin` tinyint(1) DEFAULT '0' COMMENT '0为未在线1为在线',
+  `userPicture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '头像图片url',
+  `userAge` int(11) DEFAULT NULL COMMENT '用户年龄',
+  `userPhone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户电话号码',
+  `userQQ` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户QQ号',
+  `userWeiXin` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户微信号',
+  `un8HeadImage` tinyint(1) NOT NULL DEFAULT '0' COMMENT '头像编号',
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32UserID`),
+  UNIQUE KEY `szUserName` (`szUserName`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=137 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+-- ----------------------------
+-- Records of NA_GameUser
+-- ----------------------------
+INSERT INTO `NA_GameUser` VALUES ('1', '00000000000', 'tgx01', '123456', '唐岗翔', '0', '900123216.999990', '99989362', '0', '1492644886', '0', '1', '0', null, null, null, null, null, '8', '0');
+INSERT INTO `NA_GameUser` VALUES ('2', '00000000000', 'caowen', '123456', '曹文', '0', '887460.000000', '2876', '0', '1492592871', '0', '1', '0', null, null, null, null, null, '17', '0');
+INSERT INTO `NA_GameUser` VALUES ('7', '00000000000', 'zzzzzz1', '123456', 'z1', '0', '666666262.000000', '66667078', '0', '1493756780', '0', '1', '0', null, null, null, null, null, '9', '0');
+INSERT INTO `NA_GameUser` VALUES ('53', '00000000001', 'test1', '123456', 'test1', '0', '99110.000000', '10390', '0', '1494299757', '0', '1', '0', null, null, null, null, null, '17', '0');
+INSERT INTO `NA_GameUser` VALUES ('54', '00000000000', 'test2', '123456', 'test2', '0', '88624.000000', '23776', '0', '1493735782', '0', '1', '0', null, null, null, null, null, '6', '0');
+INSERT INTO `NA_GameUser` VALUES ('55', '00000000000', 'test3', '123456', '111111', '0', '77726.000000', '9822', '0', '1494299807', '0', '1', '0', null, null, null, null, null, '22', '0');
+INSERT INTO `NA_GameUser` VALUES ('56', '00000000000', 'test4', '123456', 'test4', '0', '66650.000000', '58628', '0', '1493740883', '0', '1', '0', null, null, null, null, null, '4', '0');
+INSERT INTO `NA_GameUser` VALUES ('57', '00000000000', 'test5', '123456', 'kj9', '0', '1234792.000000', '34563698', '0', '1494232592', '0', '1', '0', null, null, null, null, null, '13', '0');
+INSERT INTO `NA_GameUser` VALUES ('58', '00000000000', 'test6', '123456', '444444', '0', '234268.000000', '4588', '0', '1493748253', '0', '1', '0', null, null, null, null, null, '27', '0');
+INSERT INTO `NA_GameUser` VALUES ('59', '00000000000', 'test7', '123456', null, '0', '2269.000000', '54227', '0', '1493753462', '0', '1', '0', null, null, null, null, null, '1', '0');
+INSERT INTO `NA_GameUser` VALUES ('60', '00000000000', 'test8', '123456', '555', '0', '2345060.000000', '124', '0', '1493755799', '0', '1', '0', null, null, null, null, null, '7', '0');
+INSERT INTO `NA_GameUser` VALUES ('61', '00000000000', 'test9', '123456', 'fufu', '0', '1233728.000000', '8', '0', '1494319184', '0', '1', '0', null, null, null, null, null, '13', '0');
+INSERT INTO `NA_GameUser` VALUES ('62', '00000000000', 'test10', '123456', '456456', '0', '986309.000000', '1644', '0', '1492649490', '0', '1', '0', null, null, null, null, null, '22', '0');
+INSERT INTO `NA_GameUser` VALUES ('64', '00000000000', 'natest1', '123456', 'natest', '0', '999581.000000', '643', '0', '1494487612', '0', '1', '0', null, null, null, null, null, '12', '123');
+INSERT INTO `NA_GameUser` VALUES ('65', '00000000000', 'natest2', '123456', '牛逼', '0', '999783.000000', '198', '0', '1494315756', '0', '1', '0', null, null, null, null, null, '14', '123');
+INSERT INTO `NA_GameUser` VALUES ('66', '00000000000', 'natest3', '123456', 'nigel', '0', '999310.000000', '1006', '0', '1494577942', '0', '1', '0', null, null, null, null, null, '13', '123');
+INSERT INTO `NA_GameUser` VALUES ('67', '00000000000', 'natest4', '123456', '123', '0', '999603.000000', '450', '0', '1494830121', '0', '1', '0', null, null, null, null, null, '12', '123');
+INSERT INTO `NA_GameUser` VALUES ('68', '00000000000', 'natest5', '123456', 'natest5', '0', '999855.000000', '768', '0', '1494497894', '0', '1', '0', null, null, null, null, null, '27', '123');
+INSERT INTO `NA_GameUser` VALUES ('69', '00000000000', 'natest6', '123456', 'natest6', '0', '999675.000000', '246', '0', '1494830102', '0', '1', '0', null, null, null, null, null, '6', '123');
+INSERT INTO `NA_GameUser` VALUES ('70', '00000000000', 'natest7', '123456', 'natest7', '0', '999963.000000', '0', '0', '1494831105', '0', '1', '0', null, null, null, null, null, '20', '123');
+INSERT INTO `NA_GameUser` VALUES ('71', '00000000000', 'natest8', '123456', 'natest8', '0', '999707.000000', '172', '0', '1494834190', '0', '1', '0', null, null, null, null, null, '14', '123');
+INSERT INTO `NA_GameUser` VALUES ('72', '00000000000', 'natest9', '123456', '笪多喝水', '0', '999111.000000', '1254', '0', '1494833775', '0', '1', '0', null, null, null, null, null, '6', '123');
+INSERT INTO `NA_GameUser` VALUES ('73', '00000000000', 'natest10', '123456', 'natest10', '0', '999839.000000', '202', '0', '1494833912', '0', '1', '0', null, null, null, null, null, '23', '123');
+INSERT INTO `NA_GameUser` VALUES ('74', '00000000000', 'natest11', '123456', 'natest11', '0', '999711.000000', '546', '0', '1494831168', '0', '1', '0', null, null, null, null, null, '20', '123');
+INSERT INTO `NA_GameUser` VALUES ('75', '00000000000', 'natest12', '123456', '777', '0', '999917.000000', '90', '0', '1494555197', '0', '1', '0', null, null, null, null, null, '8', '123');
+INSERT INTO `NA_GameUser` VALUES ('76', '00000000000', 'natest13', '123456', 'natest13', '0', '999783.000000', '390', '0', '1494833183', '0', '1', '0', null, null, null, null, null, '30', '123');
+INSERT INTO `NA_GameUser` VALUES ('77', '00000000000', 'natest14', '123456', 'natest14', '0', '999783.000000', '426', '0', '1494902591', '0', '1', '0', null, null, null, null, null, '32', '123');
+INSERT INTO `NA_GameUser` VALUES ('78', '00000000000', 'natest15', '123456', 'natest15', '0', '999927.000000', '138', '0', '1494906413', '0', '1', '0', null, null, null, null, null, '14', '123');
+INSERT INTO `NA_GameUser` VALUES ('79', '00000000000', 'natest16', '123456', 'natest16', '0', '999999.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '0', '123');
+INSERT INTO `NA_GameUser` VALUES ('80', '00000000000', 'natest17', '123456', 'natest17', '0', '999999.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '0', '123');
+INSERT INTO `NA_GameUser` VALUES ('81', '00000000000', 'natest18', '123456', 'natest18', '0', '999784.000000', '337', '0', '1492485077', '0', '1', '0', null, null, null, null, null, '22', '123');
+INSERT INTO `NA_GameUser` VALUES ('82', '00000000000', 'natest19', '123456', 'natest19', '0', '999999.000000', '0', '0', '1494588923', '0', '1', '0', null, null, null, null, null, '28', '123');
+INSERT INTO `NA_GameUser` VALUES ('83', '00000000000', 'natest20', '123456', 'natest20', '0', '999855.000000', '258', '0', '1494491838', '0', '1', '0', null, null, null, null, null, '8', '123');
+INSERT INTO `NA_GameUser` VALUES ('85', '00000000000', 'natest21', '123456', 'natest21', '0', '999927.000000', '126', '0', '1493724137', '0', '1', '0', null, null, null, null, null, '18', '123');
+INSERT INTO `NA_GameUser` VALUES ('86', '00000000000', 'natest22', '123456', 'natest22', '0', '999805.000000', '340', '0', '1494839444', '0', '1', '0', null, null, null, null, null, '7', '123');
+INSERT INTO `NA_GameUser` VALUES ('87', '00000000000', 'natest23', '123456', 'ArisJK', '0', '999603.000000', '420', '0', '1493723786', '0', '1', '0', null, null, null, null, null, '15', '123');
+INSERT INTO `NA_GameUser` VALUES ('88', '00000000000', 'natest24', '123456', 'natest24', '0', '999999.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '0', '123');
+INSERT INTO `NA_GameUser` VALUES ('89', '00000000000', 'natest25', '123456', 'natest25', '0', '999999.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '0', '123');
+INSERT INTO `NA_GameUser` VALUES ('90', '00000000000', 'natest26', '123456', 'natest26', '0', '999999.000000', '0', '0', '1492351913', '0', '1', '0', null, null, null, null, null, '10', '123');
+INSERT INTO `NA_GameUser` VALUES ('91', '00000000000', 'natest27', '123456', 'natest27', '0', '999999.000000', '0', '0', '1493753180', '0', '1', '0', null, null, null, null, null, '29', '123');
+INSERT INTO `NA_GameUser` VALUES ('92', '00000000000', 'natest28', '123456', 'natest28', '0', '999843.000000', '312', '0', '1492245455', '0', '1', '0', null, null, null, null, null, '22', '123');
+INSERT INTO `NA_GameUser` VALUES ('93', '00000000000', 'natest29', '123456', 'natest29', '0', '999995.000000', '10', '0', '1492245345', '0', '1', '0', null, null, null, null, null, '2', '123');
+INSERT INTO `NA_GameUser` VALUES ('94', '00000000000', 'natest30', '123456', 'natest30', '0', '999927.000000', '48', '0', '1492442826', '0', '1', '0', null, null, null, null, null, '13', '123');
+INSERT INTO `NA_GameUser` VALUES ('95', '00000000000', 'bingo1', '123456', 'b1', '0', '999999495.000000', '498', '0', '1492675111', '0', '1', '0', null, null, null, null, null, '18', '123');
+INSERT INTO `NA_GameUser` VALUES ('96', '00000000000', 'kaifang', '123456', 'K1', '0', '99207.000000', '1182', '0', '1492600072', '0', '1', '0', null, null, null, null, null, '8', '123');
+INSERT INTO `NA_GameUser` VALUES ('97', '00000000000', 'bingo2', '123456', 'b2', '0', '99819.000000', '264', '0', '1492397773', '0', '1', '0', null, null, null, null, null, '9', '123');
+INSERT INTO `NA_GameUser` VALUES ('101', '00000000000', 'player01', '123456', '及时雨宋江', '0', '9999928.000000', '138', '0', '1493791843', '0', '1', '0', null, null, null, null, null, '1', '1');
+INSERT INTO `NA_GameUser` VALUES ('102', '00000000000', 'player02', '123456', '玉麒麟卢俊义', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '2', '1');
+INSERT INTO `NA_GameUser` VALUES ('103', '00000000000', 'player03', '123456', '智多星吴用', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('104', '00000000000', 'player04', '123456', '入云龙公孙胜', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('105', '00000000000', 'player05', '123456', '大刀关胜', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('106', '00000000000', 'player06', '123456', '豹子头林冲', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('107', '00000000000', 'player07', '123456', '霹雳火秦明', '0', '10000000.000000', '0', '0', '1493795518', '0', '1', '0', null, null, null, null, null, '32', '1');
+INSERT INTO `NA_GameUser` VALUES ('108', '00000000000', 'player08', '123456', '双鞭呼延灼', '0', '10000000.000000', '0', '0', '1493796656', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('109', '00000000000', 'player09', '123456', '小李广花荣', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('110', '00000000000', 'player10', '123456', '小旋风柴进', '0', '10000000.000000', '0', '0', '1493807507', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('111', '00000000000', 'player11', '123456', '扑天雕李应', '0', '10000000.000000', '0', '0', '1494222293', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('112', '00000000000', 'player12', '123456', '美髯公朱仝', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('113', '00000000000', 'player13', '123456', '花和尚鲁智深', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('114', '00000000000', 'player14', '123456', '行者武松', '0', '9999928.000000', '108', '0', '1494833653', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('115', '00000000000', 'player15', '123456', '双枪董平', '0', '10000000.000000', '0', '0', '1493799687', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('116', '00000000000', 'player16', '123456', '没羽箭张清', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('117', '00000000000', 'player17', '123456', '九纹龙史进', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('118', '00000000000', 'player18', '123456', '没遮拦穆弘', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('119', '00000000000', 'player19', '123456', '退翅虎雷横', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('120', '00000000000', 'player20', '123456', '混江龙李俊', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('121', '00000000000', 'player21', '123456', '立地太岁阮小二', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('122', '00000000000', 'player22', '123456', '船火儿张横', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('123', '00000000000', 'player23', '123456', '短命二郎阮小五', '0', '10000000.000000', '0', '0', '1493799671', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('124', '00000000000', 'player24', '123456', '浪里白条张顺', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('125', '00000000000', 'player25', '123456', '活阎罗阮小七', '0', '9999928.000000', '144', '0', '1493799645', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('126', '00000000000', 'player26', '123456', '病关索杨雄', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('127', '00000000000', 'player27', '123456', '拼命三郎石秀', '0', '9999928.000000', '126', '0', '1493796609', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('128', '00000000000', 'player28', '123456', '两头蛇解珍', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('129', '00000000000', 'player29', '123456', '双尾蝎解宝', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('130', '00000000000', 'player30', '123456', '浪子燕青', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('131', '00000000000', 'player31', '123456', '青面兽杨志', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('132', '00000000000', 'player32', '123456', '金枪手徐宁', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('133', '00000000000', 'player33', '123456', '急先锋索超', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('134', '00000000000', 'player34', '123456', '神行太保戴宗', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('135', '00000000000', 'player35', '123456', '赤发鬼刘唐', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `NA_GameUser` VALUES ('136', '00000000000', 'player36', '123456', '黑旋风李逵', '0', '10000000.000000', '0', '0', '0', '0', '1', '0', null, null, null, null, null, '3', '1');
+
+-- ----------------------------
+-- Table structure for `NA_Help`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_Help`;
+CREATE TABLE `NA_Help` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) COLLATE utf8_bin DEFAULT NULL,
+  `content` varchar(1024) COLLATE utf8_bin DEFAULT NULL COMMENT '帮助手册内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='帮助手册';
+
+-- ----------------------------
+-- Records of NA_Help
+-- ----------------------------
+INSERT INTO `NA_Help` VALUES ('1', '帮助一', '这是帮助一这是帮助一这是帮助一这是帮助一这是帮助一');
+
+-- ----------------------------
+-- Table structure for `NA_MailOperation`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_MailOperation`;
+CREATE TABLE `NA_MailOperation` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32MailID` int(11) NOT NULL DEFAULT '0',
+  `un32UserID` int(11) NOT NULL DEFAULT '0',
+  `bIfReaded` tinyint(1) NOT NULL DEFAULT '0',
+  `bIfDeleted` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=74 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_MailOperation
+-- ----------------------------
+INSERT INTO `NA_MailOperation` VALUES ('24', '114', '83', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('25', '115', '83', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('26', '117', '83', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('27', '116', '83', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('28', '118', '83', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('29', '119', '83', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('30', '119', '69', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('31', '120', '86', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('32', '114', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('33', '115', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('34', '116', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('35', '117', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('36', '118', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('37', '119', '66', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('38', '118', '75', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('39', '119', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('40', '118', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('41', '117', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('42', '116', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('43', '115', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('44', '114', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('45', '119', '70', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('46', '121', '107', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('47', '121', '101', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('48', '121', '127', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('49', '121', '114', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('50', '122', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('51', '119', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('52', '117', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('53', '118', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('54', '115', '67', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('55', '122', '67', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('56', '117', '67', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('57', '119', '67', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('58', '114', '67', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('59', '116', '67', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('60', '118', '67', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('61', '116', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('62', '123', '73', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('63', '123', '67', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('64', '123', '71', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('65', '123', '69', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('66', '122', '69', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('67', '122', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('68', '123', '72', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('69', '123', '64', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('70', '122', '64', '1', '0');
+INSERT INTO `NA_MailOperation` VALUES ('71', '122', '73', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('72', '123', '70', '1', '1');
+INSERT INTO `NA_MailOperation` VALUES ('73', '122', '70', '1', '0');
+
+-- ----------------------------
+-- Table structure for `NA_Menu`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_Menu`;
+CREATE TABLE `NA_Menu` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜单栏id',
+  `name` char(40) NOT NULL DEFAULT '' COMMENT '菜单名称',
+  `parentid` smallint(6) DEFAULT '0' COMMENT '父级id',
+  `icon` varchar(20) NOT NULL DEFAULT '' COMMENT '菜单图标',
+  `c` varchar(20) DEFAULT NULL COMMENT '控制器名称',
+  `a` varchar(20) DEFAULT NULL COMMENT '方法名称',
+  `data` varchar(50) NOT NULL DEFAULT '',
+  `tip` varchar(255) NOT NULL DEFAULT '' COMMENT '提示',
+  `group` varchar(50) DEFAULT '' COMMENT '分组',
+  `listorder` smallint(6) unsigned NOT NULL DEFAULT '999' COMMENT '排序',
+  `display` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示(1:显示,2:不显示)',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`),
+  KEY `parentid` (`parentid`)
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8 COMMENT='后台管理菜单栏';
+
+-- ----------------------------
+-- Records of NA_Menu
+-- ----------------------------
+INSERT INTO `NA_Menu` VALUES ('1', '管理员设置', '0', 'fa-users', 'Admin', 'index', '', '', '', '1', '2', '1493376669');
+INSERT INTO `NA_Menu` VALUES ('31', '系统首页', '0', 'fa-bank', 'Index', 'index', '', '', '', '0', '2', '1493376660');
+INSERT INTO `NA_Menu` VALUES ('32', '玩家管理', '0', 'fa-child', 'User', 'index', '', '', '', '2', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('42', '菜单管理', '0', 'fa-cogs', 'Menu', 'index', '', '', '', '11', '1', '1493376745');
+INSERT INTO `NA_Menu` VALUES ('43', '查看管理员', '43', '', 'Admin', 'index', '', '', '', '999', '2', '1482306721');
+INSERT INTO `NA_Menu` VALUES ('44', '添加管理员', '72', '', 'Admin', 'add', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('45', '修改管理员', '72', '', 'Admin', 'edit', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('46', '删除管理员', '72', '', 'Admin', 'del', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('47', '角色管理', '0', ' fa-user', 'Group', 'index', '', '', '', '10', '1', '1493620754');
+INSERT INTO `NA_Menu` VALUES ('48', '查看角色', '47', '', 'Group', 'index', '', '', '', '777', '1', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('49', '添加角色', '62', '', 'Group', 'add', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('50', '修改角色', '62', '', 'Group', 'edit', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('51', '删除角色', '62', '', 'Group', 'del', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('53', '查看管理员', '1', '', 'Admin', 'index', '', '', '', '777', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('55', '查看权限', '48', '', 'Group', 'rule', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('56', '查看菜单', '42', '', 'Menu', 'index', '', '', '', '888', '1', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('58', '修改菜单', '64', '', 'Menu', 'edit', '', '', '', '999', '2', '1491538222');
+INSERT INTO `NA_Menu` VALUES ('59', '删除菜单', '64', '', 'Menu', 'del', '', '', '', '999', '2', '1491538222');
+INSERT INTO `NA_Menu` VALUES ('60', '日志管理', '0', ' fa-list-ul', 'Log', 'index', '', '', '', '12', '2', '1493376719');
+INSERT INTO `NA_Menu` VALUES ('62', '角色操作', '47', '', 'Group', 'info', '', '', '', '888', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('63', '修改权限', '48', '', 'Group', 'editRule', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('64', '菜单操作', '42', '', 'Menu', 'info', '', '', '', '888', '2', '1491538222');
+INSERT INTO `NA_Menu` VALUES ('65', '添加菜单', '64', '', 'Menu', 'add', '', '', '', '888', '2', '1491538222');
+INSERT INTO `NA_Menu` VALUES ('66', '后台公告', '0', ' fa-bullhorn', 'System', 'index', '', '', '', '3', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('67', '发布公告', '71', '', 'System', 'announce', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('68', '发布邮件', '75', '', 'System', 'sendmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('69', '玩家反馈', '66', '', 'System', 'propose', '', '', '', '999', '1', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('70', '所有玩家', '32', '', 'User', 'index', '', '', '', '999', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('71', '查看公告', '66', '', 'System', 'index', '', '', '', '888', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('72', '管理员操作', '1', '', 'Admin', 'info', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('74', '删除公告', '71', '', 'System', 'del', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('75', '查看邮件', '66', '', 'System', 'showmail', '', '', '', '888', '1', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('77', '添加帮助手册', '76', '', 'System', 'addhelp', '', '', '', '999', '2', '1482805694');
+INSERT INTO `NA_Menu` VALUES ('78', '修改帮助手册', '76', '', 'System', 'edithelp', '', '', '', '999', '2', '1482805694');
+INSERT INTO `NA_Menu` VALUES ('79', '公告详情', '71', '', 'System', 'show', '', '', '', '888', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('80', '删除邮件', '75', '', 'System', 'delmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('81', '邮件详情', '75', '', 'System', 'showinfo', '', '', '', '888', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('82', '反馈详情', '69', '', 'System', 'showpro', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('83', '删除反馈', '69', '', 'System', 'delpro', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('84', '删除手册', '76', '', 'System', 'del', '', '', '', '999', '2', '1482805694');
+INSERT INTO `NA_Menu` VALUES ('85', '帮助手册详情', '76', '', 'System', 'show', '', '', '', '888', '2', '1482805694');
+INSERT INTO `NA_Menu` VALUES ('86', 'id查询', '70', '', 'User', 'likeid', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('87', '推锅游戏', '0', ' fa-gamepad', 'Game', 'index', '', '', '', '4', '1', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('88', '推锅游戏房间', '87', '', 'GameTuiGuo', 'show', '', '', '', '999', '1', '1493717086');
+INSERT INTO `NA_Menu` VALUES ('90', '修改邮件', '75', '', 'System', 'editmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('91', '修改公告', '71', '', 'System', 'editbc', '', '', '', '999', '2', '1491538220');
+INSERT INTO `NA_Menu` VALUES ('92', '推锅游戏系统推荐模板', '87', '', 'System', 'template', '', '', '', '999', '1', '1493716897');
+INSERT INTO `NA_Menu` VALUES ('93', '添加模板', '92', '', 'System', 'addtemplate', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('94', '修改模板', '92', '', 'System', 'edittem', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('95', '删除模板', '92', '', 'System', 'deltem', '', '', '', '999', '2', '1491538221');
+INSERT INTO `NA_Menu` VALUES ('96', '推锅游戏玩家自定义模板', '87', '', 'System', 'gameusertel', '', '', '', '999', '1', '1493716927');
+INSERT INTO `NA_Menu` VALUES ('97', '添加金币和房卡日志', '0', 'fa-shopping-cart ', 'BuyLog', 'index', '', '', '', '999', '1', '1493717001');
+INSERT INTO `NA_Menu` VALUES ('98', '下注搓牌时间配置', '87', '', 'System', 'time', '', '', '', '999', '1', '1493717167');
+INSERT INTO `NA_Menu` VALUES ('100', '推筒子', '0', ' fa-gamepad', 'GameTuiTong', 'index', '', '', '', '5', '1', '1493264119');
+INSERT INTO `NA_Menu` VALUES ('101', '牌九', '0', ' fa-gamepad', 'GamePaiJiu', 'index', '', '', '', '6', '2', '1493376688');
+INSERT INTO `NA_Menu` VALUES ('102', '系统设置', '0', 'fa-cog ', 'System', 'index', '', '', '', '7', '1', '1491538222');
+INSERT INTO `NA_Menu` VALUES ('103', '房卡商店', '102', '', 'System', 'roomcard', '', '', '', '999', '1', null);
+INSERT INTO `NA_Menu` VALUES ('104', '推筒子游戏房间', '100', '', 'GameTuiTong', 'show', '', '', '', '999', '1', '1493717101');
+INSERT INTO `NA_Menu` VALUES ('105', '推筒子系统推荐模板', '100', '', 'GameTuiTong', 'template', '', '', '', '999', '1', '1493716951');
+INSERT INTO `NA_Menu` VALUES ('106', '推筒子玩家自定义模板', '100', '', 'GameTuiTong', 'gameusertel', '', '', '', '999', '1', '1493716977');
+INSERT INTO `NA_Menu` VALUES ('107', '下注搓牌时间配置', '100', '', 'GameTuiTong', 'time', '', '', '', '999', '1', '1493717147');
+INSERT INTO `NA_Menu` VALUES ('108', '游戏房间', '101', '', 'GamePaiJiu', 'show', '', '', '', '999', '1', '1493264630');
+INSERT INTO `NA_Menu` VALUES ('109', '系统模板', '101', '', 'GamePaiJiu', 'template', '', '', '', '999', '1', null);
+INSERT INTO `NA_Menu` VALUES ('110', '玩家模板', '101', '', 'GamePaiJiu', 'usertel', '', '', '', '999', '1', null);
+INSERT INTO `NA_Menu` VALUES ('111', '时间配置', '101', '', 'GamePaiJiu', 'time', '', '', '', '999', '1', null);
+INSERT INTO `NA_Menu` VALUES ('112', '大厅配置', '0', 'fa-map', 'System', 'gamehall', '', '', '', '999', '2', '1493376730');
+INSERT INTO `NA_Menu` VALUES ('113', '用户名查询玩家', '70', '', 'User', 'likeusername', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('114', '购买金币或房卡', '70', '', 'User', 'addcoins', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('115', '发送邮件', '70', '', 'User', 'mail', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('116', '查看所有游戏', '70', '', 'User', 'details', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('117', '推锅游戏房间', '70', '', 'User', 'roomshow', '', '', '', '999', '2', '1492766744');
+INSERT INTO `NA_Menu` VALUES ('118', '推筒子游戏', '70', '', 'User', 'tuitong', '', '', '', '999', '2', '1492766760');
+INSERT INTO `NA_Menu` VALUES ('119', '牌九游戏', '70', '', 'User', 'paijiu', '', '', '', '999', '2', '1492766772');
+INSERT INTO `NA_Menu` VALUES ('120', '推锅游戏房间房间号查询', '70', '', 'User', 'likepwd', '', '', '', '999', '2', '1492767058');
+INSERT INTO `NA_Menu` VALUES ('121', '查看每回合详情', '70', '', 'User', 'roomdetail', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('122', '房间号查询房间', '88', '', 'GameTuiGuo', 'likeroomid', '', '', '', '999', '2', '1492933716');
+INSERT INTO `NA_Menu` VALUES ('123', '查看结果', '88', '', 'GameTuiGuo', 'details', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('125', '用户名查询', '88', '', 'GameTuiGuo', 'likeuser', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('126', '应用模板', '92', '', 'System', 'activetem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('127', '解除应用模板', '92', '', 'System', 'disactivetem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('128', '修改', '103', '', 'System', 'editrc', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('129', '用户名查询', '97', '', 'BuyLog', 'searchname', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('130', '时间查询', '97', '', 'BuyLog', 'liketime', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('131', '子管理员配置', '0', 'fa-cog', 'SonAdmin', 'index', '', '', '', '999', '1', '1492957149');
+INSERT INTO `NA_Menu` VALUES ('132', '所有管理员', '131', '', 'SonAdmin', 'index', '', '', '', '999', '1', null);
+INSERT INTO `NA_Menu` VALUES ('133', '查看管理员', '132', '', 'SonAdmin', 'info', '', '', '', '999', '2', '1493029574');
+INSERT INTO `NA_Menu` VALUES ('134', '编辑管理员', '132', '', 'SonAdmin', 'edit', '', '', '', '999', '2', '1493089465');
+INSERT INTO `NA_Menu` VALUES ('135', '添加管理员', '132', '', 'SonAdmin', 'add', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('136', '删除管理员', '132', '', 'SonAdmin', 'del', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('137', '房间号查询房间', '104', '', 'GameTuiTong', 'likeroomid', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('138', '用户名查询', '104', '', 'GameTuiTong', 'likeuser', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('139', '详情', '104', '', 'GameTuiTong', 'details', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('140', '局详情', '104', '', 'GameTuiTong', 'juinfo', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('141', '回合详情', '104', '', 'GameTuiTong', 'huiinfo', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('142', '每局详情', '88', '', 'GameTuiGuo', 'juinfo', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('143', '回合详情', '88', '', 'GameTuiGuo', 'huiinfo', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('144', '添加模板', '105', '', 'GameTuiTong', 'addtemplate', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('145', '修改模板', '105', '', 'GameTuiTong', 'edittem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('146', '删除模板', '105', '', 'GameTuiTong', 'deltem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('147', '应用模板', '105', '', 'GameTuiTong', 'activetem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('148', '解除应用模板', '105', '', 'GameTuiTong', 'disactivetem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('149', '删除玩家模板', '106', '', 'GameTuiTong', 'userdeltem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('150', '删除玩家模板', '96', '', 'System', 'userdeltem', '', '', '', '999', '2', null);
+INSERT INTO `NA_Menu` VALUES ('151', '推筒子房间号查询', '70', '', 'User', 'likepwdtong', '', '', '', '999', '2', '1493621097');
+INSERT INTO `NA_Menu` VALUES ('152', '推筒子回合详情', '70', '', 'User', 'roomdetailtong', '', '', '', '999', '2', null);
+
+-- ----------------------------
+-- Table structure for `na_propose`
+-- ----------------------------
+DROP TABLE IF EXISTS `na_propose`;
+CREATE TABLE `na_propose` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) DEFAULT NULL COMMENT '反馈的内容',
+  `phone` varchar(50) DEFAULT NULL COMMENT '建议人的联系方式',
+  `time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='反馈表';
+
+-- ----------------------------
+-- Records of na_propose
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `NA_RoomCardConsumeOrder`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_RoomCardConsumeOrder`;
+CREATE TABLE `NA_RoomCardConsumeOrder` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32GameUserID` int(11) NOT NULL,
+  `un32ConsumeCardNum` int(11) NOT NULL,
+  `un32LogTime` int(11) NOT NULL,
+  `bIfCancel` tinyint(1) NOT NULL DEFAULT '0',
+  `un32GameHallID` int(11) NOT NULL,
+  `eType` tinyint(1) NOT NULL,
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=781 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_RoomCardConsumeOrder
+-- ----------------------------
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('151', '57', '96', '1492112851', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('152', '1', '6', '1492133355', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('153', '1', '6', '1492133366', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('154', '1', '12', '1492133373', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('155', '57', '6', '1492133413', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('156', '57', '18', '1492133441', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('157', '57', '96', '1492133453', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('158', '1', '12', '1492134147', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('159', '1', '18', '1492134151', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('160', '1', '6', '1492134156', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('161', '1', '6', '1492134159', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('162', '1', '6', '1492134161', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('163', '1', '6', '1492134164', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('164', '1', '6', '1492134167', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('165', '1', '6', '1492134170', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('166', '1', '6', '1492134173', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('167', '1', '6', '1492134175', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('168', '53', '12', '1492135648', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('169', '53', '18', '1492135656', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('170', '53', '30', '1492135663', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('171', '53', '96', '1492135671', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('172', '53', '288', '1492135688', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('173', '53', '30', '1492135700', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('174', '53', '6', '1492135708', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('175', '62', '96', '1492135844', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('176', '61', '96', '1492136500', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('177', '53', '6', '1492137890', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('178', '53', '96', '1492140613', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('179', '53', '96', '1492141013', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('180', '1', '96', '1492141593', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('181', '55', '96', '1492142545', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('182', '55', '96', '1492142615', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('183', '55', '96', '1492142623', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('184', '55', '96', '1492142660', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('185', '1', '96', '1492143569', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('186', '1', '96', '1492143600', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('187', '62', '96', '1492143662', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('188', '62', '36', '1492143674', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('189', '62', '96', '1492143813', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('190', '2', '96', '1492148098', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('191', '53', '6', '1492151365', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('192', '53', '288', '1492151472', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('193', '58', '96', '1492151865', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('194', '1', '96', '1492151980', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('195', '53', '12', '1492152147', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('196', '53', '288', '1492152154', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('197', '53', '288', '1492152173', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('198', '53', '288', '1492152179', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('199', '53', '288', '1492152185', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('200', '53', '288', '1492152191', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('201', '54', '96', '1492152669', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('202', '1', '96', '1492152765', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('203', '53', '96', '1492153055', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('204', '62', '96', '1492157484', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('205', '53', '96', '1492158244', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('206', '7', '6', '1492159432', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('207', '54', '96', '1492159795', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('208', '7', '96', '1492165055', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('209', '1', '6', '1492167634', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('210', '53', '96', '1492170182', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('211', '53', '96', '1492170198', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('212', '1', '96', '1492171447', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('213', '7', '6', '1492172325', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('214', '53', '288', '1492175047', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('215', '1', '96', '1492179856', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('216', '1', '96', '1492182199', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('217', '53', '96', '1492189797', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('218', '1', '18', '1492227613', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('219', '53', '96', '1492227979', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('220', '54', '96', '1492236448', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('221', '54', '96', '1492236497', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('222', '54', '36', '1492237246', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('223', '54', '6', '1492237248', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('224', '54', '96', '1492237415', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('225', '53', '288', '1492237640', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('226', '1', '6', '1492238120', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('227', '1', '6', '1492238783', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('228', '1', '96', '1492240067', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('229', '1', '96', '1492241666', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('230', '54', '6', '1492244178', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('231', '54', '288', '1492244389', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('232', '54', '288', '1492245676', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('233', '54', '288', '1492245684', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('234', '54', '288', '1492245690', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('235', '54', '282', '1492245698', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('236', '53', '96', '1492247265', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('237', '65', '12', '1492247990', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('238', '7', '96', '1492248563', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('239', '53', '96', '1492250923', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('240', '7', '96', '1492252551', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('241', '7', '96', '1492252660', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('242', '53', '96', '1492268263', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('243', '53', '96', '1492268842', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('244', '53', '96', '1492269076', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('245', '53', '6', '1492269180', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('246', '1', '6', '1492309891', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('247', '1', '6', '1492310669', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('248', '1', '6', '1492310675', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('249', '61', '6', '1492311477', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('250', '54', '6', '1492312295', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('251', '2', '6', '1492356940', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('252', '7', '96', '1492361706', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('253', '57', '96', '1492362015', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('254', '57', '6', '1492366145', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('255', '57', '96', '1492366776', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('256', '96', '96', '1492367291', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('257', '96', '6', '1492367934', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('258', '1', '96', '1492397388', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('259', '96', '96', '1492397665', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('260', '62', '96', '1492398870', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('261', '62', '96', '1492398877', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('262', '96', '6', '1492401476', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('263', '53', '96', '1492401681', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('264', '62', '96', '1492404027', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('265', '62', '96', '1492404029', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('266', '62', '96', '1492404029', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('267', '95', '6', '1492404301', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('268', '95', '36', '1492404351', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('269', '95', '246', '1492404360', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('270', '95', '36', '1492404364', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('271', '53', '96', '1492409723', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('272', '54', '96', '1492410116', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('273', '55', '96', '1492410241', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('274', '62', '96', '1492411529', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('275', '60', '6', '1492414290', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('276', '60', '18', '1492414388', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('277', '60', '18', '1492414393', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('278', '97', '96', '1492414464', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('279', '65', '96', '1492416236', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('280', '1', '6', '1492416290', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('281', '95', '96', '1492416869', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('282', '1', '96', '1492417022', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('283', '1', '96', '1492417278', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('284', '57', '96', '1492417379', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('285', '1', '96', '1492418148', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('286', '72', '96', '1492419152', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('287', '73', '96', '1492420249', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('288', '1', '6', '1492422666', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('289', '95', '96', '1492423520', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('290', '95', '96', '1492432796', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('291', '96', '96', '1492433449', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('292', '94', '96', '1492435145', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('293', '1', '6', '1492438418', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('294', '81', '96', '1492485291', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('295', '72', '96', '1492485437', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('296', '81', '96', '1492485480', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('297', '81', '96', '1492486366', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('298', '95', '96', '1492486574', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('299', '1', '12', '1492488498', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('300', '53', '96', '1492489365', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('301', '96', '96', '1492498029', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('302', '53', '96', '1492499811', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('303', '62', '12', '1492500512', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('304', '95', '96', '1492500712', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('305', '62', '6', '1492501694', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('306', '62', '6', '1492502400', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('307', '53', '96', '1492503513', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('308', '57', '96', '1492504939', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('309', '94', '96', '1492528786', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('310', '1', '96', '1492565363', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('311', '1', '6', '1492565394', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('312', '62', '6', '1492565985', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('313', '61', '96', '1492566444', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('314', '1', '96', '1492567244', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('315', '62', '96', '1492570797', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('316', '95', '96', '1492572272', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('317', '61', '6', '1492572513', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('318', '61', '6', '1492573137', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('319', '61', '96', '1492574027', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('320', '53', '96', '1492575589', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('321', '1', '96', '1492576286', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('322', '53', '96', '1492585454', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('323', '1', '6', '1492585471', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('324', '53', '96', '1492587177', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('325', '61', '96', '1492587195', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('326', '61', '96', '1492587438', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('327', '62', '6', '1492588138', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('328', '1', '6', '1492588294', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('329', '53', '96', '1492590754', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('330', '53', '96', '1492590837', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('331', '61', '96', '1492592768', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('332', '72', '6', '1492592769', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('333', '1', '96', '1492595002', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('334', '64', '96', '1492595956', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('335', '1', '96', '1492596322', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('336', '66', '96', '1492597343', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('337', '1', '96', '1492598085', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('338', '1', '96', '1492598510', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('339', '96', '96', '1492602669', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('340', '96', '96', '1492610222', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('341', '96', '96', '1492610255', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('342', '96', '96', '1492610325', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('343', '96', '96', '1492610403', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('344', '96', '96', '1492610416', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('345', '96', '96', '1492610464', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('346', '54', '96', '1492612609', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('347', '96', '96', '1492619523', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('348', '96', '12', '1492621231', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('349', '96', '96', '1492630918', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('350', '53', '6', '1492635230', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('351', '7', '96', '1492637107', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('352', '58', '96', '1492638753', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('353', '1', '6', '1492645082', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('354', '62', '6', '1492649817', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('355', '62', '6', '1492650454', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('356', '62', '6', '1492653264', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('357', '58', '96', '1492653574', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('358', '87', '180', '1492654417', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('359', '61', '6', '1492655124', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('360', '53', '12', '1492656675', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('361', '1', '6', '1492657068', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('362', '87', '96', '1492657444', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('363', '58', '96', '1492658449', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('364', '1', '96', '1492658456', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('365', '58', '96', '1492658902', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('366', '58', '96', '1492659354', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('367', '1', '96', '1492659876', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('368', '62', '96', '1492661682', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('369', '1', '6', '1492669858', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('370', '58', '24', '1492672343', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('371', '1', '96', '1492673655', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('372', '55', '6', '1492678778', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('373', '55', '6', '1492679603', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('374', '55', '6', '1492680219', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('375', '55', '6', '1492680964', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('376', '55', '6', '1492684441', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('377', '55', '6', '1492684818', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('378', '55', '6', '1492684820', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('379', '1', '6', '1492686260', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('380', '7', '6', '1492688795', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('381', '53', '6', '1492696353', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('382', '72', '96', '1492740854', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('383', '72', '96', '1492752404', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('384', '87', '96', '1492755769', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('385', '87', '96', '1492755770', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('386', '1', '96', '1492766653', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('387', '95', '96', '1492766784', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('388', '53', '24', '1492958785', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('389', '53', '24', '1492959082', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('390', '53', '24', '1492960496', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('391', '53', '0', '1492962045', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('392', '53', '0', '1492962600', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('393', '53', '0', '1492962657', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('394', '53', '0', '1492962842', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('395', '53', '24', '1492963105', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('396', '53', '6', '1492963150', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('397', '53', '24', '1492963917', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('398', '53', '24', '1492972066', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('399', '53', '6', '1492972425', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('400', '53', '6', '1492972461', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('401', '53', '6', '1492972466', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('402', '53', '24', '1492972482', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('403', '53', '24', '1492972484', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('404', '53', '24', '1492972485', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('405', '53', '24', '1492972488', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('406', '53', '6', '1492973202', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('407', '53', '24', '1492973316', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('408', '53', '6', '1492973324', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('409', '53', '6', '1492974471', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('410', '53', '6', '1492974708', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('411', '53', '6', '1492974740', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('412', '53', '6', '1492974806', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('413', '53', '6', '1492974816', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('414', '53', '6', '1492974832', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('415', '64', '6', '1492998620', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('416', '58', '6', '1493020964', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('417', '53', '24', '1493022304', '1', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('418', '54', '24', '1493358026', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('419', '53', '24', '1493375671', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('420', '54', '24', '1493456996', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('421', '64', '24', '1493457099', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('422', '53', '24', '1493457150', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('423', '64', '24', '1493460311', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('424', '53', '24', '1493460427', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('425', '53', '24', '1493461525', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('426', '64', '12', '1493462734', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('427', '65', '12', '1493474738', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('428', '53', '24', '1493474957', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('429', '53', '24', '1493474962', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('430', '53', '24', '1493475008', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('431', '53', '24', '1493475318', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('432', '53', '24', '1493475530', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('433', '53', '24', '1493475658', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('434', '53', '24', '1493475673', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('435', '53', '18', '1493475722', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('436', '53', '6', '1493475727', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('437', '53', '18', '1493475757', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('438', '53', '6', '1493475870', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('439', '54', '24', '1493476044', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('440', '53', '24', '1493476216', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('441', '53', '24', '1493476230', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('442', '53', '24', '1493476621', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('443', '64', '24', '1493476713', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('444', '64', '24', '1493491165', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('445', '64', '24', '1493491171', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('446', '65', '24', '1493491563', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('447', '61', '24', '1493512047', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('448', '64', '6', '1493517054', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('449', '64', '6', '1493520912', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('450', '64', '6', '1493530470', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('451', '64', '6', '1493530545', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('452', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('453', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('454', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('455', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('456', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('457', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('458', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('459', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('460', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('461', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('462', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('463', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('464', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('465', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('466', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('467', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('468', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('469', '64', '6', '1493530546', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('470', '64', '6', '1493534385', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('471', '64', '6', '1493535120', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('472', '64', '6', '1493535121', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('473', '64', '6', '1493535121', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('474', '64', '6', '1493535121', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('475', '64', '6', '1493536632', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('476', '65', '24', '1493536775', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('477', '64', '6', '1493537609', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('478', '64', '6', '1493537877', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('479', '64', '24', '1493537991', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('480', '57', '24', '1493539920', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('481', '57', '24', '1493539962', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('482', '64', '24', '1493539967', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('483', '64', '24', '1493540503', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('484', '54', '24', '1493540510', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('485', '64', '6', '1493540720', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('486', '55', '24', '1493541271', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('487', '64', '6', '1493542267', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('488', '54', '6', '1493544101', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('489', '54', '6', '1493546199', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('490', '64', '6', '1493546808', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('491', '54', '6', '1493549060', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('492', '65', '6', '1493549276', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('493', '54', '6', '1493554794', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('494', '65', '24', '1493555700', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('495', '66', '24', '1493556802', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('496', '66', '24', '1493556805', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('497', '66', '24', '1493557265', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('498', '66', '24', '1493557279', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('499', '66', '24', '1493557280', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('500', '66', '24', '1493557409', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('501', '66', '24', '1493557409', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('502', '66', '24', '1493557410', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('503', '66', '24', '1493557410', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('504', '53', '24', '1493567660', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('505', '53', '24', '1493567686', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('506', '53', '24', '1493571897', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('507', '53', '24', '1493574890', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('508', '66', '6', '1493609602', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('509', '53', '24', '1493609924', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('510', '53', '24', '1493612421', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('511', '57', '24', '1493690093', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('512', '64', '6', '1493691947', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('513', '64', '6', '1493694876', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('514', '68', '6', '1493696283', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('515', '64', '24', '1493696511', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('516', '53', '24', '1493702544', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('517', '53', '24', '1493702544', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('518', '64', '24', '1493709463', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('519', '64', '24', '1493711327', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('520', '53', '6', '1493714400', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('521', '53', '24', '1493720559', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('522', '53', '24', '1493721716', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('523', '53', '24', '1493721884', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('524', '83', '6', '1493721905', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('525', '83', '6', '1493722277', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('526', '83', '6', '1493722284', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('527', '64', '6', '1493722605', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('528', '64', '6', '1493723641', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('529', '86', '6', '1493723761', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('530', '64', '6', '1493723800', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('531', '86', '12', '1493725585', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('532', '67', '6', '1493726566', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('533', '67', '6', '1493731266', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('534', '85', '6', '1493732163', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('535', '85', '6', '1493732530', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('536', '85', '6', '1493732531', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('537', '86', '24', '1493733262', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('538', '67', '24', '1493733750', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('539', '66', '12', '1493734407', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('540', '65', '6', '1493735014', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('541', '54', '24', '1493735900', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('542', '55', '24', '1493736178', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('543', '65', '6', '1493736611', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('544', '55', '24', '1493737342', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('545', '7', '24', '1493737940', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('546', '7', '24', '1493738188', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('547', '55', '24', '1493738230', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('548', '68', '24', '1493739031', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('549', '56', '24', '1493741021', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('550', '56', '24', '1493741215', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('551', '64', '6', '1493742478', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('552', '64', '6', '1493742522', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('553', '64', '24', '1493742561', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('554', '64', '6', '1493743440', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('555', '68', '6', '1493745762', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('556', '68', '6', '1493745914', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('557', '55', '24', '1493746310', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('558', '61', '24', '1493746432', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('559', '7', '24', '1493746680', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('560', '7', '24', '1493746948', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('561', '58', '24', '1493748343', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('562', '64', '6', '1493749723', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('563', '67', '6', '1493749937', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('564', '61', '6', '1493750234', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('565', '7', '24', '1493750818', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('566', '7', '24', '1493750826', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('567', '7', '24', '1493750870', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('568', '66', '24', '1493751461', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('569', '64', '6', '1493751854', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('570', '61', '24', '1493752211', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('571', '7', '24', '1493752230', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('572', '61', '24', '1493752241', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('573', '64', '6', '1493752336', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('574', '7', '24', '1493752975', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('575', '61', '24', '1493753316', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('576', '59', '24', '1493753518', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('577', '75', '24', '1493755492', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('578', '75', '6', '1493755519', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('579', '75', '6', '1493755570', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('580', '68', '12', '1493755745', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('581', '75', '6', '1493755801', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('582', '65', '6', '1493756300', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('583', '69', '6', '1493756596', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('584', '69', '24', '1493757184', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('585', '71', '24', '1493758172', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('586', '71', '6', '1493761141', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('587', '71', '6', '1493761555', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('588', '70', '6', '1493762440', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('589', '70', '6', '1493762446', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('590', '70', '6', '1493776590', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('591', '101', '6', '1493805859', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('592', '127', '6', '1493866002', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('593', '127', '6', '1493866122', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('594', '127', '6', '1493868167', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('595', '61', '24', '1493868977', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('596', '61', '24', '1493869564', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('597', '114', '6', '1493898993', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('598', '114', '6', '1493899414', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('599', '114', '6', '1493899415', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('600', '114', '6', '1494083999', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('601', '114', '6', '1494085583', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('602', '71', '24', '1494208362', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('603', '66', '6', '1494209102', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('604', '65', '6', '1494211184', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('605', '64', '6', '1494216427', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('606', '64', '6', '1494225413', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('607', '64', '6', '1494232175', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('608', '57', '24', '1494232709', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('609', '64', '6', '1494233089', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('610', '69', '6', '1494233495', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('611', '68', '6', '1494234106', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('612', '65', '6', '1494234705', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('613', '69', '6', '1494235365', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('614', '69', '6', '1494235984', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('615', '67', '6', '1494236725', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('616', '114', '6', '1494237366', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('617', '69', '6', '1494237481', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('618', '69', '6', '1494238282', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('619', '66', '6', '1494238293', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('620', '66', '6', '1494238357', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('621', '71', '6', '1494238610', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('622', '71', '6', '1494238610', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('623', '67', '6', '1494239531', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('624', '70', '6', '1494243676', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('625', '70', '6', '1494243683', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('626', '70', '6', '1494243683', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('627', '70', '6', '1494243683', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('628', '70', '6', '1494243683', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('629', '70', '6', '1494243683', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('630', '53', '24', '1494299865', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('631', '70', '6', '1494301832', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('632', '70', '6', '1494301832', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('633', '71', '6', '1494311444', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('634', '64', '6', '1494312811', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('635', '53', '24', '1494315575', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('636', '65', '6', '1494315776', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('637', '66', '24', '1494317281', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('638', '66', '24', '1494317282', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('639', '71', '6', '1494317355', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('640', '71', '6', '1494317397', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('641', '71', '24', '1494317428', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('642', '67', '6', '1494317515', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('643', '53', '24', '1494317794', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('644', '66', '6', '1494319215', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('645', '66', '6', '1494320566', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('646', '71', '6', '1494321014', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('647', '71', '6', '1494321192', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('648', '67', '6', '1494321379', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('649', '67', '6', '1494322074', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('650', '71', '18', '1494323990', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('651', '61', '24', '1494325238', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('652', '71', '6', '1494325711', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('653', '71', '24', '1494325803', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('654', '71', '24', '1494325852', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('655', '71', '6', '1494325933', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('656', '71', '6', '1494325973', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('657', '71', '24', '1494326005', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('658', '67', '6', '1494381935', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('659', '68', '6', '1494383350', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('660', '68', '6', '1494383351', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('661', '67', '6', '1494384175', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('662', '67', '24', '1494384420', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('663', '69', '6', '1494386277', '0', '0', '0');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('664', '69', '6', '1494387237', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('665', '68', '6', '1494387759', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('666', '69', '6', '1494388360', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('667', '69', '6', '1494389496', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('668', '83', '6', '1494390316', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('669', '67', '6', '1494396812', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('670', '71', '6', '1494397663', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('671', '67', '6', '1494399852', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('672', '83', '6', '1494401170', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('673', '67', '6', '1494467201', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('674', '69', '6', '1494467444', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('675', '71', '6', '1494469632', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('676', '71', '6', '1494469683', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('677', '71', '24', '1494472070', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('678', '71', '6', '1494472414', '0', '1', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('679', '71', '6', '1494472416', '0', '1', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('680', '71', '6', '1494472418', '0', '1', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('681', '72', '6', '1494472516', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('682', '72', '24', '1494486857', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('683', '69', '12', '1494487388', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('684', '67', '6', '1494494865', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('685', '67', '6', '1494494868', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('686', '67', '6', '1494494871', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('687', '64', '6', '1494495634', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('688', '71', '6', '1494495939', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('689', '68', '6', '1494498760', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('690', '64', '6', '1494499348', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('691', '68', '6', '1494553321', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('692', '68', '6', '1494553483', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('693', '75', '6', '1494555239', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('694', '71', '6', '1494555748', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('695', '67', '6', '1494555812', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('696', '67', '6', '1494555945', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('697', '67', '6', '1494555957', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('698', '72', '6', '1494559238', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('699', '72', '6', '1494560466', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('700', '67', '6', '1494561638', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('701', '69', '6', '1494561761', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('702', '75', '6', '1494562458', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('703', '75', '6', '1494563308', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('704', '74', '6', '1494565543', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('705', '74', '6', '1494572383', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('706', '70', '6', '1494573708', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('707', '75', '6', '1494574271', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('708', '74', '6', '1494575168', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('709', '72', '6', '1494575467', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('710', '72', '6', '1494575932', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('711', '72', '6', '1494576097', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('712', '72', '6', '1494576146', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('713', '66', '6', '1494578041', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('714', '66', '6', '1494578041', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('715', '72', '12', '1494578374', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('716', '69', '6', '1494579096', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('717', '66', '24', '1494580919', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('718', '74', '6', '1494581212', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('719', '71', '6', '1494582284', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('720', '75', '6', '1494583790', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('721', '71', '6', '1494584972', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('722', '75', '6', '1494585726', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('723', '71', '6', '1494587566', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('724', '69', '6', '1494588136', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('725', '69', '6', '1494814344', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('726', '69', '6', '1494817267', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('727', '69', '6', '1494817267', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('728', '69', '6', '1494817267', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('729', '69', '6', '1494817267', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('730', '69', '6', '1494817267', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('731', '69', '6', '1494817268', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('732', '69', '6', '1494817268', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('733', '69', '6', '1494817330', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('734', '67', '6', '1494819931', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('735', '76', '24', '1494820678', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('736', '69', '6', '1494822716', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('737', '69', '6', '1494830137', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('738', '74', '6', '1494831233', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('739', '69', '24', '1494832448', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('740', '76', '6', '1494833191', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('741', '67', '6', '1494833882', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('742', '67', '6', '1494833883', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('743', '72', '24', '1494834302', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('744', '71', '6', '1494834339', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('745', '67', '24', '1494834616', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('746', '69', '6', '1494837713', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('747', '67', '6', '1494837946', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('748', '72', '24', '1494838372', '0', '1', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('749', '72', '24', '1494838382', '0', '1', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('750', '71', '24', '1494838505', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('751', '73', '24', '1494838715', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('752', '71', '24', '1494839017', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('753', '69', '24', '1494839049', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('754', '86', '6', '1494839504', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('755', '72', '24', '1494842632', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('756', '67', '6', '1494899205', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('757', '67', '24', '1494899673', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('758', '76', '6', '1494901109', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('759', '69', '24', '1494901487', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('760', '69', '6', '1494901503', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('761', '72', '24', '1494901876', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('762', '67', '24', '1494902516', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('763', '77', '6', '1494903046', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('764', '76', '6', '1494903093', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('765', '67', '24', '1494903519', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('766', '71', '6', '1494903673', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('767', '86', '6', '1494903729', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('768', '69', '24', '1494904149', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('769', '69', '24', '1494906386', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('770', '69', '24', '1494906943', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('771', '71', '6', '1494908051', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('772', '67', '24', '1494908212', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('773', '78', '6', '1494908279', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('774', '72', '6', '1494908380', '0', '0', '6');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('775', '72', '24', '1494908446', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('776', '71', '24', '1494908529', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('777', '67', '24', '1494916842', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('778', '69', '24', '1494917046', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('779', '69', '24', '1494918505', '0', '0', '7');
+INSERT INTO `NA_RoomCardConsumeOrder` VALUES ('780', '69', '6', '1494918638', '0', '0', '6');
+
+-- ----------------------------
+-- Table structure for `NA_RoomShopping`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_RoomShopping`;
+CREATE TABLE `NA_RoomShopping` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `roomcard` int(11) DEFAULT NULL,
+  `coins` double(10,2) DEFAULT NULL,
+  `state` tinyint(1) DEFAULT '0' COMMENT '0正常价格，1特惠价格',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='房卡商店';
+
+-- ----------------------------
+-- Records of NA_RoomShopping
+-- ----------------------------
+INSERT INTO `NA_RoomShopping` VALUES ('13', '10', '4.00', '1', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('14', '24', '10.00', '1', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('15', '72', '36.00', '0', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('16', '96', '48.00', '0', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('17', '120', '60.00', '0', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('18', '144', '72.00', '0', '123');
+INSERT INTO `NA_RoomShopping` VALUES ('19', '10', '5.00', '1', '1');
+INSERT INTO `NA_RoomShopping` VALUES ('20', '24', '12.00', '0', '1');
+INSERT INTO `NA_RoomShopping` VALUES ('21', '72', '36.00', '0', '1');
+INSERT INTO `NA_RoomShopping` VALUES ('22', '96', '48.00', '0', '1');
+INSERT INTO `NA_RoomShopping` VALUES ('23', '120', '60.00', '0', '1');
+INSERT INTO `NA_RoomShopping` VALUES ('24', '144', '72.00', '0', '1');
+
+-- ----------------------------
+-- Table structure for `na_upgradelog`
+-- ----------------------------
+DROP TABLE IF EXISTS `na_upgradelog`;
+CREATE TABLE `na_upgradelog` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LastUpgradeTime` bigint(20) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of na_upgradelog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `NA_UserFeedback`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_UserFeedback`;
+CREATE TABLE `NA_UserFeedback` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32GameUserID` int(11) NOT NULL DEFAULT '0',
+  `szContactInfo` varchar(1024) COLLATE utf8_bin DEFAULT NULL,
+  `szContent` varchar(1024) COLLATE utf8_bin DEFAULT NULL,
+  `un32LogTime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_UserFeedback
+-- ----------------------------
+INSERT INTO `NA_UserFeedback` VALUES ('1', '7', 'iiiii', 'hhhhh', '1492169611');
+INSERT INTO `NA_UserFeedback` VALUES ('2', '7', 'iiiii', 'hhhhh', '1492169625');
+INSERT INTO `NA_UserFeedback` VALUES ('3', '7', 'iiiii', 'hhhhh', '1492169628');
+INSERT INTO `NA_UserFeedback` VALUES ('4', '7', 'iiiii', 'hhhhh', '1492169633');
+INSERT INTO `NA_UserFeedback` VALUES ('5', '2', 'hdhdh', 'hdhdhdh', '1492169648');
+INSERT INTO `NA_UserFeedback` VALUES ('6', '53', '123123', '123123', '1492170424');
+INSERT INTO `NA_UserFeedback` VALUES ('7', '53', '1111', '111', '1492189762');
+INSERT INTO `NA_UserFeedback` VALUES ('8', '54', '11111', '1111', '1492237274');
+INSERT INTO `NA_UserFeedback` VALUES ('9', '54', '156156', '6165156', '1492237291');
+INSERT INTO `NA_UserFeedback` VALUES ('10', '7', '斤斤计较', '斌帮', '1492364226');
+INSERT INTO `NA_UserFeedback` VALUES ('11', '1', '韩国人', '，', '1492397467');
+INSERT INTO `NA_UserFeedback` VALUES ('12', '57', 'Hbbbb', 'Hhhhhhhjju', '1492417635');
+INSERT INTO `NA_UserFeedback` VALUES ('13', '1', 'wjsjwjejen', 'akakakwkwkw', '1492567271');
+INSERT INTO `NA_UserFeedback` VALUES ('14', '87', 'aris@na77.com', '1当咱家正在语音交流时.此时开始咪牌！我只能听到该玩家语音内容一半', '1492656784');
+INSERT INTO `NA_UserFeedback` VALUES ('15', '87', 'aris@na77.com', '2.在一个位置投注后，更改位置后，原有座位筹码显示错误', '1492656857');
+INSERT INTO `NA_UserFeedback` VALUES ('16', '87', 'aris@na77.com', '3.旁住人员看到某个位置空缺时.是否可以当即占位', '1492656922');
+INSERT INTO `NA_UserFeedback` VALUES ('17', '87', 'aris@na77.com', '4.房主给玩家添加积分迟钝问题！！是点击效果问题', '1492656981');
+INSERT INTO `NA_UserFeedback` VALUES ('18', '72', 'trevor@na.com', '庄应该可以随时下庄', '1492659743');
+INSERT INTO `NA_UserFeedback` VALUES ('19', '72', 'trevor@na.com', '点击开牌应该直接显示出自己的点数', '1492659838');
+INSERT INTO `NA_UserFeedback` VALUES ('20', '72', 'trevor@na.com', '不喝水局，庄锅底为负数是应当直接从本金中扣除', '1492659968');
+INSERT INTO `NA_UserFeedback` VALUES ('21', '72', 'trevor@na.com', '战绩 时间错误', '1492660040');
+INSERT INTO `NA_UserFeedback` VALUES ('22', '53', '123123123', '13231', '1492958701');
+INSERT INTO `NA_UserFeedback` VALUES ('23', '83', '伸进去', '很好很好很好', '1493722087');
+INSERT INTO `NA_UserFeedback` VALUES ('24', '83', '哦哦哦', '呃呃呃额额', '1493722116');
+INSERT INTO `NA_UserFeedback` VALUES ('25', '67', '240', '很不错', '1494322609');
+INSERT INTO `NA_UserFeedback` VALUES ('26', '73', 'uhuuu', 'ggghhh', '1494381597');
+INSERT INTO `NA_UserFeedback` VALUES ('27', '73', '悟空', '6666', '1494381810');
+
+-- ----------------------------
+-- Table structure for `NA_UserGoldConsumeRecord`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_UserGoldConsumeRecord`;
+CREATE TABLE `NA_UserGoldConsumeRecord` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32UserID` int(11) NOT NULL DEFAULT '0',
+  `un32HallID` int(11) NOT NULL DEFAULT '0',
+  `dConsumeGold` double(20,6) NOT NULL DEFAULT '0.000000',
+  `dRestGold` double(20,6) NOT NULL DEFAULT '0.000000',
+  `un32GotRoomCard` int(11) NOT NULL DEFAULT '0',
+  `un32LogTime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=248 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_UserGoldConsumeRecord
+-- ----------------------------
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('2', '57', '0', '12.000000', '1235312.000000', '24', '1492112427');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('3', '57', '0', '36.000000', '1235276.000000', '72', '1492112429');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('4', '57', '0', '36.000000', '1235240.000000', '72', '1492112837');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('5', '57', '6', '36.000000', '1235204.000000', '72', '1492112863');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('6', '57', '6', '4.000000', '1235200.000000', '10', '1492112865');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('7', '57', '6', '12.000000', '1235188.000000', '24', '1492112867');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('8', '57', '6', '72.000000', '1235116.000000', '144', '1492112896');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('9', '1', '0', '36.000000', '9999999903.999990', '72', '1492133272');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('10', '1', '0', '36.000000', '9999999867.999990', '72', '1492133275');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('11', '1', '0', '4.000000', '9999999863.999990', '10', '1492134088');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('12', '1', '0', '12.000000', '9999999851.999990', '24', '1492134090');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('13', '1', '0', '36.000000', '9999999815.999990', '72', '1492134092');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('14', '1', '0', '48.000000', '9999999767.999990', '96', '1492134099');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('15', '1', '0', '60.000000', '9999999707.999990', '140', '1492134101');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('16', '1', '0', '72.000000', '9999999635.999990', '144', '1492134103');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('17', '57', '0', '36.000000', '1235080.000000', '72', '1492134308');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('18', '57', '0', '12.000000', '1235068.000000', '24', '1492134311');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('19', '57', '0', '72.000000', '1234996.000000', '144', '1492134314');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('20', '57', '0', '60.000000', '1234936.000000', '140', '1492134317');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('21', '57', '0', '60.000000', '1234876.000000', '140', '1492134320');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('22', '57', '0', '60.000000', '1234816.000000', '140', '1492134322');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('23', '54', '0', '36.000000', '88852.000000', '72', '1492137735');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('24', '54', '0', '72.000000', '88780.000000', '144', '1492137738');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('25', '53', '0', '36.000000', '99356.000000', '72', '1492137749');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('26', '53', '0', '72.000000', '99284.000000', '144', '1492137752');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('27', '55', '0', '4.000000', '77773.000000', '10', '1492137768');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('28', '55', '0', '12.000000', '77761.000000', '24', '1492137770');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('29', '56', '0', '4.000000', '66662.000000', '10', '1492137782');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('30', '56', '0', '12.000000', '66650.000000', '24', '1492137783');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('31', '53', '0', '4.000000', '99280.000000', '10', '1492140269');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('32', '55', '0', '4.000000', '77757.000000', '10', '1492142751');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('33', '2', '0', '36.000000', '888780.000000', '72', '1492147998');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('34', '2', '0', '36.000000', '888744.000000', '72', '1492148000');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('35', '2', '0', '36.000000', '888708.000000', '72', '1492148003');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('36', '2', '0', '36.000000', '888672.000000', '72', '1492148005');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('37', '2', '0', '36.000000', '888636.000000', '72', '1492148007');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('38', '2', '6', '60.000000', '888576.000000', '140', '1492148087');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('39', '54', '0', '12.000000', '88768.000000', '24', '1492151946');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('40', '53', '0', '36.000000', '99244.000000', '72', '1492159033');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('41', '2', '0', '72.000000', '888504.000000', '144', '1492169562');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('42', '2', '0', '72.000000', '888432.000000', '144', '1492169564');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('43', '7', '0', '12.000000', '666666654.000000', '24', '1492169565');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('44', '2', '0', '72.000000', '888360.000000', '144', '1492169567');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('45', '2', '0', '72.000000', '888288.000000', '144', '1492169569');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('46', '2', '0', '72.000000', '888216.000000', '144', '1492169573');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('47', '2', '0', '72.000000', '888144.000000', '144', '1492169575');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('48', '2', '0', '72.000000', '888072.000000', '144', '1492169579');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('49', '2', '0', '72.000000', '888000.000000', '144', '1492169580');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('50', '2', '0', '36.000000', '887964.000000', '72', '1492170747');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('51', '2', '0', '72.000000', '887892.000000', '144', '1492179655');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('52', '2', '0', '72.000000', '887820.000000', '144', '1492179672');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('53', '2', '0', '72.000000', '887748.000000', '144', '1492179676');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('54', '2', '0', '72.000000', '887676.000000', '144', '1492179678');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('55', '54', '0', '36.000000', '88732.000000', '72', '1492237530');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('56', '7', '0', '36.000000', '666666618.000000', '72', '1492237874');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('57', '7', '0', '4.000000', '666666614.000000', '10', '1492237879');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('58', '7', '0', '12.000000', '666666602.000000', '24', '1492237883');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('59', '7', '0', '60.000000', '666666542.000000', '140', '1492237887');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('60', '1', '0', '72.000000', '9999999563.999990', '144', '1492238859');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('61', '93', '0', '4.000000', '999995.000000', '10', '1492245353');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('62', '92', '0', '36.000000', '999963.000000', '72', '1492246254');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('63', '92', '6', '12.000000', '999951.000000', '24', '1492246372');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('64', '92', '6', '36.000000', '999915.000000', '72', '1492246374');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('65', '92', '6', '72.000000', '999843.000000', '144', '1492246377');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('66', '65', '0', '36.000000', '999963.000000', '72', '1492247958');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('67', '66', '0', '36.000000', '999963.000000', '72', '1492247993');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('68', '7', '0', '36.000000', '666666506.000000', '72', '1492248989');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('69', '7', '0', '72.000000', '666666434.000000', '144', '1492248991');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('70', '7', '0', '12.000000', '666666422.000000', '24', '1492248994');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('71', '7', '0', '4.000000', '666666418.000000', '10', '1492248997');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('72', '7', '0', '48.000000', '666666370.000000', '96', '1492248999');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('73', '7', '0', '72.000000', '666666298.000000', '144', '1492249001');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('74', '94', '0', '72.000000', '999927.000000', '144', '1492249538');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('75', '65', '0', '72.000000', '999891.000000', '144', '1492250279');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('76', '65', '0', '72.000000', '999819.000000', '144', '1492250282');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('77', '65', '0', '36.000000', '999783.000000', '72', '1492252807');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('78', '54', '0', '36.000000', '88696.000000', '72', '1492313134');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('79', '54', '0', '72.000000', '88624.000000', '144', '1492313137');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('80', '2', '0', '72.000000', '887604.000000', '144', '1492356696');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('81', '2', '0', '72.000000', '887532.000000', '144', '1492356698');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('82', '95', '0', '72.000000', '999999927.000000', '144', '1492367125');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('83', '95', '0', '72.000000', '999999855.000000', '144', '1492367127');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('84', '95', '0', '72.000000', '999999783.000000', '144', '1492367129');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('85', '95', '0', '72.000000', '999999711.000000', '144', '1492367131');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('86', '95', '0', '72.000000', '999999639.000000', '144', '1492367134');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('87', '96', '6', '36.000000', '99963.000000', '72', '1492367203');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('88', '96', '0', '36.000000', '99927.000000', '72', '1492367270');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('89', '96', '0', '36.000000', '99891.000000', '72', '1492368744');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('90', '97', '0', '36.000000', '99963.000000', '72', '1492369808');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('91', '1', '0', '36.000000', '10012320850.999990', '72', '1492397294');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('92', '1', '0', '36.000000', '10012320814.999990', '72', '1492397452');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('93', '86', '0', '72.000000', '999927.000000', '144', '1492400444');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('94', '95', '0', '36.000000', '999999603.000000', '72', '1492404232');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('95', '95', '0', '72.000000', '999999531.000000', '144', '1492404239');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('96', '97', '0', '72.000000', '99891.000000', '144', '1492414254');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('97', '97', '0', '72.000000', '99819.000000', '144', '1492414257');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('98', '1', '0', '36.000000', '10012320778.999990', '72', '1492415016');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('99', '1', '0', '60.000000', '10012320718.999990', '140', '1492415018');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('100', '1', '0', '72.000000', '10012320646.999990', '144', '1492415021');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('101', '57', '0', '36.000000', '1234780.000000', '72', '1492417180');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('102', '72', '0', '72.000000', '999927.000000', '144', '1492418740');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('103', '73', '0', '72.000000', '999927.000000', '144', '1492419133');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('104', '96', '6', '72.000000', '99819.000000', '144', '1492433435');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('105', '96', '6', '72.000000', '99747.000000', '144', '1492433441');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('106', '72', '0', '72.000000', '999855.000000', '144', '1492442744');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('107', '72', '0', '72.000000', '999783.000000', '144', '1492442748');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('108', '81', '0', '72.000000', '999927.000000', '144', '1492485275');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('109', '81', '0', '72.000000', '999855.000000', '144', '1492485465');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('110', '81', '0', '72.000000', '999783.000000', '144', '1492486348');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('111', '59', '6', '12.000000', '2333.000000', '24', '1492494254');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('112', '59', '6', '12.000000', '2321.000000', '24', '1492494257');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('113', '59', '6', '36.000000', '2285.000000', '72', '1492494264');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('114', '59', '6', '12.000000', '2273.000000', '24', '1492494267');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('115', '59', '6', '4.000000', '2269.000000', '10', '1492494270');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('116', '55', '6', '36.000000', '77721.000000', '72', '1492510079');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('117', '61', '0', '36.000000', '1233800.000000', '72', '1492573679');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('118', '61', '0', '72.000000', '1233728.000000', '144', '1492573683');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('119', '62', '0', '36.000000', '986681.000000', '72', '1492588168');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('120', '62', '0', '36.000000', '986645.000000', '72', '1492588170');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('121', '62', '0', '72.000000', '986573.000000', '144', '1492588172');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('122', '62', '0', '72.000000', '986501.000000', '144', '1492588175');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('123', '62', '0', '72.000000', '986429.000000', '144', '1492588177');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('124', '62', '0', '72.000000', '986357.000000', '144', '1492588180');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('125', '64', '0', '72.000000', '999927.000000', '144', '1492595908');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('126', '64', '0', '72.000000', '999855.000000', '144', '1492595910');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('127', '64', '0', '72.000000', '999783.000000', '144', '1492595912');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('128', '66', '0', '72.000000', '999891.000000', '144', '1492597295');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('129', '66', '0', '72.000000', '999819.000000', '144', '1492597588');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('130', '66', '0', '72.000000', '999747.000000', '144', '1492597590');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('131', '66', '0', '72.000000', '999675.000000', '144', '1492597681');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('132', '96', '0', '36.000000', '99711.000000', '72', '1492610294');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('133', '96', '0', '36.000000', '99675.000000', '72', '1492610298');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('134', '96', '0', '36.000000', '99639.000000', '72', '1492610301');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('135', '96', '0', '36.000000', '99603.000000', '72', '1492610302');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('136', '96', '0', '36.000000', '99567.000000', '72', '1492610304');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('137', '96', '0', '72.000000', '99495.000000', '144', '1492610307');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('138', '96', '0', '72.000000', '99423.000000', '144', '1492610309');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('139', '96', '0', '72.000000', '99351.000000', '144', '1492610313');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('140', '96', '0', '72.000000', '99279.000000', '144', '1492610315');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('141', '96', '0', '72.000000', '99207.000000', '144', '1492610317');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('142', '2', '0', '72.000000', '887460.000000', '144', '1492622971');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('143', '53', '0', '72.000000', '99172.000000', '144', '1492635264');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('144', '7', '0', '36.000000', '666666262.000000', '72', '1492637182');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('145', '58', '0', '36.000000', '234484.000000', '72', '1492638869');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('146', '58', '0', '36.000000', '234448.000000', '72', '1492638927');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('147', '62', '0', '36.000000', '986321.000000', '72', '1492649743');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('148', '62', '0', '12.000000', '986309.000000', '24', '1492649746');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('149', '58', '0', '36.000000', '234412.000000', '72', '1492652454');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('150', '58', '6', '72.000000', '234340.000000', '144', '1492652588');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('151', '87', '0', '72.000000', '999927.000000', '144', '1492654272');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('152', '87', '0', '72.000000', '999855.000000', '144', '1492654275');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('153', '87', '0', '72.000000', '999783.000000', '144', '1492654276');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('154', '87', '0', '72.000000', '999711.000000', '144', '1492656624');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('155', '87', '0', '72.000000', '999639.000000', '144', '1492656633');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('156', '58', '0', '36.000000', '234304.000000', '72', '1492672365');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('157', '95', '0', '36.000000', '999999495.000000', '72', '1492766796');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('158', '53', '0', '36.000000', '99138.000000', '72', '1492971894');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('159', '53', '0', '12.000000', '99126.000000', '24', '1492971900');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('160', '58', '0', '36.000000', '234268.000000', '72', '1493020918');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('161', '53', '0', '4.000000', '99122.000000', '10', '1493474922');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('162', '53', '0', '12.000000', '99110.000000', '24', '1493475428');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('163', '64', '6', '12.000000', '999771.000000', '24', '1493491138');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('164', '64', '0', '36.000000', '999735.000000', '72', '1493519035');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('165', '64', '0', '72.000000', '999663.000000', '144', '1493519037');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('166', '64', '0', '12.000000', '999651.000000', '24', '1493523569');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('167', '64', '0', '36.000000', '999615.000000', '72', '1493535247');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('168', '64', '0', '36.000000', '999579.000000', '72', '1493537707');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('169', '66', '0', '36.000000', '999639.000000', '72', '1493554520');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('170', '66', '0', '72.000000', '999567.000000', '144', '1493554522');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('171', '66', '0', '5.000000', '999562.000000', '10', '1493554525');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('172', '66', '0', '36.000000', '999526.000000', '72', '1493556626');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('173', '66', '0', '72.000000', '999454.000000', '144', '1493556628');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('174', '66', '0', '36.000000', '999418.000000', '72', '1493557048');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('175', '66', '0', '36.000000', '999382.000000', '72', '1493603124');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('176', '66', '0', '36.000000', '999346.000000', '72', '1493692984');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('177', '66', '0', '36.000000', '999310.000000', '72', '1493692987');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('178', '64', '0', '0.000000', '999689.000000', '144', '1493695638');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('179', '68', '0', '0.000000', '999999.000000', '144', '1493695640');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('180', '68', '0', '0.000000', '999999.000000', '144', '1493695643');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('181', '68', '0', '0.000000', '999999.000000', '144', '1493695648');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('182', '64', '0', '0.000000', '999689.000000', '144', '1493695651');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('183', '68', '0', '0.000000', '999999.000000', '144', '1493695655');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('184', '83', '0', '36.000000', '999963.000000', '72', '1493721674');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('185', '83', '0', '72.000000', '999891.000000', '144', '1493721678');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('186', '83', '0', '36.000000', '999855.000000', '72', '1493722474');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('187', '67', '0', '72.000000', '999927.000000', '144', '1493726545');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('188', '67', '0', '72.000000', '999855.000000', '144', '1493726548');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('189', '67', '0', '72.000000', '999783.000000', '144', '1493726550');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('190', '67', '0', '72.000000', '999711.000000', '144', '1493726551');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('191', '86', '0', '72.000000', '999855.000000', '144', '1493732002');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('192', '85', '6', '72.000000', '999927.000000', '144', '1493732160');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('193', '86', '0', '36.000000', '999819.000000', '72', '1493732441');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('194', '86', '0', '10.000000', '999809.000000', '24', '1493732444');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('195', '86', '0', '4.000000', '999805.000000', '10', '1493732447');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('196', '87', '0', '36.000000', '999603.000000', '72', '1493732803');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('197', '64', '0', '36.000000', '999653.000000', '72', '1493749510');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('198', '75', '0', '10.000000', '999989.000000', '24', '1493755316');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('199', '75', '0', '72.000000', '999917.000000', '144', '1493755319');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('200', '68', '0', '36.000000', '999963.000000', '72', '1493755475');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('201', '68', '0', '72.000000', '999891.000000', '144', '1493755478');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('202', '69', '0', '36.000000', '999963.000000', '72', '1493756566');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('203', '71', '0', '36.000000', '999963.000000', '72', '1493758116');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('204', '71', '0', '72.000000', '999891.000000', '144', '1493758120');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('205', '70', '0', '36.000000', '999963.000000', '72', '1493762404');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('206', '125', '0', '72.000000', '9999928.000000', '144', '1493799651');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('207', '101', '0', '72.000000', '9999928.000000', '144', '1493805823');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('208', '127', '0', '72.000000', '9999928.000000', '144', '1493865983');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('209', '114', '6', '72.000000', '9999928.000000', '144', '1493898973');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('210', '71', '0', '72.000000', '999819.000000', '144', '1494208322');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('211', '67', '0', '72.000000', '999639.000000', '144', '1494321911');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('212', '67', '6', '36.000000', '999603.000000', '72', '1494322387');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('213', '69', '0', '72.000000', '999891.000000', '144', '1494387205');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('214', '69', '0', '72.000000', '999819.000000', '144', '1494387207');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('215', '69', '0', '72.000000', '999747.000000', '144', '1494387209');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('216', '69', '0', '72.000000', '999675.000000', '144', '1494486762');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('217', '72', '7', '72.000000', '999711.000000', '144', '1494486841');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('218', '72', '7', '72.000000', '999639.000000', '144', '1494486845');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('219', '64', '0', '36.000000', '999617.000000', '72', '1494488963');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('220', '64', '0', '36.000000', '999581.000000', '72', '1494488969');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('221', '73', '0', '4.000000', '999923.000000', '10', '1494492262');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('222', '73', '0', '36.000000', '999887.000000', '72', '1494492264');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('223', '73', '0', '48.000000', '999839.000000', '96', '1494492276');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('224', '68', '6', '36.000000', '999855.000000', '72', '1494553318');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('225', '74', '0', '72.000000', '999927.000000', '144', '1494565524');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('226', '74', '0', '72.000000', '999855.000000', '144', '1494565530');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('227', '74', '0', '72.000000', '999783.000000', '144', '1494565532');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('228', '74', '0', '72.000000', '999711.000000', '144', '1494565534');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('229', '71', '0', '4.000000', '999815.000000', '10', '1494576336');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('230', '76', '0', '72.000000', '999927.000000', '144', '1494820650');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('231', '76', '0', '72.000000', '999855.000000', '144', '1494820653');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('232', '76', '0', '72.000000', '999783.000000', '144', '1494820655');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('233', '71', '0', '36.000000', '999779.000000', '72', '1494838680');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('234', '72', '6', '72.000000', '999567.000000', '144', '1494838880');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('235', '72', '6', '72.000000', '999495.000000', '144', '1494838902');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('236', '72', '6', '36.000000', '999459.000000', '72', '1494838904');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('237', '72', '6', '60.000000', '999399.000000', '120', '1494838907');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('238', '72', '6', '72.000000', '999327.000000', '144', '1494838909');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('239', '72', '6', '36.000000', '999291.000000', '72', '1494838911');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('240', '72', '6', '72.000000', '999219.000000', '144', '1494838914');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('241', '72', '6', '36.000000', '999183.000000', '72', '1494838916');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('242', '72', '6', '72.000000', '999111.000000', '144', '1494838919');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('243', '71', '0', '72.000000', '999707.000000', '144', '1494901638');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('244', '77', '0', '72.000000', '999927.000000', '144', '1494903029');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('245', '77', '0', '72.000000', '999855.000000', '144', '1494903031');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('246', '77', '0', '72.000000', '999783.000000', '144', '1494903033');
+INSERT INTO `NA_UserGoldConsumeRecord` VALUES ('247', '78', '0', '72.000000', '999927.000000', '144', '1494908268');
+
+-- ----------------------------
+-- Table structure for `upgradelog`
+-- ----------------------------
+DROP TABLE IF EXISTS `upgradelog`;
+CREATE TABLE `upgradelog` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LastUpgradeTime` bigint(20) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of upgradelog
+-- ----------------------------

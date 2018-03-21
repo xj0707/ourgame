@@ -1,0 +1,69 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            模板时间
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               配置
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          
+            <form class="form-horizontal" role="form" action="" method="post" name="myfrom" >
+                <input type="hidden" name="id" value="{$info.id}"/>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">下注时间:</label>
+                    <div class="col-sm-9">
+                        <select class="col-xs-10 col-sm-2" name='un32BetWaitSecond'>
+                        	<option value="10" {if condition='$info.un32BetWaitSecond==10'} selected="selected" {/if}>10s</option>
+                        	<option value="15" {if condition='$info.un32BetWaitSecond==15'} selected="selected" {/if}>15s</option>
+                        	<option value="20" {if condition='$info.un32BetWaitSecond==20'} selected="selected" {/if}>20s</option>
+                        	<option value="25" {if condition='$info.un32BetWaitSecond==25'} selected="selected" {/if}>25s</option>
+                        	<option value="30" {if condition='$info.un32BetWaitSecond==30'} selected="selected" {/if}>30s</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">搓牌时间:</label>
+                    <div class="col-sm-9">
+                        <select class="col-xs-10 col-sm-2" name='un32RubCardSecond'>
+                        	<option value="5" {if condition='$info.un32RubCardSecond==5'} selected="selected" {/if}>5s</option>
+                        	<option value="10" {if condition='$info.un32RubCardSecond==10'} selected="selected" {/if}>10s</option>
+                        	<option value="15" {if condition='$info.un32RubCardSecond==15'} selected="selected" {/if}>15s</option>
+                        	<option value="20" {if condition='$info.un32RubCardSecond==20'} selected="selected" {/if}>20s</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+
+                
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button" onclick="myfrom.submit()">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

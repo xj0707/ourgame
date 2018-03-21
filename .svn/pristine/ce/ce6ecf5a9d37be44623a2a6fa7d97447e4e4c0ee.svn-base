@@ -1,0 +1,38 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : NA_GamePlaza
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-03-31 14:36:58
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for NA_RoomShopping
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_RoomShopping`;
+CREATE TABLE `NA_RoomShopping` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `roomcard` int(11) DEFAULT NULL,
+  `coins` float(10,2) DEFAULT NULL,
+  `state` tinyint(1) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='房卡商店';
+
+-- ----------------------------
+-- Records of NA_RoomShopping
+-- ----------------------------
+INSERT INTO `NA_RoomShopping` VALUES ('1', '6', '3.00', null);
+INSERT INTO `NA_RoomShopping` VALUES ('2', '24', '12.00', null);
+INSERT INTO `NA_RoomShopping` VALUES ('3', '72', '36.00', null);
+INSERT INTO `NA_RoomShopping` VALUES ('4', '96', '48.00', null);
+INSERT INTO `NA_RoomShopping` VALUES ('5', '120', '60.00', null);
+INSERT INTO `NA_RoomShopping` VALUES ('6', '144', '72.00', null);

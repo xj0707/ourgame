@@ -1,0 +1,564 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : NA_7_TuiTongZi
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-05-16 15:26:26
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for `NA_GameBetRecord`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameBetRecord`;
+CREATE TABLE `NA_GameBetRecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `un32GameRoundID` int(11) NOT NULL COMMENT '回合数',
+  `eIdentity` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0null,1庄家，2闲家，3旁观',
+  `un32PlayerID` int(11) NOT NULL COMMENT '玩家ID',
+  `n32TianBetNum` int(11) NOT NULL COMMENT '下注数量',
+  `n32TianWinloseNum` int(11) NOT NULL COMMENT '输赢积分',
+  `n32DiBetNum` int(11) NOT NULL,
+  `n32DiWinloseNum` int(11) NOT NULL,
+  `n32RenBetNum` int(11) NOT NULL,
+  `n32RenWinloseNum` int(11) NOT NULL,
+  `n32UserRemainScore` int(11) NOT NULL COMMENT '剩余积分',
+  `un32LogTime` bigint(20) NOT NULL COMMENT '时间',
+  `n32GuoDiScore` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=409 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_GameBetRecord
+-- ----------------------------
+INSERT INTO `NA_GameBetRecord` VALUES ('274', '329', '1', '1', '2', '65', '500', '100', '500', '0', '500', '0', '5100', '1493757273', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('275', '329', '1', '1', '1', '69', '500', '-100', '500', '0', '500', '0', '4900', '1493757273', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('276', '330', '1', '1', '2', '66', '300', '-300', '100', '100', '200', '200', '5000', '1493760547', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('277', '330', '1', '1', '1', '71', '300', '300', '100', '-100', '200', '-200', '4500', '1493760547', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('278', '330', '1', '2', '2', '66', '300', '-300', '100', '-100', '300', '-300', '4300', '1493760648', '1200');
+INSERT INTO `NA_GameBetRecord` VALUES ('279', '330', '1', '2', '1', '71', '300', '300', '100', '100', '300', '300', '4500', '1493760648', '1200');
+INSERT INTO `NA_GameBetRecord` VALUES ('280', '330', '1', '3', '2', '66', '400', '-400', '400', '-400', '500', '-500', '3000', '1493760728', '2500');
+INSERT INTO `NA_GameBetRecord` VALUES ('281', '330', '1', '3', '1', '71', '400', '400', '400', '400', '500', '500', '4500', '1493760728', '2500');
+INSERT INTO `NA_GameBetRecord` VALUES ('282', '334', '1', '1', '1', '71', '0', '0', '0', '0', '0', '0', '4950', '1494317742', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('283', '340', '1', '1', '2', '69', '800', '-800', '0', '0', '0', '0', '4200', '1494469893', '1300');
+INSERT INTO `NA_GameBetRecord` VALUES ('284', '340', '1', '1', '1', '71', '800', '800', '0', '0', '0', '0', '4500', '1494469893', '1300');
+INSERT INTO `NA_GameBetRecord` VALUES ('285', '340', '1', '2', '2', '69', '500', '500', '400', '400', '600', '-600', '4500', '1494470465', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('286', '340', '1', '2', '1', '71', '500', '-500', '400', '-400', '600', '600', '4500', '1494470465', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('287', '340', '1', '3', '2', '69', '1000', '-1000', '0', '0', '0', '0', '3500', '1494470531', '2000');
+INSERT INTO `NA_GameBetRecord` VALUES ('288', '340', '1', '3', '1', '71', '1000', '1000', '0', '0', '0', '0', '4500', '1494470531', '2000');
+INSERT INTO `NA_GameBetRecord` VALUES ('289', '340', '1', '4', '2', '69', '0', '0', '0', '0', '1500', '1500', '5000', '1494470595', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('290', '340', '1', '4', '1', '71', '0', '0', '0', '0', '1500', '-1500', '4500', '1494470595', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('291', '340', '1', '5', '2', '69', '800', '500', '0', '0', '0', '0', '5500', '1494471212', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('292', '340', '1', '5', '1', '71', '800', '-500', '0', '0', '0', '0', '4500', '1494471212', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('293', '340', '2', '1', '1', '69', '0', '0', '0', '0', '1000', '1000', '5000', '1494471353', '1500');
+INSERT INTO `NA_GameBetRecord` VALUES ('294', '340', '2', '1', '2', '71', '0', '0', '0', '0', '1000', '-1000', '3475', '1494471353', '1500');
+INSERT INTO `NA_GameBetRecord` VALUES ('295', '340', '2', '2', '1', '69', '0', '0', '0', '0', '900', '-900', '5000', '1494471965', '600');
+INSERT INTO `NA_GameBetRecord` VALUES ('296', '340', '2', '2', '2', '71', '0', '0', '0', '0', '900', '900', '4375', '1494471965', '600');
+INSERT INTO `NA_GameBetRecord` VALUES ('297', '342', '1', '1', '1', '72', '0', '0', '0', '0', '0', '0', '0', '1494486943', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('298', '342', '1', '2', '2', '69', '4000', '4000', '0', '0', '0', '0', '9000', '1494487010', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('299', '342', '1', '2', '1', '72', '4000', '-4000', '0', '0', '0', '0', '0', '1494487010', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('300', '343', '1', '1', '1', '69', '4000', '4000', '0', '0', '0', '0', '0', '1494487484', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('301', '343', '1', '1', '2', '72', '4000', '-4000', '0', '0', '0', '0', '1000', '1494487484', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('302', '345', '1', '1', '2', '66', '0', '0', '500', '500', '450', '450', '5950', '1494578249', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('303', '345', '1', '1', '2', '70', '150', '-150', '100', '100', '150', '150', '5100', '1494578249', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('304', '345', '1', '1', '2', '72', '150', '-150', '0', '0', '50', '50', '4900', '1494578249', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('305', '345', '1', '1', '1', '75', '300', '300', '600', '-600', '650', '-650', '3550', '1494578249', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('306', '346', '1', '1', '1', '70', '0', '0', '0', '0', '0', '0', '4950', '1494578527', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('307', '346', '1', '2', '2', '66', '0', '0', '0', '0', '600', '-600', '4400', '1494578593', '1100');
+INSERT INTO `NA_GameBetRecord` VALUES ('308', '346', '1', '2', '1', '70', '100', '100', '300', '300', '650', '650', '4950', '1494578593', '1100');
+INSERT INTO `NA_GameBetRecord` VALUES ('309', '346', '1', '2', '2', '72', '0', '0', '250', '-250', '0', '0', '4750', '1494578593', '1100');
+INSERT INTO `NA_GameBetRecord` VALUES ('310', '346', '1', '2', '2', '75', '100', '-100', '50', '-50', '50', '-50', '4800', '1494578593', '1100');
+INSERT INTO `NA_GameBetRecord` VALUES ('311', '346', '2', '1', '2', '66', '1450', '50', '0', '0', '0', '0', '4450', '1494578857', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('312', '346', '2', '1', '2', '70', '800', '0', '2050', '0', '500', '0', '5885', '1494578857', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('313', '346', '2', '1', '1', '72', '2250', '-50', '2050', '0', '5300', '0', '4700', '1494578857', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('314', '346', '2', '1', '2', '75', '0', '0', '0', '0', '4800', '0', '4800', '1494578857', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('315', '346', '3', '1', '1', '66', '400', '-400', '500', '-500', '700', '-700', '2800', '1494579022', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('316', '346', '3', '1', '2', '72', '0', '0', '0', '0', '350', '350', '5047', '1494579022', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('317', '346', '3', '1', '2', '75', '400', '400', '500', '500', '350', '350', '6050', '1494579022', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('318', '346', '3', '2', '1', '66', '1775', '-1775', '75', '-75', '250', '250', '1200', '1494579828', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('319', '346', '3', '2', '2', '70', '1550', '1550', '0', '0', '0', '0', '7435', '1494579828', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('320', '346', '3', '2', '2', '75', '225', '225', '75', '75', '250', '-250', '6100', '1494579828', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('321', '346', '3', '3', '1', '66', '750', '750', '0', '0', '0', '0', '1200', '1494580097', '800');
+INSERT INTO `NA_GameBetRecord` VALUES ('322', '346', '3', '3', '2', '70', '750', '-750', '0', '0', '0', '0', '6685', '1494580097', '800');
+INSERT INTO `NA_GameBetRecord` VALUES ('323', '346', '4', '1', '2', '69', '0', '0', '300', '300', '0', '0', '5300', '1494580424', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('324', '346', '4', '1', '1', '70', '450', '-450', '850', '-850', '500', '-500', '5635', '1494580424', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('325', '346', '4', '1', '3', '75', '450', '450', '550', '550', '500', '500', '7600', '1494580424', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('326', '346', '4', '2', '2', '66', '0', '0', '0', '0', '550', '550', '1750', '1494580497', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('327', '346', '4', '2', '2', '69', '0', '0', '200', '-200', '0', '0', '5100', '1494580497', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('328', '346', '4', '2', '1', '70', '0', '0', '450', '450', '1100', '-1100', '4985', '1494580497', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('329', '346', '4', '2', '3', '75', '0', '0', '250', '-250', '550', '550', '7900', '1494580497', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('330', '346', '4', '3', '2', '66', '50', '-50', '0', '0', '200', '-200', '1500', '1494580634', '300');
+INSERT INTO `NA_GameBetRecord` VALUES ('331', '346', '4', '3', '1', '75', '50', '50', '0', '0', '200', '200', '7900', '1494580634', '300');
+INSERT INTO `NA_GameBetRecord` VALUES ('332', '346', '4', '4', '1', '66', '0', '0', '0', '0', '350', '-350', '1400', '1494580843', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('333', '346', '4', '4', '2', '75', '0', '0', '0', '0', '350', '350', '8250', '1494580843', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('334', '347', '1', '1', '2', '66', '150', '-150', '0', '0', '350', '-350', '4500', '1494581012', '1150');
+INSERT INTO `NA_GameBetRecord` VALUES ('335', '347', '1', '1', '1', '69', '200', '200', '50', '50', '400', '400', '4500', '1494581012', '1150');
+INSERT INTO `NA_GameBetRecord` VALUES ('336', '347', '1', '1', '2', '75', '50', '-50', '50', '-50', '50', '-50', '4850', '1494581012', '1150');
+INSERT INTO `NA_GameBetRecord` VALUES ('337', '350', '1', '1', '1', '72', '130', '-130', '0', '0', '0', '0', '4850', '1494834443', '20');
+INSERT INTO `NA_GameBetRecord` VALUES ('338', '350', '1', '1', '2', '73', '130', '130', '0', '0', '0', '0', '5130', '1494834443', '20');
+INSERT INTO `NA_GameBetRecord` VALUES ('339', '350', '1', '2', '2', '71', '50', '-50', '0', '0', '0', '0', '4950', '1494834599', '130');
+INSERT INTO `NA_GameBetRecord` VALUES ('340', '350', '1', '2', '1', '72', '110', '110', '0', '0', '0', '0', '4850', '1494834599', '130');
+INSERT INTO `NA_GameBetRecord` VALUES ('341', '350', '1', '2', '2', '73', '60', '-60', '0', '0', '0', '0', '5070', '1494834599', '130');
+INSERT INTO `NA_GameBetRecord` VALUES ('342', '350', '1', '3', '1', '72', '0', '0', '0', '0', '0', '0', '4850', '1494834684', '130');
+INSERT INTO `NA_GameBetRecord` VALUES ('343', '350', '1', '4', '2', '71', '60', '-60', '0', '0', '0', '0', '4890', '1494834767', '250');
+INSERT INTO `NA_GameBetRecord` VALUES ('344', '350', '1', '4', '1', '72', '120', '120', '0', '0', '0', '0', '4850', '1494834767', '250');
+INSERT INTO `NA_GameBetRecord` VALUES ('345', '350', '1', '4', '2', '73', '60', '-60', '0', '0', '0', '0', '5010', '1494834767', '250');
+INSERT INTO `NA_GameBetRecord` VALUES ('346', '350', '1', '5', '2', '71', '0', '0', '60', '-60', '0', '0', '4830', '1494834868', '310');
+INSERT INTO `NA_GameBetRecord` VALUES ('347', '350', '1', '5', '1', '72', '0', '0', '60', '60', '0', '0', '4850', '1494834868', '310');
+INSERT INTO `NA_GameBetRecord` VALUES ('348', '350', '1', '6', '2', '71', '0', '0', '70', '-70', '0', '0', '4760', '1494835021', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('349', '350', '1', '6', '1', '72', '70', '70', '70', '70', '0', '0', '4850', '1494835021', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('350', '350', '1', '6', '2', '73', '70', '-70', '0', '0', '0', '0', '4940', '1494835021', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('351', '350', '1', '7', '2', '71', '0', '0', '0', '0', '100', '-100', '4660', '1494835088', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('352', '350', '1', '7', '1', '72', '100', '-100', '0', '0', '100', '100', '4850', '1494835088', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('353', '350', '1', '7', '2', '73', '100', '100', '0', '0', '0', '0', '5040', '1494835088', '450');
+INSERT INTO `NA_GameBetRecord` VALUES ('354', '350', '1', '8', '2', '71', '0', '0', '110', '110', '0', '0', '4770', '1494835180', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('355', '350', '1', '8', '1', '72', '0', '0', '220', '-220', '0', '0', '4850', '1494835180', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('356', '350', '1', '8', '2', '73', '0', '0', '110', '110', '0', '0', '5150', '1494835180', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('357', '350', '1', '9', '2', '71', '0', '0', '130', '-130', '0', '0', '4640', '1494835331', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('358', '350', '1', '9', '1', '72', '120', '120', '130', '130', '20', '20', '4850', '1494835331', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('359', '350', '1', '9', '2', '73', '120', '-120', '0', '0', '20', '-20', '5010', '1494835331', '500');
+INSERT INTO `NA_GameBetRecord` VALUES ('360', '350', '2', '1', '1', '71', '60', '60', '40', '40', '110', '110', '4620', '1494835436', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('361', '350', '2', '1', '2', '72', '0', '0', '40', '-40', '0', '0', '5235', '1494835436', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('362', '350', '2', '1', '2', '73', '60', '-60', '0', '0', '110', '-110', '4840', '1494835436', '230');
+INSERT INTO `NA_GameBetRecord` VALUES ('363', '351', '1', '1', '1', '69', '0', '0', '0', '0', '0', '0', '0', '1494835539', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('364', '350', '2', '2', '1', '71', '0', '0', '60', '60', '50', '50', '4620', '1494835552', '340');
+INSERT INTO `NA_GameBetRecord` VALUES ('365', '350', '2', '2', '2', '72', '0', '0', '60', '-60', '0', '0', '5175', '1494835552', '340');
+INSERT INTO `NA_GameBetRecord` VALUES ('366', '350', '2', '2', '2', '73', '0', '0', '0', '0', '50', '-50', '4790', '1494835552', '340');
+INSERT INTO `NA_GameBetRecord` VALUES ('367', '350', '2', '3', '1', '71', '0', '0', '0', '0', '0', '0', '4620', '1494835859', '340');
+INSERT INTO `NA_GameBetRecord` VALUES ('368', '350', '3', '1', '2', '71', '60', '0', '0', '0', '0', '0', '4909', '1494836024', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('369', '350', '3', '1', '2', '72', '0', '0', '0', '0', '60', '20', '5195', '1494836024', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('370', '350', '3', '1', '1', '73', '60', '0', '0', '0', '60', '-20', '4770', '1494836024', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('371', '350', '4', '1', '2', '71', '0', '0', '170', '110', '0', '0', '5019', '1494836236', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('372', '350', '4', '1', '1', '72', '90', '90', '170', '-110', '0', '0', '5175', '1494836236', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('373', '350', '4', '1', '2', '73', '90', '-90', '0', '0', '0', '0', '4679', '1494836236', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('374', '351', '1', '2', '1', '69', '0', '0', '0', '0', '0', '0', '0', '1494836397', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('375', '350', '5', '1', '2', '71', '100', '-100', '0', '0', '0', '0', '4919', '1494836403', '220');
+INSERT INTO `NA_GameBetRecord` VALUES ('376', '350', '5', '1', '2', '72', '0', '0', '0', '0', '100', '-100', '5074', '1494836403', '220');
+INSERT INTO `NA_GameBetRecord` VALUES ('377', '350', '5', '1', '1', '73', '100', '100', '0', '0', '100', '100', '4659', '1494836403', '220');
+INSERT INTO `NA_GameBetRecord` VALUES ('378', '351', '2', '1', '1', '67', '0', '0', '0', '0', '0', '0', '0', '1494836568', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('379', '351', '2', '2', '1', '67', '4000', '4000', '0', '0', '0', '0', '0', '1494837594', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('380', '351', '2', '2', '2', '69', '4000', '-4000', '0', '0', '0', '0', '750', '1494837594', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('381', '351', '2', '3', '1', '67', '0', '0', '0', '0', '0', '0', '0', '1494837658', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('382', '350', '5', '2', '2', '71', '140', '140', '0', '0', '0', '0', '5059', '1494838249', '80');
+INSERT INTO `NA_GameBetRecord` VALUES ('383', '350', '5', '2', '1', '73', '140', '-140', '0', '0', '0', '0', '4659', '1494838249', '80');
+INSERT INTO `NA_GameBetRecord` VALUES ('384', '354', '1', '1', '1', '71', '240', '240', '60', '60', '20', '20', '5150', '1494839319', '370');
+INSERT INTO `NA_GameBetRecord` VALUES ('385', '354', '1', '1', '2', '72', '0', '0', '60', '-60', '20', '-20', '4920', '1494839319', '370');
+INSERT INTO `NA_GameBetRecord` VALUES ('386', '354', '1', '1', '2', '73', '240', '-240', '0', '0', '0', '0', '4760', '1494839319', '370');
+INSERT INTO `NA_GameBetRecord` VALUES ('387', '354', '2', '1', '1', '72', '0', '0', '0', '0', '0', '0', '4870', '1494839445', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('388', '354', '2', '2', '2', '69', '120', '-120', '140', '70', '0', '0', '4950', '1494839520', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('389', '354', '2', '2', '2', '71', '0', '0', '60', '0', '0', '0', '5464', '1494839520', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('390', '354', '2', '2', '1', '72', '120', '120', '200', '-70', '100', '-100', '4870', '1494839520', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('391', '354', '2', '2', '2', '73', '0', '0', '0', '0', '100', '100', '4860', '1494839520', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('392', '354', '3', '1', '1', '71', '0', '0', '3080', '3080', '0', '0', '5414', '1494839994', '3130');
+INSERT INTO `NA_GameBetRecord` VALUES ('393', '354', '3', '1', '2', '73', '0', '0', '3080', '-3080', '0', '0', '1780', '1494839994', '3130');
+INSERT INTO `NA_GameBetRecord` VALUES ('394', '354', '4', '1', '2', '71', '0', '0', '0', '0', '120', '0', '8074', '1494840200', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('395', '354', '4', '1', '2', '72', '0', '0', '80', '0', '0', '0', '4867', '1494840200', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('396', '354', '4', '1', '2', '73', '1760', '50', '0', '0', '0', '0', '1830', '1494840200', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('397', '354', '4', '1', '1', '86', '1760', '-50', '80', '0', '120', '0', '4950', '1494840200', '0');
+INSERT INTO `NA_GameBetRecord` VALUES ('398', '354', '5', '1', '1', '71', '0', '0', '0', '0', '0', '0', '8024', '1494842723', '50');
+INSERT INTO `NA_GameBetRecord` VALUES ('399', '357', '1', '1', '1', '67', '0', '0', '0', '0', '0', '0', '0', '1494900674', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('400', '357', '1', '2', '1', '67', '0', '0', '0', '0', '0', '0', '0', '1494901837', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('401', '359', '1', '1', '1', '72', '0', '0', '0', '0', '0', '0', '0', '1494902335', '5000');
+INSERT INTO `NA_GameBetRecord` VALUES ('402', '360', '1', '1', '1', '67', '4000', '-4000', '4000', '4000', '4000', '-4000', '0', '1494902706', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('403', '360', '1', '1', '2', '69', '0', '0', '0', '0', '4000', '4000', '9000', '1494902706', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('404', '360', '1', '1', '2', '72', '4000', '4000', '0', '0', '0', '0', '9000', '1494902706', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('405', '360', '1', '1', '2', '86', '0', '0', '4000', '-4000', '0', '0', '1000', '1494902706', '1000');
+INSERT INTO `NA_GameBetRecord` VALUES ('406', '360', '2', '1', '2', '71', '4000', '-4000', '0', '0', '0', '0', '1000', '1494903389', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('407', '360', '2', '1', '1', '72', '4000', '4000', '0', '0', '0', '0', '4000', '1494903389', '9000');
+INSERT INTO `NA_GameBetRecord` VALUES ('408', '361', '1', '1', '1', '72', '0', '0', '0', '0', '0', '0', '0', '1494903731', '5000');
+
+-- ----------------------------
+-- Table structure for `NA_GameRoom`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameRoom`;
+CREATE TABLE `NA_GameRoom` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32OwnerUserID` int(11) unsigned zerofill NOT NULL,
+  `tStartTime` int(11) NOT NULL DEFAULT '0',
+  `tCreateTime` int(11) NOT NULL DEFAULT '0',
+  `n32GameRoomPwd` int(11) NOT NULL DEFAULT '0',
+  `bIfOver` tinyint(1) NOT NULL DEFAULT '0',
+  `bIfTax` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否抽水',
+  `un32WinTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（赢）',
+  `un32LoseTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（输）',
+  `un32TotalAnte` int(11) NOT NULL COMMENT '锅底大小',
+  `un32RoomLiveSecond` int(11) NOT NULL DEFAULT '0' COMMENT '房间存活时间',
+  `bIfLookOn` bit(1) NOT NULL DEFAULT b'0' COMMENT '是否允许旁观',
+  `un32OnLookerNum` int(11) NOT NULL DEFAULT '0' COMMENT '最大旁观者数量',
+  `un32InitScore` int(11) NOT NULL DEFAULT '0' COMMENT '初始积分',
+  `eForbidChat` int(1) NOT NULL DEFAULT '0' COMMENT '禁止聊天0：不禁止1：仅旁观者禁止2：全禁止',
+  `un32SingleScore` int(11) NOT NULL DEFAULT '0' COMMENT '单注积分',
+  `un32ConsumeCardNum` int(11) NOT NULL DEFAULT '0' COMMENT '消耗房卡数量',
+  `un32JoinUserNum` int(11) NOT NULL DEFAULT '0' COMMENT '参与玩家数量',
+  `un32OrderID` int(11) NOT NULL DEFAULT '0',
+  `tPauseTime` int(11) NOT NULL DEFAULT '0' COMMENT '房间暂停时间',
+  `un32PumpWater` int(11) NOT NULL DEFAULT '0' COMMENT '房间总抽水',
+  PRIMARY KEY (`un32ID`),
+  KEY `OwnerUserID` (`un32OwnerUserID`)
+) ENGINE=InnoDB AUTO_INCREMENT=371 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of NA_GameRoom
+-- ----------------------------
+INSERT INTO `NA_GameRoom` VALUES ('329', '00000000069', '1493757195', '1493757184', '789877', '1', '1', '15', '5', '100', '7200', '', '10', '5000', '0', '50', '24', '2', '584', '0', '5');
+INSERT INTO `NA_GameRoom` VALUES ('330', '00000000071', '1493760460', '1493758172', '755313', '1', '1', '15', '5', '500', '7200', '', '10', '5000', '0', '100', '24', '2', '585', '0', '375');
+INSERT INTO `NA_GameRoom` VALUES ('331', '00000000071', '0', '1494208363', '768514', '1', '1', '15', '5', '1000', '7200', '', '10', '5000', '0', '1000', '24', '1', '602', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('332', '00000000066', '0', '1494317282', '787483', '1', '1', '15', '5', '500', '7200', '', '10', '5000', '0', '50', '24', '0', '637', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('333', '00000000066', '0', '1494317282', '742790', '1', '1', '15', '5', '500', '7200', '', '10', '5000', '0', '50', '24', '3', '638', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('334', '00000000071', '1494317463', '1494317428', '729005', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '10', '24', '3', '641', '0', '3');
+INSERT INTO `NA_GameRoom` VALUES ('335', '00000000061', '0', '1494325238', '729724', '1', '1', '10', '5', '50000', '7200', '', '10', '100000', '0', '2000', '24', '1', '651', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('336', '00000000071', '0', '1494325804', '723247', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '25', '24', '1', '653', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('337', '00000000071', '0', '1494325852', '741023', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '20', '24', '1', '654', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('338', '00000000071', '0', '1494326005', '757458', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '5000', '24', '2', '657', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('339', '00000000067', '0', '1494384420', '790918', '0', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '662', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('340', '00000000071', '1494469705', '1494469683', '789096', '1', '1', '15', '5', '500', '1800', '', '10', '5000', '0', '100', '6', '2', '676', '0', '25');
+INSERT INTO `NA_GameRoom` VALUES ('341', '00000000071', '0', '1494472071', '796868', '0', '1', '15', '5', '100', '12600', '', '10', '5000', '0', '50', '42', '0', '677', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('342', '00000000072', '1494486873', '1494486857', '763111', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '2', '682', '0', '250');
+INSERT INTO `NA_GameRoom` VALUES ('343', '00000000069', '1494487413', '1494487389', '788427', '1', '1', '15', '5', '5000', '3600', '', '10', '5000', '0', '2000', '12', '3', '683', '0', '1350');
+INSERT INTO `NA_GameRoom` VALUES ('344', '00000000066', '0', '1494578041', '772013', '1', '1', '15', '5', '500', '1800', '', '10', '5000', '0', '50', '6', '0', '713', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('345', '00000000066', '1494578125', '1494578041', '712770', '1', '1', '15', '5', '500', '1800', '', '10', '5000', '0', '50', '6', '4', '714', '0', '25');
+INSERT INTO `NA_GameRoom` VALUES ('346', '00000000072', '1494578402', '1494578374', '797671', '1', '1', '15', '5', '50', '3600', '', '10', '5000', '0', '50', '12', '5', '715', '0', '171');
+INSERT INTO `NA_GameRoom` VALUES ('347', '00000000066', '1494580935', '1494580919', '768270', '1', '1', '15', '5', '500', '7200', '', '10', '5000', '0', '50', '24', '4', '717', '0', '173');
+INSERT INTO `NA_GameRoom` VALUES ('348', '00000000076', '0', '1494820678', '709451', '0', '1', '15', '5', '500', '7200', '', '10', '5000', '0', '200', '24', '1', '735', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('349', '00000000069', '0', '1494832448', '786459', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '739', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('350', '00000000072', '1494834336', '1494834302', '762610', '1', '1', '15', '5', '20', '21600', '', '10', '5000', '0', '10', '72', '3', '743', '0', '140');
+INSERT INTO `NA_GameRoom` VALUES ('351', '00000000067', '1494835464', '1494834616', '709489', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '2', '745', '0', '1600');
+INSERT INTO `NA_GameRoom` VALUES ('352', '00000000071', '0', '1494838506', '715146', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '20', '24', '1', '750', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('353', '00000000073', '0', '1494838715', '778241', '1', '1', '15', '5', '30', '7200', '', '10', '5000', '0', '10', '24', '1', '751', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('354', '00000000071', '1494839199', '1494839017', '750320', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '20', '24', '5', '752', '0', '535');
+INSERT INTO `NA_GameRoom` VALUES ('355', '00000000069', '0', '1494839049', '775862', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '753', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('356', '00000000072', '1494842779', '1494842632', '739222', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '4', '755', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('357', '00000000067', '1494899753', '1494899673', '735125', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '4', '757', '0', '250');
+INSERT INTO `NA_GameRoom` VALUES ('358', '00000000069', '0', '1494901488', '751058', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '0', '759', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('359', '00000000072', '1494901963', '1494901876', '720459', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '4', '761', '0', '250');
+INSERT INTO `NA_GameRoom` VALUES ('360', '00000000067', '1494902632', '1494902516', '778901', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '5', '762', '0', '1600');
+INSERT INTO `NA_GameRoom` VALUES ('361', '00000000067', '1494903581', '1494903519', '740261', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '4', '765', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('362', '00000000069', '0', '1494904149', '709411', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '2', '768', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('363', '00000000069', '0', '1494906386', '760266', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '769', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('364', '00000000069', '0', '1494906943', '792425', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '770', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('365', '00000000067', '0', '1494908212', '723897', '1', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '772', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('366', '00000000072', '0', '1494908446', '762796', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '10', '24', '1', '775', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('367', '00000000071', '0', '1494908529', '747277', '1', '1', '15', '5', '50', '7200', '', '10', '5000', '0', '20', '24', '1', '776', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('368', '00000000067', '0', '1494916842', '705561', '0', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '777', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('369', '00000000069', '0', '1494917046', '752265', '0', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '778', '0', '0');
+INSERT INTO `NA_GameRoom` VALUES ('370', '00000000069', '0', '1494918505', '730471', '0', '1', '15', '5', '5000', '7200', '', '10', '5000', '0', '2000', '24', '1', '779', '0', '0');
+
+-- ----------------------------
+-- Table structure for `NA_GameRoomRecord`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameRoomRecord`;
+CREATE TABLE `NA_GameRoomRecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `un32GameUserID` int(11) NOT NULL DEFAULT '0' COMMENT '玩家ID',
+  `n32AppendedScore` int(11) NOT NULL DEFAULT '0',
+  `n32GotScore` int(11) NOT NULL DEFAULT '0' COMMENT '输赢积分',
+  `n32PumpWater` int(11) NOT NULL DEFAULT '0' COMMENT '抽水金额',
+  `un32LogTime` bigint(20) NOT NULL DEFAULT '0' COMMENT '时间',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=497 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_GameRoomRecord
+-- ----------------------------
+INSERT INTO `NA_GameRoomRecord` VALUES ('414', '329', '69', '0', '-100', '5', '1493757185');
+INSERT INTO `NA_GameRoomRecord` VALUES ('415', '329', '65', '0', '100', '0', '1493757192');
+INSERT INTO `NA_GameRoomRecord` VALUES ('416', '330', '71', '0', '2000', '375', '1493758174');
+INSERT INTO `NA_GameRoomRecord` VALUES ('417', '330', '66', '0', '-2000', '0', '1493758194');
+INSERT INTO `NA_GameRoomRecord` VALUES ('418', '331', '71', '0', '0', '0', '1494208364');
+INSERT INTO `NA_GameRoomRecord` VALUES ('419', '333', '66', '0', '0', '0', '1494317283');
+INSERT INTO `NA_GameRoomRecord` VALUES ('420', '333', '71', '0', '0', '0', '1494317296');
+INSERT INTO `NA_GameRoomRecord` VALUES ('421', '333', '53', '0', '0', '0', '1494317311');
+INSERT INTO `NA_GameRoomRecord` VALUES ('422', '334', '71', '0', '0', '3', '1494317429');
+INSERT INTO `NA_GameRoomRecord` VALUES ('423', '334', '66', '0', '0', '0', '1494317439');
+INSERT INTO `NA_GameRoomRecord` VALUES ('424', '334', '53', '0', '0', '0', '1494317450');
+INSERT INTO `NA_GameRoomRecord` VALUES ('425', '335', '61', '2000', '0', '0', '1494325242');
+INSERT INTO `NA_GameRoomRecord` VALUES ('426', '336', '71', '0', '0', '0', '1494325807');
+INSERT INTO `NA_GameRoomRecord` VALUES ('427', '337', '71', '0', '0', '0', '1494325853');
+INSERT INTO `NA_GameRoomRecord` VALUES ('428', '338', '71', '0', '0', '0', '1494326006');
+INSERT INTO `NA_GameRoomRecord` VALUES ('429', '338', '61', '0', '0', '0', '1494326016');
+INSERT INTO `NA_GameRoomRecord` VALUES ('430', '339', '67', '0', '0', '0', '1494384422');
+INSERT INTO `NA_GameRoomRecord` VALUES ('431', '340', '71', '0', '-600', '25', '1494469684');
+INSERT INTO `NA_GameRoomRecord` VALUES ('432', '340', '69', '0', '600', '0', '1494469702');
+INSERT INTO `NA_GameRoomRecord` VALUES ('433', '342', '72', '0', '-4000', '250', '1494486859');
+INSERT INTO `NA_GameRoomRecord` VALUES ('434', '342', '69', '0', '4000', '0', '1494486867');
+INSERT INTO `NA_GameRoomRecord` VALUES ('435', '343', '69', '6000', '4000', '1350', '1494487390');
+INSERT INTO `NA_GameRoomRecord` VALUES ('436', '343', '72', '0', '-4000', '0', '1494487409');
+INSERT INTO `NA_GameRoomRecord` VALUES ('437', '343', '64', '0', '0', '0', '1494487779');
+INSERT INTO `NA_GameRoomRecord` VALUES ('438', '345', '66', '0', '950', '0', '1494578042');
+INSERT INTO `NA_GameRoomRecord` VALUES ('439', '345', '70', '0', '100', '0', '1494578074');
+INSERT INTO `NA_GameRoomRecord` VALUES ('440', '345', '75', '0', '-950', '25', '1494578076');
+INSERT INTO `NA_GameRoomRecord` VALUES ('441', '345', '72', '0', '-100', '0', '1494578170');
+INSERT INTO `NA_GameRoomRecord` VALUES ('442', '346', '72', '0', '50', '3', '1494578375');
+INSERT INTO `NA_GameRoomRecord` VALUES ('443', '346', '66', '0', '-3050', '3', '1494578384');
+INSERT INTO `NA_GameRoomRecord` VALUES ('444', '346', '70', '0', '-600', '165', '1494578395');
+INSERT INTO `NA_GameRoomRecord` VALUES ('445', '346', '75', '0', '3500', '0', '1494578397');
+INSERT INTO `NA_GameRoomRecord` VALUES ('446', '346', '69', '0', '100', '0', '1494580229');
+INSERT INTO `NA_GameRoomRecord` VALUES ('447', '347', '66', '0', '-500', '0', '1494580920');
+INSERT INTO `NA_GameRoomRecord` VALUES ('448', '347', '75', '0', '-150', '173', '1494580928');
+INSERT INTO `NA_GameRoomRecord` VALUES ('449', '347', '70', '0', '0', '0', '1494580929');
+INSERT INTO `NA_GameRoomRecord` VALUES ('450', '347', '69', '0', '650', '0', '1494580931');
+INSERT INTO `NA_GameRoomRecord` VALUES ('451', '348', '76', '0', '0', '0', '1494820680');
+INSERT INTO `NA_GameRoomRecord` VALUES ('452', '349', '69', '0', '0', '0', '1494832449');
+INSERT INTO `NA_GameRoomRecord` VALUES ('453', '350', '72', '260', '150', '76', '1494834303');
+INSERT INTO `NA_GameRoomRecord` VALUES ('454', '350', '73', '100', '-260', '13', '1494834311');
+INSERT INTO `NA_GameRoomRecord` VALUES ('455', '350', '71', '100', '110', '51', '1494834445');
+INSERT INTO `NA_GameRoomRecord` VALUES ('456', '351', '67', '0', '4000', '1350', '1494834619');
+INSERT INTO `NA_GameRoomRecord` VALUES ('457', '351', '69', '0', '-4000', '250', '1494835169');
+INSERT INTO `NA_GameRoomRecord` VALUES ('458', '352', '71', '20', '0', '0', '1494838507');
+INSERT INTO `NA_GameRoomRecord` VALUES ('459', '353', '73', '10', '0', '0', '1494838717');
+INSERT INTO `NA_GameRoomRecord` VALUES ('460', '354', '71', '200', '3400', '529', '1494839020');
+INSERT INTO `NA_GameRoomRecord` VALUES ('461', '355', '69', '12000', '0', '0', '1494839052');
+INSERT INTO `NA_GameRoomRecord` VALUES ('462', '354', '73', '0', '-3170', '0', '1494839149');
+INSERT INTO `NA_GameRoomRecord` VALUES ('463', '354', '72', '0', '-130', '3', '1494839184');
+INSERT INTO `NA_GameRoomRecord` VALUES ('464', '354', '69', '40', '-50', '0', '1494839187');
+INSERT INTO `NA_GameRoomRecord` VALUES ('465', '354', '86', '0', '-50', '3', '1494839831');
+INSERT INTO `NA_GameRoomRecord` VALUES ('466', '356', '72', '0', '0', '0', '1494842634');
+INSERT INTO `NA_GameRoomRecord` VALUES ('467', '356', '71', '0', '0', '0', '1494842770');
+INSERT INTO `NA_GameRoomRecord` VALUES ('468', '356', '86', '0', '0', '0', '1494842857');
+INSERT INTO `NA_GameRoomRecord` VALUES ('469', '356', '69', '0', '0', '0', '1494842939');
+INSERT INTO `NA_GameRoomRecord` VALUES ('470', '357', '67', '0', '0', '250', '1494899676');
+INSERT INTO `NA_GameRoomRecord` VALUES ('471', '357', '72', '0', '0', '0', '1494899682');
+INSERT INTO `NA_GameRoomRecord` VALUES ('472', '357', '86', '0', '0', '0', '1494899696');
+INSERT INTO `NA_GameRoomRecord` VALUES ('473', '357', '69', '0', '0', '0', '1494899730');
+INSERT INTO `NA_GameRoomRecord` VALUES ('474', '359', '72', '0', '0', '250', '1494901878');
+INSERT INTO `NA_GameRoomRecord` VALUES ('475', '359', '86', '0', '0', '0', '1494901889');
+INSERT INTO `NA_GameRoomRecord` VALUES ('476', '359', '67', '0', '0', '0', '1494901902');
+INSERT INTO `NA_GameRoomRecord` VALUES ('477', '359', '69', '0', '0', '0', '1494901937');
+INSERT INTO `NA_GameRoomRecord` VALUES ('478', '360', '67', '0', '-4000', '250', '1494902519');
+INSERT INTO `NA_GameRoomRecord` VALUES ('479', '360', '72', '0', '8000', '1350', '1494902528');
+INSERT INTO `NA_GameRoomRecord` VALUES ('480', '360', '86', '0', '-4000', '0', '1494902537');
+INSERT INTO `NA_GameRoomRecord` VALUES ('481', '360', '69', '0', '4000', '0', '1494902624');
+INSERT INTO `NA_GameRoomRecord` VALUES ('482', '360', '71', '0', '-4000', '0', '1494902783');
+INSERT INTO `NA_GameRoomRecord` VALUES ('483', '361', '67', '0', '0', '0', '1494903521');
+INSERT INTO `NA_GameRoomRecord` VALUES ('484', '361', '71', '0', '0', '0', '1494903553');
+INSERT INTO `NA_GameRoomRecord` VALUES ('485', '361', '72', '0', '0', '0', '1494903555');
+INSERT INTO `NA_GameRoomRecord` VALUES ('486', '361', '69', '0', '0', '0', '1494903574');
+INSERT INTO `NA_GameRoomRecord` VALUES ('487', '362', '69', '0', '0', '0', '1494904151');
+INSERT INTO `NA_GameRoomRecord` VALUES ('488', '362', '67', '0', '0', '0', '1494904698');
+INSERT INTO `NA_GameRoomRecord` VALUES ('489', '363', '69', '0', '0', '0', '1494906387');
+INSERT INTO `NA_GameRoomRecord` VALUES ('490', '364', '69', '0', '0', '0', '1494906945');
+INSERT INTO `NA_GameRoomRecord` VALUES ('491', '365', '67', '0', '0', '0', '1494908214');
+INSERT INTO `NA_GameRoomRecord` VALUES ('492', '366', '72', '0', '0', '0', '1494908447');
+INSERT INTO `NA_GameRoomRecord` VALUES ('493', '367', '71', '0', '0', '0', '1494908530');
+INSERT INTO `NA_GameRoomRecord` VALUES ('494', '368', '67', '0', '0', '0', '1494916843');
+INSERT INTO `NA_GameRoomRecord` VALUES ('495', '369', '69', '0', '0', '0', '1494917048');
+INSERT INTO `NA_GameRoomRecord` VALUES ('496', '370', '69', '0', '0', '0', '1494918506');
+
+-- ----------------------------
+-- Table structure for `NA_GameRoomTemplate_TuiTongZi`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameRoomTemplate_TuiTongZi`;
+CREATE TABLE `NA_GameRoomTemplate_TuiTongZi` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `szName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '模板名字',
+  `un32UserID` int(11) NOT NULL DEFAULT '0' COMMENT '0为系统模版',
+  `bIfTax` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否抽水',
+  `un32WinTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（赢）',
+  `un32LoseTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（输）',
+  `un32TotalAnte` int(11) NOT NULL DEFAULT '0' COMMENT '锅底大小',
+  `un32RoomLiveSecond` int(11) NOT NULL DEFAULT '0' COMMENT '房间时间',
+  `bIfLookOn` tinyint(1) NOT NULL DEFAULT '0' COMMENT '允许旁观',
+  `un32OnLookerNum` int(11) NOT NULL DEFAULT '0' COMMENT '旁观者数量',
+  `un32InitScore` int(11) NOT NULL DEFAULT '0' COMMENT '初始积分',
+  `eForbidChat` int(1) NOT NULL DEFAULT '0' COMMENT '禁止聊天',
+  `un32SingleScore` int(11) NOT NULL DEFAULT '0' COMMENT '单注积分',
+  `un32IfActive` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否应用',
+  `remarks` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '模板备注',
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_GameRoomTemplate_TuiTongZi
+-- ----------------------------
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('1', '系统模板', '0', '1', '10', '5', '50000', '28800', '1', '10', '100000', '0', '2000', '1', '0', '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('7', '系统模板', '0', '1', '15', '5', '50000', '28800', '0', '10', '5000', '0', '2000', '1', '0', '123');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('8', 'fgdgfdg', '57', '1', '10', '5', '50000', '1800', '0', '5', '100000', '0', '500', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('9', '0000', '57', '1', '10', '5', '50000', '1800', '0', '8', '100000', '0', '500', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('10', '1111', '57', '1', '10', '5', '50000', '1800', '0', '6', '100000', '0', '500', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('11', '4444', '57', '1', '10', '5', '50000', '28800', '0', '9', '100000', '1', '500', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('12', '6', '53', '1', '50', '50', '50066', '1800', '0', '10', '500066', '1', '5000', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('13', '1', '53', '1', '5', '10', '50000', '1800', '0', '10', '500000', '1', '500', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('14', '模板1', '53', '1', '10', '5', '2', '7200', '0', '10', '100000', '0', '1', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('15', '系统模板', '0', '1', '10', '5', '5000', '0', '1', '10', '10000', '0', '500', '0', null, '111');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('16', '唾沫', '64', '1', '10', '5', '50000', '1800', '0', '10', '100000', '0', '2000', '1', null, '0');
+INSERT INTO `NA_GameRoomTemplate_TuiTongZi` VALUES ('17', '系统模板', '0', '1', '10', '5', '5000', '0', '1', '10', '50000', '0', '500', '1', '', '1');
+
+-- ----------------------------
+-- Table structure for `NA_GameRoundRecord`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_GameRoundRecord`;
+CREATE TABLE `NA_GameRoundRecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `un32GameRoundID` int(11) NOT NULL COMMENT '回合数',
+  `un32LogTime` bigint(20) NOT NULL COMMENT '时间',
+  `un32BankerPlayerID` int(11) NOT NULL COMMENT '座位1玩家ID',
+  `n8BankerSeatID` tinyint(1) NOT NULL,
+  `un8BankerCardID1` tinyint(2) NOT NULL COMMENT '座位1玩家第一张牌',
+  `un8BankerCardID2` tinyint(2) NOT NULL COMMENT '座位1玩家第二张牌',
+  `n32GuoDiScore` int(11) NOT NULL COMMENT '座位1总注数(如果为庄家就是锅底)',
+  `n32BankerWinLoseNum` int(11) NOT NULL COMMENT '座位1总输赢',
+  `un32ShunPlayerID` int(11) NOT NULL,
+  `un8ShunCardID1` tinyint(2) NOT NULL,
+  `un8ShunCardID2` tinyint(2) NOT NULL,
+  `n32ShunTotalBetNum` int(11) NOT NULL,
+  `n32ShunWinLoseNum` int(11) NOT NULL,
+  `un32TianPlayerID` int(11) NOT NULL,
+  `un8TianCardID1` tinyint(2) NOT NULL,
+  `un8TianCardID2` tinyint(2) NOT NULL,
+  `n32TianTotalBetNum` int(11) NOT NULL,
+  `n32TianWinLoseNum` int(11) NOT NULL,
+  `un32DiPlayerID` int(11) NOT NULL,
+  `un8DiCardID1` tinyint(2) NOT NULL,
+  `un8DiCardID2` tinyint(2) NOT NULL,
+  `n32DiTotalBetNum` int(11) NOT NULL,
+  `n32DiWinLoseNum` int(11) NOT NULL,
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=244 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_GameRoundRecord
+-- ----------------------------
+INSERT INTO `NA_GameRoundRecord` VALUES ('184', '329', '1', '1', '1493786073', '69', '1', '21', '23', '0', '-100', '65', '21', '21', '500', '100', '0', '28', '27', '500', '0', '0', '29', '27', '500', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('185', '330', '1', '1', '1493789347', '71', '1', '27', '25', '500', '0', '0', '23', '27', '300', '-300', '0', '29', '28', '100', '100', '66', '27', '28', '200', '200');
+INSERT INTO `NA_GameRoundRecord` VALUES ('186', '330', '1', '2', '1493789448', '71', '1', '23', '26', '1200', '700', '0', '21', '24', '300', '-300', '0', '29', '24', '100', '-100', '66', '23', '22', '300', '-300');
+INSERT INTO `NA_GameRoundRecord` VALUES ('187', '330', '1', '3', '1493789528', '71', '1', '25', '22', '2500', '1300', '0', '26', '29', '400', '-400', '0', '24', '21', '400', '-400', '66', '27', '25', '500', '-500');
+INSERT INTO `NA_GameRoundRecord` VALUES ('188', '334', '1', '1', '1494346542', '71', '1', '27', '28', '50', '0', '66', '29', '27', '0', '0', '53', '23', '26', '0', '0', '0', '29', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('189', '340', '1', '1', '1494469893', '71', '1', '26', '21', '1300', '800', '69', '22', '24', '800', '-800', '0', '25', '29', '0', '0', '0', '28', '24', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('190', '340', '1', '2', '1494470465', '71', '1', '21', '26', '1000', '-300', '69', '27', '27', '500', '500', '0', '25', '24', '400', '400', '0', '29', '25', '600', '-600');
+INSERT INTO `NA_GameRoundRecord` VALUES ('191', '340', '1', '3', '1494470531', '71', '1', '29', '23', '2000', '1000', '69', '28', '22', '1000', '-1000', '0', '28', '26', '0', '0', '0', '26', '27', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('192', '340', '1', '4', '1494470595', '71', '1', '23', '22', '500', '-1500', '69', '28', '25', '0', '0', '0', '29', '23', '0', '0', '0', '22', '24', '1500', '1500');
+INSERT INTO `NA_GameRoundRecord` VALUES ('193', '340', '1', '5', '1494471212', '71', '1', '21', '23', '0', '-500', '69', '27', '21', '800', '500', '0', '29', '27', '0', '0', '0', '22', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('194', '340', '2', '1', '1494471353', '69', '2', '21', '26', '1500', '1000', '0', '22', '28', '0', '0', '0', '29', '28', '0', '0', '71', '27', '25', '1000', '-1000');
+INSERT INTO `NA_GameRoundRecord` VALUES ('195', '340', '2', '2', '1494471965', '69', '2', '22', '29', '600', '-900', '0', '24', '21', '0', '0', '0', '23', '28', '0', '0', '71', '29', '27', '900', '900');
+INSERT INTO `NA_GameRoundRecord` VALUES ('196', '342', '1', '1', '1494486943', '72', '1', '23', '26', '5000', '0', '69', '21', '22', '0', '0', '0', '25', '23', '0', '0', '0', '21', '26', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('197', '342', '1', '2', '1494487010', '72', '1', '28', '27', '1000', '-4000', '69', '29', '29', '4000', '4000', '0', '26', '24', '0', '0', '0', '29', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('198', '343', '1', '1', '1494487484', '69', '1', '24', '23', '9000', '4000', '72', '25', '28', '4000', '-4000', '0', '29', '27', '0', '0', '0', '24', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('199', '345', '1', '1', '1494578249', '75', '3', '25', '23', '500', '-950', '72', '25', '21', '300', '-300', '66', '22', '27', '600', '600', '70', '23', '26', '650', '650');
+INSERT INTO `NA_GameRoundRecord` VALUES ('200', '346', '1', '1', '1494578527', '70', '3', '23', '22', '50', '0', '75', '27', '24', '0', '0', '72', '29', '27', '0', '0', '66', '25', '29', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('201', '346', '1', '2', '1494578593', '70', '3', '21', '28', '1100', '1050', '75', '26', '28', '100', '-100', '72', '28', '23', '300', '-300', '66', '25', '26', '650', '-650');
+INSERT INTO `NA_GameRoundRecord` VALUES ('202', '346', '2', '1', '1494578857', '72', '1', '24', '29', '0', '-50', '66', '25', '24', '2250', '50', '70', '21', '23', '2050', '0', '75', '27', '28', '5300', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('203', '346', '3', '1', '1494579022', '66', '2', '23', '28', '50', '-1600', '70', '27', '25', '400', '400', '75', '23', '29', '500', '500', '72', '24', '22', '700', '700');
+INSERT INTO `NA_GameRoundRecord` VALUES ('204', '346', '3', '2', '1494579828', '66', '2', '23', '28', '50', '-1600', '70', '27', '22', '1775', '1775', '0', '24', '21', '75', '75', '75', '26', '24', '250', '-250');
+INSERT INTO `NA_GameRoundRecord` VALUES ('205', '346', '3', '3', '1494580097', '66', '2', '21', '26', '800', '750', '70', '22', '23', '750', '-750', '0', '25', '25', '0', '0', '75', '29', '22', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('206', '346', '4', '1', '1494580424', '70', '3', '27', '28', '50', '-1800', '0', '29', '28', '450', '450', '69', '22', '22', '850', '850', '66', '26', '21', '500', '500');
+INSERT INTO `NA_GameRoundRecord` VALUES ('207', '346', '4', '2', '1494580497', '70', '3', '27', '25', '50', '-650', '0', '27', '24', '0', '0', '69', '29', '22', '450', '-450', '66', '24', '21', '1100', '1100');
+INSERT INTO `NA_GameRoundRecord` VALUES ('208', '346', '4', '3', '1494580634', '75', '3', '25', '23', '300', '250', '0', '29', '25', '50', '-50', '70', '23', '26', '0', '0', '66', '22', '23', '200', '-200');
+INSERT INTO `NA_GameRoundRecord` VALUES ('209', '346', '4', '4', '1494580843', '66', '3', '26', '29', '50', '-350', '69', '25', '24', '0', '0', '70', '23', '24', '0', '0', '75', '28', '28', '350', '350');
+INSERT INTO `NA_GameRoundRecord` VALUES ('210', '347', '1', '1', '1494581012', '69', '4', '25', '28', '1150', '650', '66', '22', '21', '200', '-200', '75', '29', '21', '50', '-50', '70', '26', '25', '400', '-400');
+INSERT INTO `NA_GameRoundRecord` VALUES ('211', '350', '1', '1', '1494834443', '72', '1', '27', '21', '20', '-130', '73', '24', '25', '130', '130', '0', '22', '25', '0', '0', '0', '28', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('212', '350', '1', '2', '1494834599', '72', '1', '22', '28', '130', '110', '73', '29', '26', '110', '-110', '71', '29', '23', '0', '0', '0', '27', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('213', '350', '1', '3', '1494834684', '72', '1', '26', '29', '130', '0', '73', '24', '22', '0', '0', '71', '21', '26', '0', '0', '0', '24', '27', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('214', '350', '1', '4', '1494834767', '72', '1', '23', '29', '250', '120', '73', '27', '25', '120', '-120', '71', '26', '23', '0', '0', '0', '28', '23', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('215', '350', '1', '5', '1494834868', '72', '1', '21', '21', '310', '60', '73', '24', '22', '0', '0', '71', '22', '21', '60', '-60', '0', '24', '24', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('216', '350', '1', '6', '1494835021', '72', '1', '28', '29', '450', '140', '73', '26', '27', '70', '-70', '71', '25', '28', '70', '-70', '0', '21', '26', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('217', '350', '1', '7', '1494835088', '72', '1', '29', '27', '450', '0', '73', '28', '28', '100', '100', '71', '23', '26', '0', '0', '0', '23', '22', '100', '-100');
+INSERT INTO `NA_GameRoundRecord` VALUES ('218', '350', '1', '8', '1494835180', '72', '1', '21', '26', '230', '-220', '73', '24', '27', '0', '0', '71', '25', '24', '220', '220', '0', '29', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('219', '350', '1', '9', '1494835331', '72', '1', '22', '27', '500', '270', '73', '23', '21', '120', '-120', '71', '25', '23', '130', '-130', '0', '22', '29', '20', '-20');
+INSERT INTO `NA_GameRoundRecord` VALUES ('220', '350', '2', '1', '1494835436', '71', '3', '22', '22', '230', '210', '0', '23', '22', '60', '-60', '72', '24', '23', '40', '-40', '73', '28', '29', '110', '-110');
+INSERT INTO `NA_GameRoundRecord` VALUES ('221', '351', '1', '1', '1494835539', '69', '1', '22', '23', '5000', '0', '0', '26', '22', '0', '0', '0', '21', '23', '0', '0', '67', '28', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('222', '350', '2', '2', '1494835552', '71', '3', '28', '28', '340', '110', '0', '21', '25', '0', '0', '72', '29', '29', '60', '-60', '73', '27', '26', '50', '-50');
+INSERT INTO `NA_GameRoundRecord` VALUES ('223', '350', '2', '3', '1494835859', '71', '3', '22', '26', '340', '0', '0', '24', '21', '0', '0', '72', '23', '27', '0', '0', '73', '23', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('224', '350', '3', '1', '1494836024', '73', '2', '23', '28', '0', '-20', '71', '24', '23', '60', '0', '0', '24', '29', '0', '0', '72', '27', '21', '60', '20');
+INSERT INTO `NA_GameRoundRecord` VALUES ('225', '350', '4', '1', '1494836236', '72', '1', '24', '22', '0', '-20', '73', '21', '24', '90', '-90', '71', '24', '23', '170', '110', '0', '25', '23', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('226', '351', '1', '2', '1494836397', '69', '1', '22', '27', '5000', '0', '0', '21', '27', '0', '0', '0', '23', '27', '0', '0', '67', '24', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('227', '350', '5', '1', '1494836403', '73', '2', '23', '24', '220', '200', '71', '29', '26', '100', '-100', '0', '26', '23', '0', '0', '72', '21', '22', '100', '-100');
+INSERT INTO `NA_GameRoundRecord` VALUES ('228', '351', '2', '1', '1494836568', '67', '4', '22', '28', '5000', '0', '69', '25', '27', '0', '0', '0', '21', '23', '0', '0', '0', '22', '26', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('229', '351', '2', '2', '1494837594', '67', '4', '23', '23', '9000', '4000', '69', '22', '29', '4000', '-4000', '0', '24', '27', '0', '0', '0', '26', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('230', '351', '2', '3', '1494837658', '67', '4', '29', '29', '9000', '0', '0', '29', '25', '0', '0', '0', '28', '27', '0', '0', '0', '24', '21', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('231', '350', '5', '2', '1494838249', '73', '2', '25', '27', '80', '-140', '71', '27', '21', '140', '140', '72', '26', '25', '0', '0', '0', '28', '22', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('232', '354', '1', '1', '1494839319', '71', '1', '22', '28', '370', '320', '73', '28', '23', '240', '-240', '72', '23', '25', '60', '-60', '69', '27', '29', '20', '-20');
+INSERT INTO `NA_GameRoundRecord` VALUES ('233', '354', '2', '1', '1494839445', '72', '3', '25', '27', '50', '0', '69', '21', '25', '0', '0', '71', '22', '28', '0', '0', '73', '29', '22', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('234', '354', '2', '2', '1494839520', '72', '3', '27', '25', '0', '-50', '69', '29', '23', '120', '-120', '71', '26', '21', '200', '70', '73', '28', '26', '100', '100');
+INSERT INTO `NA_GameRoundRecord` VALUES ('235', '354', '3', '1', '1494839994', '71', '1', '22', '26', '3130', '3080', '86', '29', '22', '0', '0', '73', '26', '28', '3080', '-3080', '72', '25', '22', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('236', '354', '4', '1', '1494840200', '86', '2', '29', '23', '0', '-50', '73', '25', '23', '1760', '50', '72', '26', '22', '80', '0', '71', '22', '27', '120', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('237', '354', '5', '1', '1494842723', '71', '1', '21', '24', '50', '0', '86', '25', '22', '0', '0', '73', '22', '27', '0', '0', '0', '22', '23', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('238', '357', '1', '1', '1494900674', '67', '1', '26', '26', '5000', '0', '0', '22', '27', '0', '0', '86', '23', '29', '0', '0', '69', '27', '24', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('239', '357', '1', '2', '1494901837', '67', '1', '26', '23', '5000', '0', '0', '24', '27', '0', '0', '86', '21', '28', '0', '0', '0', '22', '27', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('240', '359', '1', '1', '1494902335', '72', '1', '28', '23', '5000', '0', '86', '28', '21', '0', '0', '67', '22', '27', '0', '0', '69', '26', '25', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('241', '360', '1', '1', '1494902706', '67', '1', '23', '21', '1000', '-4000', '72', '21', '26', '4000', '4000', '86', '28', '23', '4000', '-4000', '69', '29', '26', '4000', '4000');
+INSERT INTO `NA_GameRoundRecord` VALUES ('242', '360', '2', '1', '1494903389', '72', '2', '21', '25', '9000', '4000', '71', '24', '29', '4000', '-4000', '69', '29', '26', '0', '0', '67', '22', '28', '0', '0');
+INSERT INTO `NA_GameRoundRecord` VALUES ('243', '361', '1', '1', '1494903731', '72', '3', '23', '27', '5000', '0', '69', '22', '21', '0', '0', '67', '29', '29', '0', '0', '0', '25', '24', '0', '0');
+
+-- ----------------------------
+-- Table structure for `NA_PumpWaterRecord`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_PumpWaterRecord`;
+CREATE TABLE `NA_PumpWaterRecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `ePlayWay` int(1) NOT NULL DEFAULT '0' COMMENT '1喝水2不喝水',
+  `un32GameBankerID` int(11) NOT NULL,
+  `n32BottonOfPotNum` int(11) NOT NULL COMMENT '锅底',
+  `n32PumpWaterNum` int(11) NOT NULL COMMENT '抽水数量',
+  `n32PumpWaterPercent` int(5) NOT NULL COMMENT '抽水比率',
+  `bIfWin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0输1赢',
+  `un32LogTime` bigint(20) NOT NULL,
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_PumpWaterRecord
+-- ----------------------------
+INSERT INTO `NA_PumpWaterRecord` VALUES ('61', '329', '1', '1', '69', '100', '5', '5', '0', '1493757298');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('62', '330', '1', '1', '71', '2500', '375', '15', '1', '1493760760');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('63', '334', '1', '1', '71', '50', '3', '5', '0', '1494318560');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('64', '340', '1', '1', '71', '500', '25', '5', '0', '1494471241');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('65', '342', '1', '1', '72', '5000', '250', '5', '0', '1494487035');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('66', '343', '1', '1', '69', '9000', '1350', '15', '1', '1494487632');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('67', '345', '1', '2', '75', '500', '25', '5', '0', '1494578303');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('68', '346', '1', '2', '70', '1100', '165', '15', '1', '1494578650');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('69', '346', '2', '1', '72', '50', '3', '5', '0', '1494578885');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('70', '346', '4', '2', '66', '50', '3', '5', '0', '1494580888');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('71', '347', '1', '2', '75', '1150', '173', '15', '1', '1494581217');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('72', '350', '1', '2', '72', '500', '75', '15', '1', '1494835358');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('73', '350', '2', '2', '71', '340', '51', '15', '1', '1494835894');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('74', '350', '3', '1', '73', '20', '1', '5', '0', '1494836053');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('75', '350', '4', '1', '72', '20', '1', '5', '0', '1494836260');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('76', '351', '1', '1', '69', '5000', '250', '5', '0', '1494836471');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('77', '351', '2', '1', '67', '9000', '1350', '15', '1', '1494837684');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('78', '350', '5', '1', '73', '80', '12', '15', '1', '1494838696');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('79', '354', '1', '2', '71', '370', '56', '15', '1', '1494839352');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('80', '354', '2', '1', '72', '50', '3', '5', '0', '1494839548');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('81', '354', '3', '1', '71', '3130', '470', '15', '1', '1494840030');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('82', '354', '4', '1', '86', '50', '3', '5', '0', '1494840228');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('83', '354', '5', '1', '71', '50', '3', '5', '0', '1494842753');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('84', '357', '1', '1', '67', '5000', '250', '5', '0', '1494901892');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('85', '359', '1', '1', '72', '5000', '250', '5', '0', '1494902487');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('86', '360', '1', '1', '67', '5000', '250', '5', '0', '1494902734');
+INSERT INTO `NA_PumpWaterRecord` VALUES ('87', '360', '2', '2', '72', '9000', '1350', '15', '1', '1494903539');
+
+-- ----------------------------
+-- Table structure for `NA_SetTime`
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_SetTime`;
+CREATE TABLE `NA_SetTime` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tel_id` int(11) DEFAULT NULL COMMENT '模板ID',
+  `un32BetWaitSecond` int(11) DEFAULT NULL COMMENT '下注时间',
+  `un32RubCardSecond` int(11) DEFAULT NULL COMMENT '搓牌时间',
+  `time` int(11) DEFAULT NULL,
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of NA_SetTime
+-- ----------------------------
+INSERT INTO `NA_SetTime` VALUES ('1', null, '15', '15', null, '0');
+INSERT INTO `NA_SetTime` VALUES ('2', null, '15', '10', null, '123');
+INSERT INTO `NA_SetTime` VALUES ('3', null, '10', '5', null, '1');

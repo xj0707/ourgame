@@ -1,0 +1,818 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : tp5admin
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2016-12-22 18:34:09
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for yuebo_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_admin`;
+CREATE TABLE `yuebo_admin` (
+  `id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(32) NOT NULL DEFAULT '',
+  `encrypt` varchar(6) NOT NULL DEFAULT '',
+  `lastloginip` int(10) NOT NULL DEFAULT '0',
+  `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0',
+  `email` varchar(40) NOT NULL DEFAULT '',
+  `mobile` varchar(11) NOT NULL DEFAULT '',
+  `realname` varchar(50) NOT NULL DEFAULT '',
+  `openid` varchar(255) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否有效(2:无效,1:有效)',
+  `updatetime` int(10) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `username` (`username`),
+  KEY `status` (`status`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of yuebo_admin
+-- ----------------------------
+INSERT INTO `yuebo_admin` VALUES ('1', 'admin', '21232f297a57a5a743894a0e4a801fc3', '', '2130706433', '1482374881', '5552123@qq.com', '18888873646', '阿杜', '', '1', '1477623198');
+INSERT INTO `yuebo_admin` VALUES ('5', '熊大', '202cb962ac59075b964b07152d234b70', '', '2130706433', '1482314203', '', '13076000054', '雄霸天下', '', '1', '1482373327');
+INSERT INTO `yuebo_admin` VALUES ('6', '熊二', '202cb962ac59075b964b07152d234b70', '', '2130706433', '1482373246', '', '', '', '', '1', '1482374902');
+INSERT INTO `yuebo_admin` VALUES ('7', 'zhangsan', '202cb962ac59075b964b07152d234b70', '', '0', '0', '', '', '', '', '1', '0');
+
+-- ----------------------------
+-- Table structure for yuebo_admin_group
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_admin_group`;
+CREATE TABLE `yuebo_admin_group` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `name` varchar(50) NOT NULL COMMENT '角色名称',
+  `description` text COMMENT '权限的描述',
+  `rules` varchar(500) NOT NULL DEFAULT '' COMMENT '角色拥有的权限id，多个权限 , 隔开',
+  `listorder` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='角色表';
+
+-- ----------------------------
+-- Records of yuebo_admin_group
+-- ----------------------------
+INSERT INTO `yuebo_admin_group` VALUES ('4', '普通管理员', '可以查看所有管理员信息，查看所有玩家信息', '31,1,53,54,61,44,32,47,48,55,62,49,42,56', '0', '1482314183');
+INSERT INTO `yuebo_admin_group` VALUES ('5', '测试员1', '我是来测试的', '31,1,32,47,42,60', '0', '1482393136');
+INSERT INTO `yuebo_admin_group` VALUES ('6', '查看员', '可以查看后台所有功能 但是无添加修改删除操作', '31,1,53,54,61,32,47,48,62,42,60', '0', '1482393633');
+
+-- ----------------------------
+-- Table structure for yuebo_admin_group_access
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_admin_group_access`;
+CREATE TABLE `yuebo_admin_group_access` (
+  `uid` int(10) unsigned NOT NULL COMMENT '用户id',
+  `group_id` mediumint(8) unsigned NOT NULL COMMENT '用户组id',
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of yuebo_admin_group_access
+-- ----------------------------
+INSERT INTO `yuebo_admin_group_access` VALUES ('5', '4');
+INSERT INTO `yuebo_admin_group_access` VALUES ('6', '4');
+INSERT INTO `yuebo_admin_group_access` VALUES ('7', '5');
+
+-- ----------------------------
+-- Table structure for yuebo_admin_log
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_admin_log`;
+CREATE TABLE `yuebo_admin_log` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `m` varchar(15) NOT NULL,
+  `c` varchar(20) NOT NULL,
+  `a` varchar(20) NOT NULL,
+  `querystring` varchar(255) NOT NULL,
+  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(20) NOT NULL,
+  `ip` int(10) NOT NULL,
+  `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1145 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of yuebo_admin_log
+-- ----------------------------
+INSERT INTO `yuebo_admin_log` VALUES ('576', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:54:50');
+INSERT INTO `yuebo_admin_log` VALUES ('577', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:54:53');
+INSERT INTO `yuebo_admin_log` VALUES ('578', 'admin', 'Menu', 'info', '?parentid=31', '1', 'admin', '2130706433', '2016-12-21 14:54:55');
+INSERT INTO `yuebo_admin_log` VALUES ('579', 'admin', 'Menu', 'info', '?parentid=31', '1', 'admin', '2130706433', '2016-12-21 14:54:56');
+INSERT INTO `yuebo_admin_log` VALUES ('580', 'admin', 'Menu', 'info', '?parentid=31', '1', 'admin', '2130706433', '2016-12-21 14:54:58');
+INSERT INTO `yuebo_admin_log` VALUES ('581', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:55:03');
+INSERT INTO `yuebo_admin_log` VALUES ('582', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:55:44');
+INSERT INTO `yuebo_admin_log` VALUES ('583', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:57:21');
+INSERT INTO `yuebo_admin_log` VALUES ('584', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 14:58:42');
+INSERT INTO `yuebo_admin_log` VALUES ('585', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 14:59:19');
+INSERT INTO `yuebo_admin_log` VALUES ('586', 'admin', 'Admin', 'admin', '', '1', 'admin', '2130706433', '2016-12-21 15:00:29');
+INSERT INTO `yuebo_admin_log` VALUES ('587', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:00:34');
+INSERT INTO `yuebo_admin_log` VALUES ('588', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:00:45');
+INSERT INTO `yuebo_admin_log` VALUES ('589', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:00:53');
+INSERT INTO `yuebo_admin_log` VALUES ('590', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:00:58');
+INSERT INTO `yuebo_admin_log` VALUES ('591', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:01:15');
+INSERT INTO `yuebo_admin_log` VALUES ('592', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:01:35');
+INSERT INTO `yuebo_admin_log` VALUES ('593', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:08:38');
+INSERT INTO `yuebo_admin_log` VALUES ('594', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 15:09:02');
+INSERT INTO `yuebo_admin_log` VALUES ('595', 'admin', 'Admin', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:09:30');
+INSERT INTO `yuebo_admin_log` VALUES ('596', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:09:34');
+INSERT INTO `yuebo_admin_log` VALUES ('597', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:09:50');
+INSERT INTO `yuebo_admin_log` VALUES ('598', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:09:56');
+INSERT INTO `yuebo_admin_log` VALUES ('599', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:09:58');
+INSERT INTO `yuebo_admin_log` VALUES ('600', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:10:06');
+INSERT INTO `yuebo_admin_log` VALUES ('601', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 15:10:38');
+INSERT INTO `yuebo_admin_log` VALUES ('602', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:10:52');
+INSERT INTO `yuebo_admin_log` VALUES ('603', 'admin', 'Menu', 'info', '?parentid=31', '1', 'admin', '2130706433', '2016-12-21 15:11:44');
+INSERT INTO `yuebo_admin_log` VALUES ('604', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:12:15');
+INSERT INTO `yuebo_admin_log` VALUES ('605', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 15:12:29');
+INSERT INTO `yuebo_admin_log` VALUES ('606', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:13:23');
+INSERT INTO `yuebo_admin_log` VALUES ('607', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 15:16:12');
+INSERT INTO `yuebo_admin_log` VALUES ('608', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:16:20');
+INSERT INTO `yuebo_admin_log` VALUES ('609', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:17:00');
+INSERT INTO `yuebo_admin_log` VALUES ('610', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:17:31');
+INSERT INTO `yuebo_admin_log` VALUES ('611', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:17:56');
+INSERT INTO `yuebo_admin_log` VALUES ('612', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:18:31');
+INSERT INTO `yuebo_admin_log` VALUES ('613', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:19:34');
+INSERT INTO `yuebo_admin_log` VALUES ('614', 'admin', 'Menu', 'info', '?id=43', '1', 'admin', '2130706433', '2016-12-21 15:22:05');
+INSERT INTO `yuebo_admin_log` VALUES ('615', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:22:16');
+INSERT INTO `yuebo_admin_log` VALUES ('616', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:22:36');
+INSERT INTO `yuebo_admin_log` VALUES ('617', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:23:30');
+INSERT INTO `yuebo_admin_log` VALUES ('618', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:23:36');
+INSERT INTO `yuebo_admin_log` VALUES ('619', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:24:13');
+INSERT INTO `yuebo_admin_log` VALUES ('620', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:25:27');
+INSERT INTO `yuebo_admin_log` VALUES ('621', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:25:32');
+INSERT INTO `yuebo_admin_log` VALUES ('622', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:26:13');
+INSERT INTO `yuebo_admin_log` VALUES ('623', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:26:15');
+INSERT INTO `yuebo_admin_log` VALUES ('624', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:26:30');
+INSERT INTO `yuebo_admin_log` VALUES ('625', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:26:55');
+INSERT INTO `yuebo_admin_log` VALUES ('626', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 15:27:34');
+INSERT INTO `yuebo_admin_log` VALUES ('627', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:28:24');
+INSERT INTO `yuebo_admin_log` VALUES ('628', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 15:28:36');
+INSERT INTO `yuebo_admin_log` VALUES ('629', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:28:39');
+INSERT INTO `yuebo_admin_log` VALUES ('630', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:28:42');
+INSERT INTO `yuebo_admin_log` VALUES ('631', 'admin', 'Group', 'info', '', '1', 'admin', '2130706433', '2016-12-21 15:29:11');
+INSERT INTO `yuebo_admin_log` VALUES ('632', 'admin', 'Group', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:31:25');
+INSERT INTO `yuebo_admin_log` VALUES ('633', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:31:28');
+INSERT INTO `yuebo_admin_log` VALUES ('634', 'admin', 'Admin', 'index', '?group_id=4', '1', 'admin', '2130706433', '2016-12-21 15:31:39');
+INSERT INTO `yuebo_admin_log` VALUES ('635', 'admin', 'Admin', 'index', '?group_id=4', '1', 'admin', '2130706433', '2016-12-21 15:32:21');
+INSERT INTO `yuebo_admin_log` VALUES ('636', 'admin', 'Menu', 'info', '?parentid=47', '1', 'admin', '2130706433', '2016-12-21 15:33:06');
+INSERT INTO `yuebo_admin_log` VALUES ('637', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:34:18');
+INSERT INTO `yuebo_admin_log` VALUES ('638', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 15:34:40');
+INSERT INTO `yuebo_admin_log` VALUES ('639', 'admin', 'Menu', 'info', '?id=43', '1', 'admin', '2130706433', '2016-12-21 15:35:25');
+INSERT INTO `yuebo_admin_log` VALUES ('640', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:35:32');
+INSERT INTO `yuebo_admin_log` VALUES ('641', 'admin', 'Menu', 'info', '?id=48', '1', 'admin', '2130706433', '2016-12-21 15:35:44');
+INSERT INTO `yuebo_admin_log` VALUES ('642', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:35:52');
+INSERT INTO `yuebo_admin_log` VALUES ('643', 'admin', 'Menu', 'info', '?parentid=47', '1', 'admin', '2130706433', '2016-12-21 15:36:26');
+INSERT INTO `yuebo_admin_log` VALUES ('644', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:36:49');
+INSERT INTO `yuebo_admin_log` VALUES ('645', 'admin', 'Menu', 'info', '?parentid=47', '1', 'admin', '2130706433', '2016-12-21 15:37:00');
+INSERT INTO `yuebo_admin_log` VALUES ('646', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:37:17');
+INSERT INTO `yuebo_admin_log` VALUES ('647', 'admin', 'Menu', 'info', '?parentid=47', '1', 'admin', '2130706433', '2016-12-21 15:37:24');
+INSERT INTO `yuebo_admin_log` VALUES ('648', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:37:46');
+INSERT INTO `yuebo_admin_log` VALUES ('649', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:39:14');
+INSERT INTO `yuebo_admin_log` VALUES ('650', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 15:39:21');
+INSERT INTO `yuebo_admin_log` VALUES ('651', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 15:40:41');
+INSERT INTO `yuebo_admin_log` VALUES ('652', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:41:08');
+INSERT INTO `yuebo_admin_log` VALUES ('653', 'admin', 'Group', 'rule', '', '1', 'admin', '2130706433', '2016-12-21 15:41:13');
+INSERT INTO `yuebo_admin_log` VALUES ('654', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:44:10');
+INSERT INTO `yuebo_admin_log` VALUES ('655', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 15:44:21');
+INSERT INTO `yuebo_admin_log` VALUES ('656', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:46:54');
+INSERT INTO `yuebo_admin_log` VALUES ('657', 'admin', 'Group', 'rule', '', '1', 'admin', '2130706433', '2016-12-21 15:47:56');
+INSERT INTO `yuebo_admin_log` VALUES ('658', 'admin', 'Menu', 'del', '?id=52', '1', 'admin', '2130706433', '2016-12-21 15:48:24');
+INSERT INTO `yuebo_admin_log` VALUES ('659', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:49:39');
+INSERT INTO `yuebo_admin_log` VALUES ('660', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:50:34');
+INSERT INTO `yuebo_admin_log` VALUES ('661', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:50:45');
+INSERT INTO `yuebo_admin_log` VALUES ('662', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 15:51:06');
+INSERT INTO `yuebo_admin_log` VALUES ('663', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 15:51:29');
+INSERT INTO `yuebo_admin_log` VALUES ('664', 'admin', 'Menu', 'info', '?id=43', '1', 'admin', '2130706433', '2016-12-21 15:51:50');
+INSERT INTO `yuebo_admin_log` VALUES ('665', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:52:01');
+INSERT INTO `yuebo_admin_log` VALUES ('666', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:53:07');
+INSERT INTO `yuebo_admin_log` VALUES ('667', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 15:53:10');
+INSERT INTO `yuebo_admin_log` VALUES ('668', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 15:53:15');
+INSERT INTO `yuebo_admin_log` VALUES ('669', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:53:17');
+INSERT INTO `yuebo_admin_log` VALUES ('670', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 15:53:21');
+INSERT INTO `yuebo_admin_log` VALUES ('671', 'admin', 'Menu', 'info', '?id=44', '1', 'admin', '2130706433', '2016-12-21 15:53:29');
+INSERT INTO `yuebo_admin_log` VALUES ('672', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:53:38');
+INSERT INTO `yuebo_admin_log` VALUES ('673', 'admin', 'Menu', 'info', '?id=45', '1', 'admin', '2130706433', '2016-12-21 15:53:54');
+INSERT INTO `yuebo_admin_log` VALUES ('674', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:53:59');
+INSERT INTO `yuebo_admin_log` VALUES ('675', 'admin', 'Menu', 'info', '?id=46', '1', 'admin', '2130706433', '2016-12-21 15:54:04');
+INSERT INTO `yuebo_admin_log` VALUES ('676', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:54:12');
+INSERT INTO `yuebo_admin_log` VALUES ('677', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 15:54:33');
+INSERT INTO `yuebo_admin_log` VALUES ('678', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 15:54:45');
+INSERT INTO `yuebo_admin_log` VALUES ('679', 'admin', 'Menu', 'info', '?id=1', '1', 'admin', '2130706433', '2016-12-21 15:55:03');
+INSERT INTO `yuebo_admin_log` VALUES ('680', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 15:55:11');
+INSERT INTO `yuebo_admin_log` VALUES ('681', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:55:16');
+INSERT INTO `yuebo_admin_log` VALUES ('682', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 15:55:18');
+INSERT INTO `yuebo_admin_log` VALUES ('683', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:55:33');
+INSERT INTO `yuebo_admin_log` VALUES ('684', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 15:55:35');
+INSERT INTO `yuebo_admin_log` VALUES ('685', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 15:56:08');
+INSERT INTO `yuebo_admin_log` VALUES ('686', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:57:50');
+INSERT INTO `yuebo_admin_log` VALUES ('687', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:58:59');
+INSERT INTO `yuebo_admin_log` VALUES ('688', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:59:39');
+INSERT INTO `yuebo_admin_log` VALUES ('689', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 15:59:45');
+INSERT INTO `yuebo_admin_log` VALUES ('690', 'admin', 'Menu', 'info', '?id=48', '1', 'admin', '2130706433', '2016-12-21 16:00:24');
+INSERT INTO `yuebo_admin_log` VALUES ('691', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:00:33');
+INSERT INTO `yuebo_admin_log` VALUES ('692', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:00:42');
+INSERT INTO `yuebo_admin_log` VALUES ('693', 'admin', 'Menu', 'info', '?id=49', '1', 'admin', '2130706433', '2016-12-21 16:01:18');
+INSERT INTO `yuebo_admin_log` VALUES ('694', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:01:25');
+INSERT INTO `yuebo_admin_log` VALUES ('695', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:01:30');
+INSERT INTO `yuebo_admin_log` VALUES ('696', 'admin', 'Menu', 'info', '?id=50', '1', 'admin', '2130706433', '2016-12-21 16:01:57');
+INSERT INTO `yuebo_admin_log` VALUES ('697', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:02:02');
+INSERT INTO `yuebo_admin_log` VALUES ('698', 'admin', 'Menu', 'info', '?id=51', '1', 'admin', '2130706433', '2016-12-21 16:02:08');
+INSERT INTO `yuebo_admin_log` VALUES ('699', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:02:14');
+INSERT INTO `yuebo_admin_log` VALUES ('700', 'admin', 'Menu', 'info', '?parentid=48', '1', 'admin', '2130706433', '2016-12-21 16:02:21');
+INSERT INTO `yuebo_admin_log` VALUES ('701', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:05:34');
+INSERT INTO `yuebo_admin_log` VALUES ('702', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:06:24');
+INSERT INTO `yuebo_admin_log` VALUES ('703', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:06:26');
+INSERT INTO `yuebo_admin_log` VALUES ('704', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:09:33');
+INSERT INTO `yuebo_admin_log` VALUES ('705', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:09:43');
+INSERT INTO `yuebo_admin_log` VALUES ('706', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:10:19');
+INSERT INTO `yuebo_admin_log` VALUES ('707', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:10:58');
+INSERT INTO `yuebo_admin_log` VALUES ('708', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:11:01');
+INSERT INTO `yuebo_admin_log` VALUES ('709', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:11:07');
+INSERT INTO `yuebo_admin_log` VALUES ('710', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:11:08');
+INSERT INTO `yuebo_admin_log` VALUES ('711', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:11:12');
+INSERT INTO `yuebo_admin_log` VALUES ('712', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:11:17');
+INSERT INTO `yuebo_admin_log` VALUES ('713', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:11:53');
+INSERT INTO `yuebo_admin_log` VALUES ('714', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:11:55');
+INSERT INTO `yuebo_admin_log` VALUES ('715', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:13:13');
+INSERT INTO `yuebo_admin_log` VALUES ('716', 'admin', 'Group', 'info', '', '1', 'admin', '2130706433', '2016-12-21 16:13:16');
+INSERT INTO `yuebo_admin_log` VALUES ('717', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:13:28');
+INSERT INTO `yuebo_admin_log` VALUES ('718', 'admin', 'Menu', 'info', '?id=49', '1', 'admin', '2130706433', '2016-12-21 16:13:37');
+INSERT INTO `yuebo_admin_log` VALUES ('719', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:13:46');
+INSERT INTO `yuebo_admin_log` VALUES ('720', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:13:50');
+INSERT INTO `yuebo_admin_log` VALUES ('721', 'admin', 'Group', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:13:53');
+INSERT INTO `yuebo_admin_log` VALUES ('722', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:15:17');
+INSERT INTO `yuebo_admin_log` VALUES ('723', 'admin', 'Menu', 'info', '?id=49', '1', 'admin', '2130706433', '2016-12-21 16:15:37');
+INSERT INTO `yuebo_admin_log` VALUES ('724', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:15:52');
+INSERT INTO `yuebo_admin_log` VALUES ('725', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:16:57');
+INSERT INTO `yuebo_admin_log` VALUES ('726', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:17:16');
+INSERT INTO `yuebo_admin_log` VALUES ('727', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:17:31');
+INSERT INTO `yuebo_admin_log` VALUES ('728', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:17:34');
+INSERT INTO `yuebo_admin_log` VALUES ('729', 'admin', 'Menu', 'info', '?parentid=42', '1', 'admin', '2130706433', '2016-12-21 16:18:49');
+INSERT INTO `yuebo_admin_log` VALUES ('730', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:19:16');
+INSERT INTO `yuebo_admin_log` VALUES ('731', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:19:23');
+INSERT INTO `yuebo_admin_log` VALUES ('732', 'admin', 'Menu', 'info', '?parentid=56', '1', 'admin', '2130706433', '2016-12-21 16:19:43');
+INSERT INTO `yuebo_admin_log` VALUES ('733', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 16:20:27');
+INSERT INTO `yuebo_admin_log` VALUES ('734', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 16:20:37');
+INSERT INTO `yuebo_admin_log` VALUES ('735', 'admin', 'Menu', 'info', '?parentid=56', '1', 'admin', '2130706433', '2016-12-21 16:21:07');
+INSERT INTO `yuebo_admin_log` VALUES ('736', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:21:55');
+INSERT INTO `yuebo_admin_log` VALUES ('737', 'admin', 'Menu', 'info', '?parentid=56', '1', 'admin', '2130706433', '2016-12-21 16:22:01');
+INSERT INTO `yuebo_admin_log` VALUES ('738', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:22:17');
+INSERT INTO `yuebo_admin_log` VALUES ('739', 'admin', 'Menu', 'info', '?id=58', '1', 'admin', '2130706433', '2016-12-21 16:22:30');
+INSERT INTO `yuebo_admin_log` VALUES ('740', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:22:40');
+INSERT INTO `yuebo_admin_log` VALUES ('741', 'admin', 'Menu', 'info', '?parentid=56', '1', 'admin', '2130706433', '2016-12-21 16:22:47');
+INSERT INTO `yuebo_admin_log` VALUES ('742', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:23:02');
+INSERT INTO `yuebo_admin_log` VALUES ('743', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:24:38');
+INSERT INTO `yuebo_admin_log` VALUES ('744', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 16:24:43');
+INSERT INTO `yuebo_admin_log` VALUES ('745', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:24:46');
+INSERT INTO `yuebo_admin_log` VALUES ('746', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 16:24:49');
+INSERT INTO `yuebo_admin_log` VALUES ('747', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:25:47');
+INSERT INTO `yuebo_admin_log` VALUES ('748', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 16:25:50');
+INSERT INTO `yuebo_admin_log` VALUES ('749', 'admin', 'Admin', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:25:54');
+INSERT INTO `yuebo_admin_log` VALUES ('750', 'admin', 'Admin', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:25:58');
+INSERT INTO `yuebo_admin_log` VALUES ('751', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 16:26:01');
+INSERT INTO `yuebo_admin_log` VALUES ('752', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:26:07');
+INSERT INTO `yuebo_admin_log` VALUES ('753', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 16:26:30');
+INSERT INTO `yuebo_admin_log` VALUES ('754', 'admin', 'Admin', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:26:44');
+INSERT INTO `yuebo_admin_log` VALUES ('755', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 16:27:36');
+INSERT INTO `yuebo_admin_log` VALUES ('756', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 16:32:49');
+INSERT INTO `yuebo_admin_log` VALUES ('757', 'admin', 'Admin', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:32:55');
+INSERT INTO `yuebo_admin_log` VALUES ('758', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:32:57');
+INSERT INTO `yuebo_admin_log` VALUES ('759', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:33:13');
+INSERT INTO `yuebo_admin_log` VALUES ('760', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 16:33:16');
+INSERT INTO `yuebo_admin_log` VALUES ('761', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:33:18');
+INSERT INTO `yuebo_admin_log` VALUES ('762', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:33:22');
+INSERT INTO `yuebo_admin_log` VALUES ('763', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:34:00');
+INSERT INTO `yuebo_admin_log` VALUES ('764', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:34:01');
+INSERT INTO `yuebo_admin_log` VALUES ('765', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:35:16');
+INSERT INTO `yuebo_admin_log` VALUES ('766', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 16:35:20');
+INSERT INTO `yuebo_admin_log` VALUES ('767', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 16:35:56');
+INSERT INTO `yuebo_admin_log` VALUES ('768', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:35:57');
+INSERT INTO `yuebo_admin_log` VALUES ('769', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:36:08');
+INSERT INTO `yuebo_admin_log` VALUES ('770', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:36:16');
+INSERT INTO `yuebo_admin_log` VALUES ('771', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:36:38');
+INSERT INTO `yuebo_admin_log` VALUES ('772', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 16:36:56');
+INSERT INTO `yuebo_admin_log` VALUES ('773', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:36:58');
+INSERT INTO `yuebo_admin_log` VALUES ('774', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:37:08');
+INSERT INTO `yuebo_admin_log` VALUES ('775', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:37:15');
+INSERT INTO `yuebo_admin_log` VALUES ('776', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 16:37:20');
+INSERT INTO `yuebo_admin_log` VALUES ('777', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:37:24');
+INSERT INTO `yuebo_admin_log` VALUES ('778', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:37:45');
+INSERT INTO `yuebo_admin_log` VALUES ('779', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:37:50');
+INSERT INTO `yuebo_admin_log` VALUES ('780', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 16:37:58');
+INSERT INTO `yuebo_admin_log` VALUES ('781', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 16:38:56');
+INSERT INTO `yuebo_admin_log` VALUES ('782', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 16:38:58');
+INSERT INTO `yuebo_admin_log` VALUES ('783', 'admin', 'Menu', 'info', '?id=56', '1', 'admin', '2130706433', '2016-12-21 16:39:07');
+INSERT INTO `yuebo_admin_log` VALUES ('784', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 16:39:23');
+INSERT INTO `yuebo_admin_log` VALUES ('785', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:15');
+INSERT INTO `yuebo_admin_log` VALUES ('786', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:29');
+INSERT INTO `yuebo_admin_log` VALUES ('787', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:35');
+INSERT INTO `yuebo_admin_log` VALUES ('788', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:48');
+INSERT INTO `yuebo_admin_log` VALUES ('789', 'admin', 'User', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:50');
+INSERT INTO `yuebo_admin_log` VALUES ('790', 'admin', 'User', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:52');
+INSERT INTO `yuebo_admin_log` VALUES ('791', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:42:57');
+INSERT INTO `yuebo_admin_log` VALUES ('792', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:43:29');
+INSERT INTO `yuebo_admin_log` VALUES ('793', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:44:59');
+INSERT INTO `yuebo_admin_log` VALUES ('794', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:45:29');
+INSERT INTO `yuebo_admin_log` VALUES ('795', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:45:58');
+INSERT INTO `yuebo_admin_log` VALUES ('796', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:46:09');
+INSERT INTO `yuebo_admin_log` VALUES ('797', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:47:19');
+INSERT INTO `yuebo_admin_log` VALUES ('798', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:47:27');
+INSERT INTO `yuebo_admin_log` VALUES ('799', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:50:00');
+INSERT INTO `yuebo_admin_log` VALUES ('800', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 16:52:51');
+INSERT INTO `yuebo_admin_log` VALUES ('801', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 16:55:53');
+INSERT INTO `yuebo_admin_log` VALUES ('802', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 16:56:18');
+INSERT INTO `yuebo_admin_log` VALUES ('803', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:04:03');
+INSERT INTO `yuebo_admin_log` VALUES ('804', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:04:11');
+INSERT INTO `yuebo_admin_log` VALUES ('805', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 17:04:22');
+INSERT INTO `yuebo_admin_log` VALUES ('806', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:06:26');
+INSERT INTO `yuebo_admin_log` VALUES ('807', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 17:06:32');
+INSERT INTO `yuebo_admin_log` VALUES ('808', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 17:08:58');
+INSERT INTO `yuebo_admin_log` VALUES ('809', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:12:11');
+INSERT INTO `yuebo_admin_log` VALUES ('810', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-21 17:12:22');
+INSERT INTO `yuebo_admin_log` VALUES ('811', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:12:28');
+INSERT INTO `yuebo_admin_log` VALUES ('812', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 17:12:34');
+INSERT INTO `yuebo_admin_log` VALUES ('813', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:12:40');
+INSERT INTO `yuebo_admin_log` VALUES ('814', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:13:54');
+INSERT INTO `yuebo_admin_log` VALUES ('815', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:13:56');
+INSERT INTO `yuebo_admin_log` VALUES ('816', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 17:14:13');
+INSERT INTO `yuebo_admin_log` VALUES ('817', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:14:34');
+INSERT INTO `yuebo_admin_log` VALUES ('818', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:14:39');
+INSERT INTO `yuebo_admin_log` VALUES ('819', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:14:46');
+INSERT INTO `yuebo_admin_log` VALUES ('820', 'admin', 'Menu', 'info', '?parentid=1', '1', 'admin', '2130706433', '2016-12-21 17:17:13');
+INSERT INTO `yuebo_admin_log` VALUES ('821', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 17:17:39');
+INSERT INTO `yuebo_admin_log` VALUES ('822', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 17:17:54');
+INSERT INTO `yuebo_admin_log` VALUES ('823', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 17:18:00');
+INSERT INTO `yuebo_admin_log` VALUES ('824', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:18:16');
+INSERT INTO `yuebo_admin_log` VALUES ('825', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:18:18');
+INSERT INTO `yuebo_admin_log` VALUES ('826', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:21:56');
+INSERT INTO `yuebo_admin_log` VALUES ('827', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:22:27');
+INSERT INTO `yuebo_admin_log` VALUES ('828', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:22:30');
+INSERT INTO `yuebo_admin_log` VALUES ('829', 'admin', 'Menu', 'info', '?id=61', '1', 'admin', '2130706433', '2016-12-21 17:32:47');
+INSERT INTO `yuebo_admin_log` VALUES ('830', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:33:00');
+INSERT INTO `yuebo_admin_log` VALUES ('831', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:33:10');
+INSERT INTO `yuebo_admin_log` VALUES ('832', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:33:12');
+INSERT INTO `yuebo_admin_log` VALUES ('833', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:34:12');
+INSERT INTO `yuebo_admin_log` VALUES ('834', 'admin', 'Menu', 'info', '?id=44', '1', 'admin', '2130706433', '2016-12-21 17:34:28');
+INSERT INTO `yuebo_admin_log` VALUES ('835', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:34:34');
+INSERT INTO `yuebo_admin_log` VALUES ('836', 'admin', 'Menu', 'info', '?id=45', '1', 'admin', '2130706433', '2016-12-21 17:34:40');
+INSERT INTO `yuebo_admin_log` VALUES ('837', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:34:47');
+INSERT INTO `yuebo_admin_log` VALUES ('838', 'admin', 'Menu', 'info', '?id=46', '1', 'admin', '2130706433', '2016-12-21 17:34:52');
+INSERT INTO `yuebo_admin_log` VALUES ('839', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:34:58');
+INSERT INTO `yuebo_admin_log` VALUES ('840', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:35:14');
+INSERT INTO `yuebo_admin_log` VALUES ('841', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:35:16');
+INSERT INTO `yuebo_admin_log` VALUES ('842', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:35:18');
+INSERT INTO `yuebo_admin_log` VALUES ('843', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:36:28');
+INSERT INTO `yuebo_admin_log` VALUES ('844', 'admin', 'Menu', 'info', '?parentid=47', '1', 'admin', '2130706433', '2016-12-21 17:36:57');
+INSERT INTO `yuebo_admin_log` VALUES ('845', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 17:37:15');
+INSERT INTO `yuebo_admin_log` VALUES ('846', 'admin', 'Menu', 'info', '?id=49', '1', 'admin', '2130706433', '2016-12-21 17:37:54');
+INSERT INTO `yuebo_admin_log` VALUES ('847', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:37:59');
+INSERT INTO `yuebo_admin_log` VALUES ('848', 'admin', 'Menu', 'info', '?id=44', '1', 'admin', '2130706433', '2016-12-21 17:38:21');
+INSERT INTO `yuebo_admin_log` VALUES ('849', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:38:24');
+INSERT INTO `yuebo_admin_log` VALUES ('850', 'admin', 'Menu', 'info', '?id=45', '1', 'admin', '2130706433', '2016-12-21 17:38:29');
+INSERT INTO `yuebo_admin_log` VALUES ('851', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:38:35');
+INSERT INTO `yuebo_admin_log` VALUES ('852', 'admin', 'Menu', 'info', '?id=46', '1', 'admin', '2130706433', '2016-12-21 17:38:40');
+INSERT INTO `yuebo_admin_log` VALUES ('853', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:38:43');
+INSERT INTO `yuebo_admin_log` VALUES ('854', 'admin', 'Menu', 'info', '?id=50', '1', 'admin', '2130706433', '2016-12-21 17:39:03');
+INSERT INTO `yuebo_admin_log` VALUES ('855', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:39:21');
+INSERT INTO `yuebo_admin_log` VALUES ('856', 'admin', 'Menu', 'info', '?id=51', '1', 'admin', '2130706433', '2016-12-21 17:39:31');
+INSERT INTO `yuebo_admin_log` VALUES ('857', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:39:40');
+INSERT INTO `yuebo_admin_log` VALUES ('858', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 17:40:02');
+INSERT INTO `yuebo_admin_log` VALUES ('859', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 17:40:40');
+INSERT INTO `yuebo_admin_log` VALUES ('860', 'admin', 'Menu', 'info', '?id=55', '1', 'admin', '2130706433', '2016-12-21 17:41:16');
+INSERT INTO `yuebo_admin_log` VALUES ('861', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:41:22');
+INSERT INTO `yuebo_admin_log` VALUES ('862', 'admin', 'Menu', 'info', '?id=55', '1', 'admin', '2130706433', '2016-12-21 17:42:15');
+INSERT INTO `yuebo_admin_log` VALUES ('863', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:42:51');
+INSERT INTO `yuebo_admin_log` VALUES ('864', 'admin', 'Menu', 'info', '?parentid=48', '1', 'admin', '2130706433', '2016-12-21 17:43:02');
+INSERT INTO `yuebo_admin_log` VALUES ('865', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 17:43:28');
+INSERT INTO `yuebo_admin_log` VALUES ('866', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:43:42');
+INSERT INTO `yuebo_admin_log` VALUES ('867', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:43:44');
+INSERT INTO `yuebo_admin_log` VALUES ('868', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 17:44:31');
+INSERT INTO `yuebo_admin_log` VALUES ('869', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:44:32');
+INSERT INTO `yuebo_admin_log` VALUES ('870', 'admin', 'Menu', 'info', '?parentid=42', '1', 'admin', '2130706433', '2016-12-21 17:44:56');
+INSERT INTO `yuebo_admin_log` VALUES ('871', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 17:45:22');
+INSERT INTO `yuebo_admin_log` VALUES ('872', 'admin', 'Menu', 'info', '?id=57', '1', 'admin', '2130706433', '2016-12-21 17:45:40');
+INSERT INTO `yuebo_admin_log` VALUES ('873', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:45:48');
+INSERT INTO `yuebo_admin_log` VALUES ('874', 'admin', 'Menu', 'info', '?id=58', '1', 'admin', '2130706433', '2016-12-21 17:45:55');
+INSERT INTO `yuebo_admin_log` VALUES ('875', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:46:01');
+INSERT INTO `yuebo_admin_log` VALUES ('876', 'admin', 'Menu', 'info', '?id=58', '1', 'admin', '2130706433', '2016-12-21 17:46:07');
+INSERT INTO `yuebo_admin_log` VALUES ('877', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:46:12');
+INSERT INTO `yuebo_admin_log` VALUES ('878', 'admin', 'Menu', 'info', '?id=59', '1', 'admin', '2130706433', '2016-12-21 17:46:17');
+INSERT INTO `yuebo_admin_log` VALUES ('879', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-21 17:46:22');
+INSERT INTO `yuebo_admin_log` VALUES ('880', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:46:26');
+INSERT INTO `yuebo_admin_log` VALUES ('881', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:46:28');
+INSERT INTO `yuebo_admin_log` VALUES ('882', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 17:46:59');
+INSERT INTO `yuebo_admin_log` VALUES ('883', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:47:00');
+INSERT INTO `yuebo_admin_log` VALUES ('884', 'admin', 'Menu', 'info', '?parentid=64', '1', 'admin', '2130706433', '2016-12-21 17:48:37');
+INSERT INTO `yuebo_admin_log` VALUES ('885', 'admin', 'Menu', 'add', '', '1', 'admin', '2130706433', '2016-12-21 17:49:02');
+INSERT INTO `yuebo_admin_log` VALUES ('886', 'admin', 'Menu', 'info', '?id=65', '1', 'admin', '2130706433', '2016-12-21 17:49:55');
+INSERT INTO `yuebo_admin_log` VALUES ('887', 'admin', 'Menu', 'info', '?id=65', '1', 'admin', '2130706433', '2016-12-21 17:50:43');
+INSERT INTO `yuebo_admin_log` VALUES ('888', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:50:45');
+INSERT INTO `yuebo_admin_log` VALUES ('889', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:50:49');
+INSERT INTO `yuebo_admin_log` VALUES ('890', 'admin', 'Menu', 'setlistorder', '', '1', 'admin', '2130706433', '2016-12-21 17:51:26');
+INSERT INTO `yuebo_admin_log` VALUES ('891', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:51:36');
+INSERT INTO `yuebo_admin_log` VALUES ('892', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:51:38');
+INSERT INTO `yuebo_admin_log` VALUES ('893', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:51:41');
+INSERT INTO `yuebo_admin_log` VALUES ('894', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 17:52:25');
+INSERT INTO `yuebo_admin_log` VALUES ('895', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:52:26');
+INSERT INTO `yuebo_admin_log` VALUES ('896', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:52:55');
+INSERT INTO `yuebo_admin_log` VALUES ('897', 'admin', 'Group', 'info', '?id=4', '5', '熊大', '2130706433', '2016-12-21 17:53:01');
+INSERT INTO `yuebo_admin_log` VALUES ('898', 'admin', 'Group', 'info', '?id=4', '5', '熊大', '2130706433', '2016-12-21 17:53:12');
+INSERT INTO `yuebo_admin_log` VALUES ('899', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:53:15');
+INSERT INTO `yuebo_admin_log` VALUES ('900', 'admin', 'Group', 'info', '', '5', '熊大', '2130706433', '2016-12-21 17:53:16');
+INSERT INTO `yuebo_admin_log` VALUES ('901', 'admin', 'Group', 'add', '', '5', '熊大', '2130706433', '2016-12-21 17:53:36');
+INSERT INTO `yuebo_admin_log` VALUES ('902', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:53:37');
+INSERT INTO `yuebo_admin_log` VALUES ('903', 'admin', 'Group', 'rule', '?gid=5', '5', '熊大', '2130706433', '2016-12-21 17:53:41');
+INSERT INTO `yuebo_admin_log` VALUES ('904', 'admin', 'Group', 'rule', '?gid=5', '5', '熊大', '2130706433', '2016-12-21 17:53:51');
+INSERT INTO `yuebo_admin_log` VALUES ('905', 'admin', 'Menu', 'info', '?parentid=60', '5', '熊大', '2130706433', '2016-12-21 17:54:16');
+INSERT INTO `yuebo_admin_log` VALUES ('906', 'admin', 'Menu', 'info', '?parentid=60', '5', '熊大', '2130706433', '2016-12-21 17:54:22');
+INSERT INTO `yuebo_admin_log` VALUES ('907', 'admin', 'Menu', 'info', '', '5', '熊大', '2130706433', '2016-12-21 17:54:28');
+INSERT INTO `yuebo_admin_log` VALUES ('908', 'admin', 'Menu', 'info', '', '5', '熊大', '2130706433', '2016-12-21 17:54:33');
+INSERT INTO `yuebo_admin_log` VALUES ('909', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 17:55:09');
+INSERT INTO `yuebo_admin_log` VALUES ('910', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 17:55:17');
+INSERT INTO `yuebo_admin_log` VALUES ('911', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 17:55:21');
+INSERT INTO `yuebo_admin_log` VALUES ('912', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 17:55:27');
+INSERT INTO `yuebo_admin_log` VALUES ('913', 'admin', 'Admin', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:55:28');
+INSERT INTO `yuebo_admin_log` VALUES ('914', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:55:45');
+INSERT INTO `yuebo_admin_log` VALUES ('915', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-21 17:55:51');
+INSERT INTO `yuebo_admin_log` VALUES ('916', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-21 17:56:23');
+INSERT INTO `yuebo_admin_log` VALUES ('917', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 17:56:25');
+INSERT INTO `yuebo_admin_log` VALUES ('918', 'admin', 'Group', 'rule', '?gid=5', '1', 'admin', '2130706433', '2016-12-21 17:56:28');
+INSERT INTO `yuebo_admin_log` VALUES ('919', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 17:57:24');
+INSERT INTO `yuebo_admin_log` VALUES ('920', 'admin', 'Group', 'info', '?id=4', '5', '熊大', '2130706433', '2016-12-21 17:57:41');
+INSERT INTO `yuebo_admin_log` VALUES ('921', 'admin', 'Group', 'info', '?id=4', '5', '熊大', '2130706433', '2016-12-21 17:57:48');
+INSERT INTO `yuebo_admin_log` VALUES ('922', 'admin', 'Admin', 'public_edit_info', '', '5', '熊大', '2130706433', '2016-12-21 17:59:58');
+INSERT INTO `yuebo_admin_log` VALUES ('923', 'admin', 'User', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:08');
+INSERT INTO `yuebo_admin_log` VALUES ('924', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:11');
+INSERT INTO `yuebo_admin_log` VALUES ('925', 'admin', 'Group', 'info', '', '5', '熊大', '2130706433', '2016-12-21 18:00:16');
+INSERT INTO `yuebo_admin_log` VALUES ('926', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:21');
+INSERT INTO `yuebo_admin_log` VALUES ('927', 'admin', 'Group', 'info', '?id=4', '5', '熊大', '2130706433', '2016-12-21 18:00:25');
+INSERT INTO `yuebo_admin_log` VALUES ('928', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:28');
+INSERT INTO `yuebo_admin_log` VALUES ('929', 'admin', 'Group', 'info', '', '5', '熊大', '2130706433', '2016-12-21 18:00:30');
+INSERT INTO `yuebo_admin_log` VALUES ('930', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:32');
+INSERT INTO `yuebo_admin_log` VALUES ('931', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:00:40');
+INSERT INTO `yuebo_admin_log` VALUES ('932', 'admin', 'Group', 'index', '', '5', '熊大', '2130706433', '2016-12-21 18:06:26');
+INSERT INTO `yuebo_admin_log` VALUES ('933', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:06:53');
+INSERT INTO `yuebo_admin_log` VALUES ('934', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:12:57');
+INSERT INTO `yuebo_admin_log` VALUES ('935', 'admin', 'Menu', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:14:45');
+INSERT INTO `yuebo_admin_log` VALUES ('936', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 18:14:58');
+INSERT INTO `yuebo_admin_log` VALUES ('937', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 18:14:59');
+INSERT INTO `yuebo_admin_log` VALUES ('938', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:15:01');
+INSERT INTO `yuebo_admin_log` VALUES ('939', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:15:05');
+INSERT INTO `yuebo_admin_log` VALUES ('940', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:15:13');
+INSERT INTO `yuebo_admin_log` VALUES ('941', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:15:19');
+INSERT INTO `yuebo_admin_log` VALUES ('942', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:15:22');
+INSERT INTO `yuebo_admin_log` VALUES ('943', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:17:34');
+INSERT INTO `yuebo_admin_log` VALUES ('944', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:17:42');
+INSERT INTO `yuebo_admin_log` VALUES ('945', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:17:58');
+INSERT INTO `yuebo_admin_log` VALUES ('946', 'admin', 'Group', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:19:32');
+INSERT INTO `yuebo_admin_log` VALUES ('947', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:19:37');
+INSERT INTO `yuebo_admin_log` VALUES ('948', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-21 18:19:40');
+INSERT INTO `yuebo_admin_log` VALUES ('949', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:48');
+INSERT INTO `yuebo_admin_log` VALUES ('950', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:49');
+INSERT INTO `yuebo_admin_log` VALUES ('951', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:49');
+INSERT INTO `yuebo_admin_log` VALUES ('952', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:50');
+INSERT INTO `yuebo_admin_log` VALUES ('953', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:54');
+INSERT INTO `yuebo_admin_log` VALUES ('954', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:27:56');
+INSERT INTO `yuebo_admin_log` VALUES ('955', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:28:12');
+INSERT INTO `yuebo_admin_log` VALUES ('956', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:30:54');
+INSERT INTO `yuebo_admin_log` VALUES ('957', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:30:56');
+INSERT INTO `yuebo_admin_log` VALUES ('958', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:31:00');
+INSERT INTO `yuebo_admin_log` VALUES ('959', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-21 18:31:01');
+INSERT INTO `yuebo_admin_log` VALUES ('960', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:31:03');
+INSERT INTO `yuebo_admin_log` VALUES ('961', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-21 18:31:07');
+INSERT INTO `yuebo_admin_log` VALUES ('962', 'admin', 'Index', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:46:57');
+INSERT INTO `yuebo_admin_log` VALUES ('963', 'admin', 'Menu', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:47:51');
+INSERT INTO `yuebo_admin_log` VALUES ('964', 'admin', 'Log', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:47:56');
+INSERT INTO `yuebo_admin_log` VALUES ('965', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:48:38');
+INSERT INTO `yuebo_admin_log` VALUES ('966', 'admin', 'Group', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:48:38');
+INSERT INTO `yuebo_admin_log` VALUES ('967', 'admin', 'Group', 'info', '', '1', 'admin', '2130706433', '2016-12-22 09:48:42');
+INSERT INTO `yuebo_admin_log` VALUES ('968', 'admin', 'Group', 'add', '', '1', 'admin', '2130706433', '2016-12-22 09:49:38');
+INSERT INTO `yuebo_admin_log` VALUES ('969', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:49:40');
+INSERT INTO `yuebo_admin_log` VALUES ('970', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 09:49:46');
+INSERT INTO `yuebo_admin_log` VALUES ('971', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 09:50:07');
+INSERT INTO `yuebo_admin_log` VALUES ('972', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:50:08');
+INSERT INTO `yuebo_admin_log` VALUES ('973', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:50:12');
+INSERT INTO `yuebo_admin_log` VALUES ('974', 'admin', 'Group', 'info', '', '1', 'admin', '2130706433', '2016-12-22 09:50:15');
+INSERT INTO `yuebo_admin_log` VALUES ('975', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:51:52');
+INSERT INTO `yuebo_admin_log` VALUES ('976', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:55:01');
+INSERT INTO `yuebo_admin_log` VALUES ('977', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:55:20');
+INSERT INTO `yuebo_admin_log` VALUES ('978', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:55:25');
+INSERT INTO `yuebo_admin_log` VALUES ('979', 'admin', 'User', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:55:26');
+INSERT INTO `yuebo_admin_log` VALUES ('980', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:55:28');
+INSERT INTO `yuebo_admin_log` VALUES ('981', 'admin', 'Admin', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 09:55:29');
+INSERT INTO `yuebo_admin_log` VALUES ('982', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:56:18');
+INSERT INTO `yuebo_admin_log` VALUES ('983', 'admin', 'Menu', 'info', '?id=53', '1', 'admin', '2130706433', '2016-12-22 09:56:30');
+INSERT INTO `yuebo_admin_log` VALUES ('984', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-22 09:56:38');
+INSERT INTO `yuebo_admin_log` VALUES ('985', 'admin', 'Menu', 'info', '?id=48', '1', 'admin', '2130706433', '2016-12-22 09:56:49');
+INSERT INTO `yuebo_admin_log` VALUES ('986', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-22 09:56:58');
+INSERT INTO `yuebo_admin_log` VALUES ('987', 'admin', 'Menu', 'info', '?id=56', '1', 'admin', '2130706433', '2016-12-22 09:57:27');
+INSERT INTO `yuebo_admin_log` VALUES ('988', 'admin', 'Menu', 'edit', '', '1', 'admin', '2130706433', '2016-12-22 09:57:35');
+INSERT INTO `yuebo_admin_log` VALUES ('989', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:57:43');
+INSERT INTO `yuebo_admin_log` VALUES ('990', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-22 09:57:47');
+INSERT INTO `yuebo_admin_log` VALUES ('991', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:58:51');
+INSERT INTO `yuebo_admin_log` VALUES ('992', 'admin', 'Admin', 'index', '?group_id=6', '1', 'admin', '2130706433', '2016-12-22 09:59:05');
+INSERT INTO `yuebo_admin_log` VALUES ('993', 'admin', 'Admin', 'index', '?group_id=4', '1', 'admin', '2130706433', '2016-12-22 09:59:12');
+INSERT INTO `yuebo_admin_log` VALUES ('994', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 09:59:27');
+INSERT INTO `yuebo_admin_log` VALUES ('995', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:00:00');
+INSERT INTO `yuebo_admin_log` VALUES ('996', 'admin', 'Admin', 'index', '?group_id=4', '1', 'admin', '2130706433', '2016-12-22 10:00:07');
+INSERT INTO `yuebo_admin_log` VALUES ('997', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:00:32');
+INSERT INTO `yuebo_admin_log` VALUES ('998', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-22 10:00:36');
+INSERT INTO `yuebo_admin_log` VALUES ('999', 'admin', 'Admin', 'add', '', '1', 'admin', '2130706433', '2016-12-22 10:00:55');
+INSERT INTO `yuebo_admin_log` VALUES ('1000', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:00:56');
+INSERT INTO `yuebo_admin_log` VALUES ('1001', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:01:14');
+INSERT INTO `yuebo_admin_log` VALUES ('1002', 'admin', 'Admin', 'index', '?group_id=4', '1', 'admin', '2130706433', '2016-12-22 10:01:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1003', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:01:29');
+INSERT INTO `yuebo_admin_log` VALUES ('1004', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:02:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1005', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:02:47');
+INSERT INTO `yuebo_admin_log` VALUES ('1006', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:07:11');
+INSERT INTO `yuebo_admin_log` VALUES ('1007', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:07:15');
+INSERT INTO `yuebo_admin_log` VALUES ('1008', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:07:23');
+INSERT INTO `yuebo_admin_log` VALUES ('1009', 'admin', 'Group', 'rule', '?gid=5', '1', 'admin', '2130706433', '2016-12-22 10:09:10');
+INSERT INTO `yuebo_admin_log` VALUES ('1010', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 10:10:02');
+INSERT INTO `yuebo_admin_log` VALUES ('1011', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:10:04');
+INSERT INTO `yuebo_admin_log` VALUES ('1012', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:11:13');
+INSERT INTO `yuebo_admin_log` VALUES ('1013', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:11:14');
+INSERT INTO `yuebo_admin_log` VALUES ('1014', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:11:17');
+INSERT INTO `yuebo_admin_log` VALUES ('1015', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:11:19');
+INSERT INTO `yuebo_admin_log` VALUES ('1016', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:11:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1017', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:20:30');
+INSERT INTO `yuebo_admin_log` VALUES ('1018', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:20:34');
+INSERT INTO `yuebo_admin_log` VALUES ('1019', 'admin', 'Menu', 'info', '?parentid=32', '6', '熊二', '2130706433', '2016-12-22 10:21:38');
+INSERT INTO `yuebo_admin_log` VALUES ('1020', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:21:42');
+INSERT INTO `yuebo_admin_log` VALUES ('1021', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:21:52');
+INSERT INTO `yuebo_admin_log` VALUES ('1022', 'admin', 'Admin', 'info', '?id=5', '6', '熊二', '2130706433', '2016-12-22 10:21:55');
+INSERT INTO `yuebo_admin_log` VALUES ('1023', 'admin', 'Admin', 'edit', '', '6', '熊二', '2130706433', '2016-12-22 10:22:07');
+INSERT INTO `yuebo_admin_log` VALUES ('1024', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:22:09');
+INSERT INTO `yuebo_admin_log` VALUES ('1025', 'admin', 'Admin', 'info', '?id=6', '6', '熊二', '2130706433', '2016-12-22 10:22:18');
+INSERT INTO `yuebo_admin_log` VALUES ('1026', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:22:31');
+INSERT INTO `yuebo_admin_log` VALUES ('1027', 'admin', 'Admin', 'public_edit_info', '', '6', '熊二', '2130706433', '2016-12-22 10:22:53');
+INSERT INTO `yuebo_admin_log` VALUES ('1028', 'admin', 'Admin', 'public_edit_info', '', '6', '熊二', '2130706433', '2016-12-22 10:22:58');
+INSERT INTO `yuebo_admin_log` VALUES ('1029', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:23:01');
+INSERT INTO `yuebo_admin_log` VALUES ('1030', 'admin', 'Admin', 'info', '?id=6', '6', '熊二', '2130706433', '2016-12-22 10:23:28');
+INSERT INTO `yuebo_admin_log` VALUES ('1031', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:24:13');
+INSERT INTO `yuebo_admin_log` VALUES ('1032', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:24:48');
+INSERT INTO `yuebo_admin_log` VALUES ('1033', 'admin', 'User', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:25:36');
+INSERT INTO `yuebo_admin_log` VALUES ('1034', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:25:38');
+INSERT INTO `yuebo_admin_log` VALUES ('1035', 'admin', 'Admin', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:30:49');
+INSERT INTO `yuebo_admin_log` VALUES ('1036', 'admin', 'Menu', 'info', '?id=58', '6', '熊二', '2130706433', '2016-12-22 10:46:45');
+INSERT INTO `yuebo_admin_log` VALUES ('1037', 'admin', 'Menu', 'edit', '', '6', '熊二', '2130706433', '2016-12-22 10:46:48');
+INSERT INTO `yuebo_admin_log` VALUES ('1038', 'admin', 'Group', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:47:37');
+INSERT INTO `yuebo_admin_log` VALUES ('1039', 'admin', 'Group', 'index', '', '6', '熊二', '2130706433', '2016-12-22 10:47:45');
+INSERT INTO `yuebo_admin_log` VALUES ('1040', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:48:06');
+INSERT INTO `yuebo_admin_log` VALUES ('1041', 'admin', 'Admin', 'info', '?id=6', '1', 'admin', '2130706433', '2016-12-22 10:48:09');
+INSERT INTO `yuebo_admin_log` VALUES ('1042', 'admin', 'Admin', 'edit', '', '1', 'admin', '2130706433', '2016-12-22 10:48:22');
+INSERT INTO `yuebo_admin_log` VALUES ('1043', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:48:23');
+INSERT INTO `yuebo_admin_log` VALUES ('1044', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:48:26');
+INSERT INTO `yuebo_admin_log` VALUES ('1045', 'admin', 'Group', 'rule', '?gid=5', '1', 'admin', '2130706433', '2016-12-22 10:48:28');
+INSERT INTO `yuebo_admin_log` VALUES ('1046', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 10:49:37');
+INSERT INTO `yuebo_admin_log` VALUES ('1047', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:49:38');
+INSERT INTO `yuebo_admin_log` VALUES ('1048', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:49:44');
+INSERT INTO `yuebo_admin_log` VALUES ('1049', 'admin', 'Admin', 'info', '', '1', 'admin', '2130706433', '2016-12-22 10:49:46');
+INSERT INTO `yuebo_admin_log` VALUES ('1050', 'admin', 'Admin', 'add', '', '1', 'admin', '2130706433', '2016-12-22 10:50:08');
+INSERT INTO `yuebo_admin_log` VALUES ('1051', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:50:09');
+INSERT INTO `yuebo_admin_log` VALUES ('1052', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-22 10:50:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1053', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:50:27');
+INSERT INTO `yuebo_admin_log` VALUES ('1054', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:50:32');
+INSERT INTO `yuebo_admin_log` VALUES ('1055', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:54:14');
+INSERT INTO `yuebo_admin_log` VALUES ('1056', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:54:28');
+INSERT INTO `yuebo_admin_log` VALUES ('1057', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-22 10:55:41');
+INSERT INTO `yuebo_admin_log` VALUES ('1058', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-22 10:56:07');
+INSERT INTO `yuebo_admin_log` VALUES ('1059', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 10:56:11');
+INSERT INTO `yuebo_admin_log` VALUES ('1060', 'admin', 'Admin', 'info', '?id=5', '1', 'admin', '2130706433', '2016-12-22 10:56:17');
+INSERT INTO `yuebo_admin_log` VALUES ('1061', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:00:45');
+INSERT INTO `yuebo_admin_log` VALUES ('1062', 'admin', 'Group', 'rule', '?gid=4', '1', 'admin', '2130706433', '2016-12-22 11:01:10');
+INSERT INTO `yuebo_admin_log` VALUES ('1063', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:01:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1064', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:02:29');
+INSERT INTO `yuebo_admin_log` VALUES ('1065', 'admin', 'Admin', 'info', '?id=7', '1', 'admin', '2130706433', '2016-12-22 11:02:53');
+INSERT INTO `yuebo_admin_log` VALUES ('1066', 'admin', 'Admin', 'info', '?id=7', '1', 'admin', '2130706433', '2016-12-22 11:03:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1067', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:03:19');
+INSERT INTO `yuebo_admin_log` VALUES ('1068', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-22 11:03:37');
+INSERT INTO `yuebo_admin_log` VALUES ('1069', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:03:41');
+INSERT INTO `yuebo_admin_log` VALUES ('1070', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:03:44');
+INSERT INTO `yuebo_admin_log` VALUES ('1071', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:04:21');
+INSERT INTO `yuebo_admin_log` VALUES ('1072', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 11:04:28');
+INSERT INTO `yuebo_admin_log` VALUES ('1073', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:04:33');
+INSERT INTO `yuebo_admin_log` VALUES ('1074', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:05:43');
+INSERT INTO `yuebo_admin_log` VALUES ('1075', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:05:46');
+INSERT INTO `yuebo_admin_log` VALUES ('1076', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:05:48');
+INSERT INTO `yuebo_admin_log` VALUES ('1077', 'admin', 'Admin', 'public_edit_info', '', '1', 'admin', '2130706433', '2016-12-22 11:05:54');
+INSERT INTO `yuebo_admin_log` VALUES ('1078', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:05:58');
+INSERT INTO `yuebo_admin_log` VALUES ('1079', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:16:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1080', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:30:09');
+INSERT INTO `yuebo_admin_log` VALUES ('1081', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:06');
+INSERT INTO `yuebo_admin_log` VALUES ('1082', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:08');
+INSERT INTO `yuebo_admin_log` VALUES ('1083', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:21');
+INSERT INTO `yuebo_admin_log` VALUES ('1084', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1085', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:26');
+INSERT INTO `yuebo_admin_log` VALUES ('1086', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 11:38:33');
+INSERT INTO `yuebo_admin_log` VALUES ('1087', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 13:00:48');
+INSERT INTO `yuebo_admin_log` VALUES ('1088', 'admin', 'Admin', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 13:00:48');
+INSERT INTO `yuebo_admin_log` VALUES ('1089', 'admin', 'Index', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 14:50:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1090', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:51:24');
+INSERT INTO `yuebo_admin_log` VALUES ('1091', 'admin', 'User', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 15:51:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1092', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:51:30');
+INSERT INTO `yuebo_admin_log` VALUES ('1093', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:51:32');
+INSERT INTO `yuebo_admin_log` VALUES ('1094', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:51:46');
+INSERT INTO `yuebo_admin_log` VALUES ('1095', 'admin', 'Group', 'favicon.ico', '', '1', 'admin', '2130706433', '2016-12-22 15:51:47');
+INSERT INTO `yuebo_admin_log` VALUES ('1096', 'admin', 'Group', 'rule', '?gid=5', '1', 'admin', '2130706433', '2016-12-22 15:51:52');
+INSERT INTO `yuebo_admin_log` VALUES ('1097', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 15:52:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1098', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:52:17');
+INSERT INTO `yuebo_admin_log` VALUES ('1099', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 15:52:36');
+INSERT INTO `yuebo_admin_log` VALUES ('1100', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 15:52:44');
+INSERT INTO `yuebo_admin_log` VALUES ('1101', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:52:46');
+INSERT INTO `yuebo_admin_log` VALUES ('1102', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 15:54:17');
+INSERT INTO `yuebo_admin_log` VALUES ('1103', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 15:54:22');
+INSERT INTO `yuebo_admin_log` VALUES ('1104', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:54:23');
+INSERT INTO `yuebo_admin_log` VALUES ('1105', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:56:49');
+INSERT INTO `yuebo_admin_log` VALUES ('1106', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 15:56:52');
+INSERT INTO `yuebo_admin_log` VALUES ('1107', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 15:56:55');
+INSERT INTO `yuebo_admin_log` VALUES ('1108', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 15:58:47');
+INSERT INTO `yuebo_admin_log` VALUES ('1109', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:58:56');
+INSERT INTO `yuebo_admin_log` VALUES ('1110', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 15:59:53');
+INSERT INTO `yuebo_admin_log` VALUES ('1111', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 15:59:56');
+INSERT INTO `yuebo_admin_log` VALUES ('1112', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 16:00:07');
+INSERT INTO `yuebo_admin_log` VALUES ('1113', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 16:00:08');
+INSERT INTO `yuebo_admin_log` VALUES ('1114', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 16:00:22');
+INSERT INTO `yuebo_admin_log` VALUES ('1115', 'admin', 'Group', 'rule', '?gid=6', '1', 'admin', '2130706433', '2016-12-22 16:00:25');
+INSERT INTO `yuebo_admin_log` VALUES ('1116', 'admin', 'Group', 'editrule', '', '1', 'admin', '2130706433', '2016-12-22 16:00:33');
+INSERT INTO `yuebo_admin_log` VALUES ('1117', 'admin', 'Group', 'index', '', '1', 'admin', '2130706433', '2016-12-22 16:00:34');
+INSERT INTO `yuebo_admin_log` VALUES ('1118', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:28:23');
+INSERT INTO `yuebo_admin_log` VALUES ('1119', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:38:18');
+INSERT INTO `yuebo_admin_log` VALUES ('1120', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:39:03');
+INSERT INTO `yuebo_admin_log` VALUES ('1121', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:41:35');
+INSERT INTO `yuebo_admin_log` VALUES ('1122', 'admin', 'User', 'info', '?id=', '1', 'admin', '2130706433', '2016-12-22 17:41:58');
+INSERT INTO `yuebo_admin_log` VALUES ('1123', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:42:01');
+INSERT INTO `yuebo_admin_log` VALUES ('1124', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:46:56');
+INSERT INTO `yuebo_admin_log` VALUES ('1125', 'admin', 'User', 'info', '?id=4', '1', 'admin', '2130706433', '2016-12-22 17:47:01');
+INSERT INTO `yuebo_admin_log` VALUES ('1126', 'admin', 'User', 'info', '?id=4', '1', 'admin', '2130706433', '2016-12-22 17:47:26');
+INSERT INTO `yuebo_admin_log` VALUES ('1127', 'admin', 'User', 'info', '?id=4', '1', 'admin', '2130706433', '2016-12-22 17:47:39');
+INSERT INTO `yuebo_admin_log` VALUES ('1128', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:47:42');
+INSERT INTO `yuebo_admin_log` VALUES ('1129', 'admin', 'User', 'del', '?id=4', '1', 'admin', '2130706433', '2016-12-22 17:48:13');
+INSERT INTO `yuebo_admin_log` VALUES ('1130', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:52:55');
+INSERT INTO `yuebo_admin_log` VALUES ('1131', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 17:52:56');
+INSERT INTO `yuebo_admin_log` VALUES ('1132', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:07:07');
+INSERT INTO `yuebo_admin_log` VALUES ('1133', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:18:15');
+INSERT INTO `yuebo_admin_log` VALUES ('1134', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:19:15');
+INSERT INTO `yuebo_admin_log` VALUES ('1135', 'admin', 'User', 'disabled', '?id=4', '1', 'admin', '2130706433', '2016-12-22 18:19:20');
+INSERT INTO `yuebo_admin_log` VALUES ('1136', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:19:33');
+INSERT INTO `yuebo_admin_log` VALUES ('1137', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:24:34');
+INSERT INTO `yuebo_admin_log` VALUES ('1138', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:26:38');
+INSERT INTO `yuebo_admin_log` VALUES ('1139', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:29:05');
+INSERT INTO `yuebo_admin_log` VALUES ('1140', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:29:23');
+INSERT INTO `yuebo_admin_log` VALUES ('1141', 'admin', 'User', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:30:16');
+INSERT INTO `yuebo_admin_log` VALUES ('1142', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:30:33');
+INSERT INTO `yuebo_admin_log` VALUES ('1143', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:30:50');
+INSERT INTO `yuebo_admin_log` VALUES ('1144', 'admin', 'Admin', 'index', '', '1', 'admin', '2130706433', '2016-12-22 18:30:57');
+
+-- ----------------------------
+-- Table structure for yuebo_app
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_app`;
+CREATE TABLE `yuebo_app` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `keyword` varchar(100) NOT NULL DEFAULT '',
+  `price` decimal(10,0) NOT NULL DEFAULT '0',
+  `icon` varchar(100) NOT NULL DEFAULT '' COMMENT '图标',
+  `total` int(11) NOT NULL DEFAULT '0' COMMENT '数量',
+  `type` tinyint(2) NOT NULL DEFAULT '1' COMMENT '1软件，2游戏，3付费',
+  `add_time` datetime NOT NULL COMMENT '添加时间',
+  `update_time` datetime NOT NULL COMMENT '更新时间',
+  `user_id` int(11) NOT NULL COMMENT '发布人ID',
+  `position` smallint(5) NOT NULL DEFAULT '0' COMMENT '位置',
+  `remark` varchar(255) NOT NULL DEFAULT '' COMMENT '标记说明',
+  `start_time` datetime DEFAULT NULL,
+  `end_time` datetime DEFAULT NULL COMMENT '开始时间',
+  `s_time` time DEFAULT NULL,
+  `date_total` int(11) DEFAULT NULL,
+  `time_type` tinyint(1) NOT NULL DEFAULT '1' COMMENT '时间类型：1全天，2时间段',
+  PRIMARY KEY (`id`),
+  KEY `nums` (`total`) USING BTREE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of yuebo_app
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for yuebo_config
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_config`;
+CREATE TABLE `yuebo_config` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '配置ID',
+  `name` varchar(30) NOT NULL DEFAULT '' COMMENT '配置名称',
+  `type` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '配置类型',
+  `title` varchar(50) NOT NULL DEFAULT '' COMMENT '配置说明',
+  `group` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '配置分组',
+  `extra` varchar(255) NOT NULL DEFAULT '' COMMENT '配置值',
+  `remark` varchar(100) NOT NULL COMMENT '配置说明',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '创建时间',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0' COMMENT '更新时间',
+  `status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '状态',
+  `value` text NOT NULL COMMENT '配置值',
+  `sort` smallint(3) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uk_name` (`name`),
+  KEY `type` (`type`),
+  KEY `group` (`group`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of yuebo_config
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for yuebo_gameuser
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_gameuser`;
+CREATE TABLE `yuebo_gameuser` (
+  `un32UserID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `eUserCate` int(11) unsigned zerofill NOT NULL COMMENT '0:无;1:普通玩家',
+  `szUserName` char(30) COLLATE utf8_unicode_ci NOT NULL,
+  `szNickName` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `n64Score` bigint(20) NOT NULL DEFAULT '0',
+  `n64Gold` bigint(20) NOT NULL DEFAULT '0',
+  `n64RoomCardNum` bigint(20) NOT NULL DEFAULT '0',
+  `tRegisteUTCMilsec` bigint(20) NOT NULL DEFAULT '0',
+  `tLastLoginUTCMilsec` bigint(20) NOT NULL DEFAULT '0',
+  `bSex` tinyint(1) NOT NULL DEFAULT '0',
+  `status` tinyint(1) DEFAULT NULL COMMENT '状态',
+  PRIMARY KEY (`un32UserID`),
+  KEY `eUserCate` (`eUserCate`),
+  KEY `szUserName` (`szUserName`),
+  KEY `szNickName` (`szNickName`),
+  KEY `n32Reputation` (`n64RoomCardNum`),
+  KEY `n64Score` (`n64Score`),
+  KEY `n64Dollar` (`n64Gold`),
+  KEY `tRegisteUTCMilsec` (`tRegisteUTCMilsec`),
+  KEY `tLastLoginUTCMilsec` (`tLastLoginUTCMilsec`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+-- ----------------------------
+-- Records of yuebo_gameuser
+-- ----------------------------
+INSERT INTO `yuebo_gameuser` VALUES ('4', '00000000001', 'test1', 'test1', '0', '80000', '600', '1482024363', '1482024363', '1', '1');
+INSERT INTO `yuebo_gameuser` VALUES ('5', '00000000001', 'test', 'test', '0', '80000', '600', '1482099170', '1482099170', '1', '1');
+INSERT INTO `yuebo_gameuser` VALUES ('6', '00000000001', 'test2', 'test2', '0', '80000', '600', '1482250310', '1482250310', '1', '0');
+
+-- ----------------------------
+-- Table structure for yuebo_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `yuebo_menu`;
+CREATE TABLE `yuebo_menu` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜单栏id',
+  `name` char(40) NOT NULL DEFAULT '' COMMENT '菜单名称',
+  `parentid` smallint(6) DEFAULT '0' COMMENT '父级id',
+  `icon` varchar(20) NOT NULL DEFAULT '' COMMENT '菜单图标',
+  `c` varchar(20) DEFAULT NULL COMMENT '控制器名称',
+  `a` varchar(20) DEFAULT NULL COMMENT '方法名称',
+  `data` varchar(50) NOT NULL DEFAULT '',
+  `tip` varchar(255) NOT NULL DEFAULT '' COMMENT '提示',
+  `group` varchar(50) DEFAULT '' COMMENT '分组',
+  `listorder` smallint(6) unsigned NOT NULL DEFAULT '999' COMMENT '排序',
+  `display` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示(1:显示,2:不显示)',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`),
+  KEY `parentid` (`parentid`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8 COMMENT='后台管理菜单栏';
+
+-- ----------------------------
+-- Records of yuebo_menu
+-- ----------------------------
+INSERT INTO `yuebo_menu` VALUES ('1', '管理员设置', '0', 'fa-users', 'Admin', 'index', '', '', '', '1', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('31', '系统首页', '0', 'fa-bank', 'Index', 'index', '', '', '', '0', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('32', '玩家管理', '0', 'fa-child', 'User', 'index', '', '', '', '2', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('42', '系统设置', '0', 'fa-cogs', 'Menu', 'index', '', '', '', '4', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('43', '查看管理员', '43', '', 'Admin', 'index', '', '', '', '999', '2', '1482306721');
+INSERT INTO `yuebo_menu` VALUES ('44', '添加管理员', '61', '', 'Admin', 'add', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('45', '修改管理员', '61', '', 'Admin', 'edit', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('46', '删除管理员', '61', '', 'Admin', 'del', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('47', '角色管理', '0', ' fa-user', 'Group', 'index', '', '', '', '3', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('48', '角色操作', '47', '', 'Group', 'index', '', '', '', '777', '1', '1482371818');
+INSERT INTO `yuebo_menu` VALUES ('49', '添加角色', '62', '', 'Group', 'add', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('50', '修改角色', '62', '', 'Group', 'edit', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('51', '删除角色', '62', '', 'Group', 'del', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('53', '管理员操作', '1', '', 'Admin', 'index', '', '', '', '777', '1', '1482371798');
+INSERT INTO `yuebo_menu` VALUES ('54', '个人设置', '1', '', 'Admin', 'public_edit_info', '', '', '', '777', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('55', '查看权限', '48', '', 'Group', 'rule', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('56', '菜单操作', '42', '', 'Menu', 'index', '', '', '', '888', '1', '1482371855');
+INSERT INTO `yuebo_menu` VALUES ('58', '修改菜单', '64', '', 'Menu', 'edit', '', '', '', '999', '2', '1482374808');
+INSERT INTO `yuebo_menu` VALUES ('59', '删除菜单', '64', '', 'Menu', 'del', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('60', '日志管理', '0', ' fa-list-ul', 'Log', 'index', '', '', '', '999', '1', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('61', '详情', '1', '', 'Admin', 'info', '', '', '', '888', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('62', '详情', '47', '', 'Group', 'info', '', '', '', '888', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('63', '修改权限', '48', '', 'Group', 'editRule', '', '', '', '999', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('64', '详情', '42', '', 'Menu', 'info', '', '', '', '888', '2', '1482313887');
+INSERT INTO `yuebo_menu` VALUES ('65', '添加菜单', '64', '', 'Menu', 'add', '', '', '', '888', '2', '1482313887');

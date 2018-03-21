@@ -1,0 +1,256 @@
+<?php
+
+/**
+ *  后台继承类
+ * @file   Admin.php  
+ * @date   2016-8-23 19:45:21 
+ * @author Zhenxun Du<5552123@qq.com>  
+ * @version    SVN:$Id:$ 
+ */
+
+namespace application\admin\controller;
+
+use think\Loader;
+use think\Url;
+use think\Model;
+use think\Db;
+class SonAdminController extends CommonController {
+
+    public function index() {
+//        $where = array();
+//
+//        if ($group_id = input('group_id')) {
+//            $where['t2.group_id'] = $group_id;
+//
+//        }
+//        $lists = db('admin')->alias('t1')->field('t1.*')
+//                ->where($where)
+//                ->join(config('database.prefix').'admingroupaccess t2', 't1.id=t2.uid', 'left')
+//                ->group('t1.id')
+//                ->order('t1.id desc')
+//                ->select();
+//
+//        foreach ($lists as $k => $v) {
+//            //取出组名
+//            $lists[$k]['groups'] = '';
+//            $groups = Loader::model('Admin')->getUserGroups($v['id']);
+//            if ($groups) {
+//                $tmp = db('admingroup')->field('name')->where('id', 'in', $groups)->select();
+//
+//                foreach ($tmp as $vv) {
+//                    $lists[$k]['groups'] .= $vv['name'] . ',';
+//                }
+//                $lists[$k]['groups'] = trim($lists[$k]['groups'], ',');
+//            }
+//        }
+        $lists=array();
+        if(session('user_id')!=1){
+            $lists=Db::name('admin')->where($this->come_where)->select();
+            foreach ($lists as $k => $v) {
+                //取出组名
+                $lists[$k]['groups'] = '';
+                $groups = Loader::model('Admin')->getUserGroups($v['id']);
+                if ($groups) {
+                    $tmp = db('admingroup')->field('name')->where('id', 'in', $groups)->select();
+
+                    foreach ($tmp as $vv) {
+                        $lists[$k]['groups'] .= $vv['name'] . ',';
+                    }
+                    $lists[$k]['groups'] = trim($lists[$k]['groups'], ',');
+                }
+
+            }
+        }
+        $this->assign('lists', $lists);
+        return $this->fetch();
+    }
+
+    /*
+     * 查看
+     */
+
+    public function info() {
+        $id = input('id');
+
+        if ($id) {
+            //当前用户信息
+            $info = model('Admin')->getInfo($id);
+
+            $info['userGroups'] = Loader::model('Admin')->getUserGroups($id);
+
+            $this->assign('info', $info);
+        }
+        $data = array();
+        if(session('merch_id')===0){
+            $this->error('你是超级超级管理员，这个是线路给自己配置管理员的');
+            $res=Db::name('Admingroup')->select();
+            foreach($res as $v){
+                $data[$v['id']] = $v['name'];
+            }
+        }else{
+            //所有组信息
+            $groupIds=Db::name('admingroupaccess')->field('group_id')->where("uid",session('user_id'))->select();
+            // echo  Db::name('admingroupaccess')->getLastSql();可以看上一句的sql语句
+            $arr=array();
+            foreach($groupIds as $val){
+                $arr[]=$val['group_id'];
+            }
+            foreach($arr as $k=>$vv){
+                if($vv==8){//去掉子管理员配置选项
+                    unset($arr[$k]);
+                }
+            }
+            $res = db('Admingroup')->field('id,name')->where('id','in',$arr)->select();
+
+            foreach ($res as $k => $v) {
+                $data[$v['id']] = $v['name'];
+            }
+        }
+
+        $this->assign('groups', $data);
+        return $this->fetch();
+
+
+    }
+    /*
+     * 添加
+     */
+
+    public function add() {
+        $data = input();
+        if($this->user_name==$data['username']){
+           $this->error('用户名已存在');
+        }
+        $data['username']=$this->user_name."_%_".$data['username'];
+        $res=Db::name('admin')->where("username",$data['username'])->find();
+        if($res){
+            $this->error('用户名已存在');
+        }
+        if ($data['password'] != $data['rpassword']) {
+            $this->error('两次密码不一致');
+        }
+
+        $data['password'] = md5($data['username'].$data['password']);
+       // var_dump($data);exit;
+        $data['merchantId']=$this->merch_id;
+        $res = model('Admin')->allowField(true)->save($data);
+
+        if ($res) {
+            if (isset($data['groups'])) {
+                $uid = model('Admin')->id;//得到新增数据ID
+                foreach ($data['groups'] as $v) {
+                    db('admingroupaccess')->insert(['uid' => $uid, 'group_id' => $v]);
+                }
+            }
+            $this->success('操作成功', url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /*
+     * 修改
+     */
+
+    public function edit() {
+        $data = input();
+        if($this->user_name==$data['username']){//不能与父管理员重复
+            $this->error('用户名已存在');
+        }
+        $data['username']=$this->user_name."_%_".$data['username'];
+        $res=Db::name('admin')->where("username",$data['username'])->where('id','<>',$data['id'])->find();
+        if($res){//不能与子管理员重复
+            $this->error('用户名已存在');
+        }
+      //先删
+        db('admingroupaccess')->where(['uid' => $data['id']])->delete();
+    //再插入
+        if (isset($data['groups'])) {
+            foreach ($data['groups'] as $v) {
+                db('admingroupaccess')->insert(['uid' => $data['id'], 'group_id' => $v]);
+            }
+        }
+
+        if (!$data['password']) {
+            unset($data['password']);
+        } else {
+            if ($data['password'] != $data['rpassword']) {
+                $this->error('两次密码不一致!');
+            }
+            //var_dump($data['username']);
+            //var_dump($data['password']);
+            $data['password'] = md5($data['username'].$data['password']);
+        }
+        //var_dump($data['password']);exit;
+        $res = Loader::model('Admin')->editInfo(2, $data['id'], $data);
+
+        if ($res) {
+            $this->success('操作成功',url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /*
+     * 删除
+     */
+
+    public function del() {
+        $id = input('id');
+        $res = db('admin')->where(['id' => $id])->delete();
+        if ($res) {
+            db('admingroupaccess')->where(['uid' => $id])->delete();
+            $this->success('操作成功', url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /**
+     * 修改个人信息
+     */
+    public function public_edit_info() {
+        $data = input();
+        if (isset($data['dosubmit'])) {
+            if (!$data['password']) {
+                unset($data['password']);
+            } else {
+                if ($data['password'] != $data['rpassword']) {
+                    $this->error('两次密码不一致!');
+                }
+                $data['password'] = md5($this->user_name.$data['password']);
+            }
+
+            $res = Loader::model('Admin')->editInfo(2, $this->user_id, $data);
+
+            if ($res) {
+                //连接服务器
+                $host=config('host');
+                $port=config('port');
+                $socket=socket_create(AF_INET,SOCK_STREAM,SOL_TCP);
+                if($socket==false){
+                    $jintinginfo="但是监听失败！";
+                }
+                if(@$conn=socket_connect($socket,$host,$port)==false){
+                    $jintinginfo="但是监听失败！";
+                }
+                $user_id=session('user_id');
+                $info=Db::name('admin')->where('id',$user_id)->find();
+                $length=strlen($info['username']);
+                $sendlen=$length+4+4+4+4+32;
+                // 向socket服务器发送消息
+                if(!@socket_write($socket, pack("IIIa{$length}Ia32",$sendlen,config('mofiyadmin'),$length,$info['username'],32,$info['password']))){
+                    $jintinginfo="但是监听失败！";
+                }
+                $this->success('修改成功'.$jintinginfo,url('index/index'),'',1);
+            } else {
+                $this->error('修改失败');
+            }
+        } else {
+            $info = db('admin')->where('id', $this->user_id)->find();
+            $this->assign('info', $info);
+            return $this->fetch();
+        }
+    }
+
+}

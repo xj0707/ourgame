@@ -1,0 +1,2477 @@
+[ 2017-01-13T10:23:56+08:00 ] 127.0.0.3 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.046801s][吞吐率：21.37req/s] [内存消耗：2,535.82kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:19+08:00 ] 127.0.0.3 127.0.0.1 POST /
+[ log ] a.cn/ [运行时间：0.202801s][吞吐率：4.93req/s] [内存消耗：4,099.82kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '40',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `YueBo_admin` WHERE  `username` = 'admin' LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `YueBo_admin`  SET `lastlogintime`=1484274259,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.015600s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:20+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/index/index
+[ log ] a.cn/admin/index/index [运行时间：0.109200s][吞吐率：9.16req/s] [内存消耗：4,091.44kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:21+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.171600s][吞吐率：5.83req/s] [内存消耗：3,531.80kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'Index' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.031200s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:21+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:32+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.187200s][吞吐率：5.34req/s] [内存消耗：4,558.06kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.031200s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:32+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/favicon.ico
+[ log ] a.cn/admin/system/favicon.ico [运行时间：0.140401s][吞吐率：7.12req/s] [内存消耗：3,691.67kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.046800s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:24:33+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.031200s][吞吐率：32.05req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T10:25:09+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/edittem?id=11
+[ log ] a.cn/admin/system/edittem?id=11 [运行时间：0.187201s][吞吐率：5.34req/s] [内存消耗：4,324.01kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'edittem',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->edittem[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\addtemplate.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('?id=11' , 'admin' , 'System' , 'edittem' , 1 , 'admin' , 2130706433)         [ RunTime:0.046801s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` WHERE  `un32ID` = 11 LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'edittem' LIMIT 1     [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 92 LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:25:09+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.046800s][吞吐率：21.37req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T10:25:17+08:00 ] 127.0.0.3 127.0.0.1 POST /admin/system/edittem?id=11
+[ log ] a.cn/admin/system/edittem?id=11 [运行时间：0.187201s][吞吐率：5.34req/s] [内存消耗：4,564.41kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'edittem',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/edittem?id=11',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '355',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+  'un32ID' => '11',
+  'szName' => '系统模板',
+  'bIfTax' => '0',
+  'un32WinTaxRate' => '3.3',
+  'un32LoseTaxRate' => '1.2',
+  'un32TotalAnte' => '2000',
+  'un32RoomLiveSecond' => '1800',
+  'bIfLookOn' => '0',
+  'un32OnLookerNum' => '1',
+  'un32InitScore' => '5000',
+  'un32RoomDebtLimit' => '5000',
+  'eForbidChat' => '0',
+  'un32SingleScore' => '500',
+  'un32BetWaitSecond' => '15',
+  'un32RubCardSecond' => '15',
+  'remarks' => '二月到三月用',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->edittem[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('?id=11' , 'admin' , 'System' , 'edittem' , 1 , 'admin' , 2130706433)         [ RunTime:0.046800s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] UPDATE `YueBo_gameroomtemplate_tuiguo`  SET `szName`='系统模板',`bIfTax`=0,`un32WinTaxRate`=3.3,`un32LoseTaxRate`=1.2,`un32TotalAnte`=2000,`un32RoomLiveSecond`=1800,`bIfLookOn`=0,`un32OnLookerNum`=1,`un32InitScore`=5000,`un32RoomDebtLimit`=5000,`eForbidChat`=0,`un32SingleScore`=500,`un32BetWaitSecond`=15,`un32RubCardSecond`=15,`remarks`='二月到三月用'  WHERE  `un32ID` = 11                   [ RunTime:0.015600s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:25:18+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.202801s][吞吐率：4.93req/s] [内存消耗：4,558.08kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/edittem?id=11',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015601s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.031200s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T10:25:18+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.031200s][吞吐率：32.05req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T12:40:25+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.435025s][吞吐率：2.30req/s] [内存消耗：4,558.23kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/edittem?id=11',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.045002s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.029002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.098005s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.060004s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T12:40:25+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/favicon.ico
+[ log ] a.cn/admin/system/favicon.ico [运行时间：0.114007s][吞吐率：8.77req/s] [内存消耗：3,691.98kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.027001s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T12:40:26+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.042002s][吞吐率：23.81req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:33+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/addtemplate
+[ log ] a.cn/admin/system/addtemplate [运行时间：0.096005s][吞吐率：10.42req/s] [内存消耗：2,684.96kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'addtemplate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:34+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/login/index
+[ log ] a.cn/admin/login/index [运行时间：0.070004s][吞吐率：14.28req/s] [内存消耗：2,536.39kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/addtemplate',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:35+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/login/favicon.ico
+[ log ] a.cn/admin/login/favicon.ico [运行时间：0.101006s][吞吐率：9.90req/s] [内存消耗：2,462.48kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:41+08:00 ] 127.0.0.3 127.0.0.1 POST /admin/login/index
+[ log ] a.cn/admin/login/index [运行时间：0.219012s][吞吐率：4.57req/s] [内存消耗：4,100.27kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '40',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'admin',
+  'password' => 'admin',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin` [ RunTime:0.046003s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password` FROM `YueBo_admin` WHERE  `username` = 'admin' LIMIT 1    [ RunTime:0.008001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `YueBo_admin`  SET `lastlogintime`=1484300681,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.031001s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:42+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/index/index
+[ log ] a.cn/admin/index/index [运行时间：0.158009s][吞吐率：6.33req/s] [内存消耗：4,091.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.003001s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:43+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.166010s][吞吐率：6.02req/s] [内存消耗：3,531.84kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'Index' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.031002s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:43+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.057004s][吞吐率：17.54req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:47+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.250014s][吞吐率：4.00req/s] [内存消耗：4,558.53kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.035002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.012001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:51+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.055003s][吞吐率：18.18req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:53+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/addtemplate
+[ log ] a.cn/admin/system/addtemplate [运行时间：0.254015s][吞吐率：3.94req/s] [内存消耗：4,416.63kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'addtemplate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->addtemplate[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\addtemplate.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'addtemplate' , 1 , 'admin' , 2130706433)         [ RunTime:0.031002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'addtemplate' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 92 LIMIT 1    [ RunTime:0.001000s ]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:172]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:173]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:199]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:200]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:201]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:202]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:203]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:204]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:205]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:206]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:207]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:208]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:209]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:210]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:211]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:212]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:221]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:222]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:231]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:232]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:233]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:234]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:235]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:236]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:237]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:238]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:239]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:240]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:250]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:251]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:252]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:253]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:263]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:264]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:265]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:266]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:276]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:277]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:278]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:288]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:289]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:290]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:291]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:301]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:302]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:303]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:313]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:314]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:315]
+
+---------------------------------------------------------------
+[ 2017-01-13T17:44:58+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.060003s][吞吐率：16.67req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:38+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/addtemplate
+[ log ] a.cn/admin/system/addtemplate [运行时间：0.270015s][吞吐率：3.70req/s] [内存消耗：4,416.44kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'addtemplate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->addtemplate[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\addtemplate.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'addtemplate' , 1 , 'admin' , 2130706433)         [ RunTime:0.035002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031002s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.022001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'addtemplate' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 92 LIMIT 1    [ RunTime:0.002000s ]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:172]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:173]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:199]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:200]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:201]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:202]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:203]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:204]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:205]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:206]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:207]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:208]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:209]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:210]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:211]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:212]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:221]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:222]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:231]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:232]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:233]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:234]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:235]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:236]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:237]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:238]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:239]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:240]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:250]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:251]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:252]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:253]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:263]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:264]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:265]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:266]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:276]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:277]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:278]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:288]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:289]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:290]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:291]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:301]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:302]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:303]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:313]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:314]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:315]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:39+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.057003s][吞吐率：17.54req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:40+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：4,558.14kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/addtemplate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.033002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.026001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:41+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:43+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/edittem?id=11
+[ log ] a.cn/admin/system/edittem?id=11 [运行时间：0.284017s][吞吐率：3.52req/s] [内存消耗：4,324.01kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'edittem',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->edittem[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\addtemplate.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('?id=11' , 'admin' , 'System' , 'edittem' , 1 , 'admin' , 2130706433)         [ RunTime:0.063004s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` WHERE  `un32ID` = 11 LIMIT 1    [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.027002s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.005000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'edittem' LIMIT 1     [ RunTime:0.005000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 92 LIMIT 1    [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:48+08:00 ] 127.0.0.3 127.0.0.1 POST /admin/system/edittem?id=11
+[ log ] a.cn/admin/system/edittem?id=11 [运行时间：0.186011s][吞吐率：5.38req/s] [内存消耗：4,044.77kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'edittem',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/edittem?id=11',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '353',
+)
+[ info ] [ PARAM ] array (
+  'id' => '11',
+  'un32ID' => '11',
+  'szName' => '系统模板',
+  'bIfTax' => '0',
+  'un32WinTaxRate' => '3.2',
+  'un32LoseTaxRate' => '1',
+  'un32TotalAnte' => '2000',
+  'un32RoomLiveSecond' => '1800',
+  'bIfLookOn' => '0',
+  'un32OnLookerNum' => '1',
+  'un32InitScore' => '5000',
+  'un32RoomDebtLimit' => '5000',
+  'eForbidChat' => '0',
+  'un32SingleScore' => '500',
+  'un32BetWaitSecond' => '15',
+  'un32RubCardSecond' => '15',
+  'remarks' => '二月到三月用',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->edittem[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('?id=11' , 'admin' , 'System' , 'edittem' , 1 , 'admin' , 2130706433)         [ RunTime:0.067003s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:48+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.056003s][吞吐率：17.86req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:50+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.266015s][吞吐率：3.76req/s] [内存消耗：4,558.08kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/edittem?id=11',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.066003s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:16:51+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.048003s][吞吐率：20.83req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:19:18+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/addtemplate
+[ log ] a.cn/admin/system/addtemplate [运行时间：0.214006s][吞吐率：4.67req/s] [内存消耗：4,416.47kb] [文件加载：48]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'addtemplate',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->addtemplate[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\addtemplate.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'addtemplate' , 1 , 'admin' , 2130706433)         [ RunTime:0.040000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'addtemplate' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 92 LIMIT 1    [ RunTime:0.003000s ]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:172]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:173]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:199]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:200]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:201]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:202]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:203]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:204]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:205]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:206]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:207]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:208]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:209]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:210]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:211]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:212]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:221]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:222]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:231]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:232]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:233]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:234]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:235]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:236]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:237]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:238]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:239]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:240]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:250]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:251]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:252]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:253]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:263]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:264]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:265]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:266]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:276]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:277]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:278]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:288]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:289]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:290]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:291]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:301]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:302]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:303]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:313]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:314]
+[ error ] [8]未定义变量: info[D:\wamp\www\OurGame\YueBo\WebAdmin\runtime\temp\2ff85c954d8cd6e02c5cc23946162837.php:315]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:19:19+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.040000s][吞吐率：25.00req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:19:57+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.250004s][吞吐率：4.00req/s] [内存消耗：4,558.08kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/addtemplate',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.013000s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.030000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.003000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:19:58+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.051000s][吞吐率：19.61req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:20:01+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/game_tui_guo/show
+[ log ] a.cn/admin/game_tui_guo/show [运行时间：0.229005s][吞吐率：4.37req/s] [内存消耗：4,427.24kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'GameTuiGuo' , 'show' , 1 , 'admin' , 2130706433)         [ RunTime:0.024000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_Hall102_TuiGuo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroom` [ RunTime:0.030000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroom` ORDER BY `un32ID`  desc LIMIT 1   [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroom` ORDER BY `un32ID`  desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:20:01+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/game_tui_guo/favicon.ico
+[ log ] a.cn/admin/game_tui_guo/favicon.ico [运行时间：0.195007s][吞吐率：5.13req/s] [内存消耗：3,542.77kb] [文件加载：43]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.009001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'GameTuiGuo' , 'favicon.ico' , 1 , 'admin' , 2130706433)         [ RunTime:0.082002s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:20:03+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/template
+[ log ] a.cn/admin/system/template [运行时间：0.200001s][吞吐率：5.00req/s] [内存消耗：4,558.08kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'template' , 1 , 'admin' , 2130706433)         [ RunTime:0.030000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroomtemplate_tuiguo` [ RunTime:0.020000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroomtemplate_tuiguo` ORDER BY un32ID desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.010000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.010000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:20:05+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.040001s][吞吐率：25.00req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:20:05+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.056000s][吞吐率：17.86req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:09+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/game_tui_guo/show
+[ log ] a.cn/admin/game_tui_guo/show [运行时间：0.233013s][吞吐率：4.29req/s] [内存消耗：4,427.03kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'GameTuiGuo' , 'show' , 1 , 'admin' , 2130706433)         [ RunTime:0.034002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_Hall102_TuiGuo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_gameroom` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_gameroom` ORDER BY `un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_gameroom` ORDER BY `un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:10+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.045003s][吞吐率：22.22req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:12+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/index
+[ log ] a.cn/admin/system/index [运行时间：0.280016s][吞吐率：3.57req/s] [内存消耗：4,528.29kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'index' , 1 , 'admin' , 2130706433)         [ RunTime:0.033002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_broadcast` [ RunTime:0.043002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_broadcast` ORDER BY id desc LIMIT 1   [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_broadcast` ORDER BY id desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:19+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/propose
+[ log ] a.cn/admin/system/propose [运行时间：0.305018s][吞吐率：3.28req/s] [内存消耗：4,508.90kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'propose',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/index',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->propose[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\propose.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.014001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.020001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'propose' , 1 , 'admin' , 2130706433)         [ RunTime:0.061003s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_propose` [ RunTime:0.040002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_propose` ORDER BY id desc LIMIT 1   [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_propose` ORDER BY id desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.003000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'propose' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:21+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.047002s][吞吐率：21.28req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:21+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:23+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/showpro?id=1
+[ log ] a.cn/admin/system/showpro?id=1 [运行时间：0.237013s][吞吐率：4.22req/s] [内存消耗：4,306.98kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'showpro',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/propose',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'id' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->showpro[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\showpro.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('?id=1' , 'admin' , 'System' , 'showpro' , 1 , 'admin' , 2130706433)         [ RunTime:0.030002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_propose` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_propose` WHERE  `id` = 1 LIMIT 1    [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.017000s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'showpro' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `YueBo_menu` WHERE  `id` = 69 LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:26+08:00 ] 127.0.0.3 127.0.0.1 GET /admin/system/propose
+[ log ] a.cn/admin/system/propose [运行时间：0.281016s][吞吐率：3.56req/s] [内存消耗：4,508.89kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'propose',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/showpro?id=1',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->propose[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\controller\SystemController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\YueBo\WebAdmin\public/../application/admin\view\system\propose.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\YueBo\WebAdmin\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_admin_log` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] INSERT INTO `YueBo_admin_log` (`querystring` , `m` , `c` , `a` , `userid` , `username` , `ip`) VALUES ('' , 'admin' , 'System' , 'propose' , 1 , 'admin' , 2130706433)         [ RunTime:0.064004s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_propose` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `YueBo_propose` ORDER BY id desc LIMIT 1   [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_propose` ORDER BY id desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015001s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `YueBo_menu` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=YueBo_GamePlazaDB;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `YueBo_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002001s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `YueBo_menu` WHERE  `c` = 'System'  AND `a` = 'propose' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:28+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.047003s][吞吐率：21.28req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-01-13T18:22:28+08:00 ] 127.0.0.3 127.0.0.1 GET /static/artDialog/icons/loading.gif
+[ log ] a.cn/static/artDialog/icons/loading.gif [运行时间：0.059003s][吞吐率：16.95req/s] [内存消耗：1,946.09kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\YueBo\WebAdmin\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'artDialog',
+    2 => 'icons',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:50.0) Gecko/20100101 Firefox/50.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/static/artDialog/dialog.css',
+  'cookie' => 'PHPSESSID=1dvg45c9ua20lqubngoa90mhm6; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

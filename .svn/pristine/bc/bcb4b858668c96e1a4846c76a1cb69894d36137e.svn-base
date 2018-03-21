@@ -1,0 +1,35 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : localhost_3306
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : NA_GamePlaza
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-05-27 18:02:08
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for na_gameserver
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameserver`;
+CREATE TABLE `na_gameserver` (
+  `un32GameServerID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '大厅ID',
+  `un32GameKindID` int(11) NOT NULL DEFAULT '0' COMMENT '类型ID',
+  `szGameServerName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅名称',
+  `szGameServerPwd` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅密码',
+  PRIMARY KEY (`un32GameServerID`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gameserver
+-- ----------------------------
+INSERT INTO `na_gameserver` VALUES ('0', '0', '广场', '');
+INSERT INTO `na_gameserver` VALUES ('1', '10000', '推锅大厅一', 'abc123');
+INSERT INTO `na_gameserver` VALUES ('2', '10001', '推筒子大厅一', 'abc123');

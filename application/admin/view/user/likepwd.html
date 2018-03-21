@@ -1,0 +1,69 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'roomshow?uid={$uid}'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+      
+    </div> 
+    <div class="page-header">
+         <h1>
+           <!--  {:model('menu')->getParentNname()} -->
+           
+           		推锅游戏
+           	
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               房间详情
+            </small>
+        </h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                               	<th class="hidden-480">ID</th>
+                                <th>房间号</th>
+                               	<th>房主昵称</th>
+
+                                <th>锅底</th>
+                                <th>抽水比例(赢/输)</th>
+                                <th>输赢记录</th>
+                                <th>实际收益</th>
+                                <th>开始时间</th>
+                                <th>结束时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <!--<td class="hidden-480">{$vo.un32ID}</td> -->
+                                <td class="hidden-480">1</td>
+                                <td>{$rooms.n32GameRoomPwd}</td>
+                                <td>{$rooms.szNickName}</td>
+
+                                <td>{$rooms.un32TotalAnte}</td>
+                                <td>{$rooms.fWinTaxRate|getFloat2}%/{$rooms.fLoseTaxRate|getFloat2}%</td>
+                                <td>{$list.n32GotScore+$list.n32PumpWater}</td>
+                                <td>{$list.n32GotScore}</td>
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$rooms.tCreateTime)}</td>
+                                <td class="hidden-480">{:date('Y-m-d H:i:s',$rooms.tCreateTime+$rooms.un32RoomLiveSecond)}</td>
+                                <td><a href='{:url("roomdetail","uid=$uid&roomid=$rooms[un64ID]")}'>查看详情</a></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+             
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->

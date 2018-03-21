@@ -1,0 +1,31 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+use think\Request;
+
+class GameMaJiangController extends CommonController{
+    public function index(){
+       $this->error('敬请期待！');
+    }
+
+
+    //玩家玩过的麻将房间
+    public function scmj(){
+        $uid=input('uid');
+        if($uid){
+            $userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+            if(!$userinfo){
+                $this->error('玩家已丢失');
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+}

@@ -1,0 +1,411 @@
+[ 2017-09-07T11:47:54+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.062003s][吞吐率：16.13req/s] [内存消耗：1,601.60kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '67d072e2-a944-8767-9568-f0de1320a233',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:00+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,601.61kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '92fcaa54-f3b6-2686-7ad6-1d1b2f0007e4',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:02+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,601.61kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '52345ff2-7abc-4e95-7747-9733790f4499',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:06+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,601.61kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => 'bc7ddfa0-adf1-8843-9537-e027f819bab5',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:15+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：1,601.61kb] [文件加载：32]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '11f2bbbe-dc1a-ff02-4943-c9fd885694b9',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:17+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.079005s][吞吐率：12.66req/s] [内存消耗：2,302.05kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '9c910ed9-9a2a-5ed6-5daa-705d5621f9b6',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.042002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-09-07T11:48:52+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.059004s][吞吐率：16.95req/s] [内存消耗：2,182.37kb] [文件加载：34]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => 'c45c9094-f9d1-8269-6d75-d4bd422b9103',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-09-07T11:49:51+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.086005s][吞吐率：11.63req/s] [内存消耗：2,245.04kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '10e353f6-15c3-5ef0-3525-d20b796e6e5a',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+[ error ] [8]Array to string conversion[D:\wamp\www\OurGame\application\admin\controller\ApiController.php:187]
+
+---------------------------------------------------------------
+[ 2017-09-07T11:50:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.050003s][吞吐率：20.00req/s] [内存消耗：2,245.08kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '3e404779-b1d6-c35f-f82c-c1cb5ca06489',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.016001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001001s ]
+[ error ] [8]Array to string conversion[D:\wamp\www\OurGame\application\admin\controller\ApiController.php:187]
+
+---------------------------------------------------------------
+[ 2017-09-07T11:51:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.049002s][吞吐率：20.41req/s] [内存消耗：2,244.71kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => 'd1a8ffb9-41ce-fa00-4b3a-cd1617758e3f',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.000000s ]
+[ error ] [8]Array to string conversion[D:\wamp\www\OurGame\application\admin\controller\ApiController.php:187]
+
+---------------------------------------------------------------
+[ 2017-09-07T11:52:42+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：2,246.70kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => 'c85570af-1a7b-42de-22cb-007429d191b4',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+[ error ] [8]Array to string conversion[D:\wamp\www\OurGame\application\admin\controller\ApiController.php:187]
+
+---------------------------------------------------------------
+[ 2017-09-07T12:03:58+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.053003s][吞吐率：18.87req/s] [内存消耗：2,304.88kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'connection' => 'keep-alive',
+  'content-length' => '171',
+  'postman-token' => '7f7a22a1-233b-dbec-9839-4aa5773f195c',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `mid` = '27d9ccea-b5be-4c52-b93f-23ad75b72325' LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------

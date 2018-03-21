@@ -1,0 +1,152 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            推锅玩家模板
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>玩家ID</th>
+                                <th>玩家昵称</th>
+                                <th class="hidden-480">模板名字</th>
+                                <th class="hidden-480">是否抽水</th>
+                                <th class="hidden-480">抽水比例(赢/输)</th>
+                                <th>锅底</th>
+                                <!--<th>房间时间</th>-->
+                                <th class="hidden-480">允许旁观</th>
+                                <th class="hidden-480">旁观人数</th>
+                                <th>初始积分</th>
+
+                                <th class="hidden-480">禁止聊天</th>
+                                <th>单注积分</th>
+
+                                <th class="hidden-480">备注</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="info" id="vo" key="k"}
+                            <tr>
+                                <td>{$k}</td>
+                                <td>{$vo.un32UserID}</td>
+                                <td>{$vo.szNickName}</td>
+                                <td class="hidden-480">{$vo.szName}</td>
+                                <td class="hidden-480">
+                                	{if condition='$vo.bIfTax==0'}
+                               			 不抽水
+                               		{else/}
+                               			抽水
+                               		{/if}
+                                </td>
+                                <td class="hidden-480">({$vo.un32WinTaxRate}%) / ({$vo.un32LoseTaxRate}%)</td>
+                                <td>{$vo.un32TotalAnte}</td>
+                                <!--<td>{$vo.un32RoomLiveSecond|datehour}</td>-->
+                                <td class="hidden-480">
+                                	{if condition='$vo.bIfLookOn==0'}
+                               			 不允许
+                               		{else/}
+                               			允许
+                               		{/if}
+                                </td>
+                                <td class="hidden-480">{$vo.un32OnLookerNum}人</td>
+                                <td>{$vo.un32InitScore}</td>
+
+                                <td class="hidden-480">{$vo.eForbidChat|ifChat}</td>
+                                <td>{$vo.un32SingleScore}</td>
+
+                                <td class="hidden-480">{$vo.remarks}</td>
+                                
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                    <!--{if condition='$vo.un32IfActive==0'}  -->
+                                    	<!--<a href='{:url("activetem","id=$vo[un32ID]")}'>-->
+                                           <!--<span class="btn btn-xs btn-success">-->
+                                                <!--<i class="glyphicon  glyphicon-ok">点击应用</i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
+                                     <!--{else/} -->
+                                     	<!--<a href='{:url("disactivetem","id=$vo[un32ID]")}'>-->
+                                           <!--<span class="btn btn-xs btn-warning">-->
+                                                <!--<i class="glyphicon  glyphicon-ban-circle">解除应用</i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
+                                      <!--{/if}  -->
+                                         <!--<a href='{:url("edittem","id=$vo[un32ID]")}'>-->
+                                           <!--<span class="btn btn-xs btn-info">-->
+                                                <!--<i class="ace-icon fa fa-pencil bigger-120">修改</i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
+                                        <a href='javascript:void(0)' onclick="return alert_del('{:url(\"userdeltem\",\"id=$vo[un32ID]\")}', '确认要删除『 id={$vo.un32ID} 』这条记录吗？');" >
+                                           <span class="btn btn-xs btn-danger">
+                                                <i class="ace-icon fa fa-trash-o bigger-120">删除</i>
+                                            </span>
+                                        </a>
+                                       
+                                    </div>
+
+                                    <div class="hidden-md hidden-lg">
+                                        <div class="inline pos-rel">
+                                            <span class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                            </span>
+
+                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+												  <!--{if condition='$vo.un32IfActive==0'}  -->
+                                                 <!--<li>-->
+                                                    <!--<a href='{:url("activetem","id=$vo[un32ID]")}' class="tooltip-success" data-rel="tooltip" title="点击应用">-->
+                                                        <!--<span class="blue">-->
+                                                            <!--<i class="glyphicon  glyphicon-ok"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                                <!--{else/}-->
+                                                <!--<li>-->
+                                                    <!--<a href='{:url("disactivetem","id=$vo[un32ID]")}' class="tooltip-success" data-rel="tooltip" title="解除应用">-->
+                                                        <!--<span class="blue">-->
+                                                            <!--<i class="glyphicon  glyphicon-ban-circle"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                                <!--{/if}-->
+                                                 <!--<li>-->
+                                                    <!--<a href='{:url("edittem","id=$vo[un32ID]")}' class="tooltip-success" data-rel="tooltip" title="修改">-->
+                                                        <!--<span class="blue">-->
+                                                            <!--<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                               
+                                                <li>
+                                                    <a href='javascript:void(0)' onclick="return alert_del('{:url(\"userdeltem\",\"id=$vo[un32ID]\")}', '确认要删除『 id={$vo.un32ID} 』这条记录吗？');" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                        <span class="red">
+                                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                     {$info->render()}
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+
+

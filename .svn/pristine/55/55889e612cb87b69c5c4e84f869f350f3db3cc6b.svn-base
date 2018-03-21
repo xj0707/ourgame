@@ -1,0 +1,72 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'gamehall'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+     
+    </div>
+    <div class="page-header">
+        <h1>
+            游戏大厅
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               {:input('id')?'修改':'新增'}
+            </small>
+        </h1>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+          
+            <form class="form-horizontal" role="form" action="" method="post" name="myfrom" >
+                <input type="hidden" name="un32GameHallID" value="{$info.un32GameHallID|default=''}"/>
+               <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">大厅名称:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-3" value="{$info.szGameHallName|default=''}" name="szGameHallName"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">大厅密码:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-3" value="{$info.szGameHallPwd|default=''}" name="szGameHallPwd" />
+                    </div>
+                </div>
+                <div class="space-4"></div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">大厅类型:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-3" value="{$info.un32GameKindID|default=''}" name="un32GameKindID" placeholder="请输入类型编码,确保正确性" onkeyup='this.value=this.value.replace(/\D/gi,"")'/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="clearfix form-actions">
+                    <div class="col-md-offset-3 col-md-9">
+                        <button class="btn btn-info" type="button" onclick="myfrom.submit()">
+                            <i class="ace-icon fa fa-check bigger-110"></i>
+                            提交
+                        </button>
+                    </div>
+                </div>
+            </form>            
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+

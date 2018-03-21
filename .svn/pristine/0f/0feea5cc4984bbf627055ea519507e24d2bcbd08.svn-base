@@ -1,0 +1,31 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : NA_GamePlaza
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2017-04-08 15:55:11
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for NA_BuyLog
+-- ----------------------------
+DROP TABLE IF EXISTS `NA_BuyLog`;
+CREATE TABLE `NA_BuyLog` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `admin_id` int(11) NOT NULL COMMENT '管理员的ID',
+  `user_id` int(11) NOT NULL COMMENT '玩家ID',
+  `user_name` varchar(128) DEFAULT NULL,
+  `gem_number` int(11) NOT NULL COMMENT '购买房卡数量',
+  `coins_number` double(10,2) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COMMENT='购买日志';

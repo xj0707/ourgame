@@ -1,0 +1,62 @@
+<div class="page-content">
+
+ <!---->
+    <!--<div class="row">-->
+        <!--<div class="col-xs-12">-->
+            <!--<div class="page-header">-->
+		        <!--<h1>-->
+		           <!--目前玩推锅玩家的有10000人-->
+		        <!--</h1>-->
+    		<!--</div>-->
+
+            <!--<div class="row">-->
+                <!--<div class="space-6"></div>-->
+
+                <!--<div class="col-sm-12 infobox-container">-->
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+
+                        <!--<div class="infobox-data">-->
+                            <!--<span class="infobox-data-number"><a href="{:url('show','id=1')}">大厅一</a></span>-->
+                            <!--<div class="infobox-content">2000人</div>-->
+                        <!--</div> -->
+                    <!--</div>-->
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+
+                        <!--<div class="infobox-data">-->
+                            <!--<span class="infobox-data-number">大厅二</span>-->
+                            <!--<div class="infobox-content">2000人</div>-->
+                        <!--</div> -->
+                    <!--</div>-->
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+
+                        <!--<div class="infobox-data">-->
+                            <!--<span class="infobox-data-number">大厅三</span>-->
+                            <!--<div class="infobox-content">2000人</div>-->
+                        <!--</div> -->
+                    <!--</div>-->
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+
+                        <!--<div class="infobox-data">-->
+                            <!--<span class="infobox-data-number">大厅四</span>-->
+                            <!--<div class="infobox-content">2000人</div>-->
+                        <!--</div> -->
+                    <!--</div>-->
+                     <!---->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!---->
+    <!--</div>-->
+</div><!-- /.page-content -->

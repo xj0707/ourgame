@@ -1,0 +1,1016 @@
+[ 2017-07-27T14:49:46+08:00 ] 127.0.0.1 127.0.0.1 POST /
+[ log ] master.test.dphub.sandai.net:80/ [运行时间：0.875050s][吞吐率：1.14req/s] [内存消耗：1,657.43kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'master.test.dphub.sandai.net:80',
+  'content-type' => 'application/octet-stream',
+  'content-length' => '256',
+  'connection' => 'Close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:21:49+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：1,657.91kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:21:56+08:00 ] 127.0.0.1 127.0.0.1 POST /
+[ log ] a.cn/ [运行时间：0.267015s][吞吐率：3.75req/s] [内存消耗：2,654.24kb] [文件加载：46]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'content-length' => '57',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'supadminxj',
+  'password' => 'admin',
+  'merchantId' => '',
+  'dosubmit' => '1',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ CACHE ] INIT File
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.053003s ]
+[ sql ] [ SQL ] SELECT `id`,`username`,`password`,`merchantId` FROM `na_admin` WHERE  `username` = 'supadminxj'  AND `password` = 'b65f703bcb8dc7cae8d22abfb8895d21'  AND `merchantId` = 0 LIMIT 1      [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] UPDATE `na_admin`  SET `lastlogintime`=1501150916,`lastloginip`=2130706433  WHERE  `id` = 1      [ RunTime:0.026002s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:21:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.256015s][吞吐率：3.91req/s] [内存消耗：2,691.22kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+  0 => 'time',
+  1 => 'ip',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.041003s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:21:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.050002s][吞吐率：20.00req/s] [内存消耗：1,607.77kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:22:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/paixing.html
+[ log ] a.cn/admin/game_ma_jiang/paixing.html [运行时间：0.111006s][吞吐率：9.01req/s] [内存消耗：2,711.40kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'paixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->paixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_ma_jiang\paixing.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:22:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/favicon.ico
+[ log ] a.cn/admin/game_ma_jiang/favicon.ico [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,624.30kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:22:39+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_ma_jiang/paixing.html
+[ log ] a.cn/admin/game_ma_jiang/paixing.html [运行时间：0.144009s][吞吐率：6.94req/s] [内存消耗：2,924.38kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'paixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'cache-control' => 'max-age=0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->paixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_ma_jiang\paixing.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:23:28+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/doaction.html
+[ log ] a.cn/admin/game_ma_jiang/doaction.html [运行时间：0.085005s][吞吐率：11.76req/s] [内存消耗：2,248.63kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'doaction',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '28',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'gfvd',
+  'merchantId' => '344',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->doAction[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.047003s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `szUserName` = 'gfvd'  AND `merchantId` = 344 LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:23:32+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/doaction.html
+[ log ] a.cn/admin/game_ma_jiang/doaction.html [运行时间：0.051002s][吞吐率：19.61req/s] [内存消耗：2,248.63kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'doaction',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '28',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'gfvd',
+  'merchantId' => '344',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->doAction[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `szUserName` = 'gfvd'  AND `merchantId` = 344 LIMIT 1     [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:23:49+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/doaction.html
+[ log ] a.cn/admin/game_ma_jiang/doaction.html [运行时间：0.071004s][吞吐率：14.08req/s] [内存消耗：2,248.60kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'doaction',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '31',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'xiang04',
+  'merchantId' => '156',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->doAction[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `szUserName` = 'xiang04'  AND `merchantId` = 156 LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:08+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/doaction.html
+[ log ] a.cn/admin/game_ma_jiang/doaction.html [运行时间：0.059003s][吞吐率：16.95req/s] [内存消耗：2,249.43kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'doaction',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '35',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => 'slplayer001',
+  'merchantId' => '156',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->doAction[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `szUserName` = 'slplayer001'  AND `merchantId` = 156 LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:10+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.032002s][吞吐率：31.25req/s] [内存消耗：1,543.29kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '56',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-24345,213233,3,,3,,,,',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:16+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.034002s][吞吐率：29.41req/s] [内存消耗：1,543.20kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '36',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-24345,213233,',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:17+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.037002s][吞吐率：27.03req/s] [内存消耗：1,543.26kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '33',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-24345,213233',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:28+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.022002s][吞吐率：45.45req/s] [内存消耗：1,543.27kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '26',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-25,21',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:24:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.023001s][吞吐率：43.48req/s] [内存消耗：1,543.27kb] [文件加载：33]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '26',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-25,21',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:25:40+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/game_ma_jiang/dopaixing.html
+[ log ] a.cn/admin/game_ma_jiang/dopaixing.html [运行时间：0.074004s][吞吐率：13.51req/s] [内存消耗：2,244.57kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_ma_jiang',
+    2 => 'dopaixing',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'content-length' => '26',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '220453',
+  'paixin' => '-25,21',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GameMaJiangController->dopaixing[ D:\wamp\www\OurGame\application\admin\controller\GameMaJiangController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.018001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_admin` WHERE  `id` = 1 LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:29:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/group/index.html
+[ log ] a.cn/admin/group/index.html [运行时间：0.178010s][吞吐率：5.62req/s] [内存消耗：3,032.59kb] [文件加载：47]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_ma_jiang/paixing.html',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GroupController->index[ D:\wamp\www\OurGame\application\admin\controller\GroupController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\group\index.html [ array (
+  0 => 'lists',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.037002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_admingroup`  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.013001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Group'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-07-27T18:29:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/group/favicon.ico
+[ log ] a.cn/admin/group/favicon.ico [运行时间：0.030001s][吞吐率：33.33req/s] [内存消耗：1,628.20kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-07-27T18:30:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/group/rule.html?gid=1
+[ log ] a.cn/admin/group/rule.html?gid=1 [运行时间：0.224013s][吞吐率：4.46req/s] [内存消耗：3,368.31kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'group',
+    2 => 'rule',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/group/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=s8gb4d83614i3ktnloi2en1k93; thinkphp_show_page_trace=0|0',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'gid' => '1',
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\GroupController->rule[ D:\wamp\www\OurGame\application\admin\controller\GroupController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\group\rule.html [ array (
+  0 => 'rules',
+  1 => 'menu',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroup` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `rules` FROM `na_admingroup` WHERE  `id` = 1 LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` ORDER BY listorder asc  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `display` = 1 ORDER BY listorder asc   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'Group'  AND `a` = 'rule' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `na_menu` WHERE  `id` = 48 LIMIT 1    [ RunTime:0.000000s ]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:170]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:176]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+[ error ] [8]Use of undefined constant id - assumed 'id'[D:\wamp\www\OurGame\runtime\temp\4c0f424ec27c55ee2468dc080fdd6589.php:184]
+
+---------------------------------------------------------------

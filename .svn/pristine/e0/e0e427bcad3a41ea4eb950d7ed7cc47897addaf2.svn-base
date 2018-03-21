@@ -1,0 +1,63 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+         <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.history.go(-1);">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+       <h1>
+          房间号：{$roompwd}
+           <small>
+               =》  第{$juid}局
+           </small>
+        </h1>  
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th>回合序号</th>
+                                <th>剩余锅底</th>
+                                <th>牌型  庄</th>
+                                <th class="hidden-480">牌型 顺 </th>
+                                <th class="hidden-480">牌型 天 </th>
+                                <th>地 牌型</th>
+                                <th>回合结算时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="infos" id="vo"}
+
+                            <tr>
+                                <td width="10%">  第{$vo.un32GameRoundID} 回合</td>
+                                <td>{$vo.n32GuoDiScore}</td>
+                                <td>{$vo.un8BankerCardID1,$vo.un8BankerCardID2|checkTuiguo} {$vo.n32BankerWinLoseNum} </td>
+                                <td class="hidden-480">{$vo.un8ShunCardID1,$vo.un8ShunCardID2|checkTuiguo} {$vo.n32ShunWinLoseNum}</td>
+                                <td class="hidden-480">{$vo.un8TianCardID1,$vo.un8TianCardID2|checkTuiguo} {$vo.n32TianWinLoseNum}</td>
+                                <td class="hidden-480">{$vo.un8DiCardID1,$vo.un8DiCardID2|checkTuiguo} {$vo.n32DiWinLoseNum}</td>
+                                <td>{$vo.un32LogTime|date="Y-m-d H:i:s",###}</td>
+                                <td><a href='{:url("huiinfo","roomid=$vo[un64GameRoomID]&juid=$vo[un32GameJuID]&huiid=$vo[un32GameRoundID]&count=$count&roompwd=$roompwd")}'>详情</a></td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+
+</script>
+

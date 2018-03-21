@@ -1,0 +1,19 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+use think\Request;
+
+class GameMaJiangController extends CommonController{
+    public function index(){
+       $this->error('敬请期待！');
+    }
+
+
+
+
+
+
+
+
+}

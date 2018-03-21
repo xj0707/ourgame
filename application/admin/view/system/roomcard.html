@@ -1,0 +1,99 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            {:model('menu')->getName()}
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                详情
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                
+                                <th>序号</th>
+                                <th>房卡数量</th>
+                                <th>购买金额</th>
+                                <th>促销价</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="lists" id="vo" key="k"}
+                            <tr>
+                                
+                                <td>{$k}</td>
+                                <td>{$vo.roomcard}</td>
+                                <td>{$vo.coins}</td>
+                                <td>{if condition="$vo.state == 0"} 否 {else /} 是 {/if}</td>
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                         <a href='{:url("editrc","id=$vo[id]")}'>
+                                           <span class="btn btn-xs btn-info">
+                                                <i class="ace-icon fa fa-pencil bigger-120">修改</i>
+                                            </span>
+                                        </a>
+                                        <!--<a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[id]\")}', '确认要删除『 id={$vo.id} 』这条记录吗？');" >-->
+                                           <!--<span class="btn btn-xs btn-danger">-->
+                                                <!--<i class="ace-icon fa fa-trash-o bigger-120">删除</i>-->
+                                            <!--</span>-->
+                                        <!--</a>-->
+                                       
+                                    </div>
+
+                                    <div class="hidden-md hidden-lg">
+                                        <div class="inline pos-rel">
+                                            <span class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                            </span>
+
+                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+												 <!--<li>-->
+                                                    <!--<a href='{:url("show","id=$vo[id]")}' class="tooltip-success" data-rel="tooltip" title="详情">-->
+                                                        <!--<span class="green">-->
+                                                            <!--<i class="ace-icon fa fa-eye bigger-120"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                                
+                                                 <li>
+                                                    <a href='{:url("editrc","id=$vo[id]")}' class="tooltip-success" data-rel="tooltip" title="修改">
+                                                        <span class="blue">
+                                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                               
+                                                <!--<li>-->
+                                                    <!--<a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[id]\")}', '确认要删除『 id={$vo.id} 』这条记录吗？');" class="tooltip-error" data-rel="tooltip" title="Delete">-->
+                                                        <!--<span class="red">-->
+                                                            <!--<i class="ace-icon fa fa-trash-o bigger-120"></i>-->
+                                                        <!--</span>-->
+                                                    <!--</a>-->
+                                                <!--</li>-->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+
+

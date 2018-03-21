@@ -1,0 +1,87 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = '{:url(\'scmj\',\"uid=$uid\")}';">
+            返回上一页
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+        <h1>
+          		房间号：{$roompwd}
+
+        </h1>  
+    </div>     
+      
+   
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+          
+            <div class="row">
+                <div class="col-xs-12">
+                <table id="simple-table" class="table  table-bordered table-hover">
+                    <caption>玩家输赢总览：</caption>
+                    <thead>
+                        <tr>
+                        	<th>{$user1}</th>
+                        	<th>{$user2}</th>
+                        	<th>{$user3}</th>
+                        	<th>{$user4}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    	<tr>
+                            <td>{$usercount1}</td>
+                            <td>{$usercount2}</td>
+                            <td>{$usercount3}</td>
+                            <td>{$usercount4}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+                <div class="col-xs-12">
+                    <table  class="table  table-bordered table-hover">
+                        <caption>局数详情：</caption>
+                        <thead>
+                        <tr>
+                            <th>局数</th>
+                            <th>{$user1}</th>
+                            <th>{$user2}</th>
+                            <th>{$user3}</th>
+                            <th>{$user4}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {volist name="infos" id="vo"}
+                        <tr>
+                            <td>{$i}</td>
+                            <td>{$vo.un32GameSeat1_ScoreChanged}</td>
+                            <td>{$vo.un32GameSeat2_ScoreChanged}</td>
+                            <td>{$vo.un32GameSeat3_ScoreChanged}</td>
+                            <td>{$vo.un32GameSeat4_ScoreChanged}</td>
+                        </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             
+           
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='un32UserID']").val()==''){
+		alert('uid不能为空');
+		$("input[name='un32UserID']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+
+
+</script>
+

@@ -1,0 +1,162 @@
+<div class="page-content">
+
+    <div class="page-header">
+        <h1>
+            游戏测试
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                麻将
+            </small>
+        </h1>
+    </div>
+
+    <div>
+
+        <div>
+            <label><span style="color: blue;">玩家查找</span></label>
+        </div>
+        用户名：<input type="text" name="username" id="user1" value=""/>
+        线路号：<input type="text" name="merchantId" id="mid" value="" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+        <button type="button" class="btn btn-default" id="btn1">搜索</button>
+        <input type="hidden" name="userid"  id="uid"/>
+        <span class="help-block" id="info"></span>
+
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+    <div>
+        <div>
+            <label><span style="color: blue;font-weight: bold;">麻将</span>牌型配置：</label>
+        </div>
+        <div>
+            <label>格式说明：11代表一万 12代表二万 21代表一筒 22代表二筒 31代表一条 32代表二条 例如牌型：11,12,18,22,26</label>
+        </div>
+        配置玩家接下来摸到的牌型以逗号分隔：<input type="text" name="paixin" style="width: 300px;" id="px" onkeyup="this.value=this.value.replace(/[^\d,-]/g,'')" />
+        <button type="button" class="btn btn-default" id="btn2">提交</button>
+        <span class="help-block" id="message"></span>
+    </div>
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+
+    <div>
+        <div>
+            <label><span style="color: blue;font-weight: bold;">推锅</span>牌型配置：</label>
+        </div>
+        <div>
+            <label>格式说明：一万 11  一筒21 一条31 白板 47 红中 45  北风 44 例如牌型：天九皇：4729或2947</label>
+        </div>
+        配置（庄顺天地）的牌型以逗号分隔：<input type="text" style="width: 300px;" id="tuiguo" onkeyup="this.value=this.value.replace(/[^\d]/g,'')" />
+        <button type="button" class="btn btn-default" id="btn3">提交</button>
+        <span class="help-block" id="message2"></span>
+    </div>
+
+    <div style="margin-top: 20px;"></div>
+    <hr/>
+
+
+
+</div>
+<!--[if !IE]> -->
+<script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script src="/static/ace1.4/assets/js/jquery-1.11.3.min.js"></script>
+<![endif]-->
+<script>
+
+    //玩家查询
+    $(document).ready(function(){
+        $("#btn1").on("click",function(){
+           var  username=$("#user1").val();
+           var  merchantId=$("#mid").val();
+           if(!username){
+               alert('用户名为空！');
+               return false;
+           }
+            if(!merchantId){
+                alert('线路号为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#info").text("数据验证中，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/doAction')}",
+                {
+                    username:username,
+                    merchantId:merchantId
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#info").text(data.message);
+                        $("#uid").val(data.uid);
+                    }else{
+                        $("#info").text(data.message);
+                    }
+                });
+        })
+    })
+    //麻将
+    $(document).ready(function(){
+        $("#btn2").on("click",function(){
+            var  uid=$("#uid").val();
+            var paixin=$("#px").val();
+            if(!uid){
+                alert('请先进行玩家查找！');
+                return false;
+            }
+            if(!paixin){
+                alert('牌型配置不能为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message").text("正在操作，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/dopaixing')}",
+                {
+                    uid:uid,
+                    paixin:paixin
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message").text(data.message);
+                    }else{
+                        $("#message").text(data.message);
+                    }
+                });
+        })
+    })
+    //推锅
+    $(document).ready(function(){
+        $("#btn3").on("click",function(){
+            var  uid=$("#uid").val();
+            var tuiguo=$("#tuiguo").val();
+            if(!uid){
+                alert('请先进行玩家查找！');
+                return false;
+            }
+            if(!tuiguo){
+                alert('牌型配置不能为空！');
+                return false;
+            }
+            //在与服务器通讯较慢时给用户提示信息
+            $("#message2").text("正在操作，请稍后...");
+            //向服务器发送请求(get、post)
+            $.post("{:url('CeShi/dotuiguo')}",
+                {
+                    uid:uid,
+                    tuiguo:tuiguo
+                },
+                function(data){
+                    if(data.code==1){
+                        $("#message2").text(data.message);
+                    }else{
+                        $("#message2").text(data.message);
+                    }
+                });
+        })
+    })
+
+
+</script>

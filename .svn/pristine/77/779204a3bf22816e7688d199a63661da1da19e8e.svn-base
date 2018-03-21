@@ -1,0 +1,564 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : wyy1
+Source Server Version : 50634
+Source Host           : 172.31.82.103:3306
+Source Database       : na_gameplaza
+
+Target Server Type    : MYSQL
+Target Server Version : 50634
+File Encoding         : 65001
+
+Date: 2017-06-01 15:48:27
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for na_admin
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admin`;
+CREATE TABLE `na_admin` (
+  `id` mediumint(6) unsigned NOT NULL AUTO_INCREMENT,
+  `username` varchar(20) NOT NULL DEFAULT '',
+  `password` varchar(32) NOT NULL DEFAULT '',
+  `encrypt` varchar(6) NOT NULL DEFAULT '',
+  `lastloginip` int(10) NOT NULL DEFAULT '0',
+  `lastlogintime` int(10) unsigned NOT NULL DEFAULT '0',
+  `email` varchar(40) NOT NULL DEFAULT '',
+  `mobile` varchar(11) NOT NULL DEFAULT '',
+  `realname` varchar(50) NOT NULL DEFAULT '',
+  `openid` varchar(255) NOT NULL DEFAULT '',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否有效(2:无效,1:有效)',
+  `updatetime` int(10) NOT NULL DEFAULT '0',
+  `merchantId` int(3) DEFAULT '0',
+  `parentId` int(10) DEFAULT '0',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `username` (`username`) USING BTREE,
+  KEY `status` (`status`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admin
+-- ----------------------------
+INSERT INTO `na_admin` VALUES ('1', 'supadminxj', 'b65f703bcb8dc7cae8d22abfb8895d21', '', '-1411541373', '1496299954', '5552123@qq.com', '18888873646', '小小军', '', '1', '1495593738', '0', '0');
+INSERT INTO `na_admin` VALUES ('14', 'gmadin123', '66e0564ad9c925fd46909ecf4d705465', '', '-556784606', '1496046860', '', '', '', '', '1', '0', '7', '0');
+INSERT INTO `na_admin` VALUES ('15', 'xyz-mch-1026599684', 'b0e0f4120e5af2bbc743c0c50e63f693', '', '-556784606', '1496047801', '', '', '', '', '1', '0', '942', '0');
+INSERT INTO `na_admin` VALUES ('16', 'rt-mch-1032979957', 'b0e0f4120e5af2bbc743c0c50e63f693', '', '0', '0', '', '', '', '', '1', '0', '702', '0');
+
+-- ----------------------------
+-- Table structure for na_admingroup
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admingroup`;
+CREATE TABLE `na_admingroup` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT COMMENT '角色ID',
+  `name` varchar(50) NOT NULL COMMENT '角色名称',
+  `description` text COMMENT '权限的描述',
+  `rules` varchar(500) NOT NULL DEFAULT '' COMMENT '角色拥有的权限id，多个权限 , 隔开',
+  `listorder` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '排序',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COMMENT='角色表';
+
+-- ----------------------------
+-- Records of na_admingroup
+-- ----------------------------
+INSERT INTO `na_admingroup` VALUES ('1', '推锅游戏', '可以操作推锅游戏的所有功能', '87,88,122,123,125,142,143,92,93,94,95,126,127,96,150,98', '0', '1493354501');
+INSERT INTO `na_admingroup` VALUES ('2', '推筒子', '可以操作所有推筒子的权限', '100,104,137,138,139,140,141,105,144,145,146,147,148,106,149,107', '0', '1493354490');
+INSERT INTO `na_admingroup` VALUES ('3', '牌九', '可以操作所有的牌九的功能', '101,108,109,110,111', '0', '1493090781');
+INSERT INTO `na_admingroup` VALUES ('4', '后台公告', '管理公告，邮件，玩家反馈', '66,71,79,67,74,91,75,81,68,80,90,69,82,83', '0', '1493090821');
+INSERT INTO `na_admingroup` VALUES ('5', '玩家管理', '管理玩家功能', '32,70,86,113,114,115,116,117,118,119,120,121,151,152', '0', '1493621113');
+INSERT INTO `na_admingroup` VALUES ('6', '系统设置', '房卡商店配置', '102,103,128', '0', '1493090965');
+INSERT INTO `na_admingroup` VALUES ('7', '购买日志', '日志查看', '97,129,130', '0', '1493091014');
+INSERT INTO `na_admingroup` VALUES ('8', '子管理员配置', '添加管理员等功能', '131,132,133,134,135,136', '0', '1493091056');
+
+-- ----------------------------
+-- Table structure for na_admingroupaccess
+-- ----------------------------
+DROP TABLE IF EXISTS `na_admingroupaccess`;
+CREATE TABLE `na_admingroupaccess` (
+  `uid` int(10) unsigned NOT NULL COMMENT '用户id',
+  `group_id` mediumint(8) unsigned NOT NULL COMMENT '用户组id',
+  UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
+  KEY `uid` (`uid`),
+  KEY `group_id` (`group_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_admingroupaccess
+-- ----------------------------
+INSERT INTO `na_admingroupaccess` VALUES ('14', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '1');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '2');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '4');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '5');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '6');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '7');
+INSERT INTO `na_admingroupaccess` VALUES ('14', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('15', '8');
+INSERT INTO `na_admingroupaccess` VALUES ('16', '8');
+
+-- ----------------------------
+-- Table structure for na_adminlog
+-- ----------------------------
+DROP TABLE IF EXISTS `na_adminlog`;
+CREATE TABLE `na_adminlog` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `m` varchar(15) NOT NULL,
+  `c` varchar(20) NOT NULL,
+  `a` varchar(20) NOT NULL,
+  `querystring` varchar(255) NOT NULL,
+  `userid` mediumint(8) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(20) NOT NULL,
+  `ip` int(10) NOT NULL,
+  `time` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_adminlog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_broadcast
+-- ----------------------------
+DROP TABLE IF EXISTS `na_broadcast`;
+CREATE TABLE `na_broadcast` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `content` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '公告内容',
+  `time` int(11) DEFAULT NULL,
+  `un32HallID` int(11) DEFAULT '0' COMMENT '游戏类别 0 为广场 其他为游戏的ID',
+  `start_time` int(11) DEFAULT NULL,
+  `end_time` int(11) DEFAULT NULL,
+  `interval` int(10) unsigned zerofill DEFAULT '0000000000' COMMENT '时间间隔秒数',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=57 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='公告';
+
+-- ----------------------------
+-- Records of na_broadcast
+-- ----------------------------
+INSERT INTO `na_broadcast` VALUES ('53', '大家好！我是supsup管理员给你们发的信息！', '1495685023', '8', '1495684980', '1495944180', '0000000030', '0');
+INSERT INTO `na_broadcast` VALUES ('54', '新的公告哦！', '1495879441', '0', '1495879380', '1495965780', '0000000030', '0');
+INSERT INTO `na_broadcast` VALUES ('55', '我是推锅里面的公告哦', '1495879467', '1', '1495879440', '1495965840', '0000000120', '0');
+INSERT INTO `na_broadcast` VALUES ('56', '我是推筒子里面的公告！', '1495879491', '2', '1495879440', '1495965840', '0000000020', '0');
+
+-- ----------------------------
+-- Table structure for na_buylog
+-- ----------------------------
+DROP TABLE IF EXISTS `na_buylog`;
+CREATE TABLE `na_buylog` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `admin_id` int(11) NOT NULL COMMENT '管理员的ID',
+  `user_id` int(11) NOT NULL COMMENT '玩家ID',
+  `user_name` varchar(128) DEFAULT NULL,
+  `gem_number` int(11) NOT NULL COMMENT '购买房卡数量',
+  `coins_number` double(10,2) DEFAULT NULL,
+  `create_time` int(11) DEFAULT NULL,
+  `merchantId` int(3) DEFAULT '0',
+  `user_account` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='购买日志';
+
+-- ----------------------------
+-- Records of na_buylog
+-- ----------------------------
+INSERT INTO `na_buylog` VALUES ('14', '1', '581295580', 'player001', '100', '100.00', '1495685094', '0', 'player001');
+INSERT INTO `na_buylog` VALUES ('15', '1', '677934037', 'lijunjun', '200', '200.00', '1495685104', '0', 'lijunjun');
+
+-- ----------------------------
+-- Table structure for na_gamemail
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gamemail`;
+CREATE TABLE `na_gamemail` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) DEFAULT NULL COMMENT '标题',
+  `content` text COMMENT '内容',
+  `time` int(11) DEFAULT '0',
+  `from` varchar(255) DEFAULT NULL COMMENT '来源于谁发送的',
+  `fromto` int(11) DEFAULT NULL COMMENT '发送给那个玩家ID',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=125 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of na_gamemail
+-- ----------------------------
+INSERT INTO `na_gamemail` VALUES ('124', '大家好！', '新的服务器，后台移植成功！！', '1495685057', '系统管理员', '0', '0');
+
+-- ----------------------------
+-- Table structure for na_gameserver
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameserver`;
+CREATE TABLE `na_gameserver` (
+  `un32GameServerID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '大厅ID',
+  `un32GameKindID` int(11) NOT NULL DEFAULT '0' COMMENT '类型ID',
+  `szGameServerName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅名称',
+  `szGameServerPwd` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '大厅密码',
+  PRIMARY KEY (`un32GameServerID`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gameserver
+-- ----------------------------
+INSERT INTO `na_gameserver` VALUES ('0', '0', '广场', '');
+INSERT INTO `na_gameserver` VALUES ('6', '10000', '推锅大厅一', 'abc123');
+INSERT INTO `na_gameserver` VALUES ('7', '10001', '推筒子大厅一', 'abc123');
+
+-- ----------------------------
+-- Table structure for na_gameuser
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameuser`;
+CREATE TABLE `na_gameuser` (
+  `un32UserID` int(11) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `eUserCate` int(11) unsigned zerofill NOT NULL COMMENT '0:无;1:普通玩家',
+  `szUserName` char(30) COLLATE utf8_unicode_ci NOT NULL COMMENT '用户名',
+  `password` char(32) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '登录密码',
+  `szNickName` varchar(30) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '昵称',
+  `n64Score` bigint(20) NOT NULL DEFAULT '0' COMMENT '积分',
+  `dGold` double(20,6) NOT NULL DEFAULT '0.000000' COMMENT '金币',
+  `n64RoomCardNum` bigint(20) NOT NULL DEFAULT '0' COMMENT '房卡数量',
+  `tRegisteUTCMilsec` bigint(20) NOT NULL DEFAULT '0' COMMENT '注册时间',
+  `tLastLoginUTCMilsec` bigint(20) NOT NULL DEFAULT '0' COMMENT '最后一次登录时间',
+  `bSex` tinyint(1) NOT NULL DEFAULT '0' COMMENT '性别',
+  `status` tinyint(1) DEFAULT '1' COMMENT '1为正常0为禁用',
+  `islogin` tinyint(1) DEFAULT '0' COMMENT '0为未在线1为在线',
+  `userPicture` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '头像图片url',
+  `userAge` int(11) DEFAULT NULL COMMENT '用户年龄',
+  `userPhone` varchar(20) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户电话号码',
+  `userQQ` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户QQ号',
+  `userWeiXin` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL COMMENT '用户微信号',
+  `un8HeadImage` tinyint(1) NOT NULL DEFAULT '0' COMMENT '头像编号',
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32UserID`),
+  UNIQUE KEY `szUserName` (`szUserName`) USING BTREE
+) ENGINE=InnoDB AUTO_INCREMENT=1048094846 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ROW_FORMAT=COMPACT;
+
+-- ----------------------------
+-- Records of na_gameuser
+-- ----------------------------
+INSERT INTO `na_gameuser` VALUES ('581295580', '00000000000', 'player001', null, 'player001', '0', '10000.000000', '82', '0', '1495881794', '0', '1', '0', null, null, null, null, null, '25', '1');
+INSERT INTO `na_gameuser` VALUES ('592377515', '00000000000', 'player002', null, 'player002', '0', '19999.000000', '0', '0', '1495788961', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `na_gameuser` VALUES ('677934037', '00000000000', 'lijunjun', null, 'lijunjun', '0', '100200.000000', '200', '0', '1495682141', '0', '1', '0', null, null, null, null, null, '4', '1');
+INSERT INTO `na_gameuser` VALUES ('677989265', '00000000000', 'tanggangxiang', null, 'tanggangxiang', '0', '100000.000000', '282', '0', '1495681914', '0', '1', '0', null, null, null, null, null, '3', '1');
+INSERT INTO `na_gameuser` VALUES ('1033041006', '00000000000', 'player1001', null, 'player1001', '0', '10000.000000', '0', '0', '1496196954', '0', '1', '0', null, null, null, null, null, '8', '702');
+INSERT INTO `na_gameuser` VALUES ('1033068850', '00000000000', 'player1000', null, 'player1000', '0', '10000.000000', '0', '0', '1496036347', '0', '1', '0', null, null, null, null, null, '5', '702');
+INSERT INTO `na_gameuser` VALUES ('1033147027', '00000000000', 'player1002', null, 'player1002', '0', '10000.000000', '0', '0', '1496287977', '0', '1', '0', null, null, null, null, null, '32', '702');
+INSERT INTO `na_gameuser` VALUES ('1033191514', '00000000000', 'player1003', null, 'player1003', '0', '10000.000000', '0', '0', '1496054104', '0', '1', '0', null, null, null, null, null, '29', '702');
+INSERT INTO `na_gameuser` VALUES ('1033220863', '00000000000', 'player1004', null, 'player1004', '0', '10000.000000', '0', '0', '1496040218', '0', '1', '0', null, null, null, null, null, '31', '702');
+INSERT INTO `na_gameuser` VALUES ('1037985460', '00000000000', 'baqi001', null, 'baqi001', '0', '10010000.000000', '0', '0', '1496301991', '0', '1', '0', null, null, null, null, null, '22', '942');
+INSERT INTO `na_gameuser` VALUES ('1048094845', '00000000000', 'kaishen001', null, 'kaishen001', '0', '20000.000000', '0', '0', '1496049009', '0', '1', '0', null, null, null, null, null, '9', '942');
+
+-- ----------------------------
+-- Table structure for na_help
+-- ----------------------------
+DROP TABLE IF EXISTS `na_help`;
+CREATE TABLE `na_help` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(30) COLLATE utf8_bin DEFAULT NULL,
+  `content` varchar(1024) COLLATE utf8_bin DEFAULT NULL COMMENT '帮助手册内容',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='帮助手册';
+
+-- ----------------------------
+-- Records of na_help
+-- ----------------------------
+INSERT INTO `na_help` VALUES ('1', '帮助一', '这是帮助一这是帮助一这是帮助一这是帮助一这是帮助一');
+
+-- ----------------------------
+-- Table structure for na_mailoperation
+-- ----------------------------
+DROP TABLE IF EXISTS `na_mailoperation`;
+CREATE TABLE `na_mailoperation` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32MailID` int(11) NOT NULL DEFAULT '0',
+  `un32UserID` int(11) NOT NULL DEFAULT '0',
+  `bIfReaded` tinyint(1) NOT NULL DEFAULT '0',
+  `bIfDeleted` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_mailoperation
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_menu
+-- ----------------------------
+DROP TABLE IF EXISTS `na_menu`;
+CREATE TABLE `na_menu` (
+  `id` smallint(6) unsigned NOT NULL AUTO_INCREMENT COMMENT '菜单栏id',
+  `name` char(40) NOT NULL DEFAULT '' COMMENT '菜单名称',
+  `parentid` smallint(6) DEFAULT '0' COMMENT '父级id',
+  `icon` varchar(20) NOT NULL DEFAULT '' COMMENT '菜单图标',
+  `c` varchar(20) DEFAULT NULL COMMENT '控制器名称',
+  `a` varchar(20) DEFAULT NULL COMMENT '方法名称',
+  `data` varchar(50) NOT NULL DEFAULT '',
+  `tip` varchar(255) NOT NULL DEFAULT '' COMMENT '提示',
+  `group` varchar(50) DEFAULT '' COMMENT '分组',
+  `listorder` smallint(6) unsigned NOT NULL DEFAULT '999' COMMENT '排序',
+  `display` tinyint(1) NOT NULL DEFAULT '1' COMMENT '是否显示(1:显示,2:不显示)',
+  `updatetime` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `listorder` (`listorder`),
+  KEY `parentid` (`parentid`)
+) ENGINE=InnoDB AUTO_INCREMENT=153 DEFAULT CHARSET=utf8 COMMENT='后台管理菜单栏';
+
+-- ----------------------------
+-- Records of na_menu
+-- ----------------------------
+INSERT INTO `na_menu` VALUES ('1', '管理员设置', '0', 'fa-users', 'Admin', 'index', '', '', '', '1', '1', '1496046729');
+INSERT INTO `na_menu` VALUES ('31', '系统首页', '0', 'fa-bank', 'Index', 'index', '', '', '', '0', '2', '1493376660');
+INSERT INTO `na_menu` VALUES ('32', '玩家管理', '0', 'fa-child', 'User', 'index', '', '', '', '2', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('42', '菜单管理', '0', 'fa-cogs', 'Menu', 'index', '', '', '', '11', '1', '1493376745');
+INSERT INTO `na_menu` VALUES ('43', '查看管理员', '43', '', 'Admin', 'index', '', '', '', '999', '2', '1482306721');
+INSERT INTO `na_menu` VALUES ('44', '添加管理员', '72', '', 'Admin', 'add', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('45', '修改管理员', '72', '', 'Admin', 'edit', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('46', '删除管理员', '72', '', 'Admin', 'del', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('47', '角色管理', '0', ' fa-user', 'Group', 'index', '', '', '', '10', '1', '1493620754');
+INSERT INTO `na_menu` VALUES ('48', '查看角色', '47', '', 'Group', 'index', '', '', '', '777', '1', '1491538221');
+INSERT INTO `na_menu` VALUES ('49', '添加角色', '62', '', 'Group', 'add', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('50', '修改角色', '62', '', 'Group', 'edit', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('51', '删除角色', '62', '', 'Group', 'del', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('53', '查看管理员', '1', '', 'Admin', 'index', '', '', '', '777', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('55', '查看权限', '48', '', 'Group', 'rule', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('56', '查看菜单', '42', '', 'Menu', 'index', '', '', '', '888', '1', '1491538221');
+INSERT INTO `na_menu` VALUES ('58', '修改菜单', '64', '', 'Menu', 'edit', '', '', '', '999', '2', '1491538222');
+INSERT INTO `na_menu` VALUES ('59', '删除菜单', '64', '', 'Menu', 'del', '', '', '', '999', '2', '1491538222');
+INSERT INTO `na_menu` VALUES ('60', '日志管理', '0', ' fa-list-ul', 'Log', 'index', '', '', '', '12', '2', '1493376719');
+INSERT INTO `na_menu` VALUES ('62', '角色操作', '47', '', 'Group', 'info', '', '', '', '888', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('63', '修改权限', '48', '', 'Group', 'editRule', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('64', '菜单操作', '42', '', 'Menu', 'info', '', '', '', '888', '2', '1491538222');
+INSERT INTO `na_menu` VALUES ('65', '添加菜单', '64', '', 'Menu', 'add', '', '', '', '888', '2', '1491538222');
+INSERT INTO `na_menu` VALUES ('66', '后台公告', '0', ' fa-bullhorn', 'System', 'index', '', '', '', '3', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('67', '发布公告', '71', '', 'System', 'announce', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('68', '发布邮件', '75', '', 'System', 'sendmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('69', '玩家反馈', '66', '', 'System', 'propose', '', '', '', '999', '1', '1491538221');
+INSERT INTO `na_menu` VALUES ('70', '所有玩家', '32', '', 'User', 'index', '', '', '', '999', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('71', '查看公告', '66', '', 'System', 'index', '', '', '', '888', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('72', '管理员操作', '1', '', 'Admin', 'info', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('74', '删除公告', '71', '', 'System', 'del', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('75', '查看邮件', '66', '', 'System', 'showmail', '', '', '', '888', '1', '1491538220');
+INSERT INTO `na_menu` VALUES ('77', '添加帮助手册', '76', '', 'System', 'addhelp', '', '', '', '999', '2', '1482805694');
+INSERT INTO `na_menu` VALUES ('78', '修改帮助手册', '76', '', 'System', 'edithelp', '', '', '', '999', '2', '1482805694');
+INSERT INTO `na_menu` VALUES ('79', '公告详情', '71', '', 'System', 'show', '', '', '', '888', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('80', '删除邮件', '75', '', 'System', 'delmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('81', '邮件详情', '75', '', 'System', 'showinfo', '', '', '', '888', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('82', '反馈详情', '69', '', 'System', 'showpro', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('83', '删除反馈', '69', '', 'System', 'delpro', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('84', '删除手册', '76', '', 'System', 'del', '', '', '', '999', '2', '1482805694');
+INSERT INTO `na_menu` VALUES ('85', '帮助手册详情', '76', '', 'System', 'show', '', '', '', '888', '2', '1482805694');
+INSERT INTO `na_menu` VALUES ('86', 'id查询', '70', '', 'User', 'likeid', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('87', '推锅游戏', '0', ' fa-gamepad', 'Game', 'index', '', '', '', '4', '1', '1491538221');
+INSERT INTO `na_menu` VALUES ('88', '推锅游戏房间', '87', '', 'GameTuiGuo', 'show', '', '', '', '999', '1', '1493717086');
+INSERT INTO `na_menu` VALUES ('90', '修改邮件', '75', '', 'System', 'editmail', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('91', '修改公告', '71', '', 'System', 'editbc', '', '', '', '999', '2', '1491538220');
+INSERT INTO `na_menu` VALUES ('92', '推锅游戏系统推荐模板', '87', '', 'System', 'template', '', '', '', '999', '1', '1493716897');
+INSERT INTO `na_menu` VALUES ('93', '添加模板', '92', '', 'System', 'addtemplate', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('94', '修改模板', '92', '', 'System', 'edittem', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('95', '删除模板', '92', '', 'System', 'deltem', '', '', '', '999', '2', '1491538221');
+INSERT INTO `na_menu` VALUES ('96', '推锅游戏玩家自定义模板', '87', '', 'System', 'gameusertel', '', '', '', '999', '1', '1493716927');
+INSERT INTO `na_menu` VALUES ('97', '添加金币和房卡日志', '0', 'fa-shopping-cart ', 'BuyLog', 'index', '', '', '', '999', '1', '1493717001');
+INSERT INTO `na_menu` VALUES ('98', '下注搓牌时间配置', '87', '', 'System', 'time', '', '', '', '999', '1', '1493717167');
+INSERT INTO `na_menu` VALUES ('100', '推筒子', '0', ' fa-gamepad', 'GameTuiTong', 'index', '', '', '', '5', '1', '1493264119');
+INSERT INTO `na_menu` VALUES ('101', '牌九', '0', ' fa-gamepad', 'GamePaiJiu', 'index', '', '', '', '6', '2', '1493376688');
+INSERT INTO `na_menu` VALUES ('102', '系统设置', '0', 'fa-cog ', 'System', 'index', '', '', '', '7', '1', '1491538222');
+INSERT INTO `na_menu` VALUES ('103', '房卡商店', '102', '', 'System', 'roomcard', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('104', '推筒子游戏房间', '100', '', 'GameTuiTong', 'show', '', '', '', '999', '1', '1493717101');
+INSERT INTO `na_menu` VALUES ('105', '推筒子系统推荐模板', '100', '', 'GameTuiTong', 'template', '', '', '', '999', '1', '1493716951');
+INSERT INTO `na_menu` VALUES ('106', '推筒子玩家自定义模板', '100', '', 'GameTuiTong', 'gameusertel', '', '', '', '999', '1', '1493716977');
+INSERT INTO `na_menu` VALUES ('107', '下注搓牌时间配置', '100', '', 'GameTuiTong', 'time', '', '', '', '999', '1', '1493717147');
+INSERT INTO `na_menu` VALUES ('108', '游戏房间', '101', '', 'GamePaiJiu', 'show', '', '', '', '999', '1', '1493264630');
+INSERT INTO `na_menu` VALUES ('109', '系统模板', '101', '', 'GamePaiJiu', 'template', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('110', '玩家模板', '101', '', 'GamePaiJiu', 'usertel', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('111', '时间配置', '101', '', 'GamePaiJiu', 'time', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('112', '大厅配置', '0', 'fa-map', 'System', 'gamehall', '', '', '', '999', '2', '1493376730');
+INSERT INTO `na_menu` VALUES ('113', '用户名查询玩家', '70', '', 'User', 'likeusername', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('114', '购买金币或房卡', '70', '', 'User', 'addcoins', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('115', '发送邮件', '70', '', 'User', 'mail', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('116', '查看所有游戏', '70', '', 'User', 'details', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('117', '推锅游戏房间', '70', '', 'User', 'roomshow', '', '', '', '999', '2', '1492766744');
+INSERT INTO `na_menu` VALUES ('118', '推筒子游戏', '70', '', 'User', 'tuitong', '', '', '', '999', '2', '1492766760');
+INSERT INTO `na_menu` VALUES ('119', '牌九游戏', '70', '', 'User', 'paijiu', '', '', '', '999', '2', '1492766772');
+INSERT INTO `na_menu` VALUES ('120', '推锅游戏房间房间号查询', '70', '', 'User', 'likepwd', '', '', '', '999', '2', '1492767058');
+INSERT INTO `na_menu` VALUES ('121', '查看每回合详情', '70', '', 'User', 'roomdetail', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('122', '房间号查询房间', '88', '', 'GameTuiGuo', 'likeroomid', '', '', '', '999', '2', '1492933716');
+INSERT INTO `na_menu` VALUES ('123', '查看结果', '88', '', 'GameTuiGuo', 'details', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('125', '用户名查询', '88', '', 'GameTuiGuo', 'likeuser', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('126', '应用模板', '92', '', 'System', 'activetem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('127', '解除应用模板', '92', '', 'System', 'disactivetem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('128', '修改', '103', '', 'System', 'editrc', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('129', '用户名查询', '97', '', 'BuyLog', 'searchname', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('130', '时间查询', '97', '', 'BuyLog', 'liketime', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('131', '子管理员配置', '0', 'fa-cog', 'SonAdmin', 'index', '', '', '', '999', '1', '1492957149');
+INSERT INTO `na_menu` VALUES ('132', '所有管理员', '131', '', 'SonAdmin', 'index', '', '', '', '999', '1', null);
+INSERT INTO `na_menu` VALUES ('133', '查看管理员', '132', '', 'SonAdmin', 'info', '', '', '', '999', '2', '1493029574');
+INSERT INTO `na_menu` VALUES ('134', '编辑管理员', '132', '', 'SonAdmin', 'edit', '', '', '', '999', '2', '1493089465');
+INSERT INTO `na_menu` VALUES ('135', '添加管理员', '132', '', 'SonAdmin', 'add', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('136', '删除管理员', '132', '', 'SonAdmin', 'del', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('137', '房间号查询房间', '104', '', 'GameTuiTong', 'likeroomid', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('138', '用户名查询', '104', '', 'GameTuiTong', 'likeuser', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('139', '详情', '104', '', 'GameTuiTong', 'details', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('140', '局详情', '104', '', 'GameTuiTong', 'juinfo', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('141', '回合详情', '104', '', 'GameTuiTong', 'huiinfo', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('142', '每局详情', '88', '', 'GameTuiGuo', 'juinfo', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('143', '回合详情', '88', '', 'GameTuiGuo', 'huiinfo', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('144', '添加模板', '105', '', 'GameTuiTong', 'addtemplate', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('145', '修改模板', '105', '', 'GameTuiTong', 'edittem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('146', '删除模板', '105', '', 'GameTuiTong', 'deltem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('147', '应用模板', '105', '', 'GameTuiTong', 'activetem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('148', '解除应用模板', '105', '', 'GameTuiTong', 'disactivetem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('149', '删除玩家模板', '106', '', 'GameTuiTong', 'userdeltem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('150', '删除玩家模板', '96', '', 'System', 'userdeltem', '', '', '', '999', '2', null);
+INSERT INTO `na_menu` VALUES ('151', '推筒子房间号查询', '70', '', 'User', 'likepwdtong', '', '', '', '999', '2', '1493621097');
+INSERT INTO `na_menu` VALUES ('152', '推筒子回合详情', '70', '', 'User', 'roomdetailtong', '', '', '', '999', '2', null);
+
+-- ----------------------------
+-- Table structure for na_propose
+-- ----------------------------
+DROP TABLE IF EXISTS `na_propose`;
+CREATE TABLE `na_propose` (
+  `id` int(11) NOT NULL,
+  `content` varchar(255) DEFAULT NULL COMMENT '反馈的内容',
+  `phone` varchar(50) DEFAULT NULL COMMENT '建议人的联系方式',
+  `time` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='反馈表';
+
+-- ----------------------------
+-- Records of na_propose
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_roomcardconsumeorder
+-- ----------------------------
+DROP TABLE IF EXISTS `na_roomcardconsumeorder`;
+CREATE TABLE `na_roomcardconsumeorder` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32GameUserID` int(11) NOT NULL,
+  `un32ConsumeCardNum` int(11) NOT NULL,
+  `un32LogTime` int(11) NOT NULL,
+  `bIfCancel` tinyint(1) NOT NULL DEFAULT '0',
+  `un32GameHallID` int(1) NOT NULL,
+  `eType` tinyint(1) NOT NULL COMMENT '0创建房间1增加时长',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_roomcardconsumeorder
+-- ----------------------------
+INSERT INTO `na_roomcardconsumeorder` VALUES ('11', '677989265', '6', '1495680011', '0', '0', '6');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('12', '581295580', '6', '1495686895', '0', '0', '6');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('13', '581295580', '6', '1495731959', '0', '0', '6');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('14', '581295580', '6', '1495881718', '0', '0', '6');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('15', '1037985460', '0', '1496039731', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('16', '1037985460', '0', '1496039972', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('17', '1037985460', '0', '1496040043', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('18', '1033191514', '0', '1496040798', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('19', '1033191514', '0', '1496040802', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('20', '1033191514', '0', '1496041843', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('21', '1033191514', '0', '1496048180', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('22', '1037985460', '0', '1496048222', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('23', '1037985460', '0', '1496048491', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('24', '1037985460', '0', '1496049325', '0', '0', '7');
+INSERT INTO `na_roomcardconsumeorder` VALUES ('25', '1033041006', '0', '1496050937', '0', '0', '7');
+
+-- ----------------------------
+-- Table structure for na_roomshopping
+-- ----------------------------
+DROP TABLE IF EXISTS `na_roomshopping`;
+CREATE TABLE `na_roomshopping` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `roomcard` int(11) DEFAULT NULL,
+  `coins` double(10,2) DEFAULT NULL,
+  `state` tinyint(1) DEFAULT '0' COMMENT '0正常价格，1特惠价格',
+  `merchantId` int(3) DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COLLATE=utf8_bin COMMENT='房卡商店';
+
+-- ----------------------------
+-- Records of na_roomshopping
+-- ----------------------------
+INSERT INTO `na_roomshopping` VALUES ('31', '10', '5.00', '0', '0');
+INSERT INTO `na_roomshopping` VALUES ('32', '24', '10.00', '1', '0');
+INSERT INTO `na_roomshopping` VALUES ('33', '72', '36.00', '0', '0');
+INSERT INTO `na_roomshopping` VALUES ('34', '96', '48.00', '0', '0');
+INSERT INTO `na_roomshopping` VALUES ('35', '120', '60.00', '0', '0');
+INSERT INTO `na_roomshopping` VALUES ('36', '144', '72.00', '0', '0');
+INSERT INTO `na_roomshopping` VALUES ('37', '10', '5.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('38', '24', '12.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('39', '72', '36.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('40', '96', '48.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('41', '120', '60.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('42', '144', '72.00', '0', '7');
+INSERT INTO `na_roomshopping` VALUES ('43', '10', '5.00', '0', '942');
+INSERT INTO `na_roomshopping` VALUES ('44', '24', '12.00', '0', '942');
+INSERT INTO `na_roomshopping` VALUES ('45', '72', '36.00', '0', '942');
+INSERT INTO `na_roomshopping` VALUES ('46', '96', '48.00', '0', '942');
+INSERT INTO `na_roomshopping` VALUES ('47', '120', '60.00', '0', '942');
+INSERT INTO `na_roomshopping` VALUES ('48', '144', '72.00', '0', '942');
+
+-- ----------------------------
+-- Table structure for na_upgradelog
+-- ----------------------------
+DROP TABLE IF EXISTS `na_upgradelog`;
+CREATE TABLE `na_upgradelog` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LastUpgradeTime` bigint(20) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of na_upgradelog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_userfeedback
+-- ----------------------------
+DROP TABLE IF EXISTS `na_userfeedback`;
+CREATE TABLE `na_userfeedback` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32GameUserID` int(11) NOT NULL DEFAULT '0',
+  `szContactInfo` varchar(1024) COLLATE utf8_bin DEFAULT NULL,
+  `szContent` varchar(1024) COLLATE utf8_bin DEFAULT NULL,
+  `un32LogTime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_userfeedback
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for na_usergoldconsumerecord
+-- ----------------------------
+DROP TABLE IF EXISTS `na_usergoldconsumerecord`;
+CREATE TABLE `na_usergoldconsumerecord` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT,
+  `un32UserID` int(11) NOT NULL DEFAULT '0',
+  `un32HallID` int(11) NOT NULL DEFAULT '0',
+  `dConsumeGold` double(20,6) NOT NULL DEFAULT '0.000000',
+  `dRestGold` double(20,6) NOT NULL DEFAULT '0.000000',
+  `un32GotRoomCard` int(11) NOT NULL DEFAULT '0',
+  `un32LogTime` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_usergoldconsumerecord
+-- ----------------------------
+INSERT INTO `na_usergoldconsumerecord` VALUES ('5', '677989265', '0', '72.000000', '99928.000000', '144', '1495679753');
+INSERT INTO `na_usergoldconsumerecord` VALUES ('6', '677989265', '0', '72.000000', '99856.000000', '144', '1495679756');

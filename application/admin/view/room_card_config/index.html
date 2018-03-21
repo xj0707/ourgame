@@ -1,0 +1,62 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+    
+        <!--<span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'addtemplate'">-->
+           <!--新增模板-->
+            <!--<i class="icon-reply icon-only"></i>-->
+        <!--</span>-->
+       
+    </div>
+    <div class="page-header">
+        <h1>
+            房卡配置
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <th class="hidden-480">游戏名</th>
+                                <th >1小时房卡数</th>
+                                <th >1局房卡数</th>
+                                <th class="hidden-480">折扣率</th>
+                                <!--<th class="hidden-480">实际房卡数</th>-->
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="infos" id="vo" key="k"}
+                            <tr>
+                                <td>{$vo.eGameKind|servername}</td>
+                                <td>{$vo.roomcard_time}</td>
+                                <td>{$vo.roomcard_round}</td>
+                                <td class="hidden-480">{$vo.rebate}</td>
+                                <!--<td class="hidden-480">{$vo.rebate}</td>-->
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                         <a href='{:url("edit","id=$vo[id]")}'>
+                                           <span class="btn btn-xs btn-info">
+                                                <i class="ace-icon fa fa-pencil bigger-120">配置</i>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                     {$infos->render()}
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+
+

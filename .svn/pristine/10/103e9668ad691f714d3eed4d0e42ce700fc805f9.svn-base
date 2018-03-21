@@ -1,0 +1,627 @@
+[ 2017-08-18T15:41:48+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.065003s][吞吐率：15.38req/s] [内存消耗：1,263.03kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'da025262-dd5f-c589-932a-090e5b76987d',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:42:05+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '50b15881-d883-e68c-c5b3-55a902ad591f',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:48:50+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.028001s][吞吐率：35.71req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'd1b29317-4e60-64ec-6b5e-5ff60d382fdb',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:48:51+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'ddc1bc53-be6b-7447-81ad-15a28f7b1cf4',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:48:52+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.025001s][吞吐率：40.00req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '799a709e-1250-8f6d-b774-757225e53024',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:49:07+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.022001s][吞吐率：45.45req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '75d3a33b-7ae6-522f-518b-81cd5550913f',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:49:57+08:00 ] 192.168.3.93 192.168.3.93 POST /wamp/www/tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/wamp/www/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,263.32kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'wamp',
+    1 => 'www',
+    2 => 'tigergame',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '1e65acfd-3260-ba46-35e0-dd44338f7390',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'public' => 'index.php',
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T15:52:43+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '005072b0-e992-84dd-658d-0d762af9e8c6',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:05:12+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] a.cn/ [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：1,672.55kb] [文件加载：39]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\login\login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-18T16:10:09+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'a6f79c90-54bd-3685-4275-ac02af09c2d6',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:10:12+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '78f9d2d7-e172-5874-c0b4-cd9666997550',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:10:21+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024001s][吞吐率：41.66req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '4b63d702-0b09-f12b-fa19-4e3e2cc185e3',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:10:23+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024002s][吞吐率：41.66req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'e83c28dd-38b7-a126-82cb-d7eb07203635',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:10:24+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.024001s][吞吐率：41.67req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '3a79eab6-d65f-e929-5609-e4eeaf1d0f7e',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:12:40+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.026002s][吞吐率：38.46req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => 'b4133132-18a9-7800-5158-13de126e0d38',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:21:34+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.025002s][吞吐率：40.00req/s] [内存消耗：1,263.11kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '533309f9-451c-6a72-1d53-76644684690f',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:21:36+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.023002s][吞吐率：43.47req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '56c3e615-294c-c158-4423-1d09e2da214b',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T16:26:51+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.027002s][吞吐率：37.03req/s] [内存消耗：1,263.04kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '205',
+  'postman-token' => '466434f9-73fc-a53a-4fba-8ee04162dbe0',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T18:31:28+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addPlayers
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addPlayers [运行时间：0.035002s][吞吐率：28.57req/s] [内存消耗：1,263.06kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '226',
+  'postman-token' => 'cf96eb02-e506-7cfd-fe8e-126997eaccb4',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-18T18:38:22+08:00 ] 192.168.3.93 192.168.3.93 POST /tigergame/public/index.php/admin/api/addAdminInfo
+[ log ] 192.168.3.93/tigergame/public/index.php/admin/api/addAdminInfo [运行时间：0.029001s][吞吐率：34.48req/s] [内存消耗：1,263.02kb] [文件加载：30]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'tigergame',
+    1 => 'public',
+    2 => 'index.php',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => '192.168.3.93',
+  'connection' => 'keep-alive',
+  'content-length' => '209',
+  'postman-token' => 'de6bb0c0-ba5a-1c22-57ec-193636f142b6',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+)
+[ info ] [ PARAM ] array (
+  'admin' => 'api',
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

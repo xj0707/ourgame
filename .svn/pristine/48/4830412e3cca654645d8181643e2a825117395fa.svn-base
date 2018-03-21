@@ -1,0 +1,113 @@
+<div class="page-content">
+	<div class="col-sm-6 pull-right">
+
+		        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+		            返回列表
+		            <i class="icon-reply icon-only"></i>
+		        </button>
+      
+    	</div>
+ 	<div class="page-header">
+		        <h1>
+		           请选择要查看的游戏
+		        </h1>
+    		</div>
+    <div class="row">
+        <div class="col-xs-12">
+            
+			
+            <div class="row">
+                <div class="space-6"></div>
+
+                <div class="col-sm-6 infobox-container" >
+                    {if condition="$groupId=='admin'"}
+                    <div class="infobox infobox-green" >
+                        <div class="infobox-icon">
+                            <i class="ace-icon fa fa-comments"></i>
+                        </div>
+                        <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                            <span class="infobox-data-number"><a href='{:url("roomshow","uid=$id")}'>推锅</a></span>
+                        </div>
+                    </div>
+                    <div class="infobox infobox-green">
+                        <div class="infobox-icon">
+                            <i class="ace-icon fa fa-comments"></i>
+                        </div>
+                        <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                            <span class="infobox-data-number"><a href='{:url("tuitong","uid=$id")}'>推筒子</a></span>
+                        </div>
+                    </div>
+                    <!--<div class="infobox infobox-green">-->
+                    <!--<div class="infobox-icon">-->
+                    <!--<i class="ace-icon fa fa-comments"></i>-->
+                    <!--</div>-->
+                    <!--<div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">-->
+                    <!--<span class="infobox-data-number"><a href='{:url("paijiu","uid=$id")}'>牌九</a></span>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="infobox infobox-green">
+                        <div class="infobox-icon">
+                            <i class="ace-icon fa fa-comments"></i>
+                        </div>
+                        <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                            <span class="infobox-data-number"><a href='{:url("game_ma_jiang/scmj","uid=$id")}'>四川麻将</a></span>
+                        </div>
+                    </div>
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+                        <!--<div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">-->
+                            <!--<span class="infobox-data-number"><a href='{:url("sxmj","uid=$id")}'>山西麻将</a></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="infobox infobox-green">-->
+                        <!--<div class="infobox-icon">-->
+                            <!--<i class="ace-icon fa fa-comments"></i>-->
+                        <!--</div>-->
+                        <!--<div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">-->
+                            <!--<span class="infobox-data-number"><a href='{:url("dzpk","uid=$id")}'>德州扑克</a></span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+
+                    {else/}
+                        {volist name="groupId" id="vo"}
+                        {if condition="$vo['group_id']==1"}
+                        <div class="infobox infobox-green" >
+                            <div class="infobox-icon">
+                                <i class="ace-icon fa fa-comments"></i>
+                            </div>
+                            <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                                <span class="infobox-data-number"><a href='{:url("roomshow","uid=$id")}'>推锅</a></span>
+                            </div>
+                        </div>
+                        {/if}
+                        {if condition="$vo['group_id']==2"}
+                        <div class="infobox infobox-green">
+                            <div class="infobox-icon">
+                                <i class="ace-icon fa fa-comments"></i>
+                            </div>
+                            <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                                <span class="infobox-data-number"><a href='{:url("tuitong","uid=$id")}'>推筒子</a></span>
+                            </div>
+                        </div>
+                        {/if}
+                        {if condition="$vo['group_id']==3"}
+                    <div class="infobox infobox-green">
+                        <div class="infobox-icon">
+                            <i class="ace-icon fa fa-comments"></i>
+                        </div>
+                        <div class="infobox-data" style="margin-top: 7px;margin-left: 10px;">
+                            <span class="infobox-data-number"><a href='{:url("game_ma_jiang/scmj","uid=$id")}'>四川麻将</a></span>
+                        </div>
+                    </div>
+                        {/if}
+                        {/volist}
+                    {/if}
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div><!-- /.page-content -->

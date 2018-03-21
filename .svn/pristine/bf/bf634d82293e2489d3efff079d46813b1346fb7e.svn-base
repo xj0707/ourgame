@@ -1,0 +1,72 @@
+<div class="page-content">
+     <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'tuitong?uid={$uid}'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+      
+    </div>
+    
+    <div class="page-header">
+         <h1>
+           <!--  {:model('menu')->getParentNname()} -->
+           
+           		推筒子游戏
+           	
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               个人下注详情
+            </small>
+        </h1>
+    </div>
+    
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                               	<th class="hidden-480">id</th>
+                               	<th>局数回合</th>
+                                <th>游戏方式</th>
+                                <th>回合开始锅底</th>
+                                <th>回合结束锅底</th>
+                                <th class="hidden-480">你的角色</th>
+                                <th>庄的牌型</th>
+                                <th class="hidden-480">顺(牌型) 下注/收益</th>
+                                <th class="hidden-480">天(牌型) 下注/收益</th>
+                                <th class="hidden-480">地(牌型) 下注/收益</th>
+                                <th>总收益</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="infos" id="vo" key="k"}
+                            <tr>
+                                <!--<td class="hidden-480">{$vo.un32ID}</td> -->
+                                <td class="hidden-480">{$k}</td>
+                                <td>第{$vo.un32GameJuID}局，第{$vo.un32GameRoundID}回合</td>
+                                <td></td>
+                                <td></td>
+                                <td>{$vo.n32GuoDiScore}</td>
+                                <td class="hidden-480">{$vo.eIdentity|isrule}</td>
+                                <td></td>
+                                <td class="hidden-480">{$vo.n32TianBetNum} / {$vo.n32TianWinloseNum}</td>
+                                <td class="hidden-480">{$vo.n32DiBetNum} /{ $vo.n32DiWinloseNum}</td>
+                                <td class="hidden-480">{$vo.n32RenBetNum} / {$vo.n32RenWinloseNum}</td>
+                                <td>{$vo.n32TianWinloseNum+$vo.n32DiWinloseNum+$vo.n32RenWinloseNum}</td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                </div><!-- /.span -->
+            </div><!-- /.row -->
+             
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->
+ 

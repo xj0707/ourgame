@@ -1,0 +1,1655 @@
+[ 2017-08-21T11:11:29+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/api/checkLoginAccess
+[ log ] a.cn/admin/api/checkLoginAccess [运行时间：0.143008s][吞吐率：6.99req/s] [内存消耗：2,339.82kb] [文件加载：38]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'api',
+    2 => 'checkLoginAccess',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'content-length' => '171',
+  'postman-token' => '2e672e8b-d83c-4b10-3950-516adcec49ce',
+  'cache-control' => 'no-cache',
+  'origin' => 'chrome-extension://blldpbpoklokpmkcolmppnojpfmmicdo',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+  'content-type' => 'application/json',
+  'accept' => '*/*',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\ApiController->checkLoginAccess[ D:\wamp\www\OurGame\application\admin\controller\ApiController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_merchant` [ RunTime:0.023001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `id` = 'c0e76a50-f15c-43b5-9370-154b81ad9a88' LIMIT 1    [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_merchant` WHERE  `parentId` = 'c0e76a50-f15c-43b5-9370-154b81ad9a88'  AND `bIfHaveChess` = 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admin` [ RunTime:0.014001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_admin` WHERE  `merchantId` = 1000  AND `username` = 'abc' LIMIT 1     [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:12:20+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html
+[ log ] a.cn/admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html [运行时间：0.066004s][吞吐率：15.15req/s] [内存消耗：1,662.05kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'apilogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/xiaojun/xjblog/web/index.php',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->apilogin[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-21T11:12:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.265016s][吞吐率：3.77req/s] [内存消耗：2,736.03kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.030002s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.044002s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.029002s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.004000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:12:22+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/favicon.ico
+[ log ] a.cn/admin/index/favicon.ico [运行时间：0.079004s][吞吐率：12.66req/s] [内存消耗：2,596.84kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:17:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html
+[ log ] a.cn/admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html [运行时间：0.036002s][吞吐率：27.78req/s] [内存消耗：1,662.58kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'apilogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/xiaojun/xjblog/web/index.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'token' => 'bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->apilogin[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-21T11:17:55+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.136008s][吞吐率：7.35req/s] [内存消耗：2,736.45kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/apilogin/token/bf17KqzeSv53BC25yc4KQrC0Sdhb5ekyC3K4zfJtCorysvMVvJc10nzhiQVchFH1vEBlk2stnlwKdvArHgdd41bxzfpFmzot3h_3wGxPRyR-_H_KL21v3g5ZDFUIVUqM2uuC5orN3Sj08zvctkHb.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/show.html
+[ log ] a.cn/admin/game_tui_tong/show.html [运行时间：0.322019s][吞吐率：3.11req/s] [内存消耗：3,160.41kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/index/index.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\show.html [ array (
+  0 => 'rooms',
+  1 => 'empty',
+  2 => 'time',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.031002s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_7_tuitongzi`.`na_gameroom` [ RunTime:0.051003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002001s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:03+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/favicon.ico
+[ log ] a.cn/admin/game_tui_tong/favicon.ico [运行时间：0.099005s][吞吐率：10.10req/s] [内存消耗：2,751.58kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:04+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.308017s][吞吐率：3.25req/s] [内存消耗：3,110.34kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/show.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.044003s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:05+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/favicon.ico
+[ log ] a.cn/admin/game_tui_guo/favicon.ico [运行时间：0.079004s][吞吐率：12.66req/s] [内存消耗：2,664.39kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/index.html
+[ log ] a.cn/admin/user/index.html [运行时间：0.315018s][吞吐率：3.17req/s] [内存消耗：3,253.16kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\UserController->index[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\index.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.009001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.008000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.009000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 0,20    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.004001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.004000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'User'  AND `a` = 'index' LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/favicon.ico
+[ log ] a.cn/admin/user/favicon.ico [运行时间：0.078004s][吞吐率：12.82req/s] [内存消耗：2,731.75kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/show.html
+[ log ] a.cn/admin/game_tui_tong/show.html [运行时间：0.173010s][吞吐率：5.78req/s] [内存消耗：3,160.33kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/user/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\show.html [ array (
+  0 => 'rooms',
+  1 => 'empty',
+  2 => 'time',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_7_tuitongzi`.`na_gameroom` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_7_tuitongzi`.`na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:48+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/template.html
+[ log ] a.cn/admin/game_tui_tong/template.html [运行时间：0.215012s][吞吐率：4.65req/s] [内存消耗：3,137.11kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/show.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->template[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.008001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuitongzi` [ RunTime:0.040002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuitongzi` WHERE  `un32UserID` = 0  AND `merchantId` IN (55) ORDER BY un32ID desc LIMIT 1     [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuitongzi` WHERE  `un32UserID` = 0  AND `merchantId` IN (55) ORDER BY un32ID desc LIMIT 0,15     [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:49+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/gameusertel.html
+[ log ] a.cn/admin/game_tui_tong/gameusertel.html [运行时间：0.182011s][吞吐率：5.49req/s] [内存消耗：3,144.56kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'gameusertel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/template.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->gameUserTel[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\gameusertel.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuitongzi` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuitongzi` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuitongzi` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:50+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_tong/timeindex.html
+[ log ] a.cn/admin/game_tui_tong/timeindex.html [运行时间：0.223013s][吞吐率：4.48req/s] [内存消耗：3,128.12kb] [文件加载：49]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_tong',
+    2 => 'timeindex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/gameusertel.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiTongController->timeindex[ D:\wamp\www\OurGame\application\admin\controller\GameTuiTongController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_tong\timeindex.html [ array (
+  0 => 'infos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_settime_tuitongzi` [ RunTime:0.028002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_settime_tuitongzi` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_settime_tuitongzi` WHERE  `merchantId` IN (55) LIMIT 0,20    [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:51+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.206012s][吞吐率：4.85req/s] [内存消耗：3,110.55kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_tong/timeindex.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:52+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.181011s][吞吐率：5.52req/s] [内存消耗：3,110.60kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001001s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:53+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/gameusertel.html
+[ log ] a.cn/admin/system/gameusertel.html [运行时间：0.279016s][吞吐率：3.58req/s] [内存消耗：3,218.18kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'gameusertel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->gameUserTel[ D:\wamp\www\OurGame\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\system\gameusertel.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuiguo` [ RunTime:0.025001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:18:54+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/favicon.ico
+[ log ] a.cn/admin/system/favicon.ico [运行时间：0.088005s][吞吐率：11.36req/s] [内存消耗：2,805.71kb] [文件加载：44]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'favicon.ico',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:20:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/template.html
+[ log ] a.cn/admin/system/template.html [运行时间：0.167010s][吞吐率：5.99req/s] [内存消耗：3,210.77kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'template',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/gameusertel.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->template[ D:\wamp\www\OurGame\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\system\template.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuiguo` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuiguo` WHERE  `un32UserID` = 0  AND `merchantId` IN (55) ORDER BY un32ID desc LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuiguo` WHERE  `un32UserID` = 0  AND `merchantId` IN (55) ORDER BY un32ID desc LIMIT 0,15     [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:21:42+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/timeindex.html
+[ log ] a.cn/admin/system/timeindex.html [运行时间：0.225013s][吞吐率：4.44req/s] [内存消耗：3,201.70kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'timeindex',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/template.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->timeindex[ D:\wamp\www\OurGame\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\system\timeindex.html [ array (
+  0 => 'infos',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.019001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_settime_tuiguo` [ RunTime:0.035002s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_settime_tuiguo` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_settime_tuiguo` WHERE  `merchantId` IN (55) LIMIT 0,20    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:21:43+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/system/gameusertel.html
+[ log ] a.cn/admin/system/gameusertel.html [运行时间：0.132008s][吞吐率：7.58req/s] [内存消耗：3,218.09kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'system',
+    2 => 'gameusertel',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/timeindex.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\SystemController->gameUserTel[ D:\wamp\www\OurGame\application\admin\controller\SystemController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\system\gameusertel.html [ array (
+  0 => 'info',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.005001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroomtemplate_tuiguo` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroomtemplate_tuiguo` `p` INNER JOIN `na_gameplaza`.`na_gameuser` `g` ON `p`.`un32UserID`=`g`.`un32UserID` WHERE  `p`.`merchantId` IN (55) ORDER BY p.un32ID desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:21:44+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/game_tui_guo/show.html
+[ log ] a.cn/admin/game_tui_guo/show.html [运行时间：0.182010s][吞吐率：5.49req/s] [内存消耗：3,110.60kb] [文件加载：50]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'game_tui_guo',
+    2 => 'show',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/system/gameusertel.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\GameTuiGuoController->show[ D:\wamp\www\OurGame\application\admin\controller\GameTuiGuoController.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\game_tui_guo\show.html [ array (
+  0 => 'rooms',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.017001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002001s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.007000s ]
+[ sql ] [ SQL ] SELECT `un32UserID` FROM `na_gameuser` WHERE  `merchantId` IN (55)   [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_6_tuiguo;host=127.0.0.1;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameroom` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 1   [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameroom` `g` INNER JOIN `na_gameplaza`.`na_gameuser` `u` ON `g`.`un32OwnerUserID`=`u`.`un32UserID` WHERE  `g`.`un32OwnerUserID` IN (889738) ORDER BY `g`.`un32ID`  desc LIMIT 0,15   [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:21:46+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/user/index.html
+[ log ] a.cn/admin/user/index.html [运行时间：0.201011s][吞吐率：4.97req/s] [内存消耗：3,253.12kb] [文件加载：51]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'user',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/game_tui_guo/show.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+  'expire' => 60,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\controller\UserController->index[ D:\wamp\www\OurGame\application\admin\controller\UserController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\user\index.html [ array (
+  0 => 'users',
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157) ORDER BY listorder asc                                                           [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_gameuser` [ RunTime:0.006000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT * FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 0,20    [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.001000s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`parentid` FROM `na_menu` WHERE  `c` = 'User'  AND `a` = 'index' LIMIT 1     [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `na_gameuser` WHERE  `merchantId` IN (55) LIMIT 1    [ RunTime:0.000000s ]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:41:56+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/apilogin/token/8232H_gUU4mFNZJNeuzZoXmK47ybF_4ZQoTqK11Q7oLfRXXZALAY0_dphBqNtpx6BukZD4SBj3YY3xkZHYi5bB0K2-hzhulj107A8XUpTSpfgh5bw0GlCkT92XpvK4gl04V8Db0wttwl-miga0H2D66LDQ2QuGDZ_o2mTLhW_NaQH5nDJpLe3w_TqLPTckiETnMy68qrLVfBQhI.html
+[ log ] a.cn/admin/login/apilogin/token/8232H_gUU4mFNZJNeuzZoXmK47ybF_4ZQoTqK11Q7oLfRXXZALAY0_dphBqNtpx6BukZD4SBj3YY3xkZHYi5bB0K2-hzhulj107A8XUpTSpfgh5bw0GlCkT92XpvK4gl04V8Db0wttwl-miga0H2D66LDQ2QuGDZ_o2mTLhW_NaQH5nDJpLe3w_TqLPTckiETnMy68qrLVfBQhI.html [运行时间：0.030002s][吞吐率：33.33req/s] [内存消耗：1,660.48kb] [文件加载：37]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'apilogin',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://localhost/xiaojun/xjblog/web/index.php',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+  'token' => '8232H_gUU4mFNZJNeuzZoXmK47ybF_4ZQoTqK11Q7oLfRXXZALAY0_dphBqNtpx6BukZD4SBj3YY3xkZHYi5bB0K2-hzhulj107A8XUpTSpfgh5bw0GlCkT92XpvK4gl04V8Db0wttwl-miga0H2D66LDQ2QuGDZ_o2mTLhW_NaQH5nDJpLe3w_TqLPTckiETnMy68qrLVfBQhI',
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->apilogin[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\thinkphp\tpl\dispatch_jump.tpl [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-08-21T11:41:59+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/index.html
+[ log ] a.cn/admin/login/index.html [运行时间：0.067004s][吞吐率：14.92req/s] [内存消耗：1,716.37kb] [文件加载：40]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/apilogin/token/8232H_gUU4mFNZJNeuzZoXmK47ybF_4ZQoTqK11Q7oLfRXXZALAY0_dphBqNtpx6BukZD4SBj3YY3xkZHYi5bB0K2-hzhulj107A8XUpTSpfgh5bw0GlCkT92XpvK4gl04V8Db0wttwl-miga0H2D66LDQ2QuGDZ_o2mTLhW_NaQH5nDJpLe3w_TqLPTckiETnMy68qrLVfBQhI.html',
+  'cookie' => 'PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] application\admin\controller\LoginController->index[ D:\wamp\www\OurGame\application\admin\controller\LoginController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin/view\dispatch_jump.html [ array (
+  0 => 'code',
+  1 => 'msg',
+  2 => 'data',
+  3 => 'url',
+  4 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: dosubmit[D:\wamp\www\OurGame\application\admin\controller\LoginController.php:20]
+
+---------------------------------------------------------------
+[ 2017-08-21T11:42:00+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/index/index.html
+[ log ] a.cn/admin/index/index.html [运行时间：0.110006s][吞吐率：9.09req/s] [内存消耗：2,735.88kb] [文件加载：45]
+[ info ] [ LANG ] D:\wamp\www\OurGame\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'a.cn',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://a.cn/admin/login/index.html',
+  'cookie' => 'thinkphp_show_page_trace=0|0; PHPSESSID=njbo37h78k0hp4p5ccsb2tagk5',
+  'connection' => 'close',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] application\admin\controller\IndexController->index[ D:\wamp\www\OurGame\application\admin\controller\IndexController.php ]
+[ info ] [ VIEW ] D:\wamp\www\OurGame\public/../application/admin\view\index\index.html [ array (
+) ]
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] application\admin\widget\Menu->index[ D:\wamp\www\OurGame\application\admin\widget\Menu.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_admingroupaccess` [ RunTime:0.007001s ]
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.001000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `na_menu` [ RunTime:0.006001s ]
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011001s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT `t2`.`rules` FROM `na_admingroupaccess` `t1` LEFT JOIN `na_admingroup` `t2` ON `t1`.`group_id`=`t2`.`id` WHERE  `t1`.`uid` = '3'  [ RunTime:0.000000s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001000s ] mysql:dbname=na_gameplaza;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `na_menu` WHERE  `id` IN (87,88,122,123,125,142,143,92,96,150,98,100,104,137,138,139,140,141,105,106,149,107,101,108,109,110,111,66,69,82,83,32,70,86,113,114,115,116,117,118,119,120,121,151,152,102,131,132,133,134,135,136,153,154,155,156,157)  AND `display` = 1 ORDER BY listorder asc                                                            [ RunTime:0.002000s ]
+
+---------------------------------------------------------------

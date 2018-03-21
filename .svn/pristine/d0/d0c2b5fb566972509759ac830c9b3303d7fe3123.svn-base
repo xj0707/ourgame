@@ -1,0 +1,78 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'show'">
+            返回上一页
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+        <h1>
+          		房间号：{$roompwd}
+          <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+                房间总抽水：{$total}
+            </small>
+        </h1>  
+    </div>     
+      
+   
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+          
+            <div class="row">
+                <div class="col-xs-12">
+               
+                <table id="simple-table" class="table  table-bordered table-hover">
+                    <thead>
+                        <tr>
+                        	<th>局数</th>
+                            <th>庄</th>
+                            <th>类型</th>
+                            <th>庄昵称</th>
+                            <th>房间锅底</th>
+                            <th>抽水锅底</th>
+                            <th>抽水比例</th>
+                            <th>房主收益</th>
+                            <th>结算时间</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {volist name="infos" id="vo" key="k"}
+                    	<tr>
+                            <td><a href='{:url("juinfo","roomid=$vo[un64GameRoomID]&juid=$vo[un32GameJuID]&roompwd=$roompwd")}'>第{$vo.un32GameJuID}局</a></td>
+                            <td>{$vo.state}</td>
+                            <td>{$vo.ePlayWay|isheshui}</td>
+                            <td>{$vo.szNickName}</td>
+                            <td>{$guodi}</td>
+                            <td>{$vo.n32BottonOfPotNum}</td>
+                            <td>{$vo.fPumpWaterPercent}%</td>
+                            <td>{$vo.n32PumpWaterNum}</td>
+                            <td>{$vo.un32LogTime|date="Y-m-d H:i:s",###}</td>
+                        </tr>
+                     {/volist}  
+                    </tbody>
+                </table>
+                  	
+                </div>
+            </div>
+             
+           
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='un32UserID']").val()==''){
+		alert('uid不能为空');
+		$("input[name='un32UserID']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+
+
+</script>
+

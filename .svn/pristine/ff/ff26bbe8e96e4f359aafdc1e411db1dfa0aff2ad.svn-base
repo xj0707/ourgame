@@ -1,0 +1,269 @@
+<?php
+
+/**
+ *  后台继承类
+ * @file   Admin.php  
+ * @date   2016-8-23 19:45:21 
+ * @author Zhenxun Du<5552123@qq.com>  
+ * @version    SVN:$Id:$ 
+ */
+
+namespace application\admin\controller;
+
+use think\Loader;
+use think\Url;
+use think\Model;
+use think\Db;
+use application\admin\model\GameroomtemplateTuiguo;
+use application\admin\model\Settime;
+class AdminController extends CommonController {
+
+    public function index() {
+        $where = array();
+        if ($group_id = input('group_id')) {
+            $where['t2.group_id'] = $group_id;
+        }
+        $lists = db('admin')->alias('t1')->field('t1.*')
+                ->where($where)
+            ->where("parentId",0)
+                ->join(config('database.prefix').'admingroupaccess t2', 't1.id=t2.uid', 'left')
+                ->group('t1.id')
+                ->order('t1.id desc')
+                ->select();
+
+        foreach ($lists as $k => $v) {
+            //取出组名
+            $lists[$k]['groups'] = '';
+            $groups = Loader::model('Admin')->getUserGroups($v['id']);
+            if ($groups) {
+                $tmp = db('admingroup')->field('name')->where('id', 'in', $groups)->select();
+
+                foreach ($tmp as $vv) {
+                    $lists[$k]['groups'] .= $vv['name'] . ',';
+                }
+                $lists[$k]['groups'] = trim($lists[$k]['groups'], ',');
+            }
+        }
+
+        $this->assign('lists', $lists);
+        return $this->fetch();
+    }
+
+    /*
+     * 查看
+     */
+
+    public function info() {
+        $id = input('id');
+        if ($id) {
+            //当前用户信息
+            $info = model('Admin')->getInfo($id);
+            $info['userGroups'] = Loader::model('Admin')->getUserGroups($id);
+            $this->assign('info', $info);
+        }
+
+        //所有组信息
+       $groups = model('admingroup')->getGroups();
+       	//$ag=new Admingroup();
+       // $groups = $ag->getGroups();
+
+        $this->assign('groups', $groups);
+        return $this->fetch();
+    }
+
+    /*
+     * 添加
+     */
+
+    public function add() {
+        $data = input();
+        $count = db('admin')->where('username', $data['username'])->count();
+        $time=time();
+        if ($count) {
+            $this->error('用户名已存在');
+        }
+
+        if ($data['password'] != $data['rpassword']) {
+            $this->error('两次密码不一致');
+        }
+        if(!$data['merchantId']){
+            $this->error('线路号不能为空');
+        }
+        $mer=Db::name('admin')->where('merchantId',$data['merchantId'])->count();
+        if($mer){
+            $this->error('该线路号已经被占用了');
+        }
+        $data['password'] = md5("sup_%_".$data['password']);
+
+        $res = model('Admin')->allowField(true)->save($data);
+
+        if ($res) {
+            if (isset($data['groups'])) {
+                $uid = model('Admin')->id;
+                foreach ($data['groups'] as $v) {
+                    db('admingroupaccess')->insert(['uid' => $uid, 'group_id' => $v]);
+                    if($v==1){//推锅添加系统模板，即搓牌下注时间
+                        //模板
+                        $template=new GameroomtemplateTuiguo();
+                        $template->data([
+                            'szName'=>'系统模板',
+                            'un32UserID'=>0,
+                            'bIfTax'=>1,
+                            'un32WinTaxRate'=>10,
+                            'un32LoseTaxRate'=>5,
+                            'un32TotalAnte'=>5000,
+                            'bIfLookOn'=>1,
+                            'un32OnLookerNum'=>10,
+                            'un32InitScore'=>10000,
+                            'eForbidChat'=>0,
+                            'un32SingleScore'=>500,
+                            'merchantId'=>$data['merchantId'],
+                            'un32IfActive'=>1,//应用
+                        ]);
+                        $template->save();
+                        $tel_id=$template->un32ID;
+                        //下注时间
+                        $settime = new Settime();
+                        $settime->data([
+                            'tel_id'=>$tel_id,
+                            'un32BetWaitSecond'=>15,
+                            'un32RubCardSecond'=>15,
+                            'time'=>$time,
+                            'merchantId'=>$data['merchantId']
+                        ]);
+                        $settime->save();
+
+                    }elseif($v==2){//推筒子添加系统模板，即搓牌下注时间
+                        $teminfo=[
+                            'szName'=>'系统模板',
+                            'un32UserID'=>0,
+                            'bIfTax'=>1,
+                            'un32WinTaxRate'=>10,
+                            'un32LoseTaxRate'=>5,
+                            'un32TotalAnte'=>5000,
+                            'bIfLookOn'=>1,
+                            'un32OnLookerNum'=>10,
+                            'un32InitScore'=>10000,
+                            'eForbidChat'=>0,
+                            'un32SingleScore'=>500,
+                            'merchantId'=>$data['merchantId'],
+                            'un32IfActive'=>1,//应用
+                        ];
+                        $resinfo=Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroomtemplate_tuitongzi')->insert($teminfo);
+                        $temId = Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'gameroomtemplate_tuitongzi')->getLastInsID();
+                        $timeinfo=[
+                            'tel_id'=>$temId,
+                            'un32BetWaitSecond'=>15,
+                            'un32RubCardSecond'=>15,
+                            'time'=>$time,
+                            'merchantId'=>$data['merchantId']
+                        ];
+                        Db::table(config('tuitongzi_db.db1').'.'.config('database.prefix').'settime')->insert($timeinfo);
+                    }
+                }
+            }
+            //房卡商店
+            $dataall = [
+                ['roomcard' => 10, 'coins' => 5,'state'=>0,'merchantId'=>$data['merchantId']],
+                ['roomcard' => 24, 'coins' => 12,'state'=>0,'merchantId'=>$data['merchantId']],
+                ['roomcard' => 72, 'coins' => 36,'state'=>0,'merchantId'=>$data['merchantId']],
+                ['roomcard' => 96, 'coins' => 48,'state'=>0,'merchantId'=>$data['merchantId']],
+                ['roomcard' => 120, 'coins' => 60,'state'=>0,'merchantId'=>$data['merchantId']],
+                ['roomcard' => 144, 'coins' => 72,'state'=>0,'merchantId'=>$data['merchantId']]
+            ];
+            Db::name('roomshopping')->insertAll($dataall);
+
+            $this->success('操作成功', url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /*
+     * 修改
+     */
+
+    public function edit() {
+        $data = input();
+        db('admingroupaccess')->where(['uid' => $data['id']])->delete();
+
+        if (isset($data['groups'])) {
+            foreach ($data['groups'] as $v) {
+                db('admingroupaccess')->insert(['uid' => $data['id'], 'group_id' => $v]);
+            }
+        }
+
+        if (!$data['password']) {
+            unset($data['password']);
+        } else {
+            if ($data['password'] != $data['rpassword']) {
+                $this->error('两次密码不一致!');
+            }
+            $data['password'] = md5("sup_%_".$data['password']);
+        }
+
+        $res = Loader::model('Admin')->editInfo(2, $data['id'], $data);
+
+        if ($res) {
+
+            $this->success('操作成功',url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /*
+     * 删除
+     */
+
+    public function del() {
+        $id = input('id');
+        $res = db('admin')->where(['id' => $id])->delete();
+        if ($res) {
+            db('admingroupaccess')->where(['uid' => $id])->delete();
+            $adminIds=Db::name('admin')->field('id')->where(['parentId'=>$id])->select();
+            foreach($adminIds as $v){
+                Db::name('admin')->where(['id'=>$v['id']])->delete();
+                db('admingroupaccess')->where(['uid' => $v['id']])->delete();
+            }
+            $this->success('操作成功', url('index'),'',1);
+        } else {
+            $this->error('操作失败');
+        }
+    }
+
+    /**
+     * 修改个人信息
+     */
+    public function public_edit_info() {
+        $data = input();
+        if (isset($data['dosubmit'])) {
+            if (!$data['password']) {
+                unset($data['password']);
+            } else {
+                if ($data['password'] != $data['rpassword']) {
+                    $this->error('两次密码不一致!');
+                }
+                $data['password'] = md5("sup_%_".$data['password']);
+            }
+
+            $res = Loader::model('Admin')->editInfo(2, $this->user_id, $data);
+
+            if ($res) {
+                //连接服务器
+                $host=config('host');
+                $port=config('port');
+                $protectId=config('mofiyadmin');
+                $jintinginfo=$this->gameListen($host,$port,$protectId);
+                $this->success('修改成功'.$jintinginfo,url('index/index'),'',1);
+            } else {
+                $this->error('修改失败');
+            }
+        } else {
+            $info = db('admin')->where('id', $this->user_id)->find();
+            $this->assign('info', $info);
+            return $this->fetch();
+        }
+    }
+
+}

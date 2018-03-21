@@ -1,0 +1,248 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : wyy1
+Source Server Version : 50634
+Source Host           : 172.31.82.103:3306
+Source Database       : na_6_tuiguo
+
+Target Server Type    : MYSQL
+Target Server Version : 50634
+File Encoding         : 65001
+
+Date: 2017-06-01 15:49:03
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for na_gamebetrecord
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gamebetrecord`;
+CREATE TABLE `na_gamebetrecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `un32GameRoundID` int(11) NOT NULL COMMENT '回合数',
+  `eIdentity` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0null,1庄家，2闲家，3旁观',
+  `un32PlayerID` int(11) NOT NULL COMMENT '玩家ID',
+  `n32TianBetNum` int(11) NOT NULL COMMENT '下注数量',
+  `n32TianWinloseNum` int(11) NOT NULL COMMENT '输赢积分',
+  `n32DiBetNum` int(11) NOT NULL,
+  `n32DiWinloseNum` int(11) NOT NULL,
+  `n32RenBetNum` int(11) NOT NULL,
+  `n32RenWinloseNum` int(11) NOT NULL,
+  `n32UserRemainScore` int(11) NOT NULL COMMENT '剩余积分',
+  `un32LogTime` bigint(20) NOT NULL COMMENT '时间',
+  `n32GuoDiScore` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gamebetrecord
+-- ----------------------------
+INSERT INTO `na_gamebetrecord` VALUES ('1', '1', '1', '1', '2', '677934037', '3000', '3000', '2000', '-2000', '0', '0', '11000', '1495680118', '500');
+INSERT INTO `na_gamebetrecord` VALUES ('2', '1', '1', '1', '1', '677989265', '3000', '-3000', '2000', '2000', '0', '0', '8500', '1495680118', '500');
+INSERT INTO `na_gamebetrecord` VALUES ('3', '1', '1', '2', '2', '677934037', '500', '-500', '500', '-500', '500', '-500', '9500', '1495680188', '2000');
+INSERT INTO `na_gamebetrecord` VALUES ('4', '1', '1', '2', '1', '677989265', '500', '500', '500', '500', '500', '500', '8500', '1495680188', '2000');
+INSERT INTO `na_gamebetrecord` VALUES ('5', '1', '2', '1', '1', '677934037', '0', '0', '0', '0', '1000', '-500', '9000', '1495680680', '0');
+INSERT INTO `na_gamebetrecord` VALUES ('6', '1', '2', '1', '2', '677989265', '0', '0', '0', '0', '1000', '500', '10800', '1495680680', '0');
+INSERT INTO `na_gamebetrecord` VALUES ('7', '1', '3', '1', '2', '677934037', '4000', '500', '0', '0', '0', '0', '9475', '1495681177', '0');
+INSERT INTO `na_gamebetrecord` VALUES ('8', '1', '3', '1', '1', '677989265', '4000', '-500', '0', '0', '0', '0', '10300', '1495681177', '0');
+
+-- ----------------------------
+-- Table structure for na_gameroom
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameroom`;
+CREATE TABLE `na_gameroom` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32OwnerUserID` int(11) unsigned zerofill NOT NULL,
+  `tStartTime` int(11) NOT NULL DEFAULT '0',
+  `tCreateTime` int(11) NOT NULL DEFAULT '0',
+  `n32GameRoomPwd` int(11) NOT NULL DEFAULT '0',
+  `bIfOver` tinyint(1) NOT NULL DEFAULT '0',
+  `bIfTax` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否抽水',
+  `un32WinTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（赢）',
+  `un32LoseTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（输）',
+  `un32TotalAnte` int(11) NOT NULL COMMENT '锅底大小',
+  `un32RoomLiveSecond` int(11) NOT NULL DEFAULT '0' COMMENT '房间存活时间',
+  `bIfLookOn` bit(1) NOT NULL DEFAULT b'0' COMMENT '是否允许旁观',
+  `un32OnLookerNum` int(11) NOT NULL DEFAULT '0' COMMENT '最大旁观者数量',
+  `un32InitScore` int(11) NOT NULL DEFAULT '0' COMMENT '初始积分',
+  `eForbidChat` int(1) NOT NULL DEFAULT '0' COMMENT '禁止聊天0：不禁止1：仅旁观者禁止2：全禁止',
+  `un32SingleScore` int(11) NOT NULL DEFAULT '0' COMMENT '单注积分',
+  `un32ConsumeCardNum` int(11) NOT NULL DEFAULT '0' COMMENT '消耗房卡数量',
+  `un32JoinUserNum` int(11) NOT NULL DEFAULT '0' COMMENT '参与玩家数量',
+  `un32OrderID` int(11) NOT NULL DEFAULT '0',
+  `tPauseTime` int(11) NOT NULL DEFAULT '0' COMMENT '房间暂停时间',
+  `un32PumpWater` int(11) NOT NULL DEFAULT '0' COMMENT '房间总抽水',
+  PRIMARY KEY (`un32ID`),
+  KEY `OwnerUserID` (`un32OwnerUserID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of na_gameroom
+-- ----------------------------
+INSERT INTO `na_gameroom` VALUES ('1', '00677989265', '1495680045', '1495680011', '649525', '1', '1', '10', '5', '500', '1800', '\0', '10', '10000', '0', '500', '6', '2', '11', '0', '250');
+INSERT INTO `na_gameroom` VALUES ('2', '00581295580', '0', '1495686895', '606522', '1', '1', '10', '5', '5000', '1800', '\0', '10', '10000', '0', '500', '6', '1', '12', '0', '0');
+INSERT INTO `na_gameroom` VALUES ('3', '00581295580', '0', '1495731959', '697266', '1', '1', '10', '5', '5000', '1800', '\0', '10', '10000', '0', '500', '6', '1', '13', '0', '0');
+INSERT INTO `na_gameroom` VALUES ('4', '00581295580', '0', '1495881718', '683348', '1', '1', '10', '5', '5000', '1800', '\0', '10', '10000', '0', '500', '6', '1', '14', '0', '0');
+
+-- ----------------------------
+-- Table structure for na_gameroomrecord
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameroomrecord`;
+CREATE TABLE `na_gameroomrecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL DEFAULT '0' COMMENT '房间ID',
+  `un32GameUserID` int(11) NOT NULL DEFAULT '0' COMMENT '玩家ID',
+  `n32AppendedScore` int(11) NOT NULL DEFAULT '0',
+  `n32GotScore` int(11) NOT NULL DEFAULT '0' COMMENT '输赢积分',
+  `n32PumpWater` int(11) NOT NULL DEFAULT '0' COMMENT '抽水金额',
+  `un32LogTime` bigint(20) NOT NULL DEFAULT '0' COMMENT '时间',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gameroomrecord
+-- ----------------------------
+INSERT INTO `na_gameroomrecord` VALUES ('1', '1', '677989265', '0', '500', '225', '1495680012');
+INSERT INTO `na_gameroomrecord` VALUES ('2', '1', '677934037', '0', '-500', '25', '1495680040');
+INSERT INTO `na_gameroomrecord` VALUES ('3', '2', '581295580', '0', '0', '0', '1495686898');
+INSERT INTO `na_gameroomrecord` VALUES ('4', '3', '581295580', '0', '0', '0', '1495731960');
+INSERT INTO `na_gameroomrecord` VALUES ('5', '4', '581295580', '0', '0', '0', '1495881720');
+
+-- ----------------------------
+-- Table structure for na_gameroomtemplate_tuiguo
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameroomtemplate_tuiguo`;
+CREATE TABLE `na_gameroomtemplate_tuiguo` (
+  `un32ID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID',
+  `szName` varchar(30) COLLATE utf8_bin NOT NULL COMMENT '模板名字',
+  `un32UserID` int(11) NOT NULL DEFAULT '0' COMMENT '0为系统模版',
+  `bIfTax` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否抽水',
+  `un32WinTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（赢）',
+  `un32LoseTaxRate` int(2) NOT NULL DEFAULT '0' COMMENT '抽水比率（输）',
+  `un32TotalAnte` int(11) NOT NULL DEFAULT '0' COMMENT '锅底大小',
+  `un32RoomLiveSecond` int(11) NOT NULL DEFAULT '0' COMMENT '房间时间',
+  `bIfLookOn` tinyint(1) NOT NULL DEFAULT '0' COMMENT '允许旁观',
+  `un32OnLookerNum` int(11) NOT NULL DEFAULT '0' COMMENT '旁观者数量',
+  `un32InitScore` int(11) NOT NULL DEFAULT '0' COMMENT '初始积分',
+  `eForbidChat` int(1) NOT NULL DEFAULT '0' COMMENT '禁止聊天',
+  `un32SingleScore` int(11) NOT NULL DEFAULT '0' COMMENT '单注积分',
+  `un32IfActive` tinyint(1) NOT NULL DEFAULT '0' COMMENT '是否应用',
+  `remarks` varchar(255) COLLATE utf8_bin DEFAULT NULL COMMENT '模板备注',
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gameroomtemplate_tuiguo
+-- ----------------------------
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('1', '系统模板', '0', '1', '10', '5', '50000', '28800', '1', '10', '100000', '0', '2000', '1', '0', '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('7', '系统模板', '0', '1', '10', '5', '50000', '28800', '0', '10', '100000', '0', '2000', '0', '0', '123');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('8', 'fgdgfdg', '57', '1', '10', '5', '50000', '1800', '0', '5', '100000', '0', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('9', '0000', '57', '1', '10', '5', '50000', '1800', '0', '8', '100000', '0', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('10', '1111', '57', '1', '10', '5', '50000', '1800', '0', '6', '100000', '0', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('11', '4444', '57', '1', '10', '5', '50000', '28800', '0', '9', '100000', '1', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('12', '6', '53', '1', '50', '50', '50066', '1800', '0', '10', '500066', '1', '5000', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('13', '1', '53', '1', '5', '10', '50000', '1800', '0', '10', '500000', '1', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('14', '模板1', '53', '1', '10', '5', '2', '7200', '0', '10', '100000', '0', '1', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('15', '系统模板', '0', '1', '10', '5', '5000', '0', '1', '10', '10000', '0', '500', '0', null, '111');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('16', '123', '64', '1', '10', '5', '50000', '1800', '0', '10', '100000', '0', '2000', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('17', 'vvgg', '64', '1', '10', '5', '50000', '1800', '0', '10', '100000', '0', '2000', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('18', '系统模板', '0', '0', '20', '10', '5000', '0', '1', '3', '10000', '0', '500', '1', '', '123');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('20', '系统模板', '0', '0', '0', '0', '434', '0', '0', '1', '5000', '0', '500', '0', '', '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('21', '噜噜噜噜', '53', '1', '10', '5', '500', '7200', '0', '10', '1000', '0', '50', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('22', 'qqqq', '7', '1', '10', '5', '50000', '7200', '0', '10', '100000', '0', '2000', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('23', '第一个', '75', '1', '20', '10', '5000', '1800', '0', '3', '10000', '0', '500', '1', null, '0');
+INSERT INTO `na_gameroomtemplate_tuiguo` VALUES ('24', '系统模板', '0', '1', '10', '5', '5000', '0', '1', '10', '10000', '0', '500', '1', '', '1');
+
+-- ----------------------------
+-- Table structure for na_gameroundrecord
+-- ----------------------------
+DROP TABLE IF EXISTS `na_gameroundrecord`;
+CREATE TABLE `na_gameroundrecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `un32GameRoundID` int(11) NOT NULL COMMENT '回合数',
+  `un32LogTime` bigint(20) NOT NULL COMMENT '时间',
+  `un32BankerPlayerID` int(11) NOT NULL COMMENT '座位1玩家ID',
+  `n8BankerSeatID` tinyint(1) NOT NULL,
+  `un8BankerCardID1` tinyint(2) NOT NULL COMMENT '座位1玩家第一张牌',
+  `un8BankerCardID2` tinyint(2) NOT NULL COMMENT '座位1玩家第二张牌',
+  `n32GuoDiScore` int(11) NOT NULL COMMENT '座位1总注数(如果为庄家就是锅底)',
+  `n32BankerWinLoseNum` int(11) NOT NULL COMMENT '座位1总输赢',
+  `un32ShunPlayerID` int(11) NOT NULL,
+  `un8ShunCardID1` tinyint(2) NOT NULL,
+  `un8ShunCardID2` tinyint(2) NOT NULL,
+  `n32ShunTotalBetNum` int(11) NOT NULL,
+  `n32ShunWinLoseNum` int(11) NOT NULL,
+  `un32TianPlayerID` int(11) NOT NULL,
+  `un8TianCardID1` tinyint(2) NOT NULL,
+  `un8TianCardID2` tinyint(2) NOT NULL,
+  `n32TianTotalBetNum` int(11) NOT NULL,
+  `n32TianWinLoseNum` int(11) NOT NULL,
+  `un32DiPlayerID` int(11) NOT NULL,
+  `un8DiCardID1` tinyint(2) NOT NULL,
+  `un8DiCardID2` tinyint(2) NOT NULL,
+  `n32DiTotalBetNum` int(11) NOT NULL,
+  `n32DiWinLoseNum` int(11) NOT NULL,
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_gameroundrecord
+-- ----------------------------
+INSERT INTO `na_gameroundrecord` VALUES ('1', '1', '1', '1', '1495680118', '677989265', '1', '28', '26', '500', '-1000', '677934037', '44', '27', '3000', '3000', '0', '45', '47', '2000', '-2000', '0', '38', '36', '0', '0');
+INSERT INTO `na_gameroundrecord` VALUES ('2', '1', '1', '2', '1495680188', '677989265', '1', '16', '38', '2000', '1500', '677934037', '25', '37', '500', '-500', '0', '27', '36', '500', '-500', '0', '22', '29', '500', '-500');
+INSERT INTO `na_gameroundrecord` VALUES ('3', '1', '2', '1', '1495680680', '677934037', '2', '36', '24', '0', '-500', '0', '25', '21', '0', '0', '0', '28', '22', '0', '0', '677989265', '38', '29', '1000', '500');
+INSERT INTO `na_gameroundrecord` VALUES ('4', '1', '3', '1', '1495681177', '677989265', '1', '25', '45', '0', '-500', '677934037', '36', '45', '4000', '500', '0', '29', '21', '0', '0', '0', '26', '34', '0', '0');
+
+-- ----------------------------
+-- Table structure for na_pumpwaterrecord
+-- ----------------------------
+DROP TABLE IF EXISTS `na_pumpwaterrecord`;
+CREATE TABLE `na_pumpwaterrecord` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32GameRoomID` int(11) NOT NULL COMMENT '房间ID',
+  `un32GameJuID` int(11) NOT NULL COMMENT '局数',
+  `ePlayWay` int(1) NOT NULL DEFAULT '0' COMMENT '1喝水2不喝水',
+  `un32GameBankerID` int(11) NOT NULL,
+  `n32BottonOfPotNum` int(11) NOT NULL COMMENT '锅底',
+  `n32PumpWaterNum` int(11) NOT NULL COMMENT '抽水数量',
+  `n32PumpWaterPercent` int(5) NOT NULL COMMENT '抽水比率',
+  `bIfWin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '0输1赢',
+  `un32LogTime` bigint(20) NOT NULL,
+  PRIMARY KEY (`un32ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_pumpwaterrecord
+-- ----------------------------
+INSERT INTO `na_pumpwaterrecord` VALUES ('1', '1', '1', '2', '677989265', '2000', '200', '10', '1', '1495680219');
+INSERT INTO `na_pumpwaterrecord` VALUES ('2', '1', '2', '1', '677934037', '500', '25', '5', '0', '1495680704');
+INSERT INTO `na_pumpwaterrecord` VALUES ('3', '1', '3', '1', '677989265', '500', '25', '5', '0', '1495681200');
+
+-- ----------------------------
+-- Table structure for na_settime
+-- ----------------------------
+DROP TABLE IF EXISTS `na_settime`;
+CREATE TABLE `na_settime` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `tel_id` int(11) DEFAULT NULL COMMENT '模板ID',
+  `un32BetWaitSecond` int(11) DEFAULT NULL COMMENT '下注时间',
+  `un32RubCardSecond` int(11) DEFAULT NULL COMMENT '搓牌时间',
+  `time` int(11) DEFAULT NULL,
+  `merchantId` int(3) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of na_settime
+-- ----------------------------
+INSERT INTO `na_settime` VALUES ('1', null, '15', '15', null, '0');
+INSERT INTO `na_settime` VALUES ('2', null, '15', '10', null, '123');
+INSERT INTO `na_settime` VALUES ('3', null, '15', '10', null, '111');
+INSERT INTO `na_settime` VALUES ('4', null, '10', '5', null, '1');

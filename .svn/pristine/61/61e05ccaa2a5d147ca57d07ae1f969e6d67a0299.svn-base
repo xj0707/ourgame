@@ -1,0 +1,250 @@
+<?php
+namespace application\admin\controller;
+
+use think\Db;
+use think\Request;
+
+class GameMaJiangController extends CommonController{
+    public function index(){
+        $role=session('user_role');
+        $inputId=input('get.mid');
+        $inputRole=input('get.role');
+        switch ($role){
+            case 1:
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 10:
+                $uid=session('user_id');
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->where('levelIndex','like',"%$uid%")->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->where('levelIndex','like',"%$uid%")->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 1000:
+                $uid=session('user_id');
+                $agentInfo=Db::name('merchant')->where('mid',$uid)->find();
+                if($agentInfo['levelIndex']==0){//超代
+                    $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','<>',0)->select();
+                }else{
+                    $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','like',"%$uid%")->select();
+                }
+                $this->assign('data1',$data1);
+                break;
+            case 10000:
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->select();
+                $data3=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','<>',0)->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                $this->assign('data3',$data3);
+                break;
+        }
+        if($inputId){
+            switch ($inputRole){
+                case 'xl':
+                    $merIds=Db::name('merchant')->field('mid')->where('levelIndex','like',"%$inputId%")->select();
+                    foreach ($merIds as $merId){
+                        $parentId[]=$merId['mid'];
+                    }
+                    $userids=Db::name('gameuser')->field('un32UserID')->where('parentId','in',$parentId)->select();
+                    break;
+                case 'sh':
+                    $userids=Db::name('gameuser')->field('un32UserID')->where('parentId',$inputId)->select();
+                    break;
+                case 'dl':
+                    $merIds=Db::name('merchant')->field('mid')->where('levelIndex','like',"%$inputId%")->select();
+                    $parentId[]=$inputId;
+                    foreach ($merIds as $merId){
+                        $parentId[]=$merId['mid'];
+                    }
+                    $userids=Db::name('gameuser')->field('un32UserID')->where('parentId','in',$parentId)->select();
+                    break;
+            }
+        }else{
+            $userids=Db::name('gameuser')->field('un32UserID')->where($this->come_where)->select();
+        }
+        $arrId = array();
+        if(count($userids)) {
+            foreach ($userids as $v) {
+                $arrId[] = $v['un32UserID'];
+            }
+            $rooms=Db::name('gameroomScmj')->alias('g')->join( config('database.prefix') .'gameuser u','g.un32OwnerUserID=u.un32UserID')->where("g.un32OwnerUserID", 'in', $arrId)->order('g.un64ID', 'desc')->paginate(20);
+//            foreach ($rooms as $k => $v) {
+//                $un32ID = $v['un32ID'];
+//                $pwr = new Pumpwaterrecord();
+//                //总抽水
+//                $total = $pwr->where('un32GameRoomID', $un32ID)->sum('n32PumpWaterNum');
+//                $rooms[$k]['total'] = $total;
+//            }
+        }else{
+            $this->error('无游戏房间！！',url('index'),'',1);
+        }
+        $this->assign('role',$role);
+        $this->assign('rooms', $rooms);
+        return $this->fetch();
+    }
+    //房间号或者用户名查询
+    public function search(){
+        $n32GameRoomPwd=input('post.n32GameRoomPwd');
+        $szUserName=input('post.szUserName');
+        $role=session('user_role');
+        switch ($role){
+            case 1:
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 10:
+                $uid=session('user_id');
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->where('levelIndex','like',"%$uid%")->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->where('levelIndex','like',"%$uid%")->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                break;
+            case 1000:
+                $uid=session('user_id');
+                $agentInfo=Db::name('merchant')->where('mid',$uid)->find();
+                if($agentInfo['levelIndex']==0){//超代
+                    $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','<>',0)->select();
+                }else{
+                    $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','like',"%$uid%")->select();
+                }
+                $this->assign('data1',$data1);
+                break;
+            case 10000:
+                $data1=Db::name('merchant')->field('mid,username,suffix')->where('role',10)->select();
+                $data2=Db::name('merchant')->field('mid,username,suffix')->where('role',100)->select();
+                $data3=Db::name('merchant')->field('mid,username,suffix')->where('role',1000)->where('levelIndex','<>',0)->select();
+                $this->assign('data1',$data1);
+                $this->assign('data2',$data2);
+                $this->assign('data3',$data3);
+                break;
+        }
+        $userids=Db::name('gameuser')->field('un32UserID')->where($this->come_where)->select();
+        $arrId = array();
+        if(count($userids)) {
+            foreach ($userids as $v) {
+                $arrId[] = $v['un32UserID'];
+            }
+        }else{
+            $this->error('无玩家！',url('index'),'',1);
+        }
+        if($n32GameRoomPwd){
+            $rooms = Db::name('gameroomScmj')->alias('g')->join(config('database.prefix') . 'gameuser u', 'g.un32OwnerUserID=u.un32UserID')->where("g.un32OwnerUserID", 'in', $arrId)->where('g.n32GameRoomPwd','like',"%$n32GameRoomPwd%")->order('g.un64ID', 'desc')->paginate(20);
+        }
+        if($szUserName){
+            $rooms = Db::name('gameroomScmj')->alias('g')->join(config('database.prefix') . 'gameuser u', 'g.un32OwnerUserID=u.un32UserID')->where("g.un32OwnerUserID", 'in', $arrId)->where('g.aszOwnerUserName','like',"%$szUserName%")->order('g.un64ID', 'desc')->paginate(20);
+        }
+        $this->assign('role',$role);
+        $this->assign('rooms', $rooms);
+        return $this->fetch('index');
+    }
+    //进入房间的详情
+    public function details(){
+        $un64ID=input('get.un64ID');//房间ID
+        $roompwd=input('get.roompwd');//房间号
+        if($un64ID){
+            $infos=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->select();
+            $info=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->find();//找一个取出所有的玩家
+            $users1=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat1_GameUserID'])->find();
+            $users2=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat2_GameUserID'])->find();
+            $users3=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat3_GameUserID'])->find();
+            $users4=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat4_GameUserID'])->find();
+            $usercount1=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat1_ScoreChanged');
+            $usercount2=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat2_ScoreChanged');
+            $usercount3=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat3_ScoreChanged');
+            $usercount4=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat4_ScoreChanged');
+            $this->assign('user1',$users1['szUserName']);
+            $this->assign('user2',$users2['szUserName']);
+            $this->assign('user3',$users3['szUserName']);
+            $this->assign('user4',$users4['szUserName']);
+            $this->assign('usercount1',$usercount1);
+            $this->assign('usercount2',$usercount2);
+            $this->assign('usercount3',$usercount3);
+            $this->assign('usercount4',$usercount4);
+            $this->assign('roompwd',$roompwd);
+            $this->assign('infos',$infos);
+            return $this->fetch();
+        }else{
+            $this->error('页面丢失！');
+        }
+    }
+
+
+    //玩家玩过的麻将房间
+    public function scmj(){
+        $uid=input('uid');
+        if($uid){
+            $userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+            if(!$userinfo){
+                $this->error('玩家已丢失');
+            }
+            $infos=Db::name('gameroomScmj')->where('un32GameUserID1',$uid)->whereOr('un32GameUserID2',$uid)->whereOr('un32GameUserID3',$uid)->whereOr('un32GameUserID4',$uid)->paginate(20);
+            $this->assign('uid',$uid);
+            $this->assign('infos',$infos);
+            $this->assign('username',$userinfo['szUserName']);
+            return $this->fetch();
+        }else{
+            $this->error('没找到玩家！');
+        }
+    }
+
+    //玩家玩过的麻将房间 查询房间号
+    public function likepwd(){
+        $uid=input('post.uid');
+        $n32GameRoomPwd=input('post.n32GameRoomPwd');
+        if($uid && $n32GameRoomPwd){
+            $userinfo=Db::name('gameuser')->where('un32UserID',$uid)->find();
+            $infos=Db::name('gameroomScmj')->where('un32GameUserID1',$uid)->whereOr('un32GameUserID2',$uid)->whereOr('un32GameUserID3',$uid)->whereOr('un32GameUserID4',$uid)->where('n32GameRoomPwd','like',"%$n32GameRoomPwd%")->paginate(20);
+            $this->assign('uid',$uid);
+            $this->assign('infos',$infos);
+            $this->assign('username',$userinfo['szUserName']);
+            return $this->fetch('scmj');
+        }else{
+            $this->error('没找到玩家！');
+        }
+    }
+
+    //进入房间的详情
+    public function details2(){
+        $uid=input('get.uid');
+        $un64ID=input('get.un64ID');//房间ID
+        $roompwd=input('get.roompwd');//房间号
+        if($un64ID){
+            $infos=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->select();
+            $info=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->find();//找一个取出所有的玩家
+            $users1=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat1_GameUserID'])->find();
+            $users2=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat2_GameUserID'])->find();
+            $users3=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat3_GameUserID'])->find();
+            $users4=Db::name('gameuser')->field('szUserName')->where('un32UserID',$info['un32GameSeat4_GameUserID'])->find();
+            $usercount1=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat1_ScoreChanged');
+            $usercount2=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat2_ScoreChanged');
+            $usercount3=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat3_ScoreChanged');
+            $usercount4=Db::name('gameroundrecordScmj')->where('un64GameRoomID',$un64ID)->sum('un32GameSeat4_ScoreChanged');
+            $this->assign('user1',$users1['szUserName']);
+            $this->assign('user2',$users2['szUserName']);
+            $this->assign('user3',$users3['szUserName']);
+            $this->assign('user4',$users4['szUserName']);
+            $this->assign('usercount1',$usercount1);
+            $this->assign('usercount2',$usercount2);
+            $this->assign('usercount3',$usercount3);
+            $this->assign('usercount4',$usercount4);
+            $this->assign('roompwd',$roompwd);
+            $this->assign('infos',$infos);
+            $this->assign('uid',$uid);
+            return $this->fetch();
+        }else{
+            $this->error('页面丢失！');
+        }
+    }
+
+
+
+
+
+
+}

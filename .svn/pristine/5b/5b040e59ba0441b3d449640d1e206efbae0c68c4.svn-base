@@ -1,0 +1,192 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+         <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+     <div class="page-header">
+       <h1>
+          四川麻将房间列表
+        </h1>
+    </div>
+    
+   
+        <div class="row">
+            {switch name="$role"}
+            {case value="1|10"}
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">线路商查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data1" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=xl")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商户查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data2" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=sh")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {/case}
+            {case value="1000"}
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">代理商查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data3" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=dl")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {/case}
+            {case value="10000"}
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">线路商查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data1" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=xl")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">商户查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data2" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=sh")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-2">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" stype="button" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">代理商查询 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            {volist name="data3" id="vo"}
+                            <li><a href='{:url("index","mid=$vo[mid]&role=dl")}'>{$vo.nickname}</a></li>
+                            {/volist}
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            {/case}
+            {/switch}
+
+
+        	<form action="{:url('search')}" method="post" name='myfrom'>
+	            <div class="col-lg-2">
+	                <div class="input-group " style="margin-bottom: 10px;">
+	                    <input style="height: 42px;" type="text" class="form-control" name='n32GameRoomPwd' onkeyup="this.value=this.value.replace(/[^\d]/g,'')"  placeholder="输入房间号查询房间">
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default" type="button" id='but'>搜一搜</button>
+	                    </span>
+	                </div>
+	            </div>
+            </form>
+            <form action="{:url('search')}" method="post" name='myfrom1'>
+                <div class="col-lg-2">
+                    <div class="input-group " style="margin-bottom: 10px;">
+                        <input style="height: 42px;" type="text" class="form-control" name='szUserName'  placeholder="输入用户名查询房间">
+	                    <span class="input-group-btn">
+	                        <button class="btn btn-default" type="button" id='but1'>搜一搜</button>
+	                    </span>
+                    </div>
+                </div>
+            </form>
+        </div>
+   
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            	<th class="hidden-480" >序号</th>
+                                <th>房间号</th>
+                                <th>消耗房卡</th>
+                                <th>开房者用户名</th>
+                                <th>开房者昵称</th>
+                                <th class="hidden-480">开房时间</th>
+                                <th>剩余局数</th>
+                                <th>房间收益</th>
+                                <th>房间状态</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        	
+                            {volist name="rooms" id="vo" key="k"}
+                            <tr>
+                                <td class="hidden-480">{$k}</td>
+                                <td>{$vo.n32GameRoomPwd}</td>
+                                <td>{$vo.un32ConsumeRoomCard}</td>
+                                <td>{$vo.aszOwnerUserName}</td>
+                                <td>{$vo.szNickName}</td>
+                                <td class="hidden-480">{$vo.un32CreateTime|date='Y-m-d H:i:s',###}</td>
+                                <td>{$vo.un32RoundNum - $vo.un32PlayedRound}</td>
+                                <td>{$vo.un32RoundNum}</td>
+                                <td>
+                                    {if condition='$vo.un32RoundNum - $vo.un32PlayedRound==0'}
+                                    <a href='{:url("details","un64ID=$vo[un64ID]&roompwd=$vo[n32GameRoomPwd]")}'><span style="color: green">已结束</span></a>
+                                    {else/}
+                                    <a href='{:url("details","un64ID=$vo[un64ID]&roompwd=$vo[n32GameRoomPwd]")}'><span style="color: red">进行中</span></a>
+                                    {/if}
+                                </td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                   {$rooms->render()}
+                </div>
+            </div>
+             
+           
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='n32GameRoomPwd']").val()==''){
+		alert('房间号不能为空');
+		$("input[name='n32GameRoomPwd']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+$("#but1").click(function(){
+    if($("input[name='szUserName']").val()==''){
+        alert('用户名不能为空');
+        $("input[name='szUserName']").focus();
+    }else{
+        document.myfrom1.submit();
+    }
+});
+
+</script>
+

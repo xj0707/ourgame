@@ -1,0 +1,121 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+    
+        <span class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'announce'">
+            添加公告
+            <i class="icon-reply icon-only"></i>
+        </span>
+       
+    </div>
+    <div class="page-header">
+        <h1>
+            {:model('menu')->getName()} 
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                
+                                <th>序号</th>
+                                <th>内容</th>
+                                <th>类别</th>
+                                <th>位置</th>
+                                <th class="hidden-480">开始时间</th>
+                                <th class="hidden-480">结束时间</th>
+                                <th class="hidden-480">间隔时间</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {volist name="lists" id="vo"}
+                            <tr>
+                                
+                                <td>{$vo.id}</td>
+                                <td>{$vo.content|chsubstr=0,50}</td>
+                                <td>
+                                    {switch name="$vo.un32GameKindID" }
+                                    {case value=":config('gh_0')"}<option value="{$vo.un32GameKindID}" >广场</option>{/case}
+                                    {case value=":config('gh_10000')"}<option value="{$vo.un32GameKindID}" >推锅</option>{/case}
+                                    {case value=":config('gh_10001')"}<option value="{$vo.un32GameKindID}" >推筒子</option>{/case}
+                                    {case value=":config('gh_10002')"}<option value="{$vo.un32GameKindID}" >牌九</option>{/case}
+                                    {/switch}
+                                </td>
+                                <td>{$vo.szGameHallName}</td>
+                                <td class="hidden-480">{$vo.start_time|date='Y-m-d H:i:s',###}</td>
+                                <td class="hidden-480">{$vo.end_time|date='Y-m-d H:i:s',###}</td>
+                                <td class="hidden-480">{$vo.interval}s</td>
+                                <td>
+                                    <div class="hidden-sm hidden-xs btn-group">
+                                    
+										<a href='{:url("show","id=$vo[id]")}'>
+                                           <span class="btn btn-xs btn-success">
+                                                <i class="ace-icon fa fa-eye bigger-120">详情</i>
+                                            </span>
+                                        </a>
+                                         <a href='{:url("editbc","id=$vo[id]")}'>
+                                           <span class="btn btn-xs btn-info">
+                                                <i class="ace-icon fa fa-pencil bigger-120">修改</i>
+                                            </span>
+                                        </a>
+                                        <a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[id]\")}', '确认要删除『 id={$vo.id} 』这条记录吗？');" >
+                                           <span class="btn btn-xs btn-danger">
+                                                <i class="ace-icon fa fa-trash-o bigger-120">删除</i>
+                                            </span>
+                                        </a>
+                                       
+                                    </div>
+
+                                    <div class="hidden-md hidden-lg">
+                                        <div class="inline pos-rel">
+                                            <span class="btn btn-minier btn-primary dropdown-toggle" data-toggle="dropdown" data-position="auto">
+                                                <i class="ace-icon fa fa-cog icon-only bigger-110"></i>
+                                            </span>
+
+                                            <ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">
+												 <li>
+                                                    <a href='{:url("show","id=$vo[id]")}' class="tooltip-success" data-rel="tooltip" title="详情">
+                                                        <span class="green">
+                                                            <i class="ace-icon fa fa-eye bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                                
+                                                 <li>
+                                                    <a href='{:url("editbc","id=$vo[id]")}' class="tooltip-success" data-rel="tooltip" title="修改">
+                                                        <span class="blue">
+                                                            <i class="ace-icon fa fa-pencil-square-o bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                               
+                                                <li>
+                                                    <a href='javascript:void(0)' onclick="return alert_del('{:url(\"del\",\"id=$vo[id]\")}', '确认要删除『 id={$vo.id} 』这条记录吗？');" class="tooltip-error" data-rel="tooltip" title="Delete">
+                                                        <span class="red">
+                                                            <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                                        </span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}    
+                        </tbody>
+                    </table>
+                     {$lists->render()}
+                </div>
+            </div>           
+        </div>
+    </div>
+</div>
+
+
+

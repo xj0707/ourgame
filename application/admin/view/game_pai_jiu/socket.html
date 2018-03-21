@@ -1,0 +1,62 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+         <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'show'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+    </div>
+    <div class="page-header">
+        <h1>
+            游戏详情
+        </h1>
+    </div>
+
+   
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <table id="simple-table" class="table  table-bordered table-hover">
+                        <thead>
+                            <tr>
+                            	<th class="hidden-480">ID</th>
+                                <th>当前积分</th>
+                                <th>金币</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                        {volist name="userinfo" id="vo"}
+                            <tr>
+                                <td class="hidden-480">{$vo.uid}</td>
+                                <td class="hidden-480">{$vo.nickname}</td>
+                                <td>{$vo.socre}</td>
+                                <td>{$vo.gold}</td>
+                            </tr>
+                        {/volist}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+             
+           
+        </div>
+    </div>
+</div>
+ <script src="__ROOT__/static/ace1.4/assets/js/jquery-2.1.4.min.js"></script>
+
+<script type="text/javascript">
+$("#but").click(function(){
+	if($("input[name='n32GameRoomPwd']").val()==''){
+		alert('房间号不能为空');
+		$("input[name='n32GameRoomPwd']").focus();
+	}else{
+		document.myfrom.submit();
+	}
+});
+
+
+</script>
+

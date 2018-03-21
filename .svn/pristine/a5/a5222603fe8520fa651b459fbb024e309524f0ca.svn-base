@@ -1,0 +1,61 @@
+/*
+Navicat MySQL Data Transfer
+
+Source Server         : 127.0.0.1
+Source Server Version : 50617
+Source Host           : localhost:3306
+Source Database       : YueBo_Hall101_CommonMJ
+
+Target Server Type    : MYSQL
+Target Server Version : 50617
+File Encoding         : 65001
+
+Date: 2016-12-23 18:23:20
+*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+-- ----------------------------
+-- Table structure for UpgradeLog
+-- ----------------------------
+DROP TABLE IF EXISTS `UpgradeLog`;
+CREATE TABLE `UpgradeLog` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `LastUpgradeTime` bigint(20) DEFAULT '0',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of UpgradeLog
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for YueBo_GameRoom
+-- ----------------------------
+DROP TABLE IF EXISTS `YueBo_GameRoom`;
+CREATE TABLE `YueBo_GameRoom` (
+  `un32ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `un32OwnerUserID` int(11) unsigned zerofill NOT NULL,
+  `tCreateTime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `un32MultiTimesLimit` int(11) unsigned NOT NULL,
+  `un32RemainJuShu` int(11) unsigned zerofill NOT NULL,
+  `un32TotalJuShu` int(11) unsigned zerofill NOT NULL DEFAULT '00000000000',
+  `un32RenShu` int(11) NOT NULL DEFAULT '0',
+  `eGameCate` int(11) NOT NULL,
+  `n32GameRoomPwd` int(11) NOT NULL DEFAULT '0',
+  `bZhiMuoJiaDi` tinyint(1) NOT NULL DEFAULT '0',
+  `bZhiMuoJiaHuan` tinyint(1) NOT NULL,
+  `bHuanShanZhang` tinyint(1) NOT NULL,
+  `bJiaXinWu` tinyint(1) NOT NULL,
+  `un32PassJuShu` int(11) NOT NULL DEFAULT '0',
+  `bIfOver` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`un32ID`),
+  KEY `OwnerUserID` (`un32OwnerUserID`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+-- ----------------------------
+-- Records of YueBo_GameRoom
+-- ----------------------------
+INSERT INTO `YueBo_GameRoom` VALUES ('23', '00000000004', '2016-12-21 16:36:32', '3', '00000000008', '00000000008', '3', '1', '857147', '1', '0', '1', '1', '0', '0');
+INSERT INTO `YueBo_GameRoom` VALUES ('24', '00000000004', '2016-12-21 16:37:53', '3', '00000000008', '00000000008', '3', '1', '857148', '1', '0', '1', '1', '0', '0');
+INSERT INTO `YueBo_GameRoom` VALUES ('25', '00000000004', '2016-12-21 16:43:21', '3', '00000000008', '00000000008', '2', '1', '857149', '1', '0', '1', '1', '0', '0');

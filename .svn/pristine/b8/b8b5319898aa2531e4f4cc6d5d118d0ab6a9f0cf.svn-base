@@ -1,0 +1,72 @@
+<div class="page-content">
+    <div class="col-sm-6 pull-right">
+
+        <button class="btn btn-sm btn-primary pull-right" onclick="javascript:window.location.href = 'index'">
+            返回列表
+            <i class="icon-reply icon-only"></i>
+        </button>
+      
+    </div>
+    <div class="page-header">
+        <h1>
+           <!--  {:model('menu')->getParentNname()} -->
+           
+           		查看公告
+           	
+            <small>
+                <i class="ace-icon fa fa-angle-double-right"></i>
+               详情
+            </small>
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <!-- PAGE CONTENT BEGINS -->
+            <form class="form-horizontal" role="form" >
+              	
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">公告详情</label>
+                    <div class="col-sm-9">
+                         <textarea class="col-xs-10 col-sm-5" rows="8" name='content'>{$info.content}</textarea>
+                    </div>
+                </div>   
+                <div class="space-4"></div>
+             
+             	<div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">所属群体:</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="col-xs-10 col-sm-2" value="{$info.szGameHallName}"  />
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                 <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">开始时间:</label>
+                    <div class="col-sm-9">
+                           <input type="text" value="{$info.start_time|date='Y-m-d H:i:s',###}" id="start_time" name="s_time" placeholder="开始时间"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">结束时间:</label>
+                    <div class="col-sm-9">
+                           <input type="text" value="{$info.end_time|date='Y-m-d H:i:s',###}" id="end_time" name="e_time" placeholder="结束时间"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+                <div class="form-group">
+                    <label class="col-sm-3 control-label no-padding-right">间隔时间:</label>
+                    <div class="col-sm-9">
+                           <input type="text" name="showtimes" value="{$info.interval}s"/>
+                    </div>
+                </div>
+                <div class="space-4"></div>
+                
+            </form>
+            <!-- PAGE CONTENT ENDS -->
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div><!-- /.page-content -->

@@ -1,0 +1,123 @@
+<?php
+
+/**
+ *  登陆页
+ */
+
+namespace application\admin\controller;
+
+use think\Controller;
+use think\Db;
+use think\Loader;
+
+class LoginController extends Controller {
+
+    /**
+     * pc端页面登入界面
+     */
+    public function index() {
+        //dump(request()->ip());exit;
+        if ($_POST['dosubmit']) {
+            $username = input('post.username');
+            $password = input('post.password');
+            $merchantId=input('post.merchantId');
+
+            if (!$username) {
+                $this->error('用户名不能为空');
+            }
+            if (!$password) {
+                $this->error('密码不能为空');
+            }
+
+            if($merchantId==0||$merchantId!=''){
+                $info = db('admin')->field('id,username,password,merchantId')->where('username', $username)->where('password',md5("sup_%_".$password))->where("merchantId",$merchantId)->find();
+                if (!$info) {
+                    $adminInfo=Db::name('admin')->field('username')->where('merchantId',$merchantId)->find();
+                    //var_dump($adminInfo['username']);
+                    //var_dump(md5($adminInfo['username']."_%_".$password));
+                    //var_dump($merchantId);
+                    // exit;
+                    if($adminInfo){
+                        $info = db('admin')->field('id,username,password,merchantId')->where('username', $adminInfo['username']."_%_".$username)->where('password',md5($adminInfo['username']."_%_".$username.$password))->where("merchantId",$merchantId)->find();
+                        if(!$info){
+                            $this->error('用户名或密码错误！');
+                        }
+                    }else{
+                        $this->error('用户名或密码错误！');
+                    }
+                }
+            }else{
+                $this->error('线路号不能为空');
+            }
+
+            session('user_name', $info['username']);
+            session('user_id', $info['id']);
+            session('merch_id',$info['merchantId']);//存一个商户ID
+            if (input('post.islogin')) {
+                cookie('user_name', encry_code($info['username']));
+                cookie('user_id', encry_code($info['id']));
+                cookie('merch_id', encry_code($info['merchantId']));
+            }
+            //记录登录信息
+            Loader::model('Admin')->editInfo(1, $info['id']);
+            $this->success('登入成功', 'index/index','',1);
+
+        } else {
+            if (session('user_name')) {
+                $this->success('您已登入', 'index/index','',1);
+            }
+
+            if (cookie('user_name')) {
+                $username = encry_code(cookie('user_name'),'DECODE');
+                $info = db('admin')->field('id,username,password')->where('username', $username)->find();
+                if ($info) {
+                    //记录
+                    session('user_name', $info['username']);
+                    session('user_id', $info['id']);
+                    session('merch_id',$info['merchantId']);//存一个商户ID
+                    Loader::model('Admin')->editInfo(1, $info['id']);
+                    $this->success('登入成功', 'index/index','',1);
+                }
+            }
+            $this->view->engine->layout(false);//临时关闭布局
+            return $this->fetch('login');
+        }
+    }
+
+    /**
+     * na平台通过URL直接登录
+     */
+    public function apilogin(){
+        $token=input('token');
+        $info = encry_code($token,'DECODE');//解密
+        $data=unserialize($info);
+        if(count($data)!=3){
+            $this->error('登录失败1','login/index');
+        }
+        $username = $data['username'];
+        $uid = $data['uid'];
+        $merchantId=$data['merchantId'];
+        if(!$username || !$uid || !isset($merchantId)){
+            $this->error('登录失败2','login/index');
+        }
+        //记录session 然后 跳转到后台页面
+        session('user_name', $username);
+        session('user_id',  $uid);
+        session('merch_id',$merchantId);//存一个商户ID
+        $this->success('登入成功', 'index/index','',1);
+    }
+
+    /**
+     * 退出登陆
+     */
+    public function logout() {
+        session('user_name', null);
+        session('user_id', null);
+        session('merch_id', null);
+        cookie('user_name', null);
+        cookie('user_id', null);
+        cookie('merch_id', null);
+        $this->success('退出成功', 'login/index','',1);
+    }
+
+}
